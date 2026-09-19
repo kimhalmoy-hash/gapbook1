@@ -14,7 +14,8 @@ type Props = {
   defaults?: {
     trade: Trade;
     unit: SlotUnit;
-    start: string;
+    startDate: string;
+    startTime: string;
     durationHours: number;
     days: number;
     priceAmount: number;
@@ -61,15 +62,24 @@ export function SlotForm({ slotId, allowedTrades, city, currency, defaults }: Pr
           ))}
         </select>
       </Field>
-      {unit === "HOURS" ? (
+      <Field label={unit === "HOURS" ? "Dato" : "Startdato"}>
+        <input
+          className={inputClass}
+          defaultValue={defaults?.startDate}
+          name="startDate"
+          required
+          type="date"
+        />
+      </Field>
+      {unit === "HOURS" && (
         <>
-          <Field label="Start">
+          <Field label="Startklokkeslett">
             <input
               className={inputClass}
-              defaultValue={defaults?.start}
-              name="start"
+              defaultValue={defaults?.startTime ?? "09:00"}
+              name="startTime"
               required
-              type="datetime-local"
+              type="time"
             />
           </Field>
           <Field label="Antall timer (minst 3)">
@@ -84,31 +94,19 @@ export function SlotForm({ slotId, allowedTrades, city, currency, defaults }: Pr
             />
           </Field>
         </>
-      ) : (
-        <>
-          <Field label="Startdato">
-            <input
-              className={inputClass}
-              defaultValue={defaults?.start?.slice(0, 10)}
-              name="start"
-              required
-              type="date"
-            />
-          </Field>
-          {unit === "DAY" && (
-            <Field label="Antall dager (1–7)">
-              <input
-                className={inputClass}
-                defaultValue={defaults?.days ?? 1}
-                min={1}
-                max={7}
-                name="days"
-                required
-                type="number"
-              />
-            </Field>
-          )}
-        </>
+      )}
+      {unit === "DAY" && (
+        <Field label="Antall dager (1–7)">
+          <input
+            className={inputClass}
+            defaultValue={defaults?.days ?? 1}
+            min={1}
+            max={7}
+            name="days"
+            required
+            type="number"
+          />
+        </Field>
       )}
       <Field label={`Synlig pris (${currency})`}>
         <input

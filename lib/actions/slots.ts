@@ -26,7 +26,9 @@ function asInt(formData: FormData, key: string) {
 function parseSlotForm(formData: FormData) {
   const trade = asString(formData, "trade") as Trade;
   const unit = asString(formData, "unit") as SlotUnit;
-  const start = asString(formData, "start");
+  const startDate = asString(formData, "startDate");
+  const startTime = asString(formData, "startTime") || "08:00";
+  const start = unit === "HOURS" ? `${startDate}T${startTime}` : startDate;
   const durationHours = asInt(formData, "durationHours") ?? undefined;
   const days = asInt(formData, "days") ?? undefined;
   const priceAmount = asInt(formData, "priceAmount");
@@ -107,23 +109,28 @@ export async function createSlotAction(
   if ("error" in parsed && parsed.error) return { error: parsed.error };
   if (!("data" in parsed) || !parsed.data) return { error: "Ugyldig skjema." };
 
-  const slot = await prisma.slot.create({
-    data: {
-      businessId: business.id,
-      trade: parsed.data.trade,
-      country: business.country,
-      city: parsed.data.city,
-      startsAt: parsed.data.startsAt,
-      endsAt: parsed.data.endsAt,
-      unit: parsed.data.unit,
-      durationHours: parsed.data.durationHours,
-      priceAmount: parsed.data.priceAmount,
-      currency: parsed.data.currency,
-      suitableFor: parsed.data.suitableFor,
-      cancellationFeeAmount: parsed.data.cancellationFeeAmount,
-      status: SlotStatus.OPEN,
-    },
-  });
+  let slot;
+  try {
+    slot = await prisma.slot.create({
+      data: {
+        businessId: business.id,
+        trade: parsed.data.trade,
+        country: business.country,
+        city: parsed.data.city,
+        startsAt: parsed.data.startsAt,
+        endsAt: parsed.data.endsAt,
+        unit: parsed.data.unit,
+        durationHours: parsed.data.durationHours,
+        priceAmount: parsed.data.priceAmount,
+        currency: parsed.data.currency,
+        suitableFor: parsed.data.suitableFor,
+        cancellationFeeAmount: parsed.data.cancellationFeeAmount,
+        status: SlotStatus.OPEN,
+      },
+    });
+  } catch {
+    return { error: "Kunne ikke lagre sloten. Sjekk datoene og prøv igjen." };
+  }
 
   revalidatePath("/sok");
   revalidatePath("/bedrift/slot");

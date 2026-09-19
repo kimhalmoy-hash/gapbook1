@@ -4,7 +4,7 @@ import { requireBusiness } from "@/lib/auth";
 import { cancelSlotAction } from "@/lib/actions/slots";
 import { currencyForCity } from "@/lib/constants";
 import { prisma } from "@/lib/prisma";
-import { toDateTimeInput } from "@/lib/slots";
+import { toDateInput } from "@/lib/slots";
 import { Flash } from "@/components/Flash";
 
 export default async function EditSlotPage({
@@ -44,7 +44,8 @@ export default async function EditSlotPage({
             defaults={{
               trade: slot.trade,
               unit: slot.unit,
-              start: toDateTimeInput(slot.startsAt),
+              startDate: toDateInput(slot.startsAt),
+              startTime: `${String(slot.startsAt.getHours()).padStart(2, "0")}:${String(slot.startsAt.getMinutes()).padStart(2, "0")}`,
               durationHours: slot.durationHours,
               days: Math.min(7, Math.max(1, days)),
               priceAmount: slot.priceAmount,

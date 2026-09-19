@@ -5,8 +5,14 @@ export function hoursBetween(startsAt: Date, endsAt: Date): number {
   return (endsAt.getTime() - startsAt.getTime()) / 3_600_000;
 }
 
+function isSaneDate(date: Date): boolean {
+  if (Number.isNaN(date.getTime())) return false;
+  const year = date.getFullYear();
+  return year >= 2024 && year <= 2100;
+}
+
 export function validateSlotWindow(startsAt: Date, endsAt: Date): string | null {
-  if (Number.isNaN(startsAt.getTime()) || Number.isNaN(endsAt.getTime())) {
+  if (!isSaneDate(startsAt) || !isSaneDate(endsAt)) {
     return "Ugyldig start eller slutt.";
   }
   if (endsAt.getTime() <= startsAt.getTime()) {
@@ -90,4 +96,11 @@ export function toDateTimeInput(date: Date): string {
   const hour = String(date.getHours()).padStart(2, "0");
   const minute = String(date.getMinutes()).padStart(2, "0");
   return `${toDateInput(date)}T${hour}:${minute}`;
+}
+
+export function defaultSlotStart(daysAhead = 3, hour = 9): Date {
+  const date = new Date();
+  date.setDate(date.getDate() + daysAhead);
+  date.setHours(hour, 0, 0, 0);
+  return date;
 }
