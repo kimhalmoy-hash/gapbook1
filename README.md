@@ -1,3 +1,82 @@
 # GapBook
 
-Nordic marketplace for open trade capacity.
+Nordic marketplace for leftover tradesperson capacity — hours (min 3), days, or one week — at a **visible price**. Not bidding.
+
+P0 markets: **Oslo (NO)** and **Stockholm (SE)**. Trades: painting/wallpaper, electrician, plumber, carpenter, tile/masonry, roofing.
+
+Job money is paid **directly** between customer and business. GapBook does not take a deposit and does not use Stripe for the job. GapBook bills the business a **success fee** after the fact (0% on the first two bookings, then 5%). Invoice UI is a stub.
+
+Locked product terms: [`docs/vilkaar.md`](docs/vilkaar.md).
+
+## Stack
+
+- Next.js (App Router) + TypeScript
+- PostgreSQL via Prisma
+- Cookie session auth (e-post + passord)
+
+## Setup
+
+**Requirements:** Node 20+ and PostgreSQL 16.
+
+### 1. Database
+
+Docker:
+
+```bash
+docker compose up -d
+```
+
+Or local Postgres, then create a database:
+
+```bash
+createdb gapbook
+# or:
+psql -c "CREATE USER gapbook WITH PASSWORD 'gapbook' SUPERUSER;"
+psql -c "CREATE DATABASE gapbook OWNER gapbook;"
+```
+
+### 2. App
+
+```bash
+cp .env.example .env
+# set DATABASE_URL and a long AUTH_SECRET
+npm install
+npx prisma migrate deploy
+npm run db:seed
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+### Useful scripts
+
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Next.js dev server |
+| `npm run build` | Production build |
+| `npm test` | Slot window + success-fee unit tests |
+| `npm run db:migrate` | Apply Prisma migrations |
+| `npm run db:seed` | Replace data with the minimal demo set |
+| `npm run db:studio` | Prisma Studio |
+
+## Demo accounts
+
+Password for all: `demo1234`
+
+| Role | E-post | Notes |
+| --- | --- | --- |
+| Admin | `admin@gapbook.no` | Approve businesses |
+| Customer | `kunde@demo.gapbook.no` | Search + book |
+| Painter (Oslo, approved) | `maler@demo.gapbook.no` | Slot CRUD |
+| Electrician (Stockholm, approved) | `elektriker@demo.gapbook.se` | Two launch bookings already (next fee is 5%) |
+| Plumber (Oslo, approved) | `rorlegger@demo.gapbook.no` | Open hours slot |
+| Roofer (Oslo, **not** approved) | `tak@demo.gapbook.no` | Hidden until admin approval |
+
+## P0 flows
+
+1. **Landing** — Norwegian hero/CTAs: *Se ledig tid* / *Selg ledig tid*
+2. **Business profile** — country, city, trade(s), org.nr; public only after admin approval
+3. **Publish slots** — trade, geography, start/end, unit hours(≥3)/day/week, visible price, «passer til»
+4. **Customer search** — place + period + trade
+5. **Booking** — digital agreement checkbox + timestamp, e-mail confirmation stub, no deposit
+6. **Success fee ledger** — count bookings per business (`/bedrift/bookinger`); invoice generation is stubbed

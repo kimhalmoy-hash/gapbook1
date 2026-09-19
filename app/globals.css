@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3eadc;
+  --paper-2: #e8dcc8;
+  --ink: #14211d;
+  --muted: #4c5a54;
+  --pine: #1b3d36;
+  --pine-mid: #2a5c50;
+  --clay: #c24e24;
+  --clay-dark: #9a3c1b;
+  --line: #d5c8b3;
+  --ok: #215c43;
+  --card: #fffaf2;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-pine: var(--pine);
+  --color-pine-mid: var(--pine-mid);
+  --color-clay: var(--clay);
+  --color-clay-dark: var(--clay-dark);
+  --color-line: var(--line);
+  --color-ok: var(--ok);
+  --color-card: var(--card);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #fbf6eb 0%, transparent 55%),
+    radial-gradient(900px 400px at 100% 0%, #eadcc4 0%, transparent 50%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-weight: 560;
+  letter-spacing: -0.03em;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.ticket {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 4px 4px 0 var(--pine);
+}
