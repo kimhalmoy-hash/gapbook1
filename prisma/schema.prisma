@@ -1,0 +1,118 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  BUSINESS
+  ADMIN
+}
+
+enum Country {
+  NO
+  SE
+}
+
+enum Trade {
+  PAINTING
+  ELECTRICIAN
+  PLUMBER
+  CARPENTER
+  TILE_MASONRY
+  ROOFING
+}
+
+enum SlotUnit {
+  HOURS
+  DAY
+  WEEK
+}
+
+enum SlotStatus {
+  OPEN
+  BOOKED
+  CANCELLED
+}
+
+enum BookingStatus {
+  CONFIRMED
+  CANCELLED
+}
+
+model User {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  role         Role
+  createdAt    DateTime  @default(now())
+  business     Business?
+  bookings     Booking[]
+}
+
+model Business {
+  id        String     @id @default(cuid())
+  userId    String     @unique
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  orgNr     String
+  country   Country
+  city      String
+  trades    Trade[]
+  approved  Boolean    @default(false)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  slots     Slot[]
+  bookings  Booking[]
+
+  @@index([approved, city])
+}
+
+model Slot {
+  id                    String     @id @default(cuid())
+  businessId            String
+  business              Business   @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  trade                 Trade
+  country               Country
+  city                  String
+  startsAt              DateTime
+  endsAt                DateTime
+  unit                  SlotUnit
+  durationHours         Int
+  priceAmount           Int
+  currency              String
+  suitableFor           String
+  cancellationFeeAmount Int?
+  status                SlotStatus @default(OPEN)
+  createdAt             DateTime   @default(now())
+  updatedAt             DateTime   @updatedAt
+  booking               Booking?
+
+  @@index([status, city, trade, startsAt])
+  @@index([businessId, status])
+}
+
+model Booking {
+  id                  String         @id @default(cuid())
+  slotId              String         @unique
+  slot                Slot           @relation(fields: [slotId], references: [id], onDelete: Restrict)
+  customerId          String
+  customer            User           @relation(fields: [customerId], references: [id])
+  businessId          String
+  business            Business       @relation(fields: [businessId], references: [id])
+  agreementAcceptedAt DateTime
+  status              BookingStatus  @default(CONFIRMED)
+  customerEmail       String
+  confirmationStubAt  DateTime?
+  feePercent          Int
+  feeAmount           Int
+  createdAt           DateTime       @default(now())
+
+  @@index([businessId, createdAt])
+  @@index([customerId, createdAt])
+}
