@@ -46,8 +46,7 @@ export default async function SearchPage({
     <PageShell wide>
       <h1 className="font-serif text-4xl">Se ledig tid</h1>
       <p className="mt-2 text-muted">
-        Finn rabatterte ledige slots. Solgt med rabatt før tiden mister verdien
-        — det bys ikke.
+        Kalenderhull hos håndverkere — ofte under ordinær pris. Det bys ikke.
       </p>
       <form className="mt-6 grid gap-3 rounded-xl border border-line bg-card p-4 sm:grid-cols-4">
         <select className={inputClass} defaultValue={city} name="city">

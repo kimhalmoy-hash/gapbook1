@@ -36,8 +36,8 @@ export function SlotForm({ slotId, allowedTrades, city, currency, defaults }: Pr
     <form action={formAction} className="mt-6 space-y-4">
       <ErrorText error={state?.error} />
       <p className="text-sm text-muted">
-        Publiseres i {city}. Selg rabattert ledig tid: minst 3 timer, maks én
-        uke. Synlig pris i {currency}.
+        Publiseres i {city}. Selg kalenderhull: minst 3 timer, maks én uke.
+        Synlig pris i {currency} — gjerne under ordinær.
       </p>
       <Field label="Fag">
         <select className={inputClass} defaultValue={defaults?.trade} name="trade" required>

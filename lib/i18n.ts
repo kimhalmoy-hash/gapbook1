@@ -17,9 +17,9 @@ export const LOCALE_LABELS: Record<Locale, string> = {
 };
 
 export const PRODUCT_TAGLINES: Record<Locale, string> = {
-  nb: "WeekSlot — rabatterte ledige timer og uker hos håndverkere, før tiden mister verdien.",
-  sv: "WeekSlot — rabatterade lediga timmar och veckor hos hantverkare, innan tiden tappar värde.",
-  en: "WeekSlot — discounted open hours and weeks from trades, before time loses its value.",
+  nb: "WeekSlot selger kalenderhull hos håndverkere — ledig tid til bedre pris, før den mister verdien.",
+  sv: "WeekSlot säljer kalenderluckor hos hantverkare — ledig tid till bättre pris, innan den förlorar värdet.",
+  en: "WeekSlot sells trades’ calendar gaps — open time at a better price, before it loses value.",
 };
 
 export type LandingCopy = {
@@ -47,21 +47,21 @@ export type LandingCopy = {
 
 const NB: LandingCopy = {
   lang: "nb",
-  kicker: "Oslo + Stockholm · rabattert ledig tid",
-  badge: "Rabatterte ledige slots",
-  title: "Rabattert ledig tid hos håndverkere",
+  kicker: "Oslo + Stockholm · synlig pris",
+  badge: "Ledige timer & uker — ofte under ordinær pris",
+  title: "Se ledige timer og uker nær deg",
   subtitle:
-    "Ledige slots i kalenderen — solgt med rabatt før tiden mister verdien. Fra 3 timer til én uke.",
+    "Kalenderhull hos håndverkere — solgt før de mister verdien, ofte under ordinær pris. Fra 3 timer til én uke.",
   ctaSee: "Se ledig tid",
   ctaSell: "Selg ledig tid",
   chips: [
-    "Rabatterte slots, ikke anbud",
-    "Solgt med rabatt",
+    "Kalenderhull, ikke anbud",
+    "Ofte under ordinær pris",
     "Synlig pris · 3 t – 1 uke",
     "Ingen depositum",
   ],
   tradesHeading: "Fag live fra start",
-  tradesSeeOpen: "Se rabatterte slots",
+  tradesSeeOpen: "Se åpne kalenderhull",
   openNow: "Ledig nå",
   allSlots: "Alle slots",
   noSlots: "Ingen åpne slots ennå. Kjør seed for demodata.",
@@ -69,8 +69,8 @@ const NB: LandingCopy = {
   steps: [
     {
       n: "01",
-      t: "Finn rabatten",
-      d: "Velg sted, periode og fag. Du ser godkjente bedrifters ledige slots — solgt med rabatt før tiden mister verdien.",
+      t: "Finn kalenderhull",
+      d: "Velg sted, periode og fag. Du ser godkjente bedrifters ledige timer og uker — ofte under ordinær pris.",
     },
     {
       n: "02",
@@ -85,7 +85,7 @@ const NB: LandingCopy = {
   ],
   businessHeading: "For bedrifter",
   businessBody:
-    "Selg rabattert ledig tid før den mister verdien. Publiser ledige slots — timer, dager eller én uke — i Oslo og Stockholm. Launch: 0 % success fee på de to første bookingene, deretter 5 % — fakturert månedlig.",
+    "Selg kalenderhull før de mister verdien — ledig tid til bedre pris. Publiser timer, dager eller én uke i Oslo og Stockholm. Launch: 0 % success fee på de to første bookingene, deretter 5 % — fakturert månedlig.",
   businessCta: "Selg ledig tid",
   trades: {
     PAINTING: "Maling/tapetsering",
@@ -100,21 +100,21 @@ const NB: LandingCopy = {
 
 const SV: LandingCopy = {
   lang: "sv",
-  kicker: "Oslo + Stockholm · rabatterad ledig tid",
-  badge: "Rabatterade lediga slots",
-  title: "Rabatterad ledig tid hos hantverkare",
+  kicker: "Oslo + Stockholm · synligt pris",
+  badge: "Lediga timmar & veckor — ofta under ordinarie pris",
+  title: "Se lediga timmar och veckor nära dig",
   subtitle:
-    "Lediga slots i kalendern — sålda med rabatt innan tiden tappar värde. Från 3 timmar till en vecka.",
+    "Kalenderluckor hos hantverkare — sålda innan de förlorar värdet, ofta under ordinarie pris. Från 3 timmar till en vecka.",
   ctaSee: "Se ledig tid",
   ctaSell: "Sälj ledig tid",
   chips: [
-    "Rabatterade slots, inte anbud",
-    "Sålda med rabatt",
+    "Kalenderluckor, inte anbud",
+    "Ofta under ordinarie pris",
     "Synligt pris · 3 t – 1 vecka",
     "Ingen deposition",
   ],
   tradesHeading: "Yrken live från start",
-  tradesSeeOpen: "Se rabatterade slots",
+  tradesSeeOpen: "Se öppna kalenderluckor",
   openNow: "Ledigt nu",
   allSlots: "Alla slots",
   noSlots: "Inga öppna slots ännu. Kör seed för demodata.",
@@ -122,8 +122,8 @@ const SV: LandingCopy = {
   steps: [
     {
       n: "01",
-      t: "Hitta rabatten",
-      d: "Välj plats, period och yrke. Du ser godkända företags lediga slots — sålda med rabatt innan tiden tappar värde.",
+      t: "Hitta kalenderluckor",
+      d: "Välj plats, period och yrke. Du ser godkända företags lediga timmar och veckor — ofta under ordinarie pris.",
     },
     {
       n: "02",
@@ -138,7 +138,7 @@ const SV: LandingCopy = {
   ],
   businessHeading: "För företag",
   businessBody:
-    "Sälj rabatterad ledig tid innan den tappar värde. Publicera lediga slots — timmar, dagar eller en vecka — i Oslo och Stockholm. Launch: 0 % success fee på de två första bokningarna, därefter 5 % — faktureras månadsvis.",
+    "Sälj kalenderluckor innan de förlorar värdet — ledig tid till bättre pris. Publicera timmar, dagar eller en vecka i Oslo och Stockholm. Launch: 0 % success fee på de två första bokningarna, därefter 5 % — faktureras månadsvis.",
   businessCta: "Sälj ledig tid",
   trades: {
     PAINTING: "Målning/tapetsering",
@@ -153,21 +153,21 @@ const SV: LandingCopy = {
 
 const EN: LandingCopy = {
   lang: "en",
-  kicker: "Oslo + Stockholm · discounted open time",
-  badge: "Discounted open slots",
-  title: "Discounted open time from trades",
+  kicker: "Oslo + Stockholm · visible price",
+  badge: "Open hours & weeks — often under standard rates",
+  title: "See open hours and weeks near you",
   subtitle:
-    "Empty calendar slots — sold at a discount before time loses value. From 3 hours to one week.",
+    "Calendar gaps from trades — sold before they lose value, often below usual rates. From 3 hours to one week.",
   ctaSee: "See open time",
   ctaSell: "List open time",
   chips: [
-    "Discounted slots, not bidding",
-    "Sold at a discount",
+    "Calendar gaps, not bidding",
+    "Often below usual rates",
     "Visible price · 3 h – 1 week",
     "No deposit",
   ],
   tradesHeading: "Trades live from day one",
-  tradesSeeOpen: "See discounted slots",
+  tradesSeeOpen: "See open calendar gaps",
   openNow: "Open now",
   allSlots: "All slots",
   noSlots: "No open slots yet. Run seed for demo data.",
@@ -175,8 +175,8 @@ const EN: LandingCopy = {
   steps: [
     {
       n: "01",
-      t: "Find the discount",
-      d: "Pick a place, period and trade. You only see approved businesses' empty calendar slots — sold at a discount before time loses value.",
+      t: "Find calendar gaps",
+      d: "Pick a place, period and trade. You only see approved businesses' open hours and weeks — often below usual rates.",
     },
     {
       n: "02",
@@ -191,7 +191,7 @@ const EN: LandingCopy = {
   ],
   businessHeading: "For businesses",
   businessBody:
-    "Sell discounted open time before it loses value. Publish empty slots — hours, days or one week — in Oslo and Stockholm. Launch: 0% success fee on the first two bookings, then 5% — invoiced monthly.",
+    "Sell calendar gaps before they lose value — open time at a better price. Publish hours, days or one week in Oslo and Stockholm. Launch: 0% success fee on the first two bookings, then 5% — invoiced monthly.",
   businessCta: "List open time",
   trades: {
     PAINTING: "Painting/wallpaper",
