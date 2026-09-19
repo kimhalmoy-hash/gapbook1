@@ -19,6 +19,7 @@ export async function loginAction(
 ): Promise<ActionState> {
   const email = asString(formData, "email").toLowerCase();
   const password = asString(formData, "password");
+  const next = asString(formData, "next");
   if (!email || !password) return { error: "Fyll inn e-post og passord." };
 
   const user = await prisma.user.findUnique({ where: { email } });
@@ -34,6 +35,7 @@ export async function loginAction(
     role: user.role,
   });
 
+  if (next.startsWith("/") && !next.startsWith("//")) redirect(next);
   if (user.role === "ADMIN") redirect("/admin");
   if (user.role === "BUSINESS") redirect("/bedrift");
   redirect("/konto");

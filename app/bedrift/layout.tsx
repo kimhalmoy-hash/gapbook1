@@ -23,7 +23,7 @@ export default async function BusinessLayout({
     <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 lg:grid-cols-[220px_1fr]">
       <aside>
         <p className="text-xs uppercase tracking-[0.18em] text-muted">Bedrift</p>
-        <p className="mt-1 font-serif text-2xl">{business?.name ?? "Ny bedrift"}</p>
+        <p className="mt-1 font-serif text-2xl break-words">{business?.name ?? "Ny bedrift"}</p>
         <p className="mt-1 text-sm text-muted">
           {business?.approved ? "Godkjent" : "Venter på godkjenning"}
         </p>

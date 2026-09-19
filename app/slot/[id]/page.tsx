@@ -59,7 +59,7 @@ export default async function SlotPage({
 
       {open && !session && (
         <p className="mt-6">
-          <Link className="rounded-full bg-clay px-5 py-2.5 text-white" href={`/login`}>
+          <Link className="rounded-full bg-clay px-5 py-2.5 text-white" href={`/login?next=/slot/${slot.id}`}>
             Logg inn for å booke
           </Link>
         </p>

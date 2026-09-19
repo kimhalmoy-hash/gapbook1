@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Flash } from "@/components/Flash";
 import { requireBusiness } from "@/lib/auth";
 import { formatMoney, formatSlotWindow } from "@/lib/format";
-import { tradeLabel } from "@/lib/constants";
+import { slotStatusLabel, tradeLabel } from "@/lib/constants";
 import { prisma } from "@/lib/prisma";
 
 export default async function BusinessSlotsPage({
@@ -42,7 +42,7 @@ export default async function BusinessSlotsPage({
               <p className="font-medium">
                 {tradeLabel(slot.trade)} · {slot.city}
               </p>
-              <span className="text-sm text-muted">{slot.status}</span>
+              <span className="text-sm text-muted">{slotStatusLabel(slot.status)}</span>
             </div>
             <p className="mt-1 text-sm text-muted">
               {formatSlotWindow(slot.startsAt, slot.endsAt, slot.unit)}

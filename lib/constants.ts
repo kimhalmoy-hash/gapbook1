@@ -47,6 +47,17 @@ export function unitLabel(unit: SlotUnit): string {
   }
 }
 
+export function slotStatusLabel(status: "OPEN" | "BOOKED" | "CANCELLED"): string {
+  switch (status) {
+    case "OPEN":
+      return "Åpen";
+    case "BOOKED":
+      return "Booket";
+    case "CANCELLED":
+      return "Trukket";
+  }
+}
+
 export function countryLabel(country: Country): string {
   return country === "NO" ? "Norge" : "Sverige";
 }
