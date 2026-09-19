@@ -9,6 +9,7 @@ import { prisma } from "@/lib/prisma";
 export default async function HomePage() {
   const locale = await getLocale();
   const t = landingCopy(locale);
+  const [titleLead, ...titleRest] = t.title.split(" ");
   const highlights = await prisma.slot.findMany({
     where: { status: "OPEN", business: { approved: true } },
     include: { business: true },
@@ -25,11 +26,12 @@ export default async function HomePage() {
           </p>
           <LanguageSwitch locale={locale} label={t.switcherLabel} />
         </div>
-        <p className="mt-4 inline-flex max-w-full rounded-full border border-clay/35 bg-paper-2 px-3 py-1 text-sm text-clay">
+        <p className="mt-5 inline-flex max-w-full items-center rounded-full bg-clay px-4 py-1.5 text-sm font-medium tracking-wide text-white sm:text-base">
           {t.badge}
         </p>
         <h1 className="mt-4 max-w-4xl font-serif text-5xl leading-[1.05] sm:text-6xl">
-          {t.title}
+          <span className="text-clay">{titleLead}</span>
+          {titleRest.length > 0 ? ` ${titleRest.join(" ")}` : null}
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-muted">{t.subtitle}</p>
         <div className="mt-8 flex flex-wrap gap-3">

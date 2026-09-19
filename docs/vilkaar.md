@@ -1,7 +1,7 @@
 # WeekSlot — låste vilkår & P0 (2026-09-19)
 
 ## Posisjonering
-WeekSlot selger kalenderhull hos maler, elektriker, rørlegger og flere — 3 timer til 1 uke, til synlig pris, ofte under ordinær. Ikke anbud.
+WeekSlot — rabatterte ledige timer og uker hos håndverkere, før tiden mister verdien. Ikke anbud.
 
 ## Fag (live fra start)
 Maling/tapetsering, elektriker, rørlegger, tømrer/snekker, flis/mur, tak

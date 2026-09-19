@@ -20,7 +20,7 @@ const body = Outfit({
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: `${PRODUCT_NAME} — ledige timer & uker, ofte under ordinær pris`,
+  title: `${PRODUCT_NAME} — rabatterte ledige timer og uker`,
   description: PRODUCT_TAGLINES.nb,
 };
 

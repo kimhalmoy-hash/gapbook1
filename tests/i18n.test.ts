@@ -53,75 +53,74 @@ test("landing copy keeps locked commercial terms", () => {
   }
 });
 
-test("landing one-liners sell leftover capacity, not a generic booking tool", () => {
-  assert.equal(landingCopy("nb").title, "Ledig håndverkertid er ferskvare");
+test("v7 landing copy leads with discount on leftover slots", () => {
+  assert.equal(landingCopy("nb").title, "Rabattert ledig tid hos håndverkere");
+  assert.equal(landingCopy("nb").badge, "Rabatterte ledige slots");
   assert.equal(
-    landingCopy("nb").badge,
-    "Ledige timer & uker — ofte under ordinær pris",
+    landingCopy("nb").subtitle,
+    "Ledige slots i kalenderen — solgt med rabatt før tiden mister verdien. Fra 3 timer til én uke.",
   );
-  assert.equal(landingCopy("nb").subtitle, PRODUCT_TAGLINES.nb);
+  assert.equal(landingCopy("nb").ctaSee, "Se ledig tid");
+  assert.equal(landingCopy("nb").ctaSell, "Selg ledig tid");
   assert.equal(
     PRODUCT_TAGLINES.nb,
-    "WeekSlot selger kalenderhull hos maler, elektriker, rørlegger og flere — 3 timer til 1 uke, til synlig pris, ofte under ordinær. Ikke anbud.",
+    "WeekSlot — rabatterte ledige timer og uker hos håndverkere, før tiden mister verdien.",
   );
 
-  assert.equal(landingCopy("sv").title, "Ledig hantverkartid är färskvara");
+  assert.equal(landingCopy("sv").title, "Rabatterad ledig tid hos hantverkare");
+  assert.equal(landingCopy("sv").badge, "Rabatterade lediga slots");
   assert.equal(
-    landingCopy("sv").badge,
-    "Lediga timmar & veckor — ofta under ordinarie pris",
+    landingCopy("sv").subtitle,
+    "Lediga slots i kalendern — sålda med rabatt innan tiden tappar värde. Från 3 timmar till en vecka.",
   );
-  assert.equal(landingCopy("sv").subtitle, PRODUCT_TAGLINES.sv);
 
-  assert.equal(landingCopy("en").title, "Fill empty trade slots for less");
+  assert.equal(landingCopy("en").title, "Discounted open time from trades");
+  assert.equal(landingCopy("en").badge, "Discounted open slots");
   assert.equal(
-    landingCopy("en").badge,
-    "Spare hours & weeks — often below the usual rate",
+    landingCopy("en").subtitle,
+    "Empty calendar slots — sold at a discount before time loses value. From 3 hours to one week.",
   );
-  assert.equal(landingCopy("en").subtitle, PRODUCT_TAGLINES.en);
+  assert.equal(landingCopy("en").ctaSee, "See open time");
+  assert.equal(landingCopy("en").ctaSell, "List open time");
+  assert.equal(
+    PRODUCT_TAGLINES.en,
+    "WeekSlot — discounted open hours and weeks from trades, before time loses its value.",
+  );
 
   for (const locale of LOCALES) {
     const copy = landingCopy(locale);
     const hero = [copy.badge, copy.title, copy.subtitle, ...copy.chips].join(
       " ",
     );
-    assert.match(copy.subtitle, /WeekSlot/);
+    assert.match(PRODUCT_TAGLINES[locale], /WeekSlot/);
     assert.doesNotMatch(hero, /GapBook/);
     assert.doesNotMatch(hero, /\d+\s?%/);
   }
 
-  const nb = [
+  const nbHero = [
+    landingCopy("nb").kicker,
     landingCopy("nb").badge,
     landingCopy("nb").title,
     landingCopy("nb").subtitle,
-    ...landingCopy("nb").chips,
-    ...landingCopy("nb").steps.map((step) => `${step.t} ${step.d}`),
-    landingCopy("nb").businessBody,
   ].join(" ");
-  assert.match(nb, /kalenderhull/i);
-  assert.match(nb, /ferskvare/i);
-  assert.match(nb, /under ordinær/i);
+  assert.match(nbHero, /rabattert/i);
+  assert.match(nbHero, /rabatt/i);
 
-  const sv = [
+  const svHero = [
+    landingCopy("sv").kicker,
     landingCopy("sv").badge,
     landingCopy("sv").title,
     landingCopy("sv").subtitle,
-    ...landingCopy("sv").chips,
-    ...landingCopy("sv").steps.map((step) => `${step.t} ${step.d}`),
-    landingCopy("sv").businessBody,
   ].join(" ");
-  assert.match(sv, /kalenderluckor/i);
-  assert.match(sv, /färskvara/i);
-  assert.match(sv, /under ordinarie/i);
+  assert.match(svHero, /rabatterad/i);
+  assert.match(svHero, /rabatterade/i);
 
-  const en = [
+  const enHero = [
+    landingCopy("en").kicker,
     landingCopy("en").badge,
     landingCopy("en").title,
     landingCopy("en").subtitle,
-    ...landingCopy("en").chips,
-    ...landingCopy("en").steps.map((step) => `${step.t} ${step.d}`),
-    landingCopy("en").businessBody,
   ].join(" ");
-  assert.match(en, /leftover|empty (trade )?slots/i);
-  assert.match(en, /below the usual rate/i);
-  assert.doesNotMatch(en, /GapBook/);
+  assert.match(enHero, /discounted/i);
+  assert.match(enHero, /discount/i);
 });
