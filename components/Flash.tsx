@@ -1,6 +1,7 @@
 const MESSAGES: Record<string, string> = {
   lagret: "Profilen er lagret. Den blir offentlig når admin har godkjent.",
   opprettet: "Sloten er publisert.",
+  oppdatert: "Sloten er oppdatert.",
   trukket: "Sloten er trukket fra markedet.",
 };
 

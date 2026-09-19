@@ -177,7 +177,7 @@ export async function updateSlotAction(
   revalidatePath("/sok");
   revalidatePath(`/slot/${slot.id}`);
   revalidatePath("/bedrift/slot");
-  redirect(`/bedrift/slot/${slot.id}?m=lagret`);
+  redirect(`/bedrift/slot/${slot.id}?m=oppdatert`);
 }
 
 export async function cancelSlotAction(slotId: string) {
