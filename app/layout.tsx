@@ -15,6 +15,8 @@ const body = Outfit({
   subsets: ["latin"],
 });
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "GapBook — ledige timer, dager og uker",
   description:
