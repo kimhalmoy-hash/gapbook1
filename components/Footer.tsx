@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { PRODUCT_NAME } from "@/lib/constants";
 
 export function Footer() {
   return (
     <footer className="mt-16 border-t border-line bg-pine text-paper">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-3">
         <div>
-          <p className="font-serif text-2xl">GapBook</p>
+          <p className="font-serif text-2xl">{PRODUCT_NAME}</p>
           <p className="mt-2 max-w-xs text-sm text-paper/80">
-            Ledig kapasitet hos håndverkere, solgt før tiden mister verdien. Synlig
-            pris — ikke anbud.
+            WeekSlot selger ledig håndverkertid — timer, dager eller uker — til
+            synlig pris, før tiden mister verdien. Ikke anbud.
           </p>
         </div>
         <div className="text-sm">

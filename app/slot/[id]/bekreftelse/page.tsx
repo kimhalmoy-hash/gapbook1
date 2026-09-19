@@ -33,7 +33,7 @@ export default async function BookingConfirmationPage({
           {formatMoney(booking.slot.priceAmount, booking.slot.currency)}
         </p>
         <p className="text-sm text-muted">
-          Betal bedriften direkte. GapBook tar ikke jobbpengene.
+          Betal bedriften direkte. WeekSlot tar ikke jobbpengene.
         </p>
       </div>
       <Link className="mt-6 inline-block text-clay underline" href="/konto">

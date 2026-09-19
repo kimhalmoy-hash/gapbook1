@@ -1,6 +1,6 @@
-# Deploy GapBook (production)
+# Deploy WeekSlot (production)
 
-GapBook is a Next.js app + PostgreSQL. Job money stays **off-platform** (no Stripe, no deposit). GapBook bills the business a **5% success fee after the fact** (0% on the first two bookings). Locked terms: [`vilkaar.md`](vilkaar.md).
+WeekSlot is a Next.js app + PostgreSQL. Job money stays **off-platform** (no Stripe, no deposit). WeekSlot bills the business a **5% success fee after the fact** (0% on the first two bookings). Locked terms: [`vilkaar.md`](vilkaar.md).
 
 Recommended pairing: **Vercel** (app) + **Neon** (Postgres). Supabase works the same way if you prefer it.
 
@@ -43,7 +43,7 @@ Prisma **migrate** cannot run through the pooler. That is why `DIRECT_URL` exist
 ### Optional: Neon ↔ Vercel integration (fewer pastes)
 
 1. In Neon: **Integrations → Vercel → Add to Vercel**
-2. Select the GapBook Vercel project and the `gapbook` Neon DB
+2. Select the WeekSlot Vercel project and the `gapbook` Neon DB
 3. Enable preview branches if offered (each PR gets its own DB — safer than migrating Production from Preview)
 4. Neon injects `DATABASE_URL` (pooled) and `DATABASE_URL_UNPOOLED` (direct)
 5. The Vercel build script copies `DATABASE_URL_UNPOOLED` → `DIRECT_URL` when `DIRECT_URL` is unset

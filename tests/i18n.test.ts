@@ -50,3 +50,26 @@ test("landing copy keeps locked commercial terms", () => {
     assert.match(text.toLowerCase(), /deposit|deposition|depositum/);
   }
 });
+
+test("landing one-liners use WeekSlot and keep the hero titles", () => {
+  assert.equal(
+    landingCopy("nb").title,
+    "Se ledige timer, dager og uker nær deg",
+  );
+  assert.equal(
+    landingCopy("nb").subtitle,
+    "WeekSlot selger ledig håndverkertid — timer, dager eller uker — til synlig pris, før tiden mister verdien.",
+  );
+  assert.equal(
+    landingCopy("en").subtitle,
+    "WeekSlot sells open trade time — hours, days or weeks — at a clear price, before time loses its value.",
+  );
+  for (const locale of LOCALES) {
+    const copy = landingCopy(locale);
+    assert.match(copy.subtitle, /WeekSlot/);
+    const branded = [copy.subtitle, ...copy.steps.map((step) => step.d)].join(
+      " ",
+    );
+    assert.doesNotMatch(branded, /GapBook/);
+  }
+});

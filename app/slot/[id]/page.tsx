@@ -44,7 +44,7 @@ export default async function SlotPage({
       </div>
       <ul className="mt-6 space-y-2 text-sm text-muted">
         <li>Jobbpenger betales direkte til bedriften.</li>
-        <li>Ingen kunde-depositum og ingen Stripe-betaling via GapBook.</li>
+        <li>Ingen kunde-depositum og ingen Stripe-betaling via WeekSlot.</li>
         <li>
           Sen avbestilling (under {LATE_CANCEL_HOURS} t) kan utløse avbestillingsgebyr
           {feeLabel ? ` (maks ${feeLabel})` : ""}.
