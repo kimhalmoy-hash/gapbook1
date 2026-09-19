@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PRODUCT_NAME } from "@/lib/constants";
+import { PRODUCT_TAGLINES } from "@/lib/i18n";
 
 export function Footer() {
   return (
@@ -8,8 +9,7 @@ export function Footer() {
         <div>
           <p className="font-serif text-2xl">{PRODUCT_NAME}</p>
           <p className="mt-2 max-w-xs text-sm text-paper/80">
-            WeekSlot selger ledig håndverkertid — timer, dager eller uker — til
-            synlig pris, før tiden mister verdien. Ikke anbud.
+            {PRODUCT_TAGLINES.nb}
           </p>
         </div>
         <div className="text-sm">

@@ -1,7 +1,7 @@
 # WeekSlot — låste vilkår & P0 (2026-09-19)
 
 ## Posisjonering
-WeekSlot selger ledig håndverkertid — timer, dager eller uker — til synlig pris, før tiden mister verdien. Ikke anbud.
+WeekSlot selger kalenderhull hos håndverkere — ledig tid til bedre pris, før den mister verdien. Ikke anbud.
 
 ## Fag (live fra start)
 Maling/tapetsering, elektriker, rørlegger, tømrer/snekker, flis/mur, tak

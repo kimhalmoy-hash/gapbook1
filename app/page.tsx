@@ -25,7 +25,10 @@ export default async function HomePage() {
           </p>
           <LanguageSwitch locale={locale} label={t.switcherLabel} />
         </div>
-        <h1 className="mt-3 max-w-4xl font-serif text-5xl leading-[1.05] sm:text-6xl">
+        <p className="mt-5 inline-flex max-w-full items-center rounded-full bg-clay px-4 py-1.5 text-sm font-medium tracking-wide text-white sm:text-base">
+          {t.badge}
+        </p>
+        <h1 className="mt-4 max-w-4xl font-serif text-5xl leading-[1.05] sm:text-6xl">
           {t.title}
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-muted">{t.subtitle}</p>

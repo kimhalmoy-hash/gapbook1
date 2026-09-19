@@ -1,8 +1,8 @@
 # WeekSlot
 
-WeekSlot sells open trade time — hours, days or weeks — at a clear price, before time loses its value.
+WeekSlot sells trades’ calendar gaps — open time at a better price, before it loses value.
 
-Nordic marketplace for leftover tradesperson capacity — hours (min 3), days, or one week — at a **visible price**. Not bidding.
+Nordic marketplace for leftover tradesperson capacity — hours (min 3), days, or one week — at a **visible price**, often below usual rates. Not bidding.
 
 P0 markets: **Oslo (NO)** and **Stockholm (SE)**. Trades: painting/wallpaper, electrician, plumber, carpenter, tile/masonry, roofing.
 
@@ -105,7 +105,7 @@ Password for all: `demo1234`
 
 ## P0 flows
 
-1. **Landing** — Norwegian default hero/CTAs: *Se ledig tid* / *Selg ledig tid*. Switcher **nb / sv / en** changes landing strings only.
+1. **Landing** — Norwegian default hero (*Se ledige timer og uker nær deg*) and CTAs: *Se ledig tid* / *Selg ledig tid*. Badge: *Ledige timer & uker — ofte under ordinær pris*. Switcher **nb / sv / en** changes landing strings only.
 2. **Business profile** — country, city, trade(s), org.nr; public only after admin approval
 3. **Publish slots** — trade, geography, start/end, unit hours(≥3)/day/week, visible price, «passer til»
 4. **Customer search** — place + period + trade

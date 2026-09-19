@@ -4,6 +4,7 @@ import { Trade } from "@prisma/client";
 import {
   DEFAULT_LOCALE,
   LOCALES,
+  PRODUCT_TAGLINES,
   landingCopy,
   parseLocale,
 } from "../lib/i18n";
@@ -30,6 +31,7 @@ test("landing copy exists for every locale with the same keys and trades", () =>
     assert.equal(copy.lang, locale);
     assert.equal(copy.chips.length, 4);
     assert.equal(copy.steps.length, 3);
+    assert.ok(copy.badge);
     for (const trade of trades) {
       assert.ok(copy.trades[trade], `${locale} missing trade ${trade}`);
     }
@@ -51,25 +53,64 @@ test("landing copy keeps locked commercial terms", () => {
   }
 });
 
-test("landing one-liners use WeekSlot and keep the hero titles", () => {
-  assert.equal(
-    landingCopy("nb").title,
-    "Se ledige timer, dager og uker nær deg",
-  );
+test("landing copy matches locked v6 WeekSlot strings", () => {
+  assert.equal(landingCopy("nb").title, "Se ledige timer og uker nær deg");
   assert.equal(
     landingCopy("nb").subtitle,
-    "WeekSlot selger ledig håndverkertid — timer, dager eller uker — til synlig pris, før tiden mister verdien.",
+    "Kalenderhull hos håndverkere — solgt før de mister verdien, ofte under ordinær pris. Fra 3 timer til én uke.",
+  );
+  assert.equal(landingCopy("nb").ctaSee, "Se ledig tid");
+  assert.equal(landingCopy("nb").ctaSell, "Selg ledig tid");
+  assert.equal(
+    landingCopy("nb").badge,
+    "Ledige timer & uker — ofte under ordinær pris",
   );
   assert.equal(
-    landingCopy("en").subtitle,
-    "WeekSlot sells open trade time — hours, days or weeks — at a clear price, before time loses its value.",
+    PRODUCT_TAGLINES.nb,
+    "WeekSlot selger kalenderhull hos håndverkere — ledig tid til bedre pris, før den mister verdien.",
   );
+
+  assert.equal(landingCopy("sv").title, "Se lediga timmar och veckor nära dig");
+  assert.equal(
+    landingCopy("sv").subtitle,
+    "Kalenderluckor hos hantverkare — sålda innan de förlorar värdet, ofta under ordinarie pris. Från 3 timmar till en vecka.",
+  );
+  assert.equal(landingCopy("sv").ctaSee, "Se ledig tid");
+  assert.equal(landingCopy("sv").ctaSell, "Sälj ledig tid");
+  assert.equal(
+    landingCopy("sv").badge,
+    "Lediga timmar & veckor — ofta under ordinarie pris",
+  );
+  assert.equal(
+    PRODUCT_TAGLINES.sv,
+    "WeekSlot säljer kalenderluckor hos hantverkare — ledig tid till bättre pris, innan den förlorar värdet.",
+  );
+
+  assert.equal(landingCopy("en").title, "See open hours and weeks near you");
+  assert.equal(
+    landingCopy("en").subtitle,
+    "Calendar gaps from trades — sold before they lose value, often below usual rates. From 3 hours to one week.",
+  );
+  assert.equal(landingCopy("en").ctaSee, "See open time");
+  assert.equal(landingCopy("en").ctaSell, "List open time");
+  assert.equal(
+    landingCopy("en").badge,
+    "Open hours & weeks — often under standard rates",
+  );
+  assert.equal(
+    PRODUCT_TAGLINES.en,
+    "WeekSlot sells trades’ calendar gaps — open time at a better price, before it loses value.",
+  );
+
   for (const locale of LOCALES) {
     const copy = landingCopy(locale);
-    assert.match(copy.subtitle, /WeekSlot/);
-    const branded = [copy.subtitle, ...copy.steps.map((step) => step.d)].join(
-      " ",
+    assert.equal(copy.subtitle !== PRODUCT_TAGLINES[locale], true);
+    assert.match(PRODUCT_TAGLINES[locale], /WeekSlot/);
+    assert.doesNotMatch(
+      [copy.badge, copy.title, copy.subtitle, PRODUCT_TAGLINES[locale]].join(
+        " ",
+      ),
+      /GapBook/,
     );
-    assert.doesNotMatch(branded, /GapBook/);
   }
 });
