@@ -29,7 +29,7 @@ export function BookingForm({
             håndheves mellom partene.
           </li>
           <li>
-            Jobben betales direkte til bedriften. GapBook tar ikke depositum og er
+            Jobben betales direkte til bedriften. WeekSlot tar ikke depositum og er
             ikke mellommann for jobbpengene.
           </li>
           <li>Bedriften holder avsatt tid og det som er oppgitt under «passer til».</li>

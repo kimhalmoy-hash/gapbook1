@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Outfit } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { PRODUCT_NAME } from "@/lib/constants";
 import "./globals.css";
 
 const display = Fraunces({
@@ -18,9 +19,9 @@ const body = Outfit({
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "GapBook — ledige timer, dager og uker",
+  title: `${PRODUCT_NAME} — ledige timer, dager og uker`,
   description:
-    "Book ledig håndverkerkapasitet fra 3 timer til én uke — til synlig pris. Ikke anbud.",
+    "WeekSlot selger ledig håndverkertid — timer, dager eller uker — til synlig pris, før tiden mister verdien.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

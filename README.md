@@ -1,10 +1,12 @@
-# GapBook
+# WeekSlot
+
+WeekSlot sells open trade time — hours, days or weeks — at a clear price, before time loses its value.
 
 Nordic marketplace for leftover tradesperson capacity — hours (min 3), days, or one week — at a **visible price**. Not bidding.
 
 P0 markets: **Oslo (NO)** and **Stockholm (SE)**. Trades: painting/wallpaper, electrician, plumber, carpenter, tile/masonry, roofing.
 
-Job money is paid **directly** between customer and business. GapBook does not take a deposit and does not use Stripe for the job. GapBook bills the business a **success fee** after the fact (0% on the first two bookings, then 5%). Invoice UI is a stub.
+Job money is paid **directly** between customer and business. WeekSlot does not take a deposit and does not use Stripe for the job. WeekSlot bills the business a **success fee** after the fact (0% on the first two bookings, then 5%). Invoice UI is a stub.
 
 Locked product terms: [`docs/vilkaar.md`](docs/vilkaar.md).
 

@@ -49,7 +49,7 @@ export default async function BusinessBookingsPage() {
         <p className="text-sm text-muted">Grunnlag for faktura (stub)</p>
         <p className="mt-1 font-serif text-3xl">{formatMoney(feeTotal, business.country === "SE" ? "SEK" : "NOK")}</p>
         <p className="mt-2 text-sm text-muted">
-          Faktura genereres månedlig — kommer. GapBook er ikke mellommann for
+          Faktura genereres månedlig — kommer. WeekSlot er ikke mellommann for
           jobbpengene.
         </p>
       </div>

@@ -1,7 +1,7 @@
-# GapBook — låste vilkår & P0 (2026-09-19)
+# WeekSlot — låste vilkår & P0 (2026-09-19)
 
 ## Posisjonering
-Selger ledige timer, dager og uker hos håndverkere til synlig pris — før tiden mister verdien. Ikke anbud.
+WeekSlot selger ledig håndverkertid — timer, dager eller uker — til synlig pris, før tiden mister verdien. Ikke anbud.
 
 ## Fag (live fra start)
 Maling/tapetsering, elektriker, rørlegger, tømrer/snekker, flis/mur, tak
@@ -17,7 +17,7 @@ NO+SE først: Oslo + Stockholm, deretter Bergen/Göteborg. DK(+FI) senere.
 ## Penger
 - Ingen kunde-depositum
 - Jobbpenger: direkte bedrift ↔ kunde
-- GapBook: 5 % success fee til bedrift i etterkant (månedlig faktura)
+- WeekSlot: 5 % success fee til bedrift i etterkant (månedlig faktura)
 - Launch: 0 % på første 2 bookinger per bedrift, deretter 5 %
 - Ikke mellommann på hovedbeløpet
 

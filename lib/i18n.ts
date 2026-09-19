@@ -43,7 +43,7 @@ const NB: LandingCopy = {
   kicker: "Oslo + Stockholm · synlig pris",
   title: "Se ledige timer, dager og uker nær deg",
   subtitle:
-    "Book fra 3 timer til én uke — til synlig pris. Ledig kapasitet hos flere fag, klar til å bookes.",
+    "WeekSlot selger ledig håndverkertid — timer, dager eller uker — til synlig pris, før tiden mister verdien.",
   ctaSee: "Se ledig tid",
   ctaSell: "Selg ledig tid",
   chips: [
@@ -72,7 +72,7 @@ const NB: LandingCopy = {
     {
       n: "03",
       t: "Gjør jobben opp",
-      d: "Jobbpenger går direkte bedrift ↔ kunde. GapBook tar success fee av bedriften etterpå.",
+      d: "Jobbpenger går direkte bedrift ↔ kunde. WeekSlot tar success fee av bedriften etterpå.",
     },
   ],
   businessHeading: "For bedrifter",
@@ -95,7 +95,7 @@ const SV: LandingCopy = {
   kicker: "Oslo + Stockholm · synligt pris",
   title: "Se lediga timmar, dagar och veckor nära dig",
   subtitle:
-    "Boka från 3 timmar till en vecka — till synligt pris. Ledig kapacitet hos flera yrken, redo att bokas.",
+    "WeekSlot säljer ledig hantverkartid — timmar, dagar eller veckor — till synligt pris, innan tiden tappar värde.",
   ctaSee: "Se ledig tid",
   ctaSell: "Sälj ledig tid",
   chips: [
@@ -124,7 +124,7 @@ const SV: LandingCopy = {
     {
       n: "03",
       t: "Gör upp om jobbet",
-      d: "Jobbpengar går direkt företag ↔ kund. GapBook tar success fee av företaget efteråt.",
+      d: "Jobbpengar går direkt företag ↔ kund. WeekSlot tar success fee av företaget efteråt.",
     },
   ],
   businessHeading: "För företag",
@@ -147,7 +147,7 @@ const EN: LandingCopy = {
   kicker: "Oslo + Stockholm · visible price",
   title: "See open hours, days and weeks near you",
   subtitle:
-    "Book from 3 hours to one week — at a visible price. Spare capacity across trades, ready to book.",
+    "WeekSlot sells open trade time — hours, days or weeks — at a clear price, before time loses its value.",
   ctaSee: "See open time",
   ctaSell: "Sell spare time",
   chips: [
@@ -176,7 +176,7 @@ const EN: LandingCopy = {
     {
       n: "03",
       t: "Settle the job",
-      d: "Job money goes directly business ↔ customer. GapBook bills the business a success fee afterwards.",
+      d: "Job money goes directly business ↔ customer. WeekSlot bills the business a success fee afterwards.",
     },
   ],
   businessHeading: "For businesses",

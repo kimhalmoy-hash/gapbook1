@@ -6,6 +6,7 @@ export const LAUNCH_FREE_BOOKINGS = 2;
 export const SUCCESS_FEE_PERCENT = 5;
 export const LATE_CANCEL_HOURS = 48;
 export const SESSION_COOKIE = "gapbook_session";
+export const PRODUCT_NAME = "WeekSlot";
 
 export const TRADES: { value: Trade; labelNb: string }[] = [
   { value: "PAINTING", labelNb: "Maling/tapetsering" },

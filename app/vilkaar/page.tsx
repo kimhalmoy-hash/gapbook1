@@ -9,8 +9,8 @@ export default function TermsPage() {
         <section>
           <h2 className="font-serif text-2xl">Posisjonering</h2>
           <p className="mt-2 text-muted">
-            GapBook selger ledige timer, dager og uker hos håndverkere til synlig
-            pris — før tiden mister verdien. Ikke anbud.
+            WeekSlot selger ledig håndverkertid — timer, dager eller uker — til
+            synlig pris, før tiden mister verdien. Ikke anbud.
           </p>
         </section>
         <section>
@@ -38,7 +38,7 @@ export default function TermsPage() {
           <ul className="mt-2 list-disc pl-5 text-muted">
             <li>Ingen kunde-depositum</li>
             <li>Jobbpenger: direkte bedrift ↔ kunde</li>
-            <li>GapBook: 5 % success fee til bedrift i etterkant (månedlig faktura)</li>
+            <li>WeekSlot: 5 % success fee til bedrift i etterkant (månedlig faktura)</li>
             <li>Launch: 0 % på første 2 bookinger per bedrift, deretter 5 %</li>
             <li>Ikke mellommann på hovedbeløpet</li>
           </ul>

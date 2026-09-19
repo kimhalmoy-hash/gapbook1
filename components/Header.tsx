@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { logoutAction } from "@/lib/actions/auth";
+import { PRODUCT_NAME } from "@/lib/constants";
 import { getSession } from "@/lib/session";
 
 export async function Header() {
@@ -9,7 +10,7 @@ export async function Header() {
     <header className="border-b border-line/80 bg-paper/80 backdrop-blur-sm sticky top-0 z-20">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="font-serif text-2xl tracking-tight text-pine">
-          GapBook
+          {PRODUCT_NAME}
         </Link>
         <nav className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm">
           <Link href="/sok" className="text-ink hover:text-clay">

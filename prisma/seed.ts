@@ -16,7 +16,7 @@ async function main() {
   const admin = await prisma.user.create({
     data: {
       email: "admin@gapbook.no",
-      name: "GapBook Admin",
+      name: "WeekSlot Admin",
       role: "ADMIN",
       passwordHash,
     },
@@ -259,7 +259,7 @@ async function main() {
     },
   });
 
-  console.log("Seeded GapBook demo data.");
+  console.log("Seeded WeekSlot demo data.");
   console.log("Admin:", admin.email);
   console.log("Customer:", customer.email);
   console.log("Open sample slot:", openHours.id);
