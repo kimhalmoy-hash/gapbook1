@@ -39,25 +39,54 @@ psql -c "CREATE DATABASE gapbook OWNER gapbook;"
 
 ```bash
 cp .env.example .env
-# set DATABASE_URL and a long AUTH_SECRET
+# set a long AUTH_SECRET (openssl rand -base64 32)
+# local Docker: keep DATABASE_URL and DIRECT_URL as they are (same URI)
 npm install
 npx prisma migrate deploy
 npm run db:seed
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000). Health: [http://localhost:3000/api/health](http://localhost:3000/api/health) → `{"ok":true,"db":"up"}`.
 
 ### Useful scripts
 
 | Script | What it does |
 | --- | --- |
 | `npm run dev` | Next.js dev server |
-| `npm run build` | Production build |
-| `npm test` | Slot window + success-fee unit tests |
-| `npm run db:migrate` | Apply Prisma migrations |
-| `npm run db:seed` | Replace data with the minimal demo set |
+| `npm run build` | Production build (no migrate — for local compile) |
+| `npm run vercel-build` | `prisma generate` + `prisma migrate deploy` + `next build` (what Vercel runs) |
+| `npm test` | Slot window, success-fee, and landing-copy unit tests |
+| `npm run db:migrate` | Apply Prisma migrations (`prisma migrate deploy`) |
+| `npm run db:migrate:dev` | Create a new migration locally |
+| `npm run db:seed` | Replace data with the minimal demo set (**deletes all rows**) |
 | `npm run db:studio` | Prisma Studio |
+
+## Deploy (production)
+
+Exact click-through: **[`docs/deploy.md`](docs/deploy.md)**.
+
+Short version:
+
+1. Create a **Neon** (or Supabase) Postgres project in the EU.
+2. Copy **pooled** URI → `DATABASE_URL` and **direct** URI → `DIRECT_URL`.
+3. Import this repo in **Vercel**. Set `DATABASE_URL`, `DIRECT_URL`, and `AUTH_SECRET`.
+4. Deploy. `vercel.json` runs `prisma migrate deploy` during the build.
+5. Check `https://<app>.vercel.app/api/health`.
+
+`prisma` is a runtime dependency so `migrate deploy` works on Vercel. Local Docker can use the same string for `DATABASE_URL` and `DIRECT_URL`; managed poolers cannot.
+
+## Environment variables
+
+See [`.env.example`](.env.example). Required:
+
+| Variable | Local | Production |
+| --- | --- | --- |
+| `DATABASE_URL` | Docker URI in `.env.example` | Pooled URI (`-pooler` / Supabase port 6543) with `sslmode=require&pgbouncer=true` |
+| `DIRECT_URL` | Same as `DATABASE_URL` | Unpooled URI (Neon without `-pooler`, or `DATABASE_URL_UNPOOLED`; Supabase port 5432) |
+| `AUTH_SECRET` | Random string | New random string (`openssl rand -base64 32`) |
+
+No Stripe keys. Do not put secrets in git.
 
 ## Demo accounts
 
@@ -74,7 +103,7 @@ Password for all: `demo1234`
 
 ## P0 flows
 
-1. **Landing** — Norwegian hero/CTAs: *Se ledig tid* / *Selg ledig tid*
+1. **Landing** — Norwegian default hero/CTAs: *Se ledig tid* / *Selg ledig tid*. Switcher **nb / sv / en** changes landing strings only.
 2. **Business profile** — country, city, trade(s), org.nr; public only after admin approval
 3. **Publish slots** — trade, geography, start/end, unit hours(≥3)/day/week, visible price, «passer til»
 4. **Customer search** — place + period + trade
