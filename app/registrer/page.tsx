@@ -18,8 +18,8 @@ export default async function RegisterPage({
     <PageShell>
       <h1 className="font-serif text-4xl">Lag konto</h1>
       <p className="mt-2 text-muted">
-        Kunder booker ledig tid. Bedrifter selger kapasitet etter manuell
-        godkjenning.
+        Kunder booker kalenderhull, ofte under ordinær pris. Bedrifter selger
+        ledig kapasitet etter manuell godkjenning.
       </p>
       <RegisterForm initialRole={initialRole} />
       <p className="mt-6 text-sm">

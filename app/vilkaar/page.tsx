@@ -1,4 +1,5 @@
 import { PageShell } from "@/components/ui";
+import { PRODUCT_TAGLINES } from "@/lib/i18n";
 
 export default function TermsPage() {
   return (
@@ -8,10 +9,7 @@ export default function TermsPage() {
       <div className="mt-6 space-y-6 text-[17px] leading-relaxed">
         <section>
           <h2 className="font-serif text-2xl">Posisjonering</h2>
-          <p className="mt-2 text-muted">
-            WeekSlot selger ledig håndverkertid — timer, dager eller uker — til
-            synlig pris, før tiden mister verdien. Ikke anbud.
-          </p>
+          <p className="mt-2 text-muted">{PRODUCT_TAGLINES.nb}</p>
         </section>
         <section>
           <h2 className="font-serif text-2xl">Fag</h2>
