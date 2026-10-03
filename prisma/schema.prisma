@@ -87,7 +87,10 @@ model Slot {
   endsAt                DateTime
   unit                  SlotUnit
   durationHours         Int
+  /// Selling price the customer pays. Stays the discounted open-slot price.
   priceAmount           Int
+  /// Ordinary price before discount. Shown only when higher than priceAmount.
+  listPrice             Int?
   currency              String
   suitableFor           String
   cancellationFeeAmount Int?

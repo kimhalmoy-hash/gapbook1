@@ -7,8 +7,20 @@ import { requireSession } from "@/lib/auth";
 import { sendBookingConfirmationStub } from "@/lib/email";
 import { feeAmount, feePercentForPriorCount } from "@/lib/fees";
 import { formatMoney, formatSlotWindow } from "@/lib/format";
+import { discountListPrice } from "@/lib/pricing";
 import { tradeLabel } from "@/lib/constants";
 import type { ActionState } from "./auth";
+
+function priceLabelForSlot(slot: {
+  listPrice: number | null;
+  priceAmount: number;
+  currency: string;
+}) {
+  const selling = formatMoney(slot.priceAmount, slot.currency);
+  const ordinary = discountListPrice(slot.listPrice, slot.priceAmount);
+  if (ordinary == null) return selling;
+  return `Ordinær pris ${formatMoney(ordinary, slot.currency)} · Rabattert pris ${selling}`;
+}
 
 export async function createBookingAction(
   slotId: string,
@@ -75,7 +87,7 @@ export async function createBookingAction(
     bookingId: booking.id,
     businessName: slot.business.name,
     slotSummary: `${tradeLabel(slot.trade)}, ${slot.city}, ${formatSlotWindow(slot.startsAt, slot.endsAt, slot.unit)}`,
-    priceLabel: formatMoney(slot.priceAmount, slot.currency),
+    priceLabel: priceLabelForSlot(slot),
   });
 
   await prisma.booking.update({

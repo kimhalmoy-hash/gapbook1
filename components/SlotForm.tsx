@@ -19,6 +19,7 @@ type Props = {
     durationHours: number;
     days: number;
     priceAmount: number;
+    listPrice?: number | null;
     suitableFor: string;
     cancellationFeeAmount: number | null;
   };
@@ -37,7 +38,6 @@ export function SlotForm({ slotId, allowedTrades, city, currency, defaults }: Pr
       <ErrorText error={state?.error} />
       <p className="text-sm text-muted">
         Publiseres i {city}. Selg kalenderhull: minst 3 timer, maks én uke.
-        Synlig pris i {currency} — gjerne under ordinær.
       </p>
       <Field label="Fag">
         <select className={inputClass} defaultValue={defaults?.trade} name="trade" required>
@@ -108,7 +108,19 @@ export function SlotForm({ slotId, allowedTrades, city, currency, defaults }: Pr
           />
         </Field>
       )}
-      <Field label={`Synlig pris (${currency})`}>
+      <Field label={`Ordinær pris (${currency}, valgfritt)`}>
+        <input
+          className={inputClass}
+          defaultValue={defaults?.listPrice ?? ""}
+          min={1}
+          name="listPrice"
+          type="number"
+        />
+      </Field>
+      <Field
+        hint="Salgsprisen skal være den rabatterte prisen for åpen slot."
+        label={`Salgspris (${currency})`}
+      >
         <input
           className={inputClass}
           defaultValue={defaults?.priceAmount}

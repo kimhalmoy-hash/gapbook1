@@ -49,6 +49,7 @@ export default async function EditSlotPage({
               durationHours: slot.durationHours,
               days: Math.min(7, Math.max(1, days)),
               priceAmount: slot.priceAmount,
+              listPrice: slot.listPrice,
               suitableFor: slot.suitableFor,
               cancellationFeeAmount: slot.cancellationFeeAmount,
             }}

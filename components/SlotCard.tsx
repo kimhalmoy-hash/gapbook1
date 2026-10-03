@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Country, SlotStatus, SlotUnit, Trade } from "@prisma/client";
-import { formatMoney, formatPlace, formatSlotWindow, formatTradeUnit } from "@/lib/format";
+import { SlotPrice } from "@/components/SlotPrice";
+import { formatPlace, formatSlotWindow, formatTradeUnit } from "@/lib/format";
 
 type SlotCardProps = {
   id: string;
@@ -11,6 +12,7 @@ type SlotCardProps = {
   endsAt: Date;
   unit: SlotUnit;
   priceAmount: number;
+  listPrice?: number | null;
   currency: string;
   suitableFor: string;
   status: SlotStatus;
@@ -39,9 +41,11 @@ export function SlotCard(slot: SlotCardProps) {
       <p className="mt-1 text-sm text-muted">{slot.businessName}</p>
       <p className="mt-3 text-sm">{formatSlotWindow(slot.startsAt, slot.endsAt, slot.unit)}</p>
       <p className="mt-2 line-clamp-2 text-sm text-muted">{slot.suitableFor}</p>
-      <p className="mt-4 font-serif text-2xl text-clay">
-        {formatMoney(slot.priceAmount, slot.currency)}
-      </p>
+      <SlotPrice
+        currency={slot.currency}
+        listPrice={slot.listPrice}
+        priceAmount={slot.priceAmount}
+      />
     </Link>
   );
 }
