@@ -15,7 +15,7 @@ export async function sendBookingConfirmationStub(input: BookingEmailInput) {
     `Booking: ${input.bookingId}`,
     `Bedrift: ${input.businessName}`,
     `Slot: ${input.slotSummary}`,
-    `Synlig pris: ${input.priceLabel}`,
+    `Pris: ${input.priceLabel}`,
     `Jobbpenger betales direkte til bedriften. Ingen depositum via ${PRODUCT_NAME}.`,
   ].join("\n");
 

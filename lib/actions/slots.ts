@@ -6,6 +6,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireBusiness } from "@/lib/auth";
 import { currencyForCity, TRADES } from "@/lib/constants";
+import { validateSlotPrices } from "@/lib/pricing";
 import { computeSlotRange, validateSlotWindow } from "@/lib/slots";
 import type { ActionState } from "./auth";
 
@@ -32,6 +33,7 @@ function parseSlotForm(formData: FormData) {
   const durationHours = asInt(formData, "durationHours") ?? undefined;
   const days = asInt(formData, "days") ?? undefined;
   const priceAmount = asInt(formData, "priceAmount");
+  const listPrice = asInt(formData, "listPrice");
   const suitableFor = asString(formData, "suitableFor");
   const cancellationFeeAmount = asInt(formData, "cancellationFeeAmount");
 
@@ -42,6 +44,7 @@ function parseSlotForm(formData: FormData) {
     durationHours,
     days,
     priceAmount,
+    listPrice,
     suitableFor,
     cancellationFeeAmount,
   };
@@ -64,9 +67,9 @@ function validatePublishInput(
   if (input.unit === "HOURS" && (input.durationHours ?? 0) < 3) {
     return { error: "Time-slot må være minst 3 timer." };
   }
-  if (!input.priceAmount || input.priceAmount <= 0) {
-    return { error: "Synlig pris må være større enn 0." };
-  }
+  const priceError = validateSlotPrices(input.priceAmount, input.listPrice);
+  if (priceError) return { error: priceError };
+  if (input.priceAmount == null) return { error: "Salgspris må være større enn 0." };
   if (!input.suitableFor) return { error: "Oppgi hva sloten passer til." };
 
   const range = computeSlotRange({
@@ -84,6 +87,7 @@ function validatePublishInput(
       trade: input.trade,
       unit: input.unit,
       priceAmount: input.priceAmount,
+      listPrice: input.listPrice,
       suitableFor: input.suitableFor,
       cancellationFeeAmount: input.cancellationFeeAmount,
       city,
@@ -122,6 +126,7 @@ export async function createSlotAction(
         unit: parsed.data.unit,
         durationHours: parsed.data.durationHours,
         priceAmount: parsed.data.priceAmount,
+        listPrice: parsed.data.listPrice,
         currency: parsed.data.currency,
         suitableFor: parsed.data.suitableFor,
         cancellationFeeAmount: parsed.data.cancellationFeeAmount,
@@ -168,6 +173,7 @@ export async function updateSlotAction(
       unit: parsed.data.unit,
       durationHours: parsed.data.durationHours,
       priceAmount: parsed.data.priceAmount,
+      listPrice: parsed.data.listPrice,
       currency: parsed.data.currency,
       suitableFor: parsed.data.suitableFor,
       cancellationFeeAmount: parsed.data.cancellationFeeAmount,

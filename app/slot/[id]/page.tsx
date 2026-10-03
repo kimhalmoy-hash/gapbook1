@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BookingForm } from "@/components/BookingForm";
+import { SlotPrice } from "@/components/SlotPrice";
 import { PageShell } from "@/components/ui";
 import { LATE_CANCEL_HOURS, tradeLabel } from "@/lib/constants";
 import { formatMoney, formatPlace, formatSlotWindow } from "@/lib/format";
@@ -35,9 +36,12 @@ export default async function SlotPage({
       <p className="mt-4 text-lg">
         {formatSlotWindow(slot.startsAt, slot.endsAt, slot.unit)}
       </p>
-      <p className="mt-2 font-serif text-4xl text-clay">
-        {formatMoney(slot.priceAmount, slot.currency)}
-      </p>
+      <SlotPrice
+        currency={slot.currency}
+        listPrice={slot.listPrice}
+        priceAmount={slot.priceAmount}
+        size="detail"
+      />
       <div className="ticket mt-6 p-5">
         <h2 className="font-serif text-2xl">Passer til</h2>
         <p className="mt-2 text-muted">{slot.suitableFor}</p>
