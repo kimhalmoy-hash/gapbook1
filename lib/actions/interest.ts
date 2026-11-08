@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 import type { InterestRole } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
-import { INTEREST_CITY, questionsFor, sanitizeAnswers } from "@/lib/interest";
+import { normalizeCity, questionsFor, sanitizeAnswers } from "@/lib/interest";
 
 export type InterestFormState = { error?: string } | null;
 
@@ -15,7 +15,7 @@ export async function submitInterestAction(
 ): Promise<InterestFormState> {
   // Honeypot: real browsers leave this empty.
   if (String(formData.get("website") ?? "").trim() !== "") {
-    redirect("/trondheim/takk");
+    redirect("/interesse/takk");
   }
 
   const roleRaw = String(formData.get("role") ?? "");
@@ -23,6 +23,11 @@ export async function submitInterestAction(
     roleRaw === "CUSTOMER" || roleRaw === "BUSINESS" ? roleRaw : null;
   if (!role) {
     return { error: "Velg om du er privatperson eller håndverksbedrift." };
+  }
+
+  const city = normalizeCity(String(formData.get("city") ?? ""));
+  if (city.length < 2) {
+    return { error: "Skriv inn byen eller stedet du vil ha WeekSlot i." };
   }
 
   const raw: Record<string, string[]> = {};
@@ -51,7 +56,7 @@ export async function submitInterestAction(
   await prisma.interest.create({
     data: {
       role,
-      city: INTEREST_CITY,
+      city,
       answers,
       email: email || null,
       postcode: postcode || null,
@@ -59,5 +64,5 @@ export async function submitInterestAction(
     },
   });
 
-  redirect("/trondheim/takk");
+  redirect(`/interesse/takk?city=${encodeURIComponent(city)}`);
 }

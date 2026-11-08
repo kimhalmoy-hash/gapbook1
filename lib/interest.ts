@@ -1,12 +1,65 @@
 import type { InterestRole } from "@prisma/client";
 
 /**
- * Pre-launch interest test for a new market (first: Trondheim).
+ * Pre-launch interest test. Respondents pick the city they want WeekSlot in;
+ * the admin page tallies per city so the launch city is chosen by demand.
  * The questions are the data model: the form renders them, the server action
  * validates against them, and the admin page aggregates on them.
  */
 
-export const INTEREST_CITY = "Trondheim";
+/** Suggested cities (datalist); any other Norwegian place is accepted as free text. */
+export const CITY_SUGGESTIONS: readonly string[] = [
+  "Oslo",
+  "Bergen",
+  "Trondheim",
+  "Stavanger",
+  "Kristiansand",
+  "Drammen",
+  "Fredrikstad",
+  "Sandnes",
+  "Tromsø",
+  "Ålesund",
+  "Bodø",
+  "Tønsberg",
+  "Sandefjord",
+  "Moss",
+  "Haugesund",
+  "Skien",
+  "Porsgrunn",
+  "Hamar",
+  "Lillehammer",
+  "Gjøvik",
+  "Arendal",
+  "Molde",
+  "Kristiansund",
+  "Harstad",
+  "Halden",
+  "Larvik",
+  "Lillestrøm",
+  "Asker",
+  "Bærum",
+  "Stjørdal",
+  "Steinkjer",
+  "Melhus",
+  "Malvik",
+  "Klæbu",
+];
+
+/** Title-case a free-text city and strip anything that is not a place name. */
+export function normalizeCity(raw: string): string {
+  const cleaned = raw
+    .replace(/[^\p{L}\p{M} .'-]/gu, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 40);
+  if (!cleaned) return "";
+  const known = CITY_SUGGESTIONS.find((c) => c.toLowerCase() === cleaned.toLowerCase());
+  if (known) return known;
+  return cleaned
+    .split(" ")
+    .map((w) => (w ? w[0].toLocaleUpperCase("nb-NO") + w.slice(1) : w))
+    .join(" ");
+}
 
 export type InterestQuestion = {
   id: string;

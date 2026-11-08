@@ -16,7 +16,7 @@ export default async function AdminPage() {
       <p className="mt-2 text-muted">
         Bedrifter er ikke offentlige før manuell godkjenning.{" "}
         <a className="underline" href="/admin/interesse">
-          Interesse Trondheim →
+          Interesse (forhåndslansering) →
         </a>
       </p>
       <div className="mt-6 space-y-3">
