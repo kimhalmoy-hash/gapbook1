@@ -47,6 +47,25 @@ enum BookingStatus {
   CANCELLED
 }
 
+enum InterestRole {
+  CUSTOMER
+  BUSINESS
+}
+
+/// Interest/survey responses from the Trondheim pre-launch test (/trondheim).
+model Interest {
+  id        String       @id @default(cuid())
+  role      InterestRole
+  city      String
+  answers   Json
+  email     String?
+  postcode  String?
+  source    String?
+  createdAt DateTime     @default(now())
+
+  @@index([city, role, createdAt])
+}
+
 model User {
   id           String    @id @default(cuid())
   email        String    @unique
