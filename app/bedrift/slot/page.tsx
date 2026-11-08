@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Flash } from "@/components/Flash";
 import { requireBusiness } from "@/lib/auth";
-import { formatMoney, formatSlotWindow } from "@/lib/format";
+import { SlotPrice } from "@/components/SlotPrice";
+import { formatSlotWindow } from "@/lib/format";
 import { slotStatusLabel, tradeLabel } from "@/lib/constants";
 import { prisma } from "@/lib/prisma";
 
@@ -47,7 +48,12 @@ export default async function BusinessSlotsPage({
             <p className="mt-1 text-sm text-muted">
               {formatSlotWindow(slot.startsAt, slot.endsAt, slot.unit)}
             </p>
-            <p className="mt-1">{formatMoney(slot.priceAmount, slot.currency)}</p>
+            <SlotPrice
+              currency={slot.currency}
+              listPrice={slot.listPrice}
+              priceAmount={slot.priceAmount}
+              size="inline"
+            />
           </Link>
         ))}
       </div>

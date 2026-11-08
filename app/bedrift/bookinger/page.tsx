@@ -1,5 +1,6 @@
 import { requireBusiness } from "@/lib/auth";
 import { LAUNCH_FREE_BOOKINGS, SUCCESS_FEE_PERCENT } from "@/lib/constants";
+import { SlotPrice } from "@/components/SlotPrice";
 import { formatDateTime, formatMoney } from "@/lib/format";
 import { prisma } from "@/lib/prisma";
 
@@ -37,7 +38,14 @@ export default async function BusinessBookingsPage() {
                 <td className="py-2">{index + 1}</td>
                 <td>{booking.customer.name}</td>
                 <td>{formatDateTime(booking.agreementAcceptedAt)}</td>
-                <td>{formatMoney(booking.slot.priceAmount, booking.slot.currency)}</td>
+                <td>
+                  <SlotPrice
+                    currency={booking.slot.currency}
+                    listPrice={booking.slot.listPrice}
+                    priceAmount={booking.slot.priceAmount}
+                    size="inline"
+                  />
+                </td>
                 <td>{booking.feePercent} %</td>
                 <td>{formatMoney(booking.feeAmount, booking.slot.currency)}</td>
               </tr>

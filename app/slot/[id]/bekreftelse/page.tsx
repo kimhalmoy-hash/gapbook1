@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { SlotPrice } from "@/components/SlotPrice";
 import { PageShell } from "@/components/ui";
-import { formatDateTime, formatMoney, formatSlotWindow } from "@/lib/format";
+import { formatDateTime, formatSlotWindow } from "@/lib/format";
 import { prisma } from "@/lib/prisma";
 import { requireRole } from "@/lib/auth";
 
@@ -29,9 +30,12 @@ export default async function BookingConfirmationPage({
       <div className="ticket mt-6 space-y-2 p-5">
         <p className="font-serif text-2xl">{booking.business.name}</p>
         <p>{formatSlotWindow(booking.slot.startsAt, booking.slot.endsAt, booking.slot.unit)}</p>
-        <p className="text-clay">
-          {formatMoney(booking.slot.priceAmount, booking.slot.currency)}
-        </p>
+        <SlotPrice
+          currency={booking.slot.currency}
+          listPrice={booking.slot.listPrice}
+          priceAmount={booking.slot.priceAmount}
+          size="inline"
+        />
         <p className="text-sm text-muted">
           Betal bedriften direkte. WeekSlot tar ikke jobbpengene.
         </p>

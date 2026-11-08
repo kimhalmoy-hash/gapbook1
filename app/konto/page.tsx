@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { SlotPrice } from "@/components/SlotPrice";
 import { PageShell } from "@/components/ui";
 import { requireRole } from "@/lib/auth";
-import { formatDateTime, formatMoney, formatSlotWindow } from "@/lib/format";
+import { formatDateTime, formatSlotWindow } from "@/lib/format";
 import { prisma } from "@/lib/prisma";
 
 export default async function AccountPage() {
@@ -31,7 +32,12 @@ export default async function AccountPage() {
             <p className="mt-1 text-sm">
               {formatSlotWindow(booking.slot.startsAt, booking.slot.endsAt, booking.slot.unit)}
             </p>
-            <p className="mt-2">{formatMoney(booking.slot.priceAmount, booking.slot.currency)}</p>
+            <SlotPrice
+              currency={booking.slot.currency}
+              listPrice={booking.slot.listPrice}
+              priceAmount={booking.slot.priceAmount}
+              size="inline"
+            />
             <p className="mt-2 text-sm text-muted">
               Avtale godkjent {formatDateTime(booking.agreementAcceptedAt)}
             </p>
