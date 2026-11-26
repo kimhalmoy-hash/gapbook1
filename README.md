@@ -32,17 +32,19 @@ Norsk bokmål er standardspråk, uten prefiks. Svensk og engelsk ligger under `/
 
 | Side | Innhold |
 | --- | --- |
-| `/` | Forside med filter på uke, kommune, type og alder |
-| `/vinterferie/2027/`, `/sommerleir/2027/`, `/hostferie/2027/`, `/paske/2027/` | Sesong. Tittelen tar ukene fra skoleruta |
-| `/vinterferie/2027/bergen/` | Ferie og kommune sammen: gratis tilbud og betalte kurs, med datoene fra skoleruta |
-| `/uke/2027-08/` | Kalenderuke. Tallet og året kommer fra dataene |
-| `/by/bergen/` | Tilbud i kommunen og kommunens høstferie, vinterferie og påske, med kilde |
-| `/type/idrettsleir/` | Én type |
+| `/` | Forside. Fire utvalgte kort per ferie, med «Se alle» til huben, og filter på uke, kommune, type og alder |
+| `/vinterferie/`, `/hostferie/`, `/paskeferie/`, `/sommerleir/` | Feriehub. Året står i tittelen og kommer fra neste sesong i skoleruta og tilbudene |
+| `/vinterferie/oslo/` | Ferie og kommune. Uke og datoer fra skoleruta rett under H1, med kilde |
+| `/vinterferie/uke-8/`, `/vinterferie/fylke/oslo/` | Uke og fylke der dataene har dem. Samme mønster for de andre feriene |
+| `/skoleruta/bergen/` | Høstferie, vinterferie og påske med uke, datoer, kilde og lenke til tilbudene. Finnes for alle 30 kommuner |
+| `/fotballskole/`, `/rideleir/` | Nasjonal hub bare når `type` mapper rent, med kommunesider under. `sommerskole` og `ferieklubb` får egen sti først når en type matcher. Andre typer ligger på `/type/<slug>/` |
 | `/leir/<id>/` | Ett tilbud, med lenke til påmelding |
 
-Hver side har egen tittel, beskrivelse, canonical og Open Graph. JSON-LD er bare `ItemList` og `BreadcrumbList`.
+Året er aldri en del av stien. Slug er ASCII (`baerum`, `tromso`, `alesund`, `fardar`). Gamle stier fra denne PR-en (`/uke/…`, `/vinterferie/2027/…`, `/by/…`, `/type/fotballskole` og tilsvarende) har 301 i `vercel.json`.
 
-Lister med færre enn 3 synlige `verifisert`- eller `delvis`-rader får `noindex,follow` og er ute av sitemap. `forventet` vises med «Forventet – 2027-dato ikke publisert ennå» og fjorårsnotatet, men teller ikke med. `delvis` viser hva som mangler. Døde og utløpte rader skjules.
+Hver side har egen tittel, beskrivelse, canonical og Open Graph. JSON-LD er bare `ItemList` og `BreadcrumbList`. Der en rad i søkeordlisten treffer stien, brukes `foreslatt_tittel`.
+
+Lister med færre enn 3 synlige `verifisert`- eller `delvis`-rader får `noindex,follow` og er ute av sitemap. Unntaket er `/skoleruta/<kommune>/`: den indekseres når datoene er verifisert, også med få tilbud. `forventet` vises med «Forventet – 2027-dato ikke publisert ennå» og fjorårsnotatet, men teller ikke med. `delvis` viser hva som mangler. Døde og utløpte rader skjules.
 
 `forventet`-sider og tynne lister indekseres av seg selv når flere verifiserte tilbud kommer inn. Demo-rader (`demo: true`) vises aldri på indekserbare sider.
 

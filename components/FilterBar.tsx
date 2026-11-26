@@ -5,7 +5,15 @@ import { CampCard } from "@/components/CampCard";
 import type { CampView } from "@/lib/katalog";
 import type { Copy } from "@/lib/i18n";
 
-export function FilterBar({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }) {
+export function FilterBar({
+  leirer,
+  tekst,
+  sesonger,
+}: {
+  leirer: CampView[];
+  tekst: Copy;
+  sesonger: { href: string; label: string }[];
+}) {
   const [uke, setUke] = useState("");
   const [kommune, setKommune] = useState("");
   const [type, setType] = useState("");
@@ -47,12 +55,15 @@ export function FilterBar({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }
     return true;
   });
 
+  const filtrert = Boolean(uke || kommune || type || alder);
+
   return (
     <div id="sok">
-      <form className="grid gap-3 rounded-2xl border border-line bg-card p-4 sm:grid-cols-2 lg:grid-cols-4" onSubmit={(e) => e.preventDefault()}>
-        <label className="grid gap-1 text-sm">
+      {!filtrert ? <SesongUtvalg leirer={leirer} tekst={tekst} sesonger={sesonger} /> : null}
+      <form className={`grid min-w-0 gap-3 rounded-2xl border border-line bg-card p-4 sm:grid-cols-2 lg:grid-cols-4 ${filtrert ? "" : "mt-12"}`} onSubmit={(e) => e.preventDefault()}>
+        <label className="grid min-w-0 gap-1 text-sm">
           <span className="font-medium">{tekst.filters.week}</span>
-          <select className="rounded-lg border border-line bg-white px-3 py-2" value={uke} onChange={(e) => setUke(e.target.value)}>
+          <select className="w-full min-w-0 rounded-lg border border-line bg-white px-3 py-2" value={uke} onChange={(e) => setUke(e.target.value)}>
             <option value="">{tekst.filters.all}</option>
             {uker.map(([nokkel, label]) => (
               <option key={nokkel} value={nokkel}>{label}</option>
@@ -61,7 +72,7 @@ export function FilterBar({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }
         </label>
         <label className="grid gap-1 text-sm">
           <span className="font-medium">{tekst.filters.place}</span>
-          <select className="rounded-lg border border-line bg-white px-3 py-2" value={kommune} onChange={(e) => setKommune(e.target.value)}>
+          <select className="w-full min-w-0 rounded-lg border border-line bg-white px-3 py-2" value={kommune} onChange={(e) => setKommune(e.target.value)}>
             <option value="">{tekst.filters.all}</option>
             {kommuner.map(([nokkel, label]) => (
               <option key={nokkel} value={nokkel}>{label}</option>
@@ -70,7 +81,7 @@ export function FilterBar({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }
         </label>
         <label className="grid gap-1 text-sm">
           <span className="font-medium">{tekst.filters.type}</span>
-          <select className="rounded-lg border border-line bg-white px-3 py-2" value={type} onChange={(e) => setType(e.target.value)}>
+          <select className="w-full min-w-0 rounded-lg border border-line bg-white px-3 py-2" value={type} onChange={(e) => setType(e.target.value)}>
             <option value="">{tekst.filters.all}</option>
             {typer.map(([nokkel, label]) => (
               <option key={nokkel} value={nokkel}>{label}</option>
@@ -79,7 +90,7 @@ export function FilterBar({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }
         </label>
         <label className="grid gap-1 text-sm">
           <span className="font-medium">{tekst.filters.age}</span>
-          <select className="rounded-lg border border-line bg-white px-3 py-2" value={alder} onChange={(e) => setAlder(e.target.value)}>
+          <select className="w-full min-w-0 rounded-lg border border-line bg-white px-3 py-2" value={alder} onChange={(e) => setAlder(e.target.value)}>
             <option value="">{tekst.filters.all}</option>
             {Array.from({ length: 15 }, (_, i) => i + 5).map((aar) => (
               <option key={aar} value={aar}>{aar}</option>
@@ -88,15 +99,59 @@ export function FilterBar({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }
         </label>
       </form>
       <p className="mt-4 text-sm text-muted">{tekst.filters.count.replace("{n}", String(vist.length))}</p>
-      {vist.length ? (
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {vist.map((camp) => (
-            <CampCard key={camp.id} camp={camp} tekst={tekst} />
-          ))}
-        </div>
-      ) : (
-        <p className="mt-6 text-lg">{tekst.empty}</p>
-      )}
+      {filtrert ? (
+        vist.length ? (
+          <div className="mt-4 grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {vist.slice(0, 12).map((camp) => (
+              <CampCard key={camp.id} camp={camp} tekst={tekst} />
+            ))}
+          </div>
+        ) : (
+          <p className="mt-6 text-lg">{tekst.empty}</p>
+        )
+      ) : null}
+    </div>
+  );
+}
+
+function SesongUtvalg({
+  leirer,
+  tekst,
+  sesonger,
+}: {
+  leirer: CampView[];
+  tekst: Copy;
+  sesonger: { href: string; label: string }[];
+}) {
+  return (
+    <div className="grid gap-10">
+      {sesonger.map((sesong) => {
+        const nokkel = sesong.href.includes("vinterferie")
+          ? "vinter"
+          : sesong.href.includes("sommerleir")
+            ? "sommer"
+            : sesong.href.includes("hostferie")
+              ? "host"
+              : "paske";
+        const valgt = leirer
+          .filter((camp) => camp.sesong.startsWith(nokkel))
+          .sort((a, b) => (a.status === b.status ? 0 : a.status === "verifisert" ? -1 : b.status === "verifisert" ? 1 : a.status === "delvis" ? -1 : 1))
+          .slice(0, 4);
+        if (!valgt.length) return null;
+        return (
+          <section key={sesong.href}>
+            <div className="flex flex-wrap items-end justify-between gap-3">
+              <h2 className="font-serif text-3xl">{sesong.label}</h2>
+              <a className="text-sm font-semibold text-clay hover:underline" href={sesong.href}>{tekst.seeAll}</a>
+            </div>
+            <div className="mt-4 grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {valgt.map((camp) => (
+                <CampCard key={camp.id} camp={camp} tekst={tekst} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }

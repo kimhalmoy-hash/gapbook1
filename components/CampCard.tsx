@@ -1,10 +1,13 @@
 import type { CampView } from "@/lib/katalog";
 import type { Copy } from "@/lib/i18n";
 
-export function CampCard({ camp, tekst, visNotat }: { camp: CampView; tekst: Copy; visNotat?: boolean }) {
-  const notat = visNotat ? camp.notat : camp.notatIListe;
+function kommentar(tekst: string) {
+  return `<!-- ${tekst.replace(/--/g, "–")} -->`;
+}
+
+export function CampCard({ camp, tekst }: { camp: CampView; tekst: Copy; visNotat?: boolean }) {
   return (
-    <article id={camp.id} className={`ticket flex h-full flex-col p-5 ${camp.fremhevet ? "border-clay" : ""}`}>
+    <article id={camp.id} className={`ticket flex h-full min-w-0 flex-col p-5 ${camp.fremhevet ? "border-clay" : ""}`}>
       <div className="flex flex-wrap gap-2">
         {camp.fremhevet ? (
           <span className="rounded-full bg-clay px-2.5 py-0.5 text-xs font-semibold text-white">{tekst.featured}</span>
@@ -56,8 +59,12 @@ export function CampCard({ camp, tekst, visNotat }: { camp: CampView; tekst: Cop
       <p className="mt-3 text-sm">{camp.pameldingLabel}</p>
       {camp.apnerLabel ? <p className="text-sm">{camp.apnerLabel}</p> : null}
       {camp.sjekketLabel ? <p className="text-sm text-muted">{camp.sjekketLabel}</p> : null}
-      {notat ? <p className="mt-3 text-sm text-muted">{notat}</p> : null}
+      {camp.kortLinje ? <p className="mt-3 text-sm text-muted">{camp.kortLinje}</p> : null}
+      {camp.notat ? <span dangerouslySetInnerHTML={{ __html: kommentar(camp.notat) }} /> : null}
       <div className="mt-auto flex flex-wrap gap-3 pt-4 text-sm">
+        <a href={camp.url} className="text-pine hover:underline" rel="noopener noreferrer">
+          {tekst.source}
+        </a>
         <a href={camp.url} className="font-semibold text-clay hover:underline" rel="noopener noreferrer">
           {camp.utenPamelding ? tekst.seeOrganiser : tekst.signup}
         </a>
@@ -74,7 +81,7 @@ export function CampCard({ camp, tekst, visNotat }: { camp: CampView; tekst: Cop
 export function CampGrid({ leirer, tekst, visNotat }: { leirer: CampView[]; tekst: Copy; visNotat?: boolean }) {
   if (!leirer.length) return null;
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {leirer.map((camp) => (
         <CampCard key={camp.id} camp={camp} tekst={tekst} visNotat={visNotat} />
       ))}

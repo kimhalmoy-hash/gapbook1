@@ -43,12 +43,14 @@ export function Header({
           )}
         </nav>
       </div>
-      <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 pb-3 text-sm">
-        {sesongLenker.map((s) => (
-          <a key={s.href} href={s.href} className="shrink-0 rounded-full border border-line bg-card px-3 py-1 hover:border-pine">
-            {s.label}
-          </a>
-        ))}
+      <div className="piller">
+        <div className="mx-auto flex w-max gap-2 px-4 pb-3 text-sm">
+          {sesongLenker.map((s) => (
+            <a key={s.href} href={s.href} className="shrink-0 rounded-full border border-line bg-card px-3 py-1 hover:border-pine">
+              {s.label}
+            </a>
+          ))}
+        </div>
       </div>
     </header>
   );

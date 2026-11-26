@@ -2,5 +2,474 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "buildCommand": "npm run build",
-  "regions": ["fra1"]
+  "regions": [
+    "fra1"
+  ],
+  "redirects": [
+    {
+      "source": "/vinterferie/:year(\\d{4})",
+      "destination": "/vinterferie",
+      "permanent": true
+    },
+    {
+      "source": "/vinterferie/:year(\\d{4})/:path*",
+      "destination": "/vinterferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/hostferie/:year(\\d{4})",
+      "destination": "/hostferie",
+      "permanent": true
+    },
+    {
+      "source": "/hostferie/:year(\\d{4})/:path*",
+      "destination": "/hostferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/sommerleir/:year(\\d{4})",
+      "destination": "/sommerleir",
+      "permanent": true
+    },
+    {
+      "source": "/sommerleir/:year(\\d{4})/:path*",
+      "destination": "/sommerleir/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/paske/:year(\\d{4})",
+      "destination": "/paskeferie",
+      "permanent": true
+    },
+    {
+      "source": "/paske/:year(\\d{4})/:path*",
+      "destination": "/paskeferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/by/:kommune",
+      "destination": "/skoleruta/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-07",
+      "destination": "/vinterferie/uke-7",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-08",
+      "destination": "/vinterferie/uke-8",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-09",
+      "destination": "/vinterferie/uke-9",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2026-40",
+      "destination": "/hostferie/uke-40",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2026-41",
+      "destination": "/hostferie/uke-41",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-25",
+      "destination": "/sommerleir/uke-25",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-26",
+      "destination": "/sommerleir/uke-26",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-27",
+      "destination": "/sommerleir/uke-27",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-28",
+      "destination": "/sommerleir/uke-28",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-29",
+      "destination": "/sommerleir/uke-29",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-30",
+      "destination": "/sommerleir/uke-30",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-31",
+      "destination": "/sommerleir/uke-31",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-32",
+      "destination": "/sommerleir/uke-32",
+      "permanent": true
+    },
+    {
+      "source": "/uke/2027-33",
+      "destination": "/sommerleir/uke-33",
+      "permanent": true
+    },
+    {
+      "source": "/type/fotballskole",
+      "destination": "/fotballskole",
+      "permanent": true
+    },
+    {
+      "source": "/type/fotballskole/:kommune",
+      "destination": "/fotballskole/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/type/rideleir",
+      "destination": "/rideleir",
+      "permanent": true
+    },
+    {
+      "source": "/type/rideleir/:kommune",
+      "destination": "/rideleir/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/type/seilleir",
+      "destination": "/seilleir",
+      "permanent": true
+    },
+    {
+      "source": "/type/seilleir/:kommune",
+      "destination": "/seilleir/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/type/idrettsleir",
+      "destination": "/idrettsleir",
+      "permanent": true
+    },
+    {
+      "source": "/type/idrettsleir/:kommune",
+      "destination": "/idrettsleir/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/sv/vinterferie/:year(\\d{4})",
+      "destination": "/sv/vinterferie",
+      "permanent": true
+    },
+    {
+      "source": "/sv/vinterferie/:year(\\d{4})/:path*",
+      "destination": "/sv/vinterferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/sv/hostferie/:year(\\d{4})",
+      "destination": "/sv/hostferie",
+      "permanent": true
+    },
+    {
+      "source": "/sv/hostferie/:year(\\d{4})/:path*",
+      "destination": "/sv/hostferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/sv/sommerleir/:year(\\d{4})",
+      "destination": "/sv/sommerleir",
+      "permanent": true
+    },
+    {
+      "source": "/sv/sommerleir/:year(\\d{4})/:path*",
+      "destination": "/sv/sommerleir/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/sv/paske/:year(\\d{4})",
+      "destination": "/sv/paskeferie",
+      "permanent": true
+    },
+    {
+      "source": "/sv/paske/:year(\\d{4})/:path*",
+      "destination": "/sv/paskeferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/sv/by/:kommune",
+      "destination": "/sv/skoleruta/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-07",
+      "destination": "/sv/vinterferie/uke-7",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-08",
+      "destination": "/sv/vinterferie/uke-8",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-09",
+      "destination": "/sv/vinterferie/uke-9",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2026-40",
+      "destination": "/sv/hostferie/uke-40",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2026-41",
+      "destination": "/sv/hostferie/uke-41",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-25",
+      "destination": "/sv/sommerleir/uke-25",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-26",
+      "destination": "/sv/sommerleir/uke-26",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-27",
+      "destination": "/sv/sommerleir/uke-27",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-28",
+      "destination": "/sv/sommerleir/uke-28",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-29",
+      "destination": "/sv/sommerleir/uke-29",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-30",
+      "destination": "/sv/sommerleir/uke-30",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-31",
+      "destination": "/sv/sommerleir/uke-31",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-32",
+      "destination": "/sv/sommerleir/uke-32",
+      "permanent": true
+    },
+    {
+      "source": "/sv/uke/2027-33",
+      "destination": "/sv/sommerleir/uke-33",
+      "permanent": true
+    },
+    {
+      "source": "/sv/type/fotballskole",
+      "destination": "/sv/fotballskole",
+      "permanent": true
+    },
+    {
+      "source": "/sv/type/fotballskole/:kommune",
+      "destination": "/sv/fotballskole/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/sv/type/rideleir",
+      "destination": "/sv/rideleir",
+      "permanent": true
+    },
+    {
+      "source": "/sv/type/rideleir/:kommune",
+      "destination": "/sv/rideleir/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/sv/type/seilleir",
+      "destination": "/sv/seilleir",
+      "permanent": true
+    },
+    {
+      "source": "/sv/type/seilleir/:kommune",
+      "destination": "/sv/seilleir/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/sv/type/idrettsleir",
+      "destination": "/sv/idrettsleir",
+      "permanent": true
+    },
+    {
+      "source": "/sv/type/idrettsleir/:kommune",
+      "destination": "/sv/idrettsleir/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/en/vinterferie/:year(\\d{4})",
+      "destination": "/en/vinterferie",
+      "permanent": true
+    },
+    {
+      "source": "/en/vinterferie/:year(\\d{4})/:path*",
+      "destination": "/en/vinterferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/hostferie/:year(\\d{4})",
+      "destination": "/en/hostferie",
+      "permanent": true
+    },
+    {
+      "source": "/en/hostferie/:year(\\d{4})/:path*",
+      "destination": "/en/hostferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/sommerleir/:year(\\d{4})",
+      "destination": "/en/sommerleir",
+      "permanent": true
+    },
+    {
+      "source": "/en/sommerleir/:year(\\d{4})/:path*",
+      "destination": "/en/sommerleir/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/paske/:year(\\d{4})",
+      "destination": "/en/paskeferie",
+      "permanent": true
+    },
+    {
+      "source": "/en/paske/:year(\\d{4})/:path*",
+      "destination": "/en/paskeferie/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/by/:kommune",
+      "destination": "/en/skoleruta/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-07",
+      "destination": "/en/vinterferie/uke-7",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-08",
+      "destination": "/en/vinterferie/uke-8",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-09",
+      "destination": "/en/vinterferie/uke-9",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2026-40",
+      "destination": "/en/hostferie/uke-40",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2026-41",
+      "destination": "/en/hostferie/uke-41",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-25",
+      "destination": "/en/sommerleir/uke-25",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-26",
+      "destination": "/en/sommerleir/uke-26",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-27",
+      "destination": "/en/sommerleir/uke-27",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-28",
+      "destination": "/en/sommerleir/uke-28",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-29",
+      "destination": "/en/sommerleir/uke-29",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-30",
+      "destination": "/en/sommerleir/uke-30",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-31",
+      "destination": "/en/sommerleir/uke-31",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-32",
+      "destination": "/en/sommerleir/uke-32",
+      "permanent": true
+    },
+    {
+      "source": "/en/uke/2027-33",
+      "destination": "/en/sommerleir/uke-33",
+      "permanent": true
+    },
+    {
+      "source": "/en/type/fotballskole",
+      "destination": "/en/fotballskole",
+      "permanent": true
+    },
+    {
+      "source": "/en/type/fotballskole/:kommune",
+      "destination": "/en/fotballskole/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/en/type/rideleir",
+      "destination": "/en/rideleir",
+      "permanent": true
+    },
+    {
+      "source": "/en/type/rideleir/:kommune",
+      "destination": "/en/rideleir/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/en/type/seilleir",
+      "destination": "/en/seilleir",
+      "permanent": true
+    },
+    {
+      "source": "/en/type/seilleir/:kommune",
+      "destination": "/en/seilleir/:kommune",
+      "permanent": true
+    },
+    {
+      "source": "/en/type/idrettsleir",
+      "destination": "/en/idrettsleir",
+      "permanent": true
+    },
+    {
+      "source": "/en/type/idrettsleir/:kommune",
+      "destination": "/en/idrettsleir/:kommune",
+      "permanent": true
+    }
+  ]
 }

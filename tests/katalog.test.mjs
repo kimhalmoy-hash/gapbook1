@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   avvikKommuner,
+  fjoraarsTekst,
   campIFerie,
   campUker,
   erDato8,
@@ -10,6 +11,7 @@ import {
   isoUke,
   kommunerMedFri,
   rensPerson,
+  slug,
   TEMA_MIN,
   ukeListe,
   ukeMandag,
@@ -171,6 +173,21 @@ test("åpent tilbud uten påmelding", () => {
   assert.equal(utenPamelding({ type: "skøyter/bading (åpent tilbud)", notat: "", prisNotat: "" }), true);
   assert.equal(utenPamelding({ type: "museum", prisNotat: "Gratis drop-in (2026)" }), true);
   assert.equal(utenPamelding({ type: "fotballskole", notat: "Påmelding åpen", prisNotat: "1 500 kr" }), false);
+});
+
+test("slugs er unike og Færder blir fardar", () => {
+  assert.equal(slug("Færder"), "fardar");
+  assert.equal(slug("Bærum"), "baerum");
+  assert.equal(slug("Tromsø"), "tromso");
+  assert.equal(slug("Ørsta"), "orsta");
+  const navn = ["Oslo", "Bergen", "Færder", "Bærum", "Tromsø", "Ålesund", "Ørsta", "Øygarden"];
+  assert.equal(new Set(navn.map(slug)).size, navn.length);
+});
+
+test("fjorårsnotat blir en kort linje uten URL", () => {
+  const notat = "Fjorår: 23.–26.02.2026 kl. 10–14. Kilde: https://stavangerif.no/na-apner-pameldingen.";
+  assert.equal(fjoraarsTekst(notat), "23.–26.02.2026 kl. 10–14");
+  assert.equal(String(fjoraarsTekst(notat)).includes("http"), false);
 });
 
 test("forfalte kilder følger sjekkDato", () => {

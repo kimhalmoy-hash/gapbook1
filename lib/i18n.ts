@@ -58,6 +58,12 @@ export type Copy = {
   providerSite: string;
   note: string;
   source: string;
+  ownDates: string;
+  lastYearLine: string;
+  expectedShort: string;
+  showMore: string;
+  seeAll: string;
+  explore: string;
   holidayHeading: string;
   offThisWeek: string;
   offThisSeason: string;
@@ -188,8 +194,8 @@ export const COPY: Record<Locale, Copy> = {
     h1WeekHoliday: "{ferie}, uke {nr}: kurs og leirer for barn",
     h1Place: "Kurs og leirer for barn i {by}",
     h1PlaceWeek: "Kurs og leirer for barn i {by} ({uker})",
-    h1HolidayPlace: "{ferie} i {by} (uke {uke}): kurs og leirer for barn",
-    h1HolidayPlaceNoWeek: "{ferie} i {by}: kurs og leirer for barn",
+    h1HolidayPlace: "{ferie} {by} {aar} (uke {uke}): aktiviteter, kurs og leirer for barn",
+    h1HolidayPlaceNoWeek: "{ferie} {by} {aar}: aktiviteter, kurs og leirer for barn",
     pamelding: {
       apen: "Påmelding åpen",
       ikke_apnet: "Påmeldingen er ikke åpnet",
@@ -202,6 +208,12 @@ export const COPY: Record<Locale, Copy> = {
     providerSite: "Arrangørens nettsted",
     note: "Merknad",
     source: "Kilde",
+    ownDates: "Kommunens egne datoer er brukt",
+    lastYearLine: "Fjorårets dato: {dato}",
+    expectedShort: "Forventet ut fra fjorårets opplegg",
+    showMore: "Vis flere",
+    seeAll: "Se alle",
+    explore: "Utforsk",
     holidayHeading: "Skolerute",
     offThisWeek: "Kommuner med fri denne uken, der vi har skolerute",
     offThisSeason: "Kommuner med fri, der vi har skolerute",
@@ -289,8 +301,8 @@ export const COPY: Record<Locale, Copy> = {
     h1WeekHoliday: "{ferie}, vecka {nr}: kurser och läger för barn",
     h1Place: "Kurser och läger för barn i {by}",
     h1PlaceWeek: "Kurser och läger för barn i {by} ({uker})",
-    h1HolidayPlace: "{ferie} i {by} (vecka {uke}): kurser och läger för barn",
-    h1HolidayPlaceNoWeek: "{ferie} i {by}: kurser och läger för barn",
+    h1HolidayPlace: "{ferie} {by} {aar} (vecka {uke}): aktiviteter, kurser och läger för barn",
+    h1HolidayPlaceNoWeek: "{ferie} {by} {aar}: aktiviteter, kurser och läger för barn",
     pamelding: {
       apen: "Anmälan öppen",
       ikke_apnet: "Anmälan har inte öppnat",
@@ -303,6 +315,12 @@ export const COPY: Record<Locale, Copy> = {
     providerSite: "Arrangörens webbplats",
     note: "Anmärkning",
     source: "Källa",
+    ownDates: "Kommunens egna datum används",
+    lastYearLine: "Fjolårets datum: {dato}",
+    expectedShort: "Förväntat utifrån förra årets upplägg",
+    showMore: "Visa fler",
+    seeAll: "Se alla",
+    explore: "Utforska",
     holidayHeading: "Skolkalender",
     offThisWeek: "Kommuner som är lediga den här veckan, där vi har skolkalender",
     offThisSeason: "Kommuner som är lediga, där vi har skolkalender",
@@ -390,8 +408,8 @@ export const COPY: Record<Locale, Copy> = {
     h1WeekHoliday: "{ferie}, week {nr}: courses and camps for kids",
     h1Place: "Courses and camps for kids in {by}",
     h1PlaceWeek: "Courses and camps for kids in {by} ({uker})",
-    h1HolidayPlace: "{ferie} in {by} (week {uke}): courses and camps for kids",
-    h1HolidayPlaceNoWeek: "{ferie} in {by}: courses and camps for kids",
+    h1HolidayPlace: "{ferie} {by} {aar} (week {uke}): activities, courses and camps for kids",
+    h1HolidayPlaceNoWeek: "{ferie} {by} {aar}: activities, courses and camps for kids",
     pamelding: {
       apen: "Registration open",
       ikke_apnet: "Registration has not opened",
@@ -404,6 +422,12 @@ export const COPY: Record<Locale, Copy> = {
     providerSite: "Organiser's website",
     note: "Note",
     source: "Source",
+    ownDates: "The municipality's own dates are used",
+    lastYearLine: "Last year's dates: {dato}",
+    expectedShort: "Expected from last year's listing",
+    showMore: "Show more",
+    seeAll: "See all",
+    explore: "Explore",
     holidayHeading: "School calendar",
     offThisWeek: "Municipalities off this week, where we have a school calendar",
     offThisSeason: "Municipalities off, where we have a school calendar",

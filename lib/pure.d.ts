@@ -48,6 +48,7 @@ export type LeirUke = {
 };
 
 export function slug(verdi: unknown): string;
+export const TYPE_STI: Record<string, string>;
 export function ukeListe(uke: number | string | null | undefined): number[];
 export function isoUke(iso: string): { aar: number; uke: number };
 export function ukeMandag(aar: number, uke: number): string;
@@ -68,6 +69,7 @@ export function erDato8(s: string): boolean;
 export function inneholderPerson(verdi: unknown): boolean;
 export function rensPerson(verdi: unknown): string | null;
 export function avvikKommuner(linjer: readonly string[]): string[];
+export function fjoraarsTekst(notat: string | null | undefined): string | null;
 export function utenPamelding(leir: { type?: string | null; notat?: string | null; prisNotat?: string | null }): boolean;
 export function ferieFelter(rad: SkoleruteRad): FerieTreff[];
 export function kommunerMedFri(rader: SkoleruteRad[], aar: number, uke: number): KommuneFri[];
