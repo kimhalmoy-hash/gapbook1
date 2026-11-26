@@ -54,6 +54,7 @@ export type Copy = {
   h1HolidayPlaceNoWeek: string;
   pamelding: { apen: string; ikke_apnet: string; full: string; stengt: string; ukjent: string };
   opens: string;
+  openedCheck: string;
   checked: string;
   providerSite: string;
   note: string;
@@ -204,6 +205,7 @@ export const COPY: Record<Locale, Copy> = {
       ukjent: "Påmelding: ukjent – sjekk arrangørens side",
     },
     opens: "Påmeldingen åpner {dato}",
+    openedCheck: "Påmeldingen åpnet {dato} – sjekk arrangørens side",
     checked: "Sist sjekket {dato}",
     providerSite: "Arrangørens nettsted",
     note: "Merknad",
@@ -311,6 +313,7 @@ export const COPY: Record<Locale, Copy> = {
       ukjent: "Anmälan: okänd – kolla arrangörens sida",
     },
     opens: "Anmälan öppnar {dato}",
+    openedCheck: "Anmälan öppnade {dato} – kolla arrangörens sida",
     checked: "Senast kollad {dato}",
     providerSite: "Arrangörens webbplats",
     note: "Anmärkning",
@@ -418,6 +421,7 @@ export const COPY: Record<Locale, Copy> = {
       ukjent: "Registration: unknown – check the organiser's page",
     },
     opens: "Registration opens {dato}",
+    openedCheck: "Registration opened {dato} – check the organiser's page",
     checked: "Last checked {dato}",
     providerSite: "Organiser's website",
     note: "Note",

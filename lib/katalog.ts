@@ -28,6 +28,7 @@ import {
   typeSlug,
   ukeListe,
   utenPamelding,
+  pameldingModus,
   ukeMandag,
   ukeNokkel,
 } from "@/lib/pure.mjs";
@@ -182,12 +183,12 @@ export function absolut(path: string): string {
   return `${site.url}${path}`;
 }
 
-function formatDato(iso: string, locale: Locale): string {
+function formatDato(iso: string, locale: Locale, medAar = true): string {
   const [y, m, d] = iso.split("-").map(Number);
   return new Intl.DateTimeFormat(intlLocale(locale), {
     day: "numeric",
     month: "short",
-    year: "numeric",
+    ...(medAar ? { year: "numeric" as const } : {}),
     timeZone: "UTC",
   }).format(new Date(Date.UTC(y, m - 1, d)));
 }
@@ -558,8 +559,17 @@ function campView(e: Leir, locale: Locale, ferieBadge: string | null): CampView 
     demo: e.demo,
     utenPamelding: utenPamelding(e),
     gratis: e.prisNok === 0,
-    pameldingLabel: e.pameldingStatus ? tekst.pamelding[e.pameldingStatus] : tekst.pamelding.ukjent,
-    apnerLabel: e.pameldingApner ? fyll(tekst.opens, { dato: formatDato(e.pameldingApner, locale) }) : null,
+    pameldingLabel: (() => {
+      const modus = pameldingModus(e.pameldingStatus, e.pameldingApner, I_DAG);
+      if (modus === "apnet" && e.pameldingApner) {
+        return fyll(tekst.openedCheck, { dato: formatDato(e.pameldingApner, locale, false) });
+      }
+      return e.pameldingStatus ? tekst.pamelding[e.pameldingStatus] : tekst.pamelding.ukjent;
+    })(),
+    apnerLabel: (() => {
+      if (pameldingModus(e.pameldingStatus, e.pameldingApner, I_DAG) !== "apner" || !e.pameldingApner) return null;
+      return fyll(tekst.opens, { dato: formatDato(e.pameldingApner, locale) });
+    })(),
     sjekketLabel: e.kildeSjekket ? fyll(tekst.checked, { dato: formatDato(e.kildeSjekket, locale) }) : null,
     sesong: e.sesong,
     kortLinje: (() => {

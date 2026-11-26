@@ -16,6 +16,7 @@ import {
   ukeListe,
   ukeMandag,
   utenPamelding,
+  pameldingModus,
 } from "../lib/pure.mjs";
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
 import { stiTillatt } from "../scripts/lib/robots.mjs";
@@ -184,6 +185,15 @@ test("slugs er unike og Færder blir fardar", () => {
   assert.equal(new Set(navn.map(slug)).size, navn.length);
 });
 
+test("påmelding som allerede har åpnet blir én linje", () => {
+  assert.equal(pameldingModus(null, "2026-11-19", "2026-11-26"), "apnet");
+  assert.equal(pameldingModus(null, "2026-11-26", "2026-11-26"), "apnet");
+  assert.equal(pameldingModus(null, "2027-01-01", "2026-11-26"), "apner");
+  assert.equal(pameldingModus("ikke_apnet", "2027-01-01", "2026-11-26"), "apner");
+  assert.equal(pameldingModus("ikke_apnet", "2026-11-19", "2026-11-26"), "status");
+  assert.equal(pameldingModus(null, null, "2026-11-26"), "status");
+});
+
 test("fjorårsnotat blir en kort linje uten URL", () => {
   const notat = "Fjorår: 23.–26.02.2026 kl. 10–14. Kilde: https://stavangerif.no/na-apner-pameldingen.";
   assert.equal(fjoraarsTekst(notat), "23.–26.02.2026 kl. 10–14");
@@ -217,10 +227,11 @@ test("importert skolerute og leirer", () => {
   const stavanger = skolerute.find((r) => r.kommune === "Stavanger");
   assert.equal(stavanger.vinterferie.uke, 7);
   assert.equal(stavanger.vinterferie.datoFra, "2027-02-15");
-  assert.equal(leirer.length, 241);
+  assert.equal(leirer.length, 479);
   assert.equal(leirer.filter((e) => e.status === "verifisert").length, 49);
   assert.equal(leirer.filter((e) => e.status === "delvis").length, 29);
-  assert.equal(leirer.filter((e) => e.status === "forventet").length, 163);
+  assert.equal(leirer.filter((e) => e.status === "forventet").length, 401);
+  assert.equal(leirer.filter((e) => /tine\.no/i.test(e.url || "")).length, 155);
   assert.equal(leirer.every((e) => "pameldingStatus" in e && "pameldingApner" in e), true);
   assert.equal(leirer.some((e) => e.demo), false);
   assert.equal(leirer.some((e) => /hoopit\.io/i.test(e.url)), false);

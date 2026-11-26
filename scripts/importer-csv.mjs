@@ -150,11 +150,10 @@ const skolerute = importerSkolerute();
 skriv("tilbydere.json", tilbydere);
 skriv("skolerute.json", skolerute);
 if (process.argv.includes("--leirer")) {
-  skriv("leirer.json", leirer);
-  console.log("skrev data/leirer.json fra CSV");
-} else {
-  console.log("data/leirer.json er kilden og ble ikke overskrevet. Bruk --leirer for å skrive CSV-konverteringen over.");
+  console.error("data/leirer.json er Supply v5. kurs-norge-v5.csv ligger ikke i data/kilder/, så v4-CSV-en skal ikke skrives over JSON-en.");
+  process.exit(1);
 }
+console.log("data/leirer.json er Supply v5 og ble ikke overskrevet.");
 console.log(
   `importer: ${leirer.length} leirer fra CSV, ${tilbydere.length} tilbydere, ${skolerute.length} kommuner i skoleruten`,
 );

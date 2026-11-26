@@ -52,7 +52,7 @@ function Hjem({ side }: { side: ReturnType<typeof modell> }) {
       <p className="mt-5 max-w-2xl text-lg text-muted">{tekst.heroSub}</p>
       <div className="mt-8 flex flex-wrap gap-3">
         <a href="#sok" className="rounded-full bg-clay px-6 py-3 text-white hover:bg-clay-dark">{tekst.ctaFind}</a>
-        <a href="#arrangor" className="rounded-full border border-pine px-6 py-3 text-pine hover:bg-pine hover:text-white">{tekst.ctaProviderNav}</a>
+        <a href={mailto(tekst.providerSubject)} className="rounded-full border border-pine px-6 py-3 text-pine hover:bg-pine hover:text-white">{tekst.ctaProviderNav}</a>
       </div>
       <section className="mt-12">
         <FilterBar leirer={side.leirer} tekst={tekst} sesonger={side.sesongLenker} />

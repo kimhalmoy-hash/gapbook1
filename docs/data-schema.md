@@ -45,7 +45,7 @@ Fila er én JSON-array. Ett objekt per kurs/leir per uke (samme oppdeling som `d
 - `status` (datakvalitet): `verifisert` | `delvis` | `forventet`. CSV-verdien `dato_ikke_publisert` blir `forventet` (tilbudet har bare fjorårets dato; den står i `notat`).
 - `lenkestatus` settes av `sjekk-lenker.mjs`: `ok` | `usikker` | `utløpt`, eller `null` før første sjekk. `dod: true` ved 404/410/DNS-feil.
 - `pameldingStatus`: `apen` | `ikke_apnet` | `full` | `stengt` | `null`. Bare når kilden sier det. Ellers `null`, som vises som «Påmelding: ukjent – sjekk arrangørens side». `sjekk-lenker` kan sette feltet fra JSON-LD `offers.availability` eller en kort «Fulltegnet»-tekst på Rubic. Den gjetter ikke ut fra brødtekst.
-- `pameldingApner`: ISO-dato når påmeldingen åpner, bare hvis kilden oppgir den. Vises som «Påmeldingen åpner …». `kildeSjekket` vises som «Sist sjekket».
+- `pameldingApner`: ISO-dato når påmeldingen åpner, bare hvis kilden oppgir den. Er datoen i dag eller tidligere og `pameldingStatus` er `null`, vises én linje: «Påmeldingen åpnet 19. nov. – sjekk arrangørens side». Da vises ikke «Påmelding: ukjent». En fremtidig dato vises som «Påmeldingen åpner …». Har status en verdi, vises den. `kildeSjekket` vises som «Sist sjekket».
 - `fremhevet: true` bare for betalt synlighet. Vises merket «Fremhevet» (svensk «Utvald», engelsk «Featured»).
 - `demo: true` bare for eksempeldata. Vises aldri på indekserbare sider og tas aldri med i sitemap.
 - `land`: `NO` nå, `SE` / `DK` / `FI` senere. Importen fra `kurs-norge-v1.csv` setter `NO` fordi fila er det norske datasettet. Feltet finnes ikke per rad i CSV-en.

@@ -81,3 +81,8 @@ export function lagId(tilbyder: string, tittel: string, sesong: string, uke: num
 export function typeSlug(type: string): string;
 export function synlig(leir: LeirUke, iDag: string): boolean;
 export function tellerMotTerskel(leir: LeirUke, iDag: string): boolean;
+export function pameldingModus(
+  status: string | null | undefined,
+  apner: string | null | undefined,
+  iDag: string,
+): "apnet" | "apner" | "status";
