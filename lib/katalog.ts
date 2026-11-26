@@ -20,6 +20,8 @@ import {
   sesongDeler,
   skolearKort,
   skolearSlutt,
+  skolerutaIndeks,
+  hreflangLokaler,
   slug,
   synlig,
   TEMA_MIN,
@@ -345,7 +347,8 @@ function leirerFor(rute: Rute): Leir[] {
 }
 
 export function indekserbar(rute: Rute): boolean {
-  if (rute.kind === "skoleruta" || rute.kind === "skolerutaHub" || rute.kind === "fremhevet") return true;
+  if (rute.kind === "skoleruta" || rute.kind === "skolerutaHub") return skolerutaIndeks(rute.kind, rute.locale) === true;
+  if (rute.kind === "fremhevet") return true;
   if (rute.kind === "leir") {
     return gruppeTellerMotTerskel(GRUPPE_SLUG.get(rute.id) || [], I_DAG);
   }
@@ -910,8 +913,11 @@ export function metadataFor(rute: Rute): Metadata {
   const description = beskrivelse(rute, side);
   const path = sammeSti(rute, rute.locale);
   const canonical = absolut(path);
-  const languages: Record<string, string> = { "x-default": absolut(sammeSti(rute, "nb")) };
-  for (const locale of LOCALES) languages[COPY[locale].htmlLang] = absolut(sammeSti(rute, locale));
+  const nbSti = absolut(sammeSti(rute, "nb"));
+  const languages: Record<string, string> = { "x-default": nbSti };
+  for (const locale of hreflangLokaler(rute.kind) as Locale[]) {
+    languages[COPY[locale].htmlLang] = locale === "nb" ? nbSti : absolut(sammeSti(rute, locale));
+  }
   const indeks = indekserbar(rute);
   return {
     title: { absolute: title },

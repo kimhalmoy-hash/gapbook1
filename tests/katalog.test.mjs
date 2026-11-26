@@ -21,6 +21,8 @@ import {
   gruppeTrefferUke,
   antallSomTeller,
   prisVisning,
+  skolerutaIndeks,
+  hreflangLokaler,
 } from "../lib/pure.mjs";
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
 import { stiTillatt } from "../scripts/lib/robots.mjs";
@@ -187,6 +189,16 @@ test("slugs er unike og Færder blir fardar", () => {
   assert.equal(slug("Ørsta"), "orsta");
   const navn = ["Oslo", "Bergen", "Færder", "Bærum", "Tromsø", "Ålesund", "Ørsta", "Øygarden"];
   assert.equal(new Set(navn.map(slug)).size, navn.length);
+});
+
+test("kommune-skolerute indekseres bare på bokmål", () => {
+  assert.equal(skolerutaIndeks("skoleruta", "nb"), true);
+  assert.equal(skolerutaIndeks("skoleruta", "sv"), false);
+  assert.equal(skolerutaIndeks("skoleruta", "en"), false);
+  assert.equal(skolerutaIndeks("skolerutaHub", "sv"), true);
+  assert.equal(skolerutaIndeks("skolerutaHub", "en"), true);
+  assert.deepEqual(hreflangLokaler("skoleruta"), ["nb"]);
+  assert.deepEqual(hreflangLokaler("skolerutaHub"), ["nb", "sv", "en"]);
 });
 
 test("prisnotat brukes som prislinje når tallet mangler", () => {

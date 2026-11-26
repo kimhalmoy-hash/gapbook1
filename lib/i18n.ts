@@ -72,6 +72,7 @@ export type Copy = {
   seeAll: string;
   explore: string;
   holidayHeading: string;
+  schoolCalendarNb: string;
   offThisWeek: string;
   offThisSeason: string;
   inHoliday: string;
@@ -229,6 +230,7 @@ export const COPY: Record<Locale, Copy> = {
     seeAll: "Se alle",
     explore: "Utforsk",
     holidayHeading: "Skolerute",
+    schoolCalendarNb: "Skoleruta på norsk",
     offThisWeek: "Kommuner med fri denne uken, der vi har skolerute",
     offThisSeason: "Kommuner med fri, der vi har skolerute",
     inHoliday: "I {ferie}",
@@ -343,6 +345,7 @@ export const COPY: Record<Locale, Copy> = {
     seeAll: "Se alla",
     explore: "Utforska",
     holidayHeading: "Skolkalender",
+    schoolCalendarNb: "Skolkalender på norska",
     offThisWeek: "Kommuner som är lediga den här veckan, där vi har skolkalender",
     offThisSeason: "Kommuner som är lediga, där vi har skolkalender",
     inHoliday: "Under {ferie}",
@@ -457,6 +460,7 @@ export const COPY: Record<Locale, Copy> = {
     seeAll: "See all",
     explore: "Explore",
     holidayHeading: "School calendar",
+    schoolCalendarNb: "School calendar in Norwegian",
     offThisWeek: "Municipalities off this week, where we have a school calendar",
     offThisSeason: "Municipalities off, where we have a school calendar",
     inHoliday: "In the {ferie}",

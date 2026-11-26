@@ -95,6 +95,8 @@ export function besteStatus(statuser: string[]): "verifisert" | "delvis" | "forv
 export function gruppeTellerMotTerskel(medlemmer: (LeirUke & { status?: string; demo?: boolean })[], iDag: string): boolean;
 export function antallSomTeller(leirer: (LeirUke & { id: string; status?: string; demo?: boolean; tilbyder?: string; tittel?: string; kommune?: string; by?: string | null })[], iDag: string): number;
 export function pameldingErLik(medlemmer: { pameldingStatus?: string | null; pameldingApner?: string | null }[]): boolean;
+export function skolerutaIndeks(kind: string, locale: string): boolean | null;
+export function hreflangLokaler(kind: string): ("nb" | "sv" | "en")[];
 export function prisVisning(
   prisLabel: string | null | undefined,
   prisNotat: string | null | undefined,

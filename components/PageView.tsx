@@ -137,6 +137,11 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
           ) : null}
         </p>
       ) : null}
+      {side.rute.kind === "skoleruta" && side.rute.locale !== "nb" ? (
+        <p className="mt-4 text-sm">
+          <a className="text-pine hover:underline" href={sammeSti(side.rute, "nb")}>{tekst.schoolCalendarNb}</a>
+        </p>
+      ) : null}
       {side.ingress ? <p className="mt-4 max-w-2xl text-lg text-muted">{side.ingress}</p> : null}
       {side.skoleruteKort ? (
         <section className="ticket mt-8 p-5">
