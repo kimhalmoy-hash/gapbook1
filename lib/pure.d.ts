@@ -1,0 +1,81 @@
+export type SesongNavn = "vinter" | "sommer" | "host" | "paske";
+
+export type FeriePeriode = {
+  uke?: number | null;
+  datoFra: string;
+  datoTil: string;
+};
+
+export type SkoleruteRad = {
+  skolear: string;
+  kommune: string;
+  hostferie: FeriePeriode | null;
+  vinterferie: FeriePeriode | null;
+  paske: ({ datoFra: string; datoTil: string } & { uke?: number | null }) | null;
+  kildeUrl: string;
+  merknad: string | null;
+};
+
+export type FerieTreff = {
+  nokkel: SesongNavn;
+  uke?: number | null;
+  datoFra: string;
+  datoTil: string;
+};
+
+export type KommuneFri = {
+  kommune: string;
+  slug: string;
+  nokkel: SesongNavn;
+  uke: number | null;
+  datoFra: string;
+  datoTil: string;
+  kildeUrl: string;
+  merknad: string | null;
+  skolear: string;
+};
+
+export type LeirUke = {
+  sesong: string;
+  uke: number | string | null;
+  datoFra: string | null;
+  datoTil: string | null;
+  kommune: string;
+  dod?: boolean;
+  demo?: boolean;
+  lenkestatus?: string | null;
+  status?: string;
+};
+
+export function slug(verdi: unknown): string;
+export function ukeListe(uke: number | string | null | undefined): number[];
+export function isoUke(iso: string): { aar: number; uke: number };
+export function ukeMandag(aar: number, uke: number): string;
+export function leggTilDager(iso: string, n: number): string;
+export function dagerMellom(fra: string, til: string): string[];
+export function overlap(
+  a0: string | null,
+  a1: string | null,
+  b0: string | null,
+  b1: string | null,
+): boolean;
+export function sesongDeler(sesong: string | null | undefined): { navn: SesongNavn; aar: number } | null;
+export function ukeNokkel(aar: number, uke: number): string;
+export function parseUkeNokkel(nokkel: string): { aar: number; uke: number } | null;
+export function campUker(camp: LeirUke): string[];
+export const TEMA_MIN: number;
+export function erDato8(s: string): boolean;
+export function inneholderPerson(verdi: unknown): boolean;
+export function rensPerson(verdi: unknown): string | null;
+export function avvikKommuner(linjer: readonly string[]): string[];
+export function utenPamelding(leir: { type?: string | null; notat?: string | null; prisNotat?: string | null }): boolean;
+export function ferieFelter(rad: SkoleruteRad): FerieTreff[];
+export function kommunerMedFri(rader: SkoleruteRad[], aar: number, uke: number): KommuneFri[];
+export function campIFerie(camp: LeirUke, rad: SkoleruteRad): FerieTreff[];
+export function kommunerISesong(rader: SkoleruteRad[], navn: SesongNavn, skolearSlutt: number): KommuneFri[];
+export function skolearSlutt(skolear: string): number | null;
+export function skolearKort(skolear: string): string;
+export function lagId(tilbyder: string, tittel: string, sesong: string, uke: number | string): string;
+export function typeSlug(type: string): string;
+export function synlig(leir: LeirUke, iDag: string): boolean;
+export function tellerMotTerskel(leir: LeirUke, iDag: string): boolean;

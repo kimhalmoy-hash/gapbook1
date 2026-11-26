@@ -1,0 +1,1152 @@
+[
+  {
+    "tilbyder": "AKKS Trondheim",
+    "typeTilbyder": "organisasjon",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://akks.no/trondheim/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Musikkorganisasjon for jenter/ikke-binære"
+  },
+  {
+    "tilbyder": "Arendal bibliotek",
+    "typeTilbyder": "bibliotek",
+    "by": "Arendal",
+    "kommune": "Arendal",
+    "nettside": "https://arendalbibliotek.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "delvis",
+    "notat": "Påmelding kun til film/eventyrstund"
+  },
+  {
+    "tilbyder": "Asker Seilforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Asker",
+    "kommune": "Asker",
+    "nettside": "https://www.askerseil.no",
+    "antallKursILista": 4,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Barça Academy / Barcelona Training (m/ Heimdal Fotball)",
+    "typeTilbyder": "kommersiell",
+    "by": "Trondheim (Heimdal)",
+    "kommune": "Trondheim",
+    "nettside": "https://campsnorway.barcaacademy.com",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Samme arrangør som Stavanger-campen"
+  },
+  {
+    "tilbyder": "Barça Academy / Barcelona Training (m/ Stavanger IF)",
+    "typeTilbyder": "kommersiell",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://campsnorway.barcaacademy.com",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Dansk arrangør, samarbeid med lokal klubb"
+  },
+  {
+    "tilbyder": "Bergens Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Bergen",
+    "kommune": "Bergen",
+    "nettside": "https://bergensturn.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Bogafjell IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://spond.com/discover/nb-no/events/902F581C1EE946C4B7309BB3D2FFA7BE",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond Discover (kun fakta og lenke)"
+  },
+  {
+    "tilbyder": "Borgarsyssel Museum (Østfoldmuseene)",
+    "typeTilbyder": "museum",
+    "by": "Sarpsborg",
+    "kommune": "Sarpsborg",
+    "nettside": "https://ostfoldmuseene.no/borgarsyssel",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Borge Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://www.borgeturn.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Bærum SK",
+    "typeTilbyder": "idrettslag",
+    "by": "Bærum",
+    "kommune": "Bærum",
+    "nettside": "https://baerumsk.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Superinvite"
+  },
+  {
+    "tilbyder": "Bærums Skiklub",
+    "typeTilbyder": "idrettslag",
+    "by": "Bærum",
+    "kommune": "Bærum",
+    "nettside": "https://bsk.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "LetsReg"
+  },
+  {
+    "tilbyder": "Damgården Ridesenter",
+    "typeTilbyder": "kommersiell",
+    "by": "Larvik",
+    "kommune": "Larvik",
+    "nettside": "https://damgarden.no",
+    "antallKursILista": 5,
+    "harPameldingOnline": "ja",
+    "notat": "Skjema"
+  },
+  {
+    "tilbyder": "DNT Bærum Turlag",
+    "typeTilbyder": "organisasjon",
+    "by": "Fornebu",
+    "kommune": "Bærum",
+    "nettside": "https://www.dnt.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "aktiviteter.dnt.no"
+  },
+  {
+    "tilbyder": "DNT Sunnmøre",
+    "typeTilbyder": "organisasjon",
+    "by": "Ålesund; Ørsta",
+    "kommune": "Ålesund; Ørsta",
+    "nettside": "https://www.dnt.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "aktiviteter.dnt.no"
+  },
+  {
+    "tilbyder": "Drammen kulturskole (Drammen kommune)",
+    "typeTilbyder": "kommune",
+    "by": "Drammen",
+    "kommune": "Drammen",
+    "nettside": "https://www.drammen.kommune.no/tjenester/kunst-kultur/kulturskolen/feriekurs-kulturskole/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "SpeedAdmin"
+  },
+  {
+    "tilbyder": "Drammens Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Drammen",
+    "kommune": "Drammen",
+    "nettside": "https://www.drammenturn.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "EKT Rideskole og Husdyrpark",
+    "typeTilbyder": "kommersiell",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.rideskole.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Påmelding 'åpner snart'"
+  },
+  {
+    "tilbyder": "Esport4alle",
+    "typeTilbyder": "organisasjon",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://aktivitetsportalenfredrikstad.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via kommunens aktivitetsportal"
+  },
+  {
+    "tilbyder": "Fet IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Fetsund",
+    "kommune": "Lillestrøm",
+    "nettside": "https://www.fetil.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Rubic"
+  },
+  {
+    "tilbyder": "Fet IL Aktiv",
+    "typeTilbyder": "idrettslag",
+    "by": "Fetsund",
+    "kommune": "Lillestrøm",
+    "nettside": "https://www.fetil.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Rubic"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "typeTilbyder": "kommersiell",
+    "by": "Flere byer",
+    "kommune": "Flere",
+    "nettside": "https://www.forskerfabrikken.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Nasjonal, lokale kurs"
+  },
+  {
+    "tilbyder": "Fredrikstad Ballklubb (håndball)",
+    "typeTilbyder": "idrettslag",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://www.fredrikstadbk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Woow nettbutikk"
+  },
+  {
+    "tilbyder": "Fredrikstad FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://www.fredrikstadfk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Fredrikstad museum (Østfoldmuseene)",
+    "typeTilbyder": "museum",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://ostfoldmuseene.no/fredrikstad",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Gomma Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://aktivitetsportalenfredrikstad.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via kommunens aktivitetsportal"
+  },
+  {
+    "tilbyder": "Grip Klatring",
+    "typeTilbyder": "kommersiell",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://gripklatring.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Gui SK",
+    "typeTilbyder": "idrettslag",
+    "by": "Vollen",
+    "kommune": "Asker",
+    "nettside": "https://spond.com/discover/nb-no/events/3BCBBB81AE4F48F19FE364373BA77BA5",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Hasle-Løren IL Ishockey",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://ishockey.hasle-loren.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Billett via klubbens arrangementsside"
+  },
+  {
+    "tilbyder": "Haugar kunstmuseum",
+    "typeTilbyder": "museum",
+    "by": "Tønsberg",
+    "kommune": "Tønsberg",
+    "nettside": "https://www.tonsberg.kommune.no/aktuelt/klar-for-vinterferie.46420.aspx",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Herkules Håndball",
+    "typeTilbyder": "idrettslag",
+    "by": "Skien",
+    "kommune": "Skien",
+    "nettside": "https://skienfritidspark.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Skjema"
+  },
+  {
+    "tilbyder": "Hvalfangstmuseet (Vestfoldmuseene)",
+    "typeTilbyder": "museum",
+    "by": "Sandefjord",
+    "kommune": "Sandefjord",
+    "nettside": "https://vestfoldmuseene.no/hvalfangstmuseet",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "IHK Sparta Sarpsborg",
+    "typeTilbyder": "idrettslag",
+    "by": "Sarpsborg",
+    "kommune": "Sarpsborg",
+    "nettside": "https://ihksparta.spond.club",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "IK Start",
+    "typeTilbyder": "idrettslag",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.ikstart.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "INSPIRIA science center",
+    "typeTilbyder": "museum",
+    "by": "Sarpsborg",
+    "kommune": "Sarpsborg",
+    "nettside": "https://www.inspiria.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in, billett"
+  },
+  {
+    "tilbyder": "Kjerringåsen Alpinsenter",
+    "typeTilbyder": "organisasjon",
+    "by": "Sarpsborg",
+    "kommune": "Sarpsborg",
+    "nettside": "https://www.kjerringaasen.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Åpent anlegg"
+  },
+  {
+    "tilbyder": "Klatreverket",
+    "typeTilbyder": "kommersiell",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://klatreverket.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Nettbutikk + interesseliste"
+  },
+  {
+    "tilbyder": "Klatreverket Kristiansand",
+    "typeTilbyder": "kommersiell",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://klatreverketkrs.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Kongelig Norsk Seilforening (KNS)",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.kns.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": null
+  },
+  {
+    "tilbyder": "Kongstensvømmerne",
+    "typeTilbyder": "idrettslag",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://kongstensvommerne.no",
+    "antallKursILista": 5,
+    "harPameldingOnline": "ja",
+    "notat": "Skjema"
+  },
+  {
+    "tilbyder": "Konnerud IL Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Drammen",
+    "kommune": "Drammen",
+    "nettside": "https://www.konnerud.no/fotball",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "iSonen"
+  },
+  {
+    "tilbyder": "Korsvoll IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://spond.com/discover/nb-no/events/3BCAB0D6D49349D88E7F544034AAFBAF",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Kristiansand folkebibliotek",
+    "typeTilbyder": "bibliotek",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://krsbib.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Kultur- og bydelshusene i Haugesund",
+    "typeTilbyder": "kommune",
+    "by": "Haugesund",
+    "kommune": "Haugesund",
+    "nettside": "https://www.haugesund.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Påmelding per e-post"
+  },
+  {
+    "tilbyder": "Kunstsilo",
+    "typeTilbyder": "museum",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.kunstsilo.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "delvis",
+    "notat": null
+  },
+  {
+    "tilbyder": "Langedrag Naturpark",
+    "typeTilbyder": "kommersiell",
+    "by": "Tunhovd",
+    "kommune": "Nore og Uvdal",
+    "nettside": "https://www.langedrag.no",
+    "antallKursILista": 5,
+    "harPameldingOnline": "ja",
+    "notat": "Cloudbooking"
+  },
+  {
+    "tilbyder": "Larvik museum (Vestfoldmuseene)",
+    "typeTilbyder": "museum",
+    "by": "Larvik",
+    "kommune": "Larvik",
+    "nettside": "https://vestfoldmuseene.no/larvik-museum",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Lillestrøm SK",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillestrøm",
+    "kommune": "Lillestrøm",
+    "nettside": "https://www.lsk.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Lillestrøm SK (LSK Bredde Akademiet)",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillestrøm",
+    "kommune": "Lillestrøm",
+    "nettside": "https://www.lsk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Lura IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://lura-il.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Skjema + Spond-betaling"
+  },
+  {
+    "tilbyder": "Lyn Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.lynfotball.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": null
+  },
+  {
+    "tilbyder": "Museum Stavanger (MUST)",
+    "typeTilbyder": "museum",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.stavanger.kommune.no/nyheter/tilbud-i-vinterferien/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in; lenke til kommunens oversikt"
+  },
+  {
+    "tilbyder": "Nedre Glomma Turn",
+    "typeTilbyder": "idrettslag",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://nedreglommaturn.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Rubic"
+  },
+  {
+    "tilbyder": "Njård Gymnastikk og turn",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://turn.njaard.no",
+    "antallKursILista": 4,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Nordnorsk Kunstmuseum",
+    "typeTilbyder": "museum",
+    "by": "Bodø; Tromsø",
+    "kommune": "Bodø; Tromsø",
+    "nettside": "https://nnkm.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Nordnorsk Vitensenter",
+    "typeTilbyder": "organisasjon",
+    "by": "Tromsø",
+    "kommune": "Tromsø",
+    "nettside": "https://nordnorsk.vitensenter.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Nordstrand Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.nordstrandturn.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Norsk Oljemuseum",
+    "typeTilbyder": "museum",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.norskolje.museum.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Odd",
+    "typeTilbyder": "idrettslag",
+    "by": "Skien",
+    "kommune": "Skien",
+    "nettside": "https://www.odd.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Oksnøen leir",
+    "typeTilbyder": "kommersiell",
+    "by": "Råde",
+    "kommune": "Råde",
+    "nettside": "https://oksnoen.no",
+    "antallKursILista": 7,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Oslo Klatresenter",
+    "typeTilbyder": "kommersiell",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.osloklatresenter.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": null
+  },
+  {
+    "tilbyder": "Oslo Movement",
+    "typeTilbyder": "kommersiell",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://oslo-movement.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Nettbutikk"
+  },
+  {
+    "tilbyder": "Oslo Parkour Park",
+    "typeTilbyder": "kommersiell",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.osloparkourpark.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Oslo Seilforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.osloseilforening.no",
+    "antallKursILista": 4,
+    "harPameldingOnline": "ja",
+    "notat": "Rubic, åpner 01.01.2027"
+  },
+  {
+    "tilbyder": "Oslo Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://osloturn.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Pivot Studio",
+    "typeTilbyder": "kommersiell",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://pivotstudio.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Påmelding kommer"
+  },
+  {
+    "tilbyder": "Playwell",
+    "typeTilbyder": "kommersiell",
+    "by": "Bergen",
+    "kommune": "Bergen",
+    "nettside": "https://www.playwell.no",
+    "antallKursILista": 5,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Ranheim Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://www.ranheimfotball.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Rolvsøy IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://rolvsoyif.com",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Skjema"
+  },
+  {
+    "tilbyder": "Rosenborg BK (Rosenborg Skolen)",
+    "typeTilbyder": "idrettslag",
+    "by": "Hommelvik (Trondheim-regionen)",
+    "kommune": "Malvik",
+    "nettside": "https://www.rbk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "billett.rbk.no"
+  },
+  {
+    "tilbyder": "Rygge IL Turn",
+    "typeTilbyder": "idrettslag",
+    "by": "Moss",
+    "kommune": "Moss",
+    "nettside": "https://ryggeturn.klubbnettside.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Via Moss kommunes vinterferieklubb"
+  },
+  {
+    "tilbyder": "Sandefjordbibliotekene",
+    "typeTilbyder": "bibliotek",
+    "by": "Sandefjord",
+    "kommune": "Sandefjord",
+    "nettside": "https://sandefjordbibliotekene.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "delvis",
+    "notat": null
+  },
+  {
+    "tilbyder": "Sandnes Håndballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://www.sandneshk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Sandnes Ulf",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://sandnesulf.spond.club",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Sandvika Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandvika",
+    "kommune": "Bærum",
+    "nettside": "https://www.sandvikaturn.no",
+    "antallKursILista": 4,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Sarpsborg FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Sarpsborg",
+    "kommune": "Sarpsborg",
+    "nettside": "https://sarpsborgfk.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Sarpsborg Skøyteklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Sarpsborg",
+    "kommune": "Sarpsborg",
+    "nettside": "https://sskkunstlop.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": null
+  },
+  {
+    "tilbyder": "Sarpsborg Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Sarpsborg",
+    "kommune": "Sarpsborg",
+    "nettside": "https://www.sarpsborgturn.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "SK Brann – Kniksen-Akademiet",
+    "typeTilbyder": "idrettslag",
+    "by": "Bergen",
+    "kommune": "Bergen",
+    "nettside": "https://www.brann.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Superinvite"
+  },
+  {
+    "tilbyder": "Skedsmo FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillestrøm",
+    "kommune": "Lillestrøm",
+    "nettside": "https://skedsmofk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Hoopit (ikke lest)"
+  },
+  {
+    "tilbyder": "Skien fritidspark",
+    "typeTilbyder": "kommune",
+    "by": "Skien",
+    "kommune": "Skien",
+    "nettside": "https://skienfritidspark.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Billett"
+  },
+  {
+    "tilbyder": "Skien kommune",
+    "typeTilbyder": "kommune",
+    "by": "Skien",
+    "kommune": "Skien",
+    "nettside": "https://www.skien.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Program legges ut før ferien"
+  },
+  {
+    "tilbyder": "Skimore Oslo Skiskole",
+    "typeTilbyder": "kommersiell",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://oslo.skischool.shop",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Nettbutikk"
+  },
+  {
+    "tilbyder": "Slottsfjellsmuseet (Vestfoldmuseene)",
+    "typeTilbyder": "museum",
+    "by": "Tønsberg",
+    "kommune": "Tønsberg",
+    "nettside": "https://vestfoldmuseene.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "St. Croix-huset / UKM Fredrikstad",
+    "typeTilbyder": "kommune",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://aktivitetsportalenfredrikstad.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Via kommunens aktivitetsportal"
+  },
+  {
+    "tilbyder": "Stabæk Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Bærum",
+    "kommune": "Bærum",
+    "nettside": "https://www.stabak.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Stall Kringla",
+    "typeTilbyder": "kommersiell",
+    "by": "Steinkjer",
+    "kommune": "Steinkjer",
+    "nettside": "https://www.stallkringla.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Skjema"
+  },
+  {
+    "tilbyder": "Stall Verdens Ende",
+    "typeTilbyder": "kommersiell",
+    "by": "Tjøme",
+    "kommune": "Færder",
+    "nettside": "https://stallverdensende.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ja",
+    "notat": "Rideleir med overnatting, Tjøme"
+  },
+  {
+    "tilbyder": "Stavanger IF Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://stavangerif.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Stavanger Ishockeyklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.stavangerhockey.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Stavanger kommune – Fiks ferigge ferie (Ungdom og fritid)",
+    "typeTilbyder": "kommune",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.stavanger.kommune.no/kultur-og-fritid/fiks-ferigge-ferie/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Billettportal; kun Stavanger-barn"
+  },
+  {
+    "tilbyder": "Sverresborg Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://www.sverresborgfotball.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "LetsReg"
+  },
+  {
+    "tilbyder": "Sølvberget bibliotek og kulturhus",
+    "typeTilbyder": "bibliotek",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.solvberget.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "delvis",
+    "notat": "Gratisbilletter til noen arrangementer"
+  },
+  {
+    "tilbyder": "Sørvest Bandyregion (innebandy)",
+    "typeTilbyder": "organisasjon",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://innebandyturnering.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Regionledd i Norges Bandyforbund"
+  },
+  {
+    "tilbyder": "Tare Vintercamp (Spjelkavik IL, SIF/Hessa, Guard, Rollon, AaFK)",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://tarevintercamp.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Samarbeid mellom fem klubber"
+  },
+  {
+    "tilbyder": "Telemark museum",
+    "typeTilbyder": "museum",
+    "by": "Porsgrunn; Skien",
+    "kommune": "Porsgrunn; Skien",
+    "nettside": "https://www.telemarkmuseum.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "TENK (TENK Tech Camp)",
+    "typeTilbyder": "organisasjon",
+    "by": "Bergen; Kristiansand; Oslo; Sandnes; Tromsø; Trondheim",
+    "kommune": "Bergen; Kristiansand; Oslo; Sandnes; Tromsø; Trondheim",
+    "nettside": "https://tenknorge.com",
+    "antallKursILista": 6,
+    "harPameldingOnline": "ja",
+    "notat": "Gratis"
+  },
+  {
+    "tilbyder": "Tomm Murstad Sjøleir",
+    "typeTilbyder": "organisasjon",
+    "by": "Asker",
+    "kommune": "Asker",
+    "nettside": "https://sjoleir.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ja",
+    "notat": "pameld.sjoleir.no"
+  },
+  {
+    "tilbyder": "Tromsø IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Tromsø",
+    "kommune": "Tromsø",
+    "nettside": "https://www.til.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Tromsø kommune (Fritid)",
+    "typeTilbyder": "kommune",
+    "by": "Tromsø",
+    "kommune": "Tromsø",
+    "nettside": "https://tromso.kommune.no/sommeraktiviteter",
+    "antallKursILista": 4,
+    "harPameldingOnline": "ja",
+    "notat": "Kommunalt skjema"
+  },
+  {
+    "tilbyder": "Trondhjems Skiklub",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://skiklubben.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Påmelding ikke åpnet ennå"
+  },
+  {
+    "tilbyder": "Trondhjems Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://trondhjemsturn.no",
+    "antallKursILista": 4,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Tryggvi Islandshestgård",
+    "typeTilbyder": "kommersiell",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://tryggvi.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Tønsberg og Færder bibliotek",
+    "typeTilbyder": "bibliotek",
+    "by": "Tønsberg",
+    "kommune": "Tønsberg",
+    "nettside": "https://www.tonsberg.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "delvis",
+    "notat": null
+  },
+  {
+    "tilbyder": "Tønsbergs Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Tønsberg",
+    "kommune": "Tønsberg",
+    "nettside": "https://xn--tnsbergsturn-vjb.spond.club",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond-klubbside; betaling via Vipps"
+  },
+  {
+    "tilbyder": "Utleira IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://utleira.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Påmelding via Superinvite"
+  },
+  {
+    "tilbyder": "Vest-Agder-museet",
+    "typeTilbyder": "museum",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.vestagdermuseet.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Viking FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.vikingfotball.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Viking HK og Hinna",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://vikinghk.spond.club",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Skjema"
+  },
+  {
+    "tilbyder": "Vitenfabrikken (Jærmuseet)",
+    "typeTilbyder": "museum",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://www.jaermuseet.no/vitenfabrikken",
+    "antallKursILista": 2,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Vålerenga Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://klubb.valerenga-fotball.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Ålesund Gymnastikk og Turnklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.alesundgtk.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Aalesunds FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.aafk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Aalesunds Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.aatf.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
+    "tilbyder": "Århus gård / Bybonden i Skien",
+    "typeTilbyder": "organisasjon",
+    "by": "Skien",
+    "kommune": "Skien",
+    "nettside": "https://aarhusgaard.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Via kommunens nettsider"
+  },
+  {
+    "tilbyder": "Åssiden IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Drammen",
+    "kommune": "Drammen",
+    "nettside": "https://www.aif.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ja",
+    "notat": "Spond (håndball), Hoopit (fotball, ikke lest)"
+  }
+]
