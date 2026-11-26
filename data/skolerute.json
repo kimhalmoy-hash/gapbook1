@@ -21,9 +21,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-30"
     },
-    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-06-25-3097",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-08-13-1631",
     "kildeType": "lovdata",
-    "merknad": "Også kommunens side https://www.oslo.kommune.no/skole-og-utdanning/ferie-og-fridager-i-skolen/ . Påskeferie t.o.m. tirsdag 30.03. Oslo er eget fylke; lik rute for grunnskole og vgs.",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: endringsforskrift FOR-2026-08-13-1631 (utdanningsdirektøren 13.08.2026), som gjengir hele tabellen; feriedatoene er de samme som i FOR-2025-06-25-3097. Påskeferie t.o.m. tirsdag 30.03.",
     "slug": "oslo"
   },
   {
@@ -48,9 +48,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-29"
     },
-    "kildeUrl": "https://www.bergen.kommune.no/omkommunen/avdelinger/etat-for-skole/ferie-og-fridager",
-    "kildeType": "kommune-side",
-    "merknad": "Veiledende rute; planleggingsdager varierer per skole. AVVIK I KILDE: Lovdata-forskriften (FOR-2025-06-03-980) sier «uke 9» men oppgir 22.–26. februar; kommunens side og PDF sier 01.03–05.03 (uke 9). Kommunens side er brukt.",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-06-23-1333",
+    "kildeType": "lovdata",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: endringsforskrift FOR-2025-06-23-1333 (fastsatt 23.06.2025), som flytter vinterferien til 1.–5. mars (uke 9). Den opprinnelige forskriften FOR-2025-06-03-980 (03.06.2025) sa 22.–26. februar. Kommunens side sier også 1.–5. mars. Veiledende rute; planleggingsdager varierer per skole.",
     "slug": "bergen"
   },
   {
@@ -320,7 +320,7 @@
     },
     "kildeUrl": "https://www.tromso.kommune.no/barnehage-og-skole/skole/ferie-og-fridager-i-skoler-og-barnehager",
     "kildeType": "kommune-side",
-    "merknad": "AVVIK: høstferien er bare 3 dager (onsdag 30.09–fredag 02.10); 28.–29.09 er skoledager. Ekstra elevfri 16.–17.11. Oppstart etter påske 30.03.",
+    "merknad": "Høstferien er bare 3 dager (onsdag 30.09–fredag 02.10); 28.–29.09 er skoledager. Ekstra elevfri 16.–17.11. Oppstart etter påske 30.03. Lovdata FOR-2025-09-03-1885 er en rammeforskrift uten datoer (skoleruta publiseres av kommunen), så det er ingen konflikt med Lovdata.",
     "slug": "tromso"
   },
   {
@@ -995,7 +995,7 @@
     },
     "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-01-20-57",
     "kildeType": "lovdata",
-    "merknad": "FOR-2026-01-20-57",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: FOR-2026-01-20-57 (kommunedirektøren 20.01.2026): vinterferie veke 9 (1.–5. mars). Kommunens høyringsside for 2026–2027 er eit utkast, ikkje eit vedtak, og er eldre enn forskrifta.",
     "slug": "alver"
   },
   {
@@ -1157,7 +1157,7 @@
     },
     "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2024-11-05-2696",
     "kildeType": "lovdata",
-    "merknad": "Manuelt kontrollert. Siste forskrift for 2025/26 og 2026/27 (FOR-2024-11-05-2696) har høstferie uke 41; en eldre forskrift (FOR-2024-06-19-1846) hadde uke 40. Den nyeste er brukt. Automatisk funnet kommuneside var barnehageruta og er ikke brukt.",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: FOR-2024-11-05-2696 (kommunestyret 06.11.2024): høstferie uke 41. Den eldre FOR-2024-06-19-1846 (19.06.2024) hadde uke 40. Kommunens barnehagerute oppgir også «uke 41 – høstferie for skole».",
     "slug": "horten"
   },
   {
@@ -1536,6 +1536,33 @@
   },
   {
     "skolear": "2026-2027",
+    "rang": 58,
+    "kommune": "Alta",
+    "kommunenummer": "5601",
+    "fylke": "Finnmark",
+    "folketall": 22147,
+    "hostferie": {
+      "uke": 40,
+      "datoFra": "2026-09-28",
+      "datoTil": "2026-10-02"
+    },
+    "vinterferie": {
+      "uke": 8,
+      "datoFra": "2027-02-24",
+      "datoTil": "2027-02-26"
+    },
+    "paske": {
+      "uke": null,
+      "datoFra": "2027-03-22",
+      "datoTil": "2027-03-29"
+    },
+    "kildeUrl": "https://www.alta.kommune.no/tjenester/skole-og-utdanning/skolerute-og-sfo-rute",
+    "kildeType": "kommune-side",
+    "merknad": "Manuelt kontrollert. Kommunens side «Skolerute og SFO-rute» (ny adresse; den gamle /skole-og-sfo-rute ga 404): høstferie 28.–30.09 og 1.–2.10, vinterferie onsdag 24.–fredag 26.02 (bare 3 dager), påske 22.–29.03. Lovdata FOR-2025-02-04-138 (hovedutvalget 04.02.2025) har bare tabell for 2025/26 og sier at tabellen for 2026/27 lages som vedlegg. Siden viser også 2027/28 og 2028/29.",
+    "slug": "alta"
+  },
+  {
+    "skolear": "2026-2027",
     "rang": 59,
     "kommune": "Elverum",
     "kommunenummer": "3420",
@@ -1695,6 +1722,33 @@
     "kildeType": "lovdata",
     "merknad": "FOR-2025-12-18-2794",
     "slug": "ovre-eiker"
+  },
+  {
+    "skolear": "2026-2027",
+    "rang": 65,
+    "kommune": "Rælingen",
+    "kommunenummer": "3224",
+    "fylke": "Akershus",
+    "folketall": 20999,
+    "hostferie": {
+      "uke": 40,
+      "datoFra": "2026-09-28",
+      "datoTil": "2026-10-02"
+    },
+    "vinterferie": {
+      "uke": 8,
+      "datoFra": "2027-02-22",
+      "datoTil": "2027-02-26"
+    },
+    "paske": {
+      "uke": null,
+      "datoFra": "2027-03-22",
+      "datoTil": "2027-03-30"
+    },
+    "kildeUrl": "https://www.rud.skole.no/files/2026/02/skolerute_2026-2027__rud_skole_1.pdf",
+    "kildeType": "kommune-pdf",
+    "merknad": "Manuelt kontrollert. Kilde: PDF fra Rud skole (kommunal grunnskole i Rælingen) med «Skolerute 2026-2027». Den sier at ruta gjelder alle kommunale grunnskoler i Rælingen (felles «Forskrift om skolerute for Rælingen kommune skoleåret 2026-2027», vedtatt av kommunedirektøren). Elevenes påskeferie varer t.o.m. tirsdag 30.03 (SFO stengt 22.–29.03). Kommunens egne sider er JavaScript-rendret og ga ingen lesbar tekst. Ingen forskrift i Lovdatas åpne data.",
+    "slug": "raelingen"
   },
   {
     "skolear": "2026-2027",
@@ -2474,9 +2528,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-29"
     },
-    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-08-28-1777",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-11-10-2239",
     "kildeType": "lovdata",
-    "merknad": "FOR-2025-08-28-1777 NB: endringsforskrift(er) i Lovdata: FOR-2025-11-10-2239 – sjekk",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: endringsforskrift FOR-2025-11-10-2239 (kommunedirektøren 10.11.2025), som gjengir hele tabellen; feriedatoene er de samme som i FOR-2025-08-28-1777.",
     "slug": "sogndal"
   },
   {
@@ -2715,11 +2769,11 @@
     "paske": {
       "uke": null,
       "datoFra": "2027-03-22",
-      "datoTil": "2027-03-30"
+      "datoTil": "2027-03-29"
     },
-    "kildeUrl": "https://ullensvang.kommune.no/tenester/oppvekst-og-utdanning/skule/vare-skular/hauso-skule/skuleruta/",
-    "kildeType": "kommune-side",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2025-10-20-2077) for paske: Lovdata paske 2027-03-22–2027-03-29. Kommunens side er brukt.",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-10-20-2077",
+    "kildeType": "lovdata",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: FOR-2025-10-20-2077 (kommunestyret 20.10.2025): påskeferie 22.–29.03. Hauso skule si side (kommunal skule) seier det same (første skuledag 30.03); tidlegare rad hadde feil 30.03 frå automatisk tolking.",
     "slug": "ullensvang"
   },
   {
@@ -3656,7 +3710,7 @@
     },
     "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-02-05-155",
     "kildeType": "lovdata",
-    "merknad": "Manuelt kontrollert. AVVIK I KILDEN: forskriftens innledning sier «vinterferien i uke 10», men tabellen sier 22.–26. februar (uke 8). Tabellen er brukt. Kommunens side (https://www.malselv.kommune.no/artikkel/skolerute) viste ikke 2026/27. Høstferien er bare 3 dager (onsdag–fredag).",
+    "merknad": "Uavklart avvik (26.11.2026): Brukt: FOR-2026-02-05-155 (kommunestyret 05.02.2026). Forskriftens § 2 sier «vinterferien i uke 10», men tabellen i § 4 sier 22.–26. februar (uke 8). Ingen nyere vedtak funnet; kommunens skolerute-side (malselv.kommune.no/skolerute.6191477-587555.html) ga 404 26.11.2026. En søkemotorkopi av den viste vinterferie 22.–26.02 (uke 8), men er ikke brukt som kilde. Tabellen er brukt. Uavklart: forskriftens egen tekst er selvmotsigende. Høstferien er bare 3 dager.",
     "slug": "malselv"
   },
   {
@@ -3762,9 +3816,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-30"
     },
-    "kildeUrl": "https://www.tvedestrand.kommune.no/tjenester/barnehage-og-skole/skoler/skolerute-og-permisjon-fra-undervisning/skolerute-ferie-og-fridager-innvarende-skolear-og-kommende-skolear/",
-    "kildeType": "kommune-side",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2025-11-19-2969) for paske: Lovdata paske 2027-03-22–2027-03-29. Kommunens side er brukt. NB: endringsforskrift(er) i Lovdata: FOR-2026-02-11-872 – sjekk",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-02-11-872",
+    "kildeType": "lovdata",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: endringsforskrift FOR-2026-02-11-872 (kommunestyret 11.02.2026): påskeferie t.o.m. tirsdag 30.03. Opprinnelig forskrift FOR-2025-11-19-2969 (19.11.2025) sa t.o.m. 29.03. Kommunens side sier 30.03 (samsvarer med endringen).",
     "slug": "tvedestrand"
   },
   {
@@ -4084,7 +4138,7 @@
     },
     "kildeUrl": "https://www.roros.kommune.no/barn-unge-utdanning/skole/skolerute/",
     "kildeType": "kommune-side",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2025-09-18-2147) for paske: Lovdata paske 2027-03-22–2027-04-06. Kommunens side er brukt.",
+    "merknad": "Uavklart avvik (26.11.2026): FOR-2025-09-18-2147 (kommunestyret 18.09.2025) oppgir «Fri mandag 6. april (2. påskedag)» i uke 13. 2. påskedag 2027 er 29.03, og uke 13 begynner 29.03. Kommunens side sier 22.–29.03. Samme vedtak; ingen nyere funnet. Dagens verdi (29.03, kommunens side) er beholdt.",
     "slug": "roros"
   },
   {
@@ -4190,9 +4244,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-29"
     },
-    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-10-22-3089",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-10-22-3101",
     "kildeType": "lovdata",
-    "merknad": "FOR-2025-10-22-3089 kommunens side viser ikke 2026/27: https://www.austevoll.kommune.no/artikkel/ferie-og-fridagar-i-skule-og-barnehage NB: endringsforskrift(er) i Lovdata: FOR-2025-10-22-3101 – sjekk",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: endringsforskrift FOR-2025-10-22-3101 (tenesteutvalet 22.10.2025), som gjengir hele tabellen; feriedatoene er de samme som i FOR-2025-10-22-3089.",
     "slug": "austevoll"
   },
   {
@@ -4244,9 +4298,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-29"
     },
-    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-11-20-2920",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-10-22-2277",
     "kildeType": "lovdata",
-    "merknad": "FOR-2025-11-20-2920 kommunens side viser ikke 2026/27: https://www.tinn.kommune.no/artikkel/skolerute-1709543369336 NB: endringsforskrift(er) i Lovdata: FOR-2026-10-22-2277 – sjekk",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: endringsforskrift FOR-2026-10-22-2277 (kommunestyret 22.10.2026, i kraft 01.01.2027), som gjengir hele tabellen; feriedatoene er de samme som i FOR-2025-11-20-2920.",
     "slug": "tinn"
   },
   {
@@ -4568,9 +4622,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-29"
     },
-    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-01-22-447",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-09-03-1874",
     "kildeType": "lovdata",
-    "merknad": "FOR-2026-01-22-447 NB: endringsforskrift(er) i Lovdata: FOR-2026-09-03-1874 – sjekk",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: endringsforskrift FOR-2026-09-03-1874 (kommunestyret 03.09.2026), som gjengir hele tabellen; feriedatoene er de samme som i FOR-2026-01-22-447 (FOR-2026-01-22-135 utgikk ved en inkurie).",
     "slug": "hol"
   },
   {
@@ -4836,7 +4890,7 @@
     },
     "kildeUrl": "https://www.drangedal.kommune.no/globalassets/skole-og-barnehage/skoleruta/skolerute-for-drangedal-kommune-2026-2027.pdf",
     "kildeType": "kommune-pdf",
-    "merknad": "Manuelt kontrollert. AVVIK: Lovdata FOR-2025-03-13-972 (2025–2027) oppgir vinterferie «uke 8» men datoene 15.–19. februar (uke 7); kommunens PDF sier uke 8, 22.–26. februar. Kommunens PDF er brukt.",
+    "merknad": "Uavklart avvik (26.11.2026): Kommunens PDF (opprettet 14.09.2026, uten vedtaksdato) sier vinterferie uke 8, 22.–26. februar. FOR-2025-03-13-972 (kommunestyret 13.03.2025) sier «uke 8» men datoene 15.–19. februar (uke 7). Ingen nyere vedtak funnet (søkt i Lovdata og på nett). Dagens verdi (22.–26.02, kommunens PDF) er beholdt.",
     "slug": "drangedal"
   },
   {
@@ -4960,10 +5014,14 @@
       "datoFra": "2027-02-22",
       "datoTil": "2027-02-26"
     },
-    "paske": null,
-    "kildeUrl": "https://www.hoyanger.kommune.no/tenester/barnehage-og-skule/grunnskule/skuleruta-ferie-og-fridagar/",
-    "kildeType": "kommune-side",
-    "merknad": "Samsvarer med forskrift https://lovdata.no/dokument/LF/forskrift/2026-02-26-433 NB: endringsforskrift(er) i Lovdata: FOR-2026-04-30-784 – sjekk Automatisk kontroll: påske: bare dag etter påske funnet",
+    "paske": {
+      "uke": null,
+      "datoFra": "2027-03-22",
+      "datoTil": "2027-03-29"
+    },
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-02-26-433",
+    "kildeType": "lovdata",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: FOR-2026-02-26-433 (kommunestyret 26.02.2026). Endringsforskrift FOR-2026-04-30-784 (30.04.2026) endrer bare juleferie-teksten og 1. mai, ikke høst-, vinter- eller påskeferien. Kommunens side har samme høst- og vinterferie; påske er tatt fra forskriften.",
     "slug": "hoyanger"
   },
   {
@@ -5412,9 +5470,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-29"
     },
-    "kildeUrl": "https://www.nordkapp.kommune.no/tjenester/barnehage-og-skole/skolerute/",
-    "kildeType": "kommune-side",
-    "merknad": "Manuelt kontrollert. Vinterferien er bare torsdag–fredag 25.–26.02 («Vinterferie/planleggingsdager»). AVVIK: Lovdata FOR-2026-11-05-2396 gir andre datoer (tolket automatisk, ikke lest manuelt) – kommunens side er brukt.",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2026-02-10-287",
+    "kildeType": "lovdata",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: FOR-2026-02-10-287 (kommunestyret 10.02.2026): vinterferie bare torsdag 25.–fredag 26.02. Kommunens side sier det samme. Tidligere merknad sammenlignet feilaktig med FOR-2026-11-05-2396, som gjelder 2027–2028.",
     "slug": "nordkapp"
   },
   {
@@ -5653,7 +5711,7 @@
     },
     "kildeUrl": "https://www.hemsedal.kommune.no/siteassets/barnehage-og-skule/skule/forskrift-og-planer/forskrift-til-skolerute-2026-2027.pdf",
     "kildeType": "kommune-pdf",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2025-11-12-2293) for paske: Lovdata paske 2027-03-22–2027-04-05. Kommunens side er brukt.",
+    "merknad": "Uavklart avvik (26.11.2026): Kommunens PDF av forskrifta (opprettet 13.04.2026, uten nytt vedtak) sier påskeferie 22.03 t.o.m. mandag 29.03. Lovdata-versjonen av samme forskrift FOR-2025-11-12-2293 (kommunestyret 12.11.2025) sier «t.o.m. mandag 5. april». Ingen endringsforskrift funnet. Dagens verdi (29.03) er beholdt. Vinterferie uke 9 (1.–5.03) i begge.",
     "slug": "hemsedal"
   },
   {
@@ -5815,7 +5873,7 @@
     },
     "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-06-01-1685",
     "kildeType": "lovdata",
-    "merknad": "FOR-2025-06-01-1685 NB: endringsforskrift(er) i Lovdata: FOR-2026-01-22-66 – sjekk",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: FOR-2025-06-01-1685 (kommunalsjef oppvekst 01.06.2025). Endringsforskrift FOR-2026-01-22-66 (22.01.2026) endrer bare elevfri dag i november.",
     "slug": "vik"
   },
   {
@@ -6564,6 +6622,33 @@
   },
   {
     "skolear": "2026-2027",
+    "rang": 288,
+    "kommune": "Sirdal",
+    "kommunenummer": "4228",
+    "fylke": "Agder",
+    "folketall": 1911,
+    "hostferie": {
+      "uke": 40,
+      "datoFra": "2026-09-28",
+      "datoTil": "2026-10-02"
+    },
+    "vinterferie": {
+      "uke": 8,
+      "datoFra": "2027-02-22",
+      "datoTil": "2027-02-26"
+    },
+    "paske": {
+      "uke": null,
+      "datoFra": "2027-03-22",
+      "datoTil": "2027-03-30"
+    },
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2024-03-13-2483",
+    "kildeType": "lovdata",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: FOR-2024-03-13-2483 (utval for oppvekst og levekår 13.03.2024) med endring FOR-2026-02-05-162 (kommunedirektøren 05.02.2026). Endringen gjeld berre Sinnes skule, som følgjer Rogaland-ruta: haustferie 5.–9.10 og vinterferie 15.–19.02. Øvrige skular: tabellen over.",
+    "slug": "sirdal"
+  },
+  {
+    "skolear": "2026-2027",
     "rang": 289,
     "kommune": "Aurland",
     "kommunenummer": "4641",
@@ -6690,7 +6775,7 @@
     },
     "kildeUrl": "https://www.storfjord.kommune.no/download/18.6ca3585b19980e967c05d263/1756292060407/Skolerute%20Storfjord%20kommune%202026-2027.pdf",
     "kildeType": "kommune-pdf",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2025-01-03-6) for host, vinter: Lovdata host 2026-10-01–2026-10-02; vinter 2027-03-02–2027-03-05. Kommunens side er brukt. Høstferien er bare 3 dager (onsdag–fredag).",
+    "merknad": "Avvik avklart 26.11.2026. Kommunens PDF samsvarer med FOR-2025-01-03-6 (kommunedirektøren 03.01.2025), del for 2026/27: høstferie onsdag 30.09–fredag 02.10 (bare 3 dager), vinterferie 22.–26.02, påske 22.–29.03. Tidligere «avvik» var tolking av 2025/26-delen.",
     "slug": "storfjord"
   },
   {
@@ -6742,9 +6827,9 @@
       "datoFra": "2027-03-22",
       "datoTil": "2027-03-30"
     },
-    "kildeUrl": "https://haegebostad.kommune.no/tjenester/barn-oppvekst-og-familie/barnehage-skole-og-sfo/skole/skoleruta/",
-    "kildeType": "kommune-pdf",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2025-05-08-789) for host, vinter: Lovdata host 2026-10-05–2026-10-09; vinter 2027-02-17–2027-02-19. Kommunens side er brukt. vinterferie: bare uketall i kilden, datoer = man–fre i uka Automatisk kontroll: vinter: bare uketall",
+    "kildeUrl": "https://lovdata.no/dokument/LF/forskrift/2025-05-08-789",
+    "kildeType": "lovdata",
+    "merknad": "Avvik avklart 26.11.2026. Brukt: FOR-2025-05-08-789 (kommunestyret 08.05.2025), del for 2026/27: høstferie 28.09–02.10, vinterferie 22.–26.02, påske 22.–30.03. Kommunens skolerute oppgir de samme ukene. Tidligere «avvik» var tolking av 2024/25-delen.",
     "slug": "haegebostad"
   },
   {
@@ -7014,7 +7099,7 @@
     },
     "kildeUrl": "https://www.iveland.kommune.no/tjenester/barnehage-og-skole/iveland-skole/skolerute/",
     "kildeType": "kommune-side",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2024-06-13-2510) for vinter: Lovdata vinter 2027-02-22–2027-02-22. Kommunens side er brukt.",
+    "merknad": "Uavklart avvik (26.11.2026): FOR-2024-06-13-2510 (kommunestyret 13.06.2024) sier «Vinterferie uke 8, f.o.m. mandag 22. t.o.m. tirsdag 30.» (teksten er kopiert fra påske-linja). Kommunens side sier uke 8 (22.02–26.02). Ingen nyere vedtak funnet. Dagens verdi (kommunens side) er beholdt.",
     "slug": "iveland"
   },
   {
@@ -7211,7 +7296,7 @@
     "folketall": 1241,
     "hostferie": {
       "uke": 40,
-      "datoFra": "2026-09-30",
+      "datoFra": "2026-09-28",
       "datoTil": "2026-10-02"
     },
     "vinterferie": {
@@ -7226,7 +7311,7 @@
     },
     "kildeUrl": "https://www.valle.kommune.no/tenester/barn-skule-og-familie/valle-skule/ferie-og-fridagar-i-skulen/",
     "kildeType": "kommune-side",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2025-11-06-2225) for host: Lovdata host 2026-09-28–2026-10-02. Kommunens side er brukt. Høstferien er bare 3 dager (onsdag–fredag).",
+    "merknad": "Avvik avklart 26.11.2026. Kommunens side (Valle skule): haustferie 28.–30.09 og 1.–2.10 (heile veke 40). Samsvarer med FOR-2025-11-06-2225 (fastsett administrativt 06.11.2025, «veke 40»). Tidlegare rad hadde feil 30.09 frå automatisk tolking.",
     "slug": "valle"
   },
   {
@@ -7785,7 +7870,7 @@
     },
     "kildeUrl": "https://www.aseral.kommune.no/tenester/barnehage-og-skule/skule/skuleruta-ferie-og-fridagar/",
     "kildeType": "kommune-side",
-    "merknad": "AVVIK mot Lovdata (https://lovdata.no/dokument/LF/forskrift/2024-01-23-3360) for paske: Lovdata paske 2027-03-22–2027-03-29. Kommunens side er brukt.",
+    "merknad": "Avvik avklart 26.11.2026. Kommunens side: påskeferie t.o.m. 30.03. FOR-2024-01-23-3360 (hovudutval 23.01.2024) seier «22. mars tom 30. april», openbert skrivefeil for 30. mars. Same vedtak; ingen konflikt i praksis.",
     "slug": "aseral"
   },
   {

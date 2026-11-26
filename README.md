@@ -52,7 +52,7 @@ Lister med færre enn 3 synlige `verifisert`- eller `delvis`-rader får `noindex
 
 ## Skolerute
 
-`data/skolerute.json` er bygget fra `data/kilder/skolerute-2027-alle.csv` (357 kommuner). Bare kommuner med offisielle datoer får rad og `/skoleruta/{kommune}/`. «Ikke funnet» blir utelatt. Datoene `fra`/`til` styrer uke-sidene. Der merknaden sier at kildene avviker, vises en kort linje om at kommunens egne datoer er brukt. Bergen beholder 01.–05.03.2027. Hammerfest viser vinterferie onsdag–fredag, ikke hele uken.
+`data/skolerute.json` er bygget fra `data/kilder/skolerute-2027-alle.csv` (357 kommuner, 305 med datoer). «Ikke funnet» blir utelatt og får ingen `/skoleruta/`-side. Datoene `fra`/`til` styrer uke-sidene. Der merknaden sier at avviket er avklart, vises at datoene følger det nyeste offisielle vedtaket. Bergen har vinterferie 1.–5. mars 2027. Alta har vinterferie onsdag–fredag.
 
 Kommuner uten rad viser ingen ferie. Sommerferie står ikke i skoleruta, så sommerhuben finner ikke på sommeruker.
 

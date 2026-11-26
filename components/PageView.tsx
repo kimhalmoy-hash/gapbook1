@@ -154,7 +154,11 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
           </ul>
           {side.skoleruteKort.merknad ? (
             <>
-              {/avvik/i.test(side.skoleruteKort.merknad) ? <p className="mt-4 text-sm">{tekst.ownDates}</p> : null}
+              {/avvik avklart/i.test(side.skoleruteKort.merknad) ? (
+                <p className="mt-4 text-sm">{tekst.datesResolved}</p>
+              ) : /avvik/i.test(side.skoleruteKort.merknad) ? (
+                <p className="mt-4 text-sm">{tekst.ownDates}</p>
+              ) : null}
               <span dangerouslySetInnerHTML={{ __html: `<!-- ${side.skoleruteKort.merknad.replace(/--/g, "–")} -->` }} />
             </>
           ) : null}

@@ -64,6 +64,7 @@ export type Copy = {
   note: string;
   source: string;
   ownDates: string;
+  datesResolved: string;
   lastYearLine: string;
   expectedShort: string;
   showMore: string;
@@ -219,6 +220,7 @@ export const COPY: Record<Locale, Copy> = {
     note: "Merknad",
     source: "Kilde",
     ownDates: "Kommunens egne datoer er brukt",
+    datesResolved: "Datoene følger det nyeste offisielle vedtaket.",
     lastYearLine: "Fjorårets dato: {dato}",
     expectedShort: "Forventet ut fra fjorårets opplegg",
     showMore: "Vis flere",
@@ -331,6 +333,7 @@ export const COPY: Record<Locale, Copy> = {
     note: "Anmärkning",
     source: "Källa",
     ownDates: "Kommunens egna datum används",
+    datesResolved: "Datumen följer det senaste officiella beslutet.",
     lastYearLine: "Fjolårets datum: {dato}",
     expectedShort: "Förväntat utifrån förra årets upplägg",
     showMore: "Visa fler",
@@ -443,6 +446,7 @@ export const COPY: Record<Locale, Copy> = {
     note: "Note",
     source: "Source",
     ownDates: "The municipality's own dates are used",
+    datesResolved: "The dates follow the latest official decision.",
     lastYearLine: "Last year's dates: {dato}",
     expectedShort: "Expected from last year's listing",
     showMore: "Show more",
