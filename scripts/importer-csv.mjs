@@ -45,7 +45,7 @@ function skriv(navn, data) {
 
 function importerLeirer(tilbydere) {
   const nett = new Map(tilbydere.map((t) => [t.tilbyder, t.nettside]));
-  const rader = les("kurs-norge-v3.csv");
+  const rader = les("kurs-norge-v4.csv");
   const brukt = new Set();
   const leirer = rader.map((rad) => {
     const status = STATUS[rad.status];
@@ -79,7 +79,7 @@ function importerLeirer(tilbydere) {
       by: tom(rad.by),
       kommune: tom(rad.kommune),
       fylke: tom(rad.fylke),
-      // Filen er kurs-norge-v3. Land står ikke per rad.
+      // Filen er kurs-norge-v4. Land står ikke per rad. Påmelding finnes ikke i CSV-en.
       land: "NO",
       status,
       notat: tom(rad.notat),
@@ -102,7 +102,7 @@ function importerLeirer(tilbydere) {
 }
 
 function importerTilbydere() {
-  return les("tilbydere-norge-v3.csv")
+  return les("tilbydere-norge-v4.csv")
     .map((rad) => ({
       tilbyder: tom(rad.tilbyder),
       typeTilbyder: tom(rad.type_tilbyder),

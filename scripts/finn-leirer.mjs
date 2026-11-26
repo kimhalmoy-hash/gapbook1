@@ -18,6 +18,7 @@ import {
 } from "./lib/utdrag.mjs";
 import { lagId, rensPerson } from "../lib/pure.mjs";
 import { stiTillatt as robotsTillatt } from "./lib/robots.mjs";
+import { forfalte } from "./lib/sjekk-plan.mjs";
 
 const ROT = path.resolve(import.meta.dirname, "..");
 const config = JSON.parse(readFileSync(path.join(ROT, "config", "kilder.json"), "utf8"));
@@ -181,7 +182,22 @@ async function fraArrangor(kilde) {
   );
 }
 
-for (const kilde of config.kilder || []) {
+const forfalt = process.argv.includes("--forfalte");
+let kilder = config.kilder || [];
+if (forfalt) {
+  const plan = JSON.parse(readFileSync(path.join(ROT, "data", "sjekk-plan.json"), "utf8"));
+  const due = forfalte(plan, idag);
+  const sett = new Set();
+  kilder = [];
+  for (const rad of due) {
+    if (sett.has(rad.kildeUrl)) continue;
+    sett.add(rad.kildeUrl);
+    kilder.push({ url: rad.kildeUrl, tilbyder: rad.tilbyder, kommune: rad.kommune });
+  }
+  console.log(`finn --forfalte: ${due.length} forfalt, ${kilder.length} adresser på eller før ${idag}`);
+}
+
+for (const kilde of kilder) {
   const vurdering = vurderUrl(config, kilde.url);
   if (vurdering.handling === "spond") await fraSpond(kilde.url);
   else if (vurdering.handling === "kfuk") await fraKfuk(kilde.url);
@@ -192,7 +208,9 @@ for (const kilde of config.kilder || []) {
 
 const ut = {
   generert: idag,
-  merknad: "Kandidater til manuell gjennomgang. Skriptet skriver aldri til leirer.json.",
+  merknad: forfalt
+    ? "Forfalte kilder fra sjekk-plan. Kandidater til manuell gjennomgang. Skriver aldri til leirer.json."
+    : "Kandidater til manuell gjennomgang. Skriptet skriver aldri til leirer.json.",
   kandidater,
   hoppetOver,
 };

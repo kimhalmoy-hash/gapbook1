@@ -8,9 +8,9 @@ Inntekten senere er at tilbydere betaler for å bli fremhevet. Prisen er ikke sa
 
 ## Slik flyter dataene
 
-1. Kildene ligger i `data/kilder/`: `kurs-norge-v3.csv`, `tilbydere-norge-v3.csv`, `skolerute-2027.csv` og `README-supply-v3.md`. Katalogen som nettstedet viser, er `data/leirer.json` (v3, ett objekt per uke). `npm run importer` leser CSV-en og oppdaterer tilbydere og skolerute. Den skriver bare over `leirer.json` med `--leirer`.
-2. Importen fyller ikke inn manglende felt. `pameldingStatus` og `pameldingApner` blir `null` til kilden sier noe annet. Personnavn, telefon og e-post tas ut. Åttetall som er en dato, som `01052026`, blir stående.
-3. `npm run finn` leser `config/kilder.json` og legger kandidater i `data/kandidater.json` til manuell gjennomgang. Den skriver aldri til `leirer.json` og kopierer ikke lister fra samlesider.
+1. Kildene ligger i `data/kilder/`: `kurs-norge-v4.csv`, `tilbydere-norge-v4.csv`, `skolerute-2027.csv`, `sjekk-plan.md` og `README-supply-v4.md`. Eldre v1–v3-filer er tatt ut. Katalogen som nettstedet viser, er `data/leirer.json` (v4, ett objekt per uke). `npm run importer` leser CSV-en og oppdaterer tilbydere og skolerute. Den skriver bare over `leirer.json` med `--leirer`. CSV-en har ikke påmeldingskolonner, så de blir `null`.
+2. Importen fyller ikke inn manglende felt. `pameldingStatus` og `pameldingApner` blir `null` til kilden sier noe annet. Personnavn, telefon og e-post tas ut av vanlig tekst. URL-er blir ikke kuttet, og siffer inne i en lenke eller en heksadesimal id regnes ikke som telefon. Åttetall som er en dato, som `01052026`, blir stående.
+3. `npm run finn` leser `config/kilder.json` og legger kandidater i `data/kandidater.json` til manuell gjennomgang. Den skriver aldri til `leirer.json` og kopierer ikke lister fra samlesider. `npm run sjekk-plan` lager `data/sjekk-plan.json` fra `data/kilder/sjekk-plan.md`. `npm run finn -- --forfalte` henter bare kildene der `sjekkDato` er i dag eller tidligere. En daglig jobb kan kjøre den modusen senere. Det er ikke satt opp noen cron, GitHub Action eller deploy for det nå.
 4. `npm run sjekk` sjekker lenkene. 404, 410 eller DNS-feil gir `lenkestatus: "utløpt"` og `dod: true`. 403, 429, 451, 5xx, tidsavbrudd eller en bot-utfordring gir `usikker`. Datoen `kildeSjekket` oppdateres.
 5. `npm run valider` sjekker skjema, datoer, uker, URL-er, unike id-er, Hoopit-sperren og at tekstfeltene ikke inneholder e-post eller telefon.
 6. `npm run build` kjører validering og bygger et statisk nettsted. Bygget trenger ingen `DATABASE_URL` og ingen database.
@@ -99,8 +99,10 @@ Vercel-regionen i `vercel.json` er fortsatt `fra1`. Ingenting er deployet herfra
 
 | Kommando | Gjør |
 | --- | --- |
-| `npm run importer` | CSV → `leirer.json`, `tilbydere.json`, `skolerute.json` |
+| `npm run importer` | CSV → `tilbydere.json` og `skolerute.json`. `--leirer` skriver også `leirer.json` |
+| `npm run sjekk-plan` | `sjekk-plan.md` → `data/sjekk-plan.json` |
 | `npm run finn` | Kandidater fra `config/kilder.json` |
+| `npm run finn -- --forfalte` | Bare kilder i sjekk-planen med `sjekkDato` i dag eller tidligere |
 | `npm run sjekk` | Lenkesjekk med robots.txt |
 | `npm run valider` | Skjema og personvern |
 | `npm run build` | Valider, deretter statisk eksport til `out/` |

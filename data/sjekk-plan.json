@@ -1,0 +1,802 @@
+[
+  {
+    "tilbyder": "Bærums Skiklub",
+    "kommune": "Bærum",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://bsk.no/baerums-skiklub/pamelding-til-skiskolekurs-vinteren-2027-er-apnet",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Drammen kulturskole (Drammen kommune)",
+    "kommune": "Drammen",
+    "uke": 9,
+    "status": "delvis",
+    "kildeUrl": "https://www.drammen.kommune.no/tjenester/kunst-kultur/kulturskolen/feriekurs-kulturskole/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Langedrag Naturpark",
+    "kommune": "Nore og Uvdal",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://www.langedrag.no/aktivitet/rideleir-i-vinterferien-2/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Oslo Klatresenter",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://www.osloklatresenter.no/barn-og-ungdom/klatring-i-vinterferien",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Oslo Turnforening",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://osloturn.no/aktivitetsuker/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Skimore Oslo Skiskole",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://oslo.skischool.shop/",
+    "publiseres": "desember",
+    "grunnlag": "Observert: påmelding til feriekurs åpnet 15.09.2026, men datoer/priser ikke vist",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Stall Verdens Ende",
+    "kommune": "Færder",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://stallverdensende.no/produkt/rideleir-vinterferien-2027-uke-8-og-9-stall-verdens-ende-2027",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Sørvest Bandyregion (innebandy)",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "delvis",
+    "kildeUrl": "https://innebandyturnering.no/strategi/sidehp.php?ID=270",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Trondhjems Skiklub",
+    "kommune": "Trondheim",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://skiklubben.no/aktiviteter/vinteraktiviteter2027/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Utleira IL",
+    "kommune": "Trondheim",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://utleira.no/handball/topphandball/topphandball-k1/tigercamp-handball-vinterferien-2027-pamelding-er-apen-3",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Fladmark Gård",
+    "kommune": "Indre Østfold",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.letsreg.com/no/register/587523",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Klatreverket",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://klatreverket.no/vinterferie-med-klatring/",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Oslo Movement",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://oslo-movement.no/product/vinterferiecamp-parkour-tricking-2026/",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Oslo Parkour Park",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.osloparkourpark.no/aktiviteter/vintercamp",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Sjusjøen Skisenter",
+    "kommune": "Ringsaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://sjusjoenskisenter.no/",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Tryggvi Islandshestgård",
+    "kommune": "Sandnes",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://tryggvi.no/events/dagsleir-i-vinterferien-nybegynnere/",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Lørenskog bibliotek",
+    "kommune": "Lørenskog",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.lorenskogbibliotek.no/-/program-januar-april-2026",
+    "publiseres": "desember",
+    "grunnlag": "Observert: programmet jan–apr 2026 lagt ut 18.12.2025 (Issuu)",
+    "sjekkDato": "2026-12-21"
+  },
+  {
+    "tilbyder": "Sandnes Håndballklubb",
+    "kommune": "Sandnes",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.sandneshk.no/2025/12/31/obos-handballskole-vinterferien-2026/",
+    "publiseres": "desember",
+    "grunnlag": "Observert: 2026-innlegget er datert 31.12.2025 (i URL-en)",
+    "sjekkDato": "2027-01-04"
+  },
+  {
+    "tilbyder": "Bogafjell IL",
+    "kommune": "Sandnes",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://spond.com/discover/nb-no/events/902F581C1EE946C4B7309BB3D2FFA7BE",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-08"
+  },
+  {
+    "tilbyder": "Kultur- og bydelshusene i Haugesund",
+    "kommune": "Haugesund",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.haugesund.kommune.no/kif/kultur/kulturhus-og-bygg/gamle-slaktehuset-allaktivitetshus/gratis-latskriverkurs-i-vinterferien.31170.aspx",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-siden publisert 15.01.2026 (ferien er to uker tidligere i 2027)",
+    "sjekkDato": "2027-01-08"
+  },
+  {
+    "tilbyder": "Stavanger IF Fotball",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://stavangerif.no/na-apner-pameldingen-til-ffo-fotballskole-i-vinterferien-uke-9/",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-08"
+  },
+  {
+    "tilbyder": "Stavanger Ishockeyklubb",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.stavangerhockey.no/vinterferiecamp/",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-08"
+  },
+  {
+    "tilbyder": "Lørenskog HK",
+    "kommune": "Lørenskog",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://lorenskoghk.no/klubben/lorenskog-handballskole-vinterferien-2026",
+    "publiseres": "januar",
+    "grunnlag": "Observert: påmeldingsfrist 30.01.2026 (publisering før det, eksakt dato ukjent)",
+    "sjekkDato": "2027-01-11"
+  },
+  {
+    "tilbyder": "Sotra Sportsklubb",
+    "kommune": "Øygarden",
+    "uke": 9,
+    "status": "forventet",
+    "kildeUrl": "https://www.sotrask.no/nyheter/handball/handballskole-i-vinterferien-2026-i-sotra-arena/",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-artikkelen publisert 09.01.2026",
+    "sjekkDato": "2027-01-12"
+  },
+  {
+    "tilbyder": "Fet IL Aktiv",
+    "kommune": "Lillestrøm",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://app.rubic.no/Public/Events/39097",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Kongstensvømmerne",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://kongstensvommerne.no/ferieaktiviteter/vinterferie",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Lillestrøm SK (LSK Bredde Akademiet)",
+    "kommune": "Lillestrøm",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.lsk.no/nyheter/train-like-a-pro-vinterferien-2026",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Lyn Fotball",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.lynfotball.no/arrangementer",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Nordstrand Turnforening",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.nordstrandturn.no/treningssamling-i-vinterferien",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Rolvsøy IF",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://rolvsoyif.com/fotball/gratis-vinterferie-fotball",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Rygge IL Turn",
+    "kommune": "Moss",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://ryggeturn.klubbnettside.no/troppsgymnastikk/vinterferieklubben-troppsturn-og-gymhjul",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Sarpsborg Skøyteklubb",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://sskkunstlop.no/camper-i-klubbens-egen-regi",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Tare Vintercamp (Spjelkavik IL, SIF/Hessa, Guard, Rollon, AaFK)",
+    "kommune": "Ålesund",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.sifhessa.com/post/tare-vintercamp-2026",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Tønsbergs Turnforening",
+    "kommune": "Tønsberg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://xn--tnsbergsturn-vjb.spond.club/news-article/6A5C83DE713E4D55A2A2D9583FD317F9",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-innlegget publisert 13.01.2026",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "SK Vedavåg Karmøy",
+    "kommune": "Karmøy",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://skvk.spond.club/news-article/78728BA9319748D4A061E5BEA1B4446B",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-innlegget publisert 04.02.2026 for ferie i uke 9; i 2027 er ferien uke 7, to uker tidligere",
+    "sjekkDato": "2027-01-21"
+  },
+  {
+    "tilbyder": "Drammens Turnforening",
+    "kommune": "Drammen",
+    "uke": 9,
+    "status": "forventet",
+    "kildeUrl": "https://www.drammenturn.no/vintercamp/",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-22"
+  },
+  {
+    "tilbyder": "Nordnorsk Vitensenter",
+    "kommune": "Tromsø",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://nordnorsk.vitensenter.no/nb/node/411",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-siden publisert 20.01.2026",
+    "sjekkDato": "2027-01-22"
+  },
+  {
+    "tilbyder": "Åssiden IF",
+    "kommune": "Drammen",
+    "uke": 9,
+    "status": "forventet",
+    "kildeUrl": "https://www.aif.no/p/83731/haandballskoler",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-22"
+  },
+  {
+    "tilbyder": "Øygarden IL",
+    "kommune": "Øygarden",
+    "uke": 9,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://oygardenil.no/arrangement/fotballskoler-eliteuke",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-22"
+  },
+  {
+    "tilbyder": "Sandefjordbibliotekene",
+    "kommune": "Sandefjord",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://sandefjordbibliotekene.no/nb/kampanje/vinterferie-pa-biblioteket_a172fd6c",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-kampanjen publisert 22.01.2026",
+    "sjekkDato": "2027-01-25"
+  },
+  {
+    "tilbyder": "Museum Stavanger (MUST)",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.stavanger.kommune.no/nyheter/tilbud-i-vinterferien/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-01"
+  },
+  {
+    "tilbyder": "Norsk Oljemuseum",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.norskolje.museum.no/kjekke-vinterferieaktiviteter-pa-museet/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-01"
+  },
+  {
+    "tilbyder": "Sølvberget bibliotek og kulturhus",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.solvberget.no/artikler/vinterferie-i-stavanger",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-01"
+  },
+  {
+    "tilbyder": "Vitenfabrikken (Jærmuseet)",
+    "kommune": "Sandnes",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.jaermuseet.no/vitenfabrikken/aktiviteter/redesign-drop-in-i-vinterferien/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-01"
+  },
+  {
+    "tilbyder": "Borge Turnforening",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://aktivitetsportalenfredrikstad.no/aktuelt/en-vinterferie-aa-glede-seg-til/",
+    "publiseres": "februar",
+    "grunnlag": "Observert: kommunens oversikt 2026 sist oppdatert 03.02.2026",
+    "sjekkDato": "2027-02-05"
+  },
+  {
+    "tilbyder": "Esport4alle",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://aktivitetsportalenfredrikstad.no/aktuelt/en-vinterferie-aa-glede-seg-til/",
+    "publiseres": "februar",
+    "grunnlag": "Observert: kommunens oversikt 2026 sist oppdatert 03.02.2026",
+    "sjekkDato": "2027-02-05"
+  },
+  {
+    "tilbyder": "Gomma Turnforening",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://aktivitetsportalenfredrikstad.no/aktuelt/en-vinterferie-aa-glede-seg-til/",
+    "publiseres": "februar",
+    "grunnlag": "Observert: kommunens oversikt 2026 sist oppdatert 03.02.2026",
+    "sjekkDato": "2027-02-05"
+  },
+  {
+    "tilbyder": "Arendal bibliotek",
+    "kommune": "Arendal",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://arendalbibliotek.no/arrangement/aktiviteter-i-vinterferien-3/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Borgarsyssel Museum (Østfoldmuseene)",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://ostfoldmuseene.no/borgarsyssel/hva-skjer/vinterferie24",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Danseklubben Jessheim",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Fredrikstad museum (Østfoldmuseene)",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://ostfoldmuseene.no/fredrikstad/hva-skjer/vinterferie-pa-fredrikstad-museum",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "IHK Sparta Sarpsborg",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://ihksparta.spond.club/news-article/69C5F195703B489C9B983EB7EDAD0C45",
+    "publiseres": "februar",
+    "grunnlag": "Observert: 2024-innlegget publisert 06.02.2024; ikke funnet for 2025/2026",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "INSPIRIA science center",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.inspiria.no/besok/apningstider/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Indre Østfold kommune",
+    "kommune": "Indre Østfold",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.io.kommune.no/tjenester/kultur-idrett-og-fritid/idrett-og-fysisk-aktivitet/idrettsnyheter/na-er-skoytesesongen-i-gang.37752.aspx",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Kjerringåsen Alpinsenter",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.kjerringaasen.no/blank-2",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Kristiansand folkebibliotek",
+    "kommune": "Kristiansand",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://krsbib.no/nyheder/nyheter/vinterferie-pa-biblioteket-0",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Kunstsilo",
+    "kommune": "Kristiansand",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.kunstsilo.no/no/kunstsilo-live/barnefilm-i-silosalen",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Larvik museum (Vestfoldmuseene)",
+    "kommune": "Larvik",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://vestfoldmuseene.no/larvik-museum/vinterferiemoro-i-herregarden",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Lørenskog kommune",
+    "kommune": "Lørenskog",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.lorenskog.kommune.no/tjenester/kultur-idrett-og-fritid/barn-og-ungdom/ferietilbud-for-barn-og-unge/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Nordnorsk Kunstmuseum",
+    "kommune": "Bodø",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://nnkm.no/vinterferie-pa-nordnorsk-kunstmuseum",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Nordnorsk Kunstmuseum",
+    "kommune": "Tromsø",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://nnkm.no/vinterferie-pa-nordnorsk-kunstmuseum",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Nordre Follo bibliotek",
+    "kommune": "Nordre Follo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://nordrefollobibliotek.no/-/velkommen-til-oss-i-vinterferien-",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Nordre Follo kommune (Kjeller'n fritidssenter)",
+    "kommune": "Nordre Follo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.nordrefollo.kommune.no/tjenester/kultur-idrett-og-fritid/fritidsklubb-og-ungdomskafe/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Skien fritidspark",
+    "kommune": "Skien",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://skienfritidspark.no/aktuelt/opplev-vinterferien-i-skienfritidspark",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Skien kommune",
+    "kommune": "Skien",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.skien.kommune.no/kultur-idrett-og-frivillighet/fritid/fritidsaktiviteter/ferieaktiviteter/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Slottsfjellsmuseet (Vestfoldmuseene)",
+    "kommune": "Tønsberg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://vestfoldmuseene.no/vinterferiemoro-pa-vestfoldmuseene",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "St. Croix-huset / UKM Fredrikstad",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.fredrikstad.kommune.no/tjenester/kunst-og-kultur/stcroix-huset/ungdom/ung-vintercamp-2026/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Telemark museum",
+    "kommune": "Porsgrunn",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.telemarkmuseum.no/7-ting-du-kan-gjore-i-vinterferien/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Telemark museum",
+    "kommune": "Skien",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.telemarkmuseum.no/7-ting-du-kan-gjore-i-vinterferien/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ull/Kisa innebandy",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ullensaker Gym & Turn",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ullensaker Issportklubb",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ullensaker kunstforening",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ullensakersvømmerne",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Vest-Agder-museet",
+    "kommune": "Kristiansand",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.vestagdermuseet.no/vinterferie-vest-agder-museet/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Århus gård / Bybonden i Skien",
+    "kommune": "Skien",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://aarhusgaard.no/ungebybonder/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "SK Brann – Kniksen-Akademiet",
+    "kommune": "Bergen",
+    "uke": 9,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.brann.no/kniksen-akademiet/kniksen-akademiet/alt-om-kniksen-akademiets-helgesamlinger-og-fotballcamper",
+    "publiseres": "februar",
+    "grunnlag": "Observert: siden sist oppdatert 09.02.2026",
+    "sjekkDato": "2027-02-10"
+  },
+  {
+    "tilbyder": "Haugar kunstmuseum",
+    "kommune": "Tønsberg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.tonsberg.kommune.no/aktuelt/klar-for-vinterferie.46420.aspx",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Observert: kommunens 2026-oversikt publisert 12.02.2026",
+    "sjekkDato": "2027-02-12"
+  },
+  {
+    "tilbyder": "Tønsberg og Færder bibliotek",
+    "kommune": "Tønsberg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.tonsberg.kommune.no/aktuelt/klar-for-vinterferie.46420.aspx",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Observert: kommunens 2026-oversikt publisert 12.02.2026",
+    "sjekkDato": "2027-02-12"
+  },
+  {
+    "tilbyder": "Ringsaker kommune",
+    "kommune": "Ringsaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ringsaker.kommune.no/nyheter/nyheter/2026-02-18-vinteraktivitetsdager-i-mjosparken",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Observert: 2026-nyheten publisert/oppdatert 18.02.2026, dagen før ferien (uke 9); i 2027 er ferien uke 8",
+    "sjekkDato": "2027-02-15"
+  }
+]

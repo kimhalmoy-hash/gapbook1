@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "importer": "node scripts/importer-csv.mjs",
+    "sjekk-plan": "node scripts/bygg-sjekk-plan.mjs",
     "valider": "node scripts/valider.mjs",
     "sjekk": "node scripts/sjekk-lenker.mjs",
     "finn": "node scripts/finn-leirer.mjs",

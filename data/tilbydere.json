@@ -120,6 +120,16 @@
     "notat": "Skjema"
   },
   {
+    "tilbyder": "Danseklubben Jessheim",
+    "typeTilbyder": "organisasjon",
+    "by": "Jessheim",
+    "kommune": "Ullensaker",
+    "nettside": "https://www.ullensaker.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Via kommunens vinterferieprogram"
+  },
+  {
     "tilbyder": "DNT Bærum Turlag",
     "typeTilbyder": "organisasjon",
     "by": "Fornebu",
@@ -174,10 +184,10 @@
     "typeTilbyder": "organisasjon",
     "by": "Fredrikstad",
     "kommune": "Fredrikstad",
-    "nettside": "https://aktivitetsportalenfredrikstad.no",
+    "nettside": "https://esport4alle.no",
     "antallKursILista": 1,
     "harPameldingOnline": "ukjent",
-    "notat": "Funnet via kommunens aktivitetsportal"
+    "notat": "Feriegaming+ i skoleferiene"
   },
   {
     "tilbyder": "Fet IL",
@@ -198,6 +208,16 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": "Rubic"
+  },
+  {
+    "tilbyder": "Fladmark Gård",
+    "typeTilbyder": "kommersiell",
+    "by": "Askim",
+    "kommune": "Indre Østfold",
+    "nettside": "https://www.letsreg.com/no/register/587523",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "LetsReg (enkeltoppslag); adresse Askim, Indre Østfold"
   },
   {
     "tilbyder": "Forskerfabrikken",
@@ -328,6 +348,16 @@
     "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Indre Østfold kommune",
+    "typeTilbyder": "kommune",
+    "by": "Askim",
+    "kommune": "Indre Østfold",
+    "nettside": "https://www.io.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Åpent tilbud"
   },
   {
     "tilbyder": "INSPIRIA science center",
@@ -500,6 +530,36 @@
     "notat": null
   },
   {
+    "tilbyder": "Lørenskog bibliotek",
+    "typeTilbyder": "bibliotek",
+    "by": "Lørenskog",
+    "kommune": "Lørenskog",
+    "nettside": "https://www.lorenskogbibliotek.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "delvis",
+    "notat": null
+  },
+  {
+    "tilbyder": "Lørenskog HK",
+    "typeTilbyder": "idrettslag",
+    "by": "Lørenskog",
+    "kommune": "Lørenskog",
+    "nettside": "https://lorenskoghk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Lørenskog kommune",
+    "typeTilbyder": "kommune",
+    "by": "Lørenskog",
+    "kommune": "Lørenskog",
+    "nettside": "https://www.lorenskog.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Program legges ut før ferien"
+  },
+  {
     "tilbyder": "Museum Stavanger (MUST)",
     "typeTilbyder": "museum",
     "by": "Stavanger",
@@ -548,6 +608,26 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Nordre Follo bibliotek",
+    "typeTilbyder": "bibliotek",
+    "by": "Kolbotn; Ski",
+    "kommune": "Nordre Follo",
+    "nettside": "https://nordrefollobibliotek.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Nordre Follo kommune (Kjeller'n fritidssenter)",
+    "typeTilbyder": "kommune",
+    "by": "Ski",
+    "kommune": "Nordre Follo",
+    "nettside": "https://www.nordrefollo.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Fritidsklubb"
   },
   {
     "tilbyder": "Nordstrand Turnforening",
@@ -670,6 +750,16 @@
     "notat": null
   },
   {
+    "tilbyder": "Ringsaker kommune",
+    "typeTilbyder": "kommune",
+    "by": "Brumunddal",
+    "kommune": "Ringsaker",
+    "nettside": "https://www.ringsaker.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Gratis, uten påmelding"
+  },
+  {
     "tilbyder": "Rolvsøy IF",
     "typeTilbyder": "idrettslag",
     "by": "Fredrikstad",
@@ -770,6 +860,16 @@
     "notat": "Spond"
   },
   {
+    "tilbyder": "Sjusjøen Skisenter",
+    "typeTilbyder": "kommersiell",
+    "by": "Sjusjøen",
+    "kommune": "Ringsaker",
+    "nettside": "https://sjusjoenskisenter.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Skiskole i sesongen"
+  },
+  {
     "tilbyder": "SK Brann – Kniksen-Akademiet",
     "typeTilbyder": "idrettslag",
     "by": "Bergen",
@@ -778,6 +878,16 @@
     "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": "Superinvite"
+  },
+  {
+    "tilbyder": "SK Vedavåg Karmøy",
+    "typeTilbyder": "idrettslag",
+    "by": "Vedavågen",
+    "kommune": "Karmøy",
+    "nettside": "https://skvk.spond.club",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond (kun fakta og lenke)"
   },
   {
     "tilbyder": "Skedsmo FK",
@@ -830,14 +940,24 @@
     "notat": "Drop-in"
   },
   {
+    "tilbyder": "Sotra Sportsklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Straume",
+    "kommune": "Øygarden",
+    "nettside": "https://www.sotrask.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
     "tilbyder": "St. Croix-huset / UKM Fredrikstad",
     "typeTilbyder": "kommune",
     "by": "Fredrikstad",
     "kommune": "Fredrikstad",
-    "nettside": "https://aktivitetsportalenfredrikstad.no",
+    "nettside": "https://www.fredrikstad.kommune.no/tjenester/kunst-og-kultur/stcroix-huset/",
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
-    "notat": "Via kommunens aktivitetsportal"
+    "notat": "Påmeldingsskjema på kommunens side"
   },
   {
     "tilbyder": "Stabæk Fotball",
@@ -1040,6 +1160,56 @@
     "notat": "Spond-klubbside; betaling via Vipps"
   },
   {
+    "tilbyder": "Ull/Kisa innebandy",
+    "typeTilbyder": "idrettslag",
+    "by": "Jessheim",
+    "kommune": "Ullensaker",
+    "nettside": "https://www.ullensaker.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Via kommunens vinterferieprogram"
+  },
+  {
+    "tilbyder": "Ullensaker Gym & Turn",
+    "typeTilbyder": "idrettslag",
+    "by": "Jessheim",
+    "kommune": "Ullensaker",
+    "nettside": "https://www.ullensaker.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Via kommunens vinterferieprogram"
+  },
+  {
+    "tilbyder": "Ullensaker Issportklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Jessheim",
+    "kommune": "Ullensaker",
+    "nettside": "https://www.ullensaker.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Via kommunens vinterferieprogram"
+  },
+  {
+    "tilbyder": "Ullensaker kunstforening",
+    "typeTilbyder": "organisasjon",
+    "by": "Jessheim",
+    "kommune": "Ullensaker",
+    "nettside": "https://www.ullensaker.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Via kommunens vinterferieprogram"
+  },
+  {
+    "tilbyder": "Ullensakersvømmerne",
+    "typeTilbyder": "idrettslag",
+    "by": "Ullensaker",
+    "kommune": "Ullensaker",
+    "nettside": "https://www.ullensaker.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Via kommunens vinterferieprogram"
+  },
+  {
     "tilbyder": "Utleira IL",
     "typeTilbyder": "idrettslag",
     "by": "Trondheim",
@@ -1097,6 +1267,16 @@
     "nettside": "https://klubb.valerenga-fotball.no",
     "antallKursILista": 2,
     "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Øygarden IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Rong",
+    "kommune": "Øygarden",
+    "nettside": "https://oygardenil.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
     "notat": null
   },
   {

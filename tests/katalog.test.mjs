@@ -18,6 +18,7 @@ import {
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
 import { stiTillatt } from "../scripts/lib/robots.mjs";
 import { faktaFraJsonLd, pameldingFraJsonLd, pameldingFraRubic } from "../scripts/lib/utdrag.mjs";
+import { forfalte, parseSjekkPlan } from "../scripts/lib/sjekk-plan.mjs";
 
 const config = JSON.parse(readFileSync(new URL("../config/kilder.json", import.meta.url), "utf8"));
 
@@ -138,11 +139,14 @@ test("personopplysninger fjernes og ISO-datoer blir igjen", () => {
   assert.equal(inneholderPerson("Skriv til kari@example.com"), true);
   assert.equal(inneholderPerson("ring 924 14 042"), true);
   assert.equal(inneholderPerson("id 48948539 i teksten"), true);
+  const spond = "https://sandnesulf.spond.club/news-article/362C3B1674AB48948539B819FAB79B29";
+  assert.equal(inneholderPerson(`Kilde: ${spond}.`), false);
+  assert.equal(rensPerson(`Kilde: ${spond}.`), `Kilde: ${spond}.`);
+  assert.equal(rensPerson("artikkel AB48948539B slutt"), "artikkel AB48948539B slutt");
   assert.equal(erDato8("01052026"), true);
   assert.equal(inneholderPerson("register/tine_01052026"), false);
   assert.equal(inneholderPerson("2027-02-22 til 2027-02-26"), false);
   assert.equal(rensPerson("Pris 1 500. Mail kari@example.com."), "Pris 1 500. Mail.");
-  assert.equal(rensPerson("artikkel AB48948539B slutt"), "artikkel ABB slutt");
   assert.equal(TEMA_MIN, 3);
 });
 
@@ -169,6 +173,18 @@ test("åpent tilbud uten påmelding", () => {
   assert.equal(utenPamelding({ type: "fotballskole", notat: "Påmelding åpen", prisNotat: "1 500 kr" }), false);
 });
 
+test("forfalte kilder følger sjekkDato", () => {
+  const plan = parseSjekkPlan(`| tilbyder | kommune | uke 2027 | status nå | kilde-URL som skal sjekkes | når | grunnlag | anbefalt sjekkdato |
+|---|---|---|---|---|---|---|---|
+| Klubb | Oslo | 8 | delvis | https://example.com/a | desember | sett | 2026-12-01 |
+| Annen | Bergen | 9 | forventet | https://spond.com/discover/nb-no/events/ABC | januar | sett | 2027-01-08 |`);
+  assert.equal(plan[0].kildeUrl, "https://example.com/a");
+  assert.equal(plan[0].sjekkDato, "2026-12-01");
+  assert.equal(forfalte(plan, "2026-11-26").length, 0);
+  assert.equal(forfalte(plan, "2026-12-01").length, 1);
+  assert.equal(forfalte(plan, "2027-01-08").length, 2);
+});
+
 test("importert skolerute og leirer", () => {
   const skolerute = JSON.parse(readFileSync(new URL("../data/skolerute.json", import.meta.url), "utf8"));
   const leirer = JSON.parse(readFileSync(new URL("../data/leirer.json", import.meta.url), "utf8"));
@@ -184,10 +200,11 @@ test("importert skolerute og leirer", () => {
   const stavanger = skolerute.find((r) => r.kommune === "Stavanger");
   assert.equal(stavanger.vinterferie.uke, 7);
   assert.equal(stavanger.vinterferie.datoFra, "2027-02-15");
-  assert.equal(leirer.length, 221);
+  assert.equal(leirer.length, 241);
   assert.equal(leirer.filter((e) => e.status === "verifisert").length, 49);
   assert.equal(leirer.filter((e) => e.status === "delvis").length, 29);
-  assert.equal(leirer.filter((e) => e.status === "forventet").length, 143);
+  assert.equal(leirer.filter((e) => e.status === "forventet").length, 163);
+  assert.equal(leirer.every((e) => "pameldingStatus" in e && "pameldingApner" in e), true);
   assert.equal(leirer.some((e) => e.demo), false);
   assert.equal(leirer.some((e) => /hoopit\.io/i.test(e.url)), false);
   for (const e of leirer) {
