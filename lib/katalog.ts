@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import siteConfig from "@/config/site.json";
 import leirerJson from "@/data/leirer.json";
 import skoleruteJson from "@/data/skolerute.json";
-import avvikJson from "@/data/skolerute-avvik.json";
 import sokeTitler from "@/data/sokeord.json";
+import vinterIntroNb from "@/data/intro-vinterferie-nb.json";
 import {
-  avvikKommuner,
   campIFerie,
   campUker,
   dagerMellom,
+  erHelUke,
   ferieFelter,
   isoUke,
   kommunerISesong,
@@ -39,6 +39,7 @@ import {
   ukeMandag,
   ukeNokkel,
 } from "@/lib/pure.mjs";
+import { fremhevetFaq } from "@/lib/fremhevet";
 import { COPY, copy, fyll, intlLocale, type Copy, type Locale, LOCALES } from "@/lib/i18n";
 
 type SesongNavn = "vinter" | "sommer" | "host" | "paske";
@@ -53,6 +54,8 @@ type SkoleruteRad = {
   paske: FeriePeriode | null;
   kildeUrl: string;
   merknad: string | null;
+  slug?: string;
+  fylke?: string | null;
 };
 
 function sesongNavn(verdi: string): SesongNavn {
@@ -93,8 +96,7 @@ export type Leir = {
 };
 
 export const leirer = leirerJson as Leir[];
-export const skolerute = skoleruteJson as (SkoleruteRad & { fylke?: string | null })[];
-const AVVIK = new Set(avvikKommuner(avvikJson as string[]).map((navn) => slug(navn)));
+export const skolerute = skoleruteJson as SkoleruteRad[];
 
 const SESONG_STI: Record<SesongNavn, string> = {
   vinter: "vinterferie",
@@ -113,6 +115,7 @@ export type Rute =
   | { kind: "type"; locale: Locale; slug: string[]; typeSlug: string; offentlig: boolean }
   | { kind: "typeKommune"; locale: Locale; slug: string[]; typeSti: string; kommuneSlug: string }
   | { kind: "leir"; locale: Locale; slug: string[]; id: string }
+  | { kind: "fremhevet"; locale: Locale; slug: string[] }
   | { kind: "ferieKommune"; locale: Locale; slug: string[]; navn: SesongNavn; aar: number; kommuneSlug: string };
 
 export type CampView = {
@@ -280,7 +283,7 @@ const kommuneNavn = new Map<string, string>();
 for (const e of leirer) {
   if (e.kommune) kommuneNavn.set(slug(e.kommune), e.kommune);
 }
-for (const rad of skolerute) kommuneNavn.set(slug(rad.kommune), rad.kommune);
+for (const rad of skolerute) kommuneNavn.set(rad.slug || slug(rad.kommune), rad.kommune);
 
 const typeNavn = new Map<string, string>();
 for (const e of synlige()) {
@@ -288,8 +291,21 @@ for (const e of synlige()) {
 }
 
 function skoleruteFor(kommuneSlug: string): SkoleruteRad | null {
-  if (AVVIK.has(kommuneSlug)) return null;
-  return skolerute.find((rad) => slug(rad.kommune) === kommuneSlug) ?? null;
+  return (
+    skolerute.find((rad) => rad.slug === kommuneSlug) ??
+    skolerute.find((rad) => slug(rad.kommune) === kommuneSlug) ??
+    null
+  );
+}
+
+function ukerIDato(fra: string | null | undefined, til: string | null | undefined, aar: number): number[] {
+  if (!fra || !til) return [];
+  const sett = new Set<number>();
+  for (const dag of dagerMellom(fra, til)) {
+    const iso = isoUke(dag);
+    if (iso.aar === aar) sett.add(iso.uke);
+  }
+  return [...sett];
 }
 
 function leirerFor(rute: Rute): Leir[] {
@@ -329,7 +345,7 @@ function leirerFor(rute: Rute): Leir[] {
 }
 
 export function indekserbar(rute: Rute): boolean {
-  if (rute.kind === "skoleruta" || rute.kind === "skolerutaHub") return true;
+  if (rute.kind === "skoleruta" || rute.kind === "skolerutaHub" || rute.kind === "fremhevet") return true;
   if (rute.kind === "leir") {
     return gruppeTellerMotTerskel(GRUPPE_SLUG.get(rute.id) || [], I_DAG);
   }
@@ -413,15 +429,14 @@ function overskrift(rute: Rute): string {
   if (rute.kind === "sesong") {
     const uker = ukeTekst(
       kommunerISesong(skolerute, rute.navn, rute.aar)
-        .filter((rad) => !AVVIK.has(rad.slug) && rad.uke != null)
-        .map((rad) => Number(rad.uke)),
+        .flatMap((rad) => ukerIDato(rad.datoFra, rad.datoTil, rute.aar)),
       og,
     );
     const ferie = sesongTittel(tekst, rute.navn, rute.aar);
     return uker ? fyll(tekst.h1SeasonWeek, { ferie, uke: uker }) : fyll(tekst.h1Season, { ferie });
   }
   if (rute.kind === "ferieUke") {
-    const fri = kommunerMedFri(skolerute, rute.aar, rute.uke).filter((rad) => !AVVIK.has(rad.slug));
+    const fri = kommunerMedFri(skolerute, rute.aar, rute.uke);
     const nokler = [...new Set(fri.map((rad) => rad.nokkel))];
     if (nokler.length === 1) {
       const nokkel = sesongNavn(String(nokler[0]));
@@ -469,7 +484,7 @@ function byggRuter(): Rute[] {
     const sett = new Set<number>();
     for (const rad of skolerute) {
       const felt = feltFor(rad, navn);
-      if (felt?.uke != null) sett.add(Number(felt.uke));
+      for (const uke of ukerIDato(felt?.datoFra, felt?.datoTil, year)) sett.add(uke);
     }
     for (const e of synlige()) {
       const del = sesongDeler(e.sesong);
@@ -481,8 +496,10 @@ function byggRuter(): Rute[] {
   for (const locale of LOCALES) {
     legg(ruter, locale, [], { kind: "hjem" });
     legg(ruter, locale, ["skoleruta"], { kind: "skolerutaHub" });
+    if (locale === "nb") legg(ruter, locale, ["arrangor", "fremhevet"], { kind: "fremhevet" });
     for (const rad of skolerute) {
-      legg(ruter, locale, ["skoleruta", slug(rad.kommune)], { kind: "skoleruta", kommuneSlug: slug(rad.kommune) });
+      const kommuneSlug = rad.slug || slug(rad.kommune);
+      legg(ruter, locale, ["skoleruta", kommuneSlug], { kind: "skoleruta", kommuneSlug });
     }
     for (const navn of Object.keys(SESONG_STI) as SesongNavn[]) {
       const year = sesongAar(navn);
@@ -490,7 +507,6 @@ function byggRuter(): Rute[] {
       const rot = SESONG_STI[navn];
       legg(ruter, locale, [rot], { kind: "sesong", navn, aar: year });
       for (const [kommuneSlug] of kommuneNavn) {
-        if (navn !== "sommer" && AVVIK.has(kommuneSlug)) continue;
         const har = synlige().some((e) => {
           const del = sesongDeler(e.sesong);
           return slug(e.kommune) === kommuneSlug && del?.navn === navn && del.aar === year;
@@ -684,6 +700,19 @@ function ferieLinjer(locale: Locale, rader: ReturnType<typeof kommunerMedFri> | 
     .sort((a, b) => (a.uke ?? 99) - (b.uke ?? 99) || a.kommune.localeCompare(b.kommune, "nb"));
 }
 
+function vinterIntro(rute: Rute): string | null {
+  if (rute.kind !== "ferieKommune" || rute.navn !== "vinter" || rute.locale !== "nb") return null;
+  const mal = (vinterIntroNb as Record<string, string>)[rute.kommuneSlug];
+  if (!mal) return null;
+  const felt = skoleruteFor(rute.kommuneSlug)?.vinterferie;
+  const aar = String(rute.aar);
+  if (felt?.datoFra && felt.datoTil && !erHelUke(felt.datoFra, felt.datoTil)) {
+    const dato = formatPeriode(felt.datoFra, felt.datoTil, "nb") || "";
+    return mal.replace(/uke \{uke\}/g, dato).replaceAll("{år}", aar).replaceAll("{uke}", dato);
+  }
+  return mal.replaceAll("{uke}", felt?.uke != null ? String(felt.uke) : "").replaceAll("{år}", aar);
+}
+
 export function modell(rute: Rute): SideModell {
   const tekst = copy(rute.locale);
   const home = sti(rute.locale, []);
@@ -696,13 +725,17 @@ export function modell(rute: Rute): SideModell {
   let skoleruteKort: SideModell["skoleruteKort"] = null;
   const badge = new Map<string, string>();
 
-  if (rute.kind !== "hjem" && rute.kind !== "leir") {
+  if (rute.kind === "fremhevet") {
+    h1 = "Bli sett av foreldre som planlegger ferieuka";
+    ingress =
+      "WeekSlot viser ukekurs og leirer for barn, sortert etter uke og kommune. Det er gratis å bli lagt inn. Vil du ha mer synlighet, kan du velge Fremhevet.";
+  } else if (rute.kind !== "hjem" && rute.kind !== "leir") {
     h1 = overskrift(rute);
   }
 
   if (rute.kind === "sesong") {
     ingress = tekst.seasonBlurb[rute.navn];
-    const rader = kommunerISesong(skolerute, rute.navn, rute.aar).filter((rad) => !AVVIK.has(rad.slug));
+    const rader = kommunerISesong(skolerute, rute.navn, rute.aar);
     if (rader.length) {
       ferieOverskrift = tekst.offThisSeason;
       ferieListe = ferieLinjer(rute.locale, rader);
@@ -718,7 +751,7 @@ export function modell(rute: Rute): SideModell {
       til: formatDato(son, rute.locale),
     });
     ingress = fyll(tekst.weekDescription, { nr: rute.uke, år: rute.aar });
-    const rader = kommunerMedFri(skolerute, rute.aar, rute.uke).filter((rad) => !AVVIK.has(rad.slug));
+    const rader = kommunerMedFri(skolerute, rute.aar, rute.uke);
     if (rader.length) {
       ferieOverskrift = tekst.offThisWeek;
       ferieListe = ferieLinjer(rute.locale, rader);
@@ -789,7 +822,7 @@ export function modell(rute: Rute): SideModell {
     if (dato) {
       kalenderUke = `${tekst.seasonName[rute.navn]}: ${dato}${felt?.uke != null ? ` (${fyll(tekst.week, { nr: felt.uke })})` : ""}`;
     }
-    ingress = tekst.seasonBlurb[rute.navn];
+    ingress = vinterIntro(rute) || tekst.seasonBlurb[rute.navn];
     if (rad && felt) {
       skoleruteKort = {
         skolear: skolearKort(rad.skolear),
@@ -841,6 +874,9 @@ export function modell(rute: Rute): SideModell {
 
 function beskrivelse(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
+  if (rute.kind === "fremhevet") {
+    return `Grunnoppføring er gratis. Med Fremhevet vises tilbudet ditt øverst i kommunen og uka du velger, for ${site.fremhevetPrisKr} kr per kommune per uke.`;
+  }
   if (rute.kind === "hjem") return tekst.homeDescription;
   if (rute.kind === "ferieUke") return fyll(tekst.weekDescription, { nr: rute.uke, år: rute.aar });
   if (rute.kind === "skoleruta") {
@@ -861,6 +897,7 @@ function beskrivelse(rute: Rute, side: SideModell): string {
 
 function tittel(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
+  if (rute.kind === "fremhevet") return "Bli fremhevet på WeekSlot | For arrangører";
   if (rute.kind === "hjem") return tekst.homeTitle;
   if (rute.kind !== "leir") return `${side.h1} | ${site.name}`;
   const e = side.leirer[0];
@@ -906,7 +943,18 @@ export function jsonLd(rute: Rute, side: SideModell): unknown[] {
     })),
   };
   const blokker: unknown[] = [crumbs];
-  if (rute.kind !== "leir") {
+  if (rute.kind === "fremhevet") {
+    blokker.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: fremhevetFaq(site.fremhevetPrisKr).map((rad) => ({
+        "@type": "Question",
+        name: rad.q,
+        acceptedAnswer: { "@type": "Answer", text: rad.a },
+      })),
+    });
+  }
+  if (rute.kind !== "leir" && rute.kind !== "fremhevet") {
     const elementer = side.leirer
       .filter((e) => !e.demo)
       .map((e, i) => ({

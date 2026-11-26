@@ -1,4 +1,5 @@
 import { CampGrid } from "@/components/CampCard";
+import { FremhevetSide } from "@/components/FremhevetSide";
 import { FilterBar } from "@/components/FilterBar";
 import { Footer, Header } from "@/components/Chrome";
 import { JsonLd } from "@/components/JsonLd";
@@ -29,7 +30,7 @@ export function PageView({ rute }: { rute: Rute }) {
         spraak={spraak}
       />
       <main className="mx-auto min-w-0 max-w-6xl px-4 py-10">
-        {rute.kind === "hjem" ? <Hjem side={side} /> : <Innhold side={side} />}
+        {rute.kind === "hjem" ? <Hjem side={side} /> : rute.kind === "fremhevet" ? <FremhevetSide tekst={tekst} /> : <Innhold side={side} />}
       </main>
       <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} />
     </div>
@@ -153,7 +154,7 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
           </ul>
           {side.skoleruteKort.merknad ? (
             <>
-              <p className="mt-4 text-sm">{tekst.ownDates}</p>
+              {/avvik/i.test(side.skoleruteKort.merknad) ? <p className="mt-4 text-sm">{tekst.ownDates}</p> : null}
               <span dangerouslySetInnerHTML={{ __html: `<!-- ${side.skoleruteKort.merknad.replace(/--/g, "–")} -->` }} />
             </>
           ) : null}
@@ -229,6 +230,9 @@ function Arrangor({ tekst }: { tekst: ReturnType<typeof modell>["tekst"] }) {
       <h2 className="font-serif text-3xl">{tekst.providerTitle}</h2>
       <p className="mt-3 max-w-2xl text-muted">{tekst.providerBody}</p>
       <p className="mt-3 text-sm">{fyll(tekst.featuredPrice, { pris: site.fremhevetPrisKr })}</p>
+      <p className="mt-2 text-sm">
+        <a className="text-pine hover:underline" href="/arrangor/fremhevet/">{tekst.featuredLink}</a>
+      </p>
       <a href={mailto(tekst.providerSubject)} className="mt-5 inline-block rounded-full bg-pine px-6 py-3 text-white hover:bg-pine-mid">
         {tekst.providerCta}
       </a>

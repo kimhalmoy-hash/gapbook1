@@ -275,6 +275,13 @@ test("importert skolerute og leirer", () => {
   const stavanger = skolerute.find((r) => r.kommune === "Stavanger");
   assert.equal(stavanger.vinterferie.uke, 7);
   assert.equal(stavanger.vinterferie.datoFra, "2027-02-15");
+  assert.equal(skolerute.length, 302);
+  const slugs = skolerute.map((r) => r.slug);
+  assert.equal(new Set(slugs).size, slugs.length);
+  const hammerfest = skolerute.find((r) => r.kommune === "Hammerfest");
+  assert.equal(hammerfest.vinterferie.datoFra, "2027-02-24");
+  assert.equal(hammerfest.vinterferie.datoTil, "2027-02-26");
+  assert.equal(skolerute.some((r) => r.kildeType === "ikke funnet"), false);
   assert.equal(leirer.length, 503);
   assert.equal(leirer.filter((e) => e.status === "verifisert").length, 50);
   assert.equal(leirer.filter((e) => e.status === "delvis").length, 76);

@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { parseCsv } from "./lib/csv.mjs";
-import { lagId, rensPerson } from "../lib/pure.mjs";
+import { lagId, rensPerson, slug } from "../lib/pure.mjs";
 
 const ROT = path.resolve(import.meta.dirname, "..");
 const KILDER = path.join(ROT, "data", "kilder");
@@ -135,7 +135,7 @@ function importerTilbydere() {
 function ferie(uke, fra, til) {
   const datoFra = tom(fra);
   const datoTil = tom(til);
-  if (!datoFra && !datoTil && !String(uke || "").trim()) return null;
+  if (!datoFra || !datoTil || datoFra > datoTil) return null;
   return {
     uke: heltall(uke),
     datoFra,
@@ -144,25 +144,49 @@ function ferie(uke, fra, til) {
 }
 
 function importerSkolerute() {
-  return les("skolerute-2027.csv").map((rad) => ({
-    skolear: "2026-2027",
-    rang: heltall(rad.rang),
-    kommune: tom(rad.kommune),
-    kommunenummer: tom(rad.kommunenummer),
-    fylke: tom(rad.fylke),
-    folketall: heltall(rad.folketall),
-    hostferie: ferie(rad.hostferie_uke, rad.hostferie_fra, rad.hostferie_til),
-    vinterferie: ferie(rad.vinterferie_uke, rad.vinterferie_fra, rad.vinterferie_til),
-    paske: ferie(null, rad.paske_fra, rad.paske_til),
-    kildeUrl: tom(rad.kilde_url),
-    kildeType: tom(rad.kilde_type),
-    merknad: tom(rad.merknad),
-  }));
+  const rader = les("skolerute-2027-alle.csv")
+    .map((rad) => ({
+      skolear: "2026-2027",
+      rang: heltall(rad.rang),
+      kommune: tom(rad.kommune),
+      kommunenummer: tom(rad.kommunenummer),
+      fylke: tom(rad.fylke),
+      folketall: heltall(rad.folketall),
+      hostferie: ferie(rad.hostferie_uke, rad.hostferie_fra, rad.hostferie_til),
+      vinterferie: ferie(rad.vinterferie_uke, rad.vinterferie_fra, rad.vinterferie_til),
+      paske: ferie(null, rad.paske_fra, rad.paske_til),
+      kildeUrl: tom(rad.kilde_url),
+      kildeType: tom(rad.kilde_type),
+      merknad: rad.merknad?.trim() ? rad.merknad.trim() : null,
+    }))
+    .filter((rad) => {
+      if (String(rad.kildeType || "").toLowerCase() === "ikke funnet") return false;
+      const har = [rad.hostferie, rad.vinterferie, rad.paske].some((f) => f?.datoFra && f?.datoTil);
+      return har && rad.kildeUrl && rad.kommune;
+    });
+  const tell = new Map();
+  for (const rad of rader) {
+    const base = slug(rad.kommune);
+    tell.set(base, (tell.get(base) || 0) + 1);
+  }
+  const ut = rader.map((rad) => {
+    const base = slug(rad.kommune);
+    const unik = tell.get(base) > 1 ? slug(`${rad.kommune} ${rad.fylke || ""}`) : base;
+    return { ...rad, slug: unik };
+  });
+  const slugs = ut.map((rad) => rad.slug);
+  if (new Set(slugs).size !== slugs.length) throw new Error("skolerute: slug er ikke unik");
+  return ut;
 }
 
+const skolerute = importerSkolerute();
+if (process.argv.includes("--bare-skolerute")) {
+  skriv("skolerute.json", skolerute);
+  console.log(`skolerute: ${skolerute.length} kommuner med datoer`);
+  process.exit(0);
+}
 const tilbydere = importerTilbydere();
 const leirer = importerLeirer(tilbydere);
-const skolerute = importerSkolerute();
 skriv("tilbydere.json", tilbydere);
 skriv("skolerute.json", skolerute);
 if (process.argv.includes("--leirer")) {

@@ -52,7 +52,7 @@ Lister med færre enn 3 synlige `verifisert`- eller `delvis`-rader får `noindex
 
 ## Skolerute
 
-`data/skolerute.json` har `skolear` (`"2026-2027"`), feriedatoer, `merknad` og `kildeUrl`. Koden har ingen ferieuker per kommune. Bergen beholder merknaden om at kommunens datoer (01.–05.03.2027) brukes, ikke Lovdata-februar. Tromsø viser de tre høstferiedagene, ikke hele uken.
+`data/skolerute.json` er bygget fra `data/kilder/skolerute-2027-alle.csv` (357 kommuner). Bare kommuner med offisielle datoer får rad og `/skoleruta/{kommune}/`. «Ikke funnet» blir utelatt. Datoene `fra`/`til` styrer uke-sidene. Der merknaden sier at kildene avviker, vises en kort linje om at kommunens egne datoer er brukt. Bergen beholder 01.–05.03.2027. Hammerfest viser vinterferie onsdag–fredag, ikke hele uken.
 
 Kommuner uten rad viser ingen ferie. Sommerferie står ikke i skoleruta, så sommerhuben finner ikke på sommeruker.
 

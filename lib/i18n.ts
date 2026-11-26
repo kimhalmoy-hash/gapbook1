@@ -28,6 +28,7 @@ export type Copy = {
   empty: string;
   featured: string;
   featuredPrice: string;
+  featuredLink: string;
   expected: string;
   partial: string;
   example: string;
@@ -176,6 +177,7 @@ export const COPY: Record<Locale, Copy> = {
     empty: "Ingen tilbud registrert her ennå. Kjenner du en arrangør? Tips oss.",
     featured: "Fremhevet",
     featuredPrice: "Fremhevet plassering: {pris} kr per kommune per uke.",
+    featuredLink: "Les om Fremhevet",
     expected: "Forventet – {år}-dato ikke publisert ennå",
     partial: "Noe mangler på kilden",
     example: "Eksempel",
@@ -287,6 +289,7 @@ export const COPY: Record<Locale, Copy> = {
     empty: "Inga erbjudanden registrerade här än. Känner du en arrangör? Tipsa oss.",
     featured: "Utvald",
     featuredPrice: "Utvald placering: {pris} kr per kommun och vecka.",
+    featuredLink: "Läs om Utvald",
     expected: "Förväntat – {år}-datum inte publicerat än",
     partial: "Något saknas hos källan",
     example: "Exempel",
@@ -398,6 +401,7 @@ export const COPY: Record<Locale, Copy> = {
     empty: "No listings here yet. Know an organiser? Send us a tip.",
     featured: "Featured",
     featuredPrice: "Featured placement: NOK {pris} per municipality per week.",
+    featuredLink: "Read about Featured",
     expected: "Expected – {år} dates not published yet",
     partial: "Some details are missing at the source",
     example: "Example",

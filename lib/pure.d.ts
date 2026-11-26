@@ -14,6 +14,8 @@ export type SkoleruteRad = {
   paske: ({ datoFra: string; datoTil: string } & { uke?: number | null }) | null;
   kildeUrl: string;
   merknad: string | null;
+  slug?: string;
+  fylke?: string | null;
 };
 
 export type FerieTreff = {
@@ -73,7 +75,8 @@ export function fjoraarsTekst(notat: string | null | undefined): string | null;
 export function utenPamelding(leir: { type?: string | null; notat?: string | null; prisNotat?: string | null }): boolean;
 export function ferieFelter(rad: SkoleruteRad): FerieTreff[];
 export function kommunerMedFri(rader: SkoleruteRad[], aar: number, uke: number): KommuneFri[];
-export function campIFerie(camp: LeirUke, rad: SkoleruteRad): FerieTreff[];
+export function erHelUke(fra: string | null | undefined, til: string | null | undefined): boolean;
+export function campIFerie(camp: LeirUke & { fylke?: string | null }, rad: SkoleruteRad & { fylke?: string | null }): FerieTreff[];
 export function kommunerISesong(rader: SkoleruteRad[], navn: SesongNavn, skolearSlutt: number): KommuneFri[];
 export function skolearSlutt(skolear: string): number | null;
 export function skolearKort(skolear: string): string;
