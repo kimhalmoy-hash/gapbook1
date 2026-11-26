@@ -20,6 +20,7 @@ import {
   formaterUkeTall,
   gruppeTrefferUke,
   antallSomTeller,
+  prisVisning,
 } from "../lib/pure.mjs";
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
 import { stiTillatt } from "../scripts/lib/robots.mjs";
@@ -188,6 +189,15 @@ test("slugs er unike og Færder blir fardar", () => {
   assert.equal(new Set(navn.map(slug)).size, navn.length);
 });
 
+test("prisnotat brukes som prislinje når tallet mangler", () => {
+  const mangler = "Pris ikke oppgitt";
+  const notat = "Prisområde kr 6 950–7 750 per uke, kost og lunsj";
+  assert.deepEqual(prisVisning(null, notat, mangler), { linje: notat, notat: null });
+  assert.deepEqual(prisVisning("", "  ", mangler), { linje: mangler, notat: null });
+  assert.deepEqual(prisVisning("1 050 kr", "inkl. lunsj", mangler), { linje: "1 050 kr", notat: "inkl. lunsj" });
+  assert.deepEqual(prisVisning("1 050 kr", null, mangler), { linje: "1 050 kr", notat: null });
+});
+
 test("uker blir intervall eller liste", () => {
   assert.equal(formaterUkeTall([33, 25, 26, 27, 28, 29, 30, 31, 32]), "25–33");
   assert.equal(formaterUkeTall([30, 25, 27]), "25, 27, 30");
@@ -228,6 +238,7 @@ test("ukeside treffer bare grupper som har uken", () => {
   assert.equal(gruppeTrefferUke(hest, 2027, 8), false);
   assert.equal(gruppeTrefferUke(annen, 2027, 8), true);
   assert.equal(antallSomTeller(hest, "2026-11-26"), 1);
+  assert.ok(antallSomTeller(hest, "2026-11-26") < TEMA_MIN);
   assert.equal(antallSomTeller([...hest, ...annen], "2026-11-26"), 2);
   assert.equal(antallSomTeller(hest.map((e) => ({ ...e, status: "forventet" })), "2026-11-26"), 0);
   assert.equal(antallSomTeller([{ ...hest[0], status: "verifisert" }, ...hest.slice(1).map((e) => ({ ...e, status: "forventet" }))], "2026-11-26"), 1);

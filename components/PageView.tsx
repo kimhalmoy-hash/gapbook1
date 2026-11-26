@@ -4,6 +4,7 @@ import { FilterBar } from "@/components/FilterBar";
 import { Footer, Header } from "@/components/Chrome";
 import { JsonLd } from "@/components/JsonLd";
 import { fyll, type Locale } from "@/lib/i18n";
+import { prisVisning } from "@/lib/pure.mjs";
 import { jsonLd, mailto, modell, sammeSti, site, type Rute } from "@/lib/katalog";
 import { SetLang } from "@/components/Chrome";
 
@@ -198,13 +199,20 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
                         {uke.datoLabel ? ` · ${uke.datoLabel}` : ""}
                       </p>
                       <p className="mt-1">
-                        {uke.prisLabel || tekst.priceMissing}
-                        {uke.prisNotat ? <span className="mt-0.5 block text-muted">{uke.prisNotat}</span> : null}
+                        {(() => {
+                          const pris = prisVisning(uke.prisLabel, uke.prisNotat, tekst.priceMissing);
+                          return (
+                            <>
+                              {pris.linje}
+                              {pris.notat ? <span className="mt-0.5 block text-muted">{pris.notat}</span> : null}
+                            </>
+                          );
+                        })()}
                       </p>
                       <p className="mt-1">{uke.pameldingLabel}</p>
                       {uke.apnerLabel ? <p>{uke.apnerLabel}</p> : null}
                       {uke.sjekketLabel ? <p className="text-muted">{uke.sjekketLabel}</p> : null}
-                      <a className="mt-2 inline-block text-pine hover:underline" href={uke.url} rel="noopener noreferrer">{tekst.source}</a>
+                      <a className="mt-2 inline-block text-pine hover:underline" href={uke.url} rel="noopener noreferrer">{tekst.sourceLink}</a>
                     </li>
                   ))}
                 </ul>

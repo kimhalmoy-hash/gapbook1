@@ -63,6 +63,7 @@ export type Copy = {
   providerSite: string;
   note: string;
   source: string;
+  sourceLink: string;
   ownDates: string;
   datesResolved: string;
   lastYearLine: string;
@@ -219,6 +220,7 @@ export const COPY: Record<Locale, Copy> = {
     providerSite: "Arrangørens nettsted",
     note: "Merknad",
     source: "Kilde",
+    sourceLink: "Kilde: arrangørens nettsted",
     ownDates: "Kommunens egne datoer er brukt",
     datesResolved: "Datoene følger det nyeste offisielle vedtaket.",
     lastYearLine: "Fjorårets dato: {dato}",
@@ -332,6 +334,7 @@ export const COPY: Record<Locale, Copy> = {
     providerSite: "Arrangörens webbplats",
     note: "Anmärkning",
     source: "Källa",
+    sourceLink: "Källa: arrangörens webbplats",
     ownDates: "Kommunens egna datum används",
     datesResolved: "Datumen följer det senaste officiella beslutet.",
     lastYearLine: "Fjolårets datum: {dato}",
@@ -445,6 +448,7 @@ export const COPY: Record<Locale, Copy> = {
     providerSite: "Organiser's website",
     note: "Note",
     source: "Source",
+    sourceLink: "Source: the organiser's website",
     ownDates: "The municipality's own dates are used",
     datesResolved: "The dates follow the latest official decision.",
     lastYearLine: "Last year's dates: {dato}",

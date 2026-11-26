@@ -1,11 +1,13 @@
 import type { CampView } from "@/lib/katalog";
 import type { Copy } from "@/lib/i18n";
+import { prisVisning } from "@/lib/pure.mjs";
 
 function kommentar(tekst: string) {
   return `<!-- ${tekst.replace(/--/g, "–")} -->`;
 }
 
 export function CampCard({ camp, tekst }: { camp: CampView; tekst: Copy; visNotat?: boolean }) {
+  const pris = prisVisning(camp.prisLabel, camp.prisNotat, tekst.priceMissing);
   return (
     <article id={camp.id} className={`ticket flex h-full min-w-0 flex-col p-5 ${camp.fremhevet ? "border-clay" : ""}`}>
       <div className="flex flex-wrap gap-2">
@@ -30,7 +32,13 @@ export function CampCard({ camp, tekst }: { camp: CampView; tekst: Copy; visNota
           {camp.tittel}
         </a>
       </h2>
-      <p className="mt-1 text-sm text-muted">{camp.tilbyder}</p>
+      <p className="mt-1 text-sm text-muted">
+        {camp.tilbyderUrl && camp.tilbyderUrl !== camp.url ? (
+          <a className="text-pine hover:underline" href={camp.tilbyderUrl} rel="noopener noreferrer">{camp.tilbyder}</a>
+        ) : (
+          camp.tilbyder
+        )}
+      </p>
       <dl className="mt-4 grid gap-1 text-sm">
         <div>
           <dt className="sr-only">Uke</dt>
@@ -51,8 +59,8 @@ export function CampCard({ camp, tekst }: { camp: CampView; tekst: Copy; visNota
         <div>
           <dt className="sr-only">Pris</dt>
           <dd>
-            {camp.prisLabel || tekst.priceMissing}
-            {camp.prisNotat ? <span className="mt-0.5 block text-muted">{camp.prisNotat}</span> : null}
+            {pris.linje}
+            {pris.notat ? <span className="mt-0.5 block text-muted">{pris.notat}</span> : null}
           </dd>
         </div>
       </dl>
@@ -63,16 +71,11 @@ export function CampCard({ camp, tekst }: { camp: CampView; tekst: Copy; visNota
       {camp.notat ? <span dangerouslySetInnerHTML={{ __html: kommentar(camp.notat) }} /> : null}
       <div className="mt-auto flex flex-wrap gap-3 pt-4 text-sm">
         <a href={camp.url} className="text-pine hover:underline" rel="noopener noreferrer">
-          {tekst.source}
+          {tekst.sourceLink}
         </a>
         <a href={camp.url} className="font-semibold text-clay hover:underline" rel="noopener noreferrer">
           {camp.utenPamelding ? tekst.seeOrganiser : tekst.signup}
         </a>
-        {camp.tilbyderUrl && camp.tilbyderUrl !== camp.url ? (
-          <a href={camp.tilbyderUrl} className="text-pine hover:underline" rel="noopener noreferrer">
-            {tekst.providerSite}
-          </a>
-        ) : null}
       </div>
     </article>
   );
