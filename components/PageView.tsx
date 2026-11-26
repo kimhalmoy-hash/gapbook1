@@ -180,7 +180,32 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
       ) : null}
       <section className="mt-10">
         {side.leirer.length ? (
-          <CampGrid leirer={side.leirer} tekst={tekst} visNotat={erDetalj} />
+          <>
+            <CampGrid leirer={side.leirer} tekst={tekst} visNotat={erDetalj} />
+            {erDetalj && (side.leirer[0]?.ukerader.length || 0) > 1 ? (
+              <div className="mt-8">
+                <h2 className="font-serif text-2xl">{tekst.weeksHeading}</h2>
+                <ul className="mt-4 grid gap-3">
+                  {side.leirer[0].ukerader.map((uke) => (
+                    <li key={uke.id} className="ticket min-w-0 p-4 text-sm">
+                      <p className="font-medium">
+                        {uke.ukeLabel}
+                        {uke.datoLabel ? ` · ${uke.datoLabel}` : ""}
+                      </p>
+                      <p className="mt-1">
+                        {uke.prisLabel || tekst.priceMissing}
+                        {uke.prisNotat ? <span className="mt-0.5 block text-muted">{uke.prisNotat}</span> : null}
+                      </p>
+                      <p className="mt-1">{uke.pameldingLabel}</p>
+                      {uke.apnerLabel ? <p>{uke.apnerLabel}</p> : null}
+                      {uke.sjekketLabel ? <p className="text-muted">{uke.sjekketLabel}</p> : null}
+                      <a className="mt-2 inline-block text-pine hover:underline" href={uke.url} rel="noopener noreferrer">{tekst.source}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+          </>
         ) : (
           <p className="text-lg">
             {tekst.empty}{" "}
@@ -203,6 +228,7 @@ function Arrangor({ tekst }: { tekst: ReturnType<typeof modell>["tekst"] }) {
     <section id="arrangor" className="ticket mt-16 p-6 sm:p-8">
       <h2 className="font-serif text-3xl">{tekst.providerTitle}</h2>
       <p className="mt-3 max-w-2xl text-muted">{tekst.providerBody}</p>
+      <p className="mt-3 text-sm">{fyll(tekst.featuredPrice, { pris: site.fremhevetPrisKr })}</p>
       <a href={mailto(tekst.providerSubject)} className="mt-5 inline-block rounded-full bg-pine px-6 py-3 text-white hover:bg-pine-mid">
         {tekst.providerCta}
       </a>

@@ -4,11 +4,13 @@ WeekSlot er oversikten over ukekurs og leirer for barn i skoleferiene, sortert p
 
 Tagline: **Ferieuka, ordnet.**
 
-Inntekten senere er at tilbydere betaler for å bli fremhevet. Prisen er ikke satt. Fremhevede kort merkes «Fremhevet».
+Inntekten er at tilbydere betaler for å bli fremhevet. Prisen ligger i `config/site.json` som `fremhevetPrisKr` og vises som «Fremhevet plassering: 290 kr per kommune per uke». Fremhevede kort merkes «Fremhevet».
 
 ## Slik flyter dataene
 
-1. Kildene ligger i `data/kilder/`: `kurs-norge-v4.csv`, `tilbydere-norge-v4.csv`, `skolerute-2027.csv`, `sjekk-plan.md`, `README-supply-v4.md` og `README-supply-v5.md`. Eldre v1–v3-filer er tatt ut. Katalogen som nettstedet viser, er `data/leirer.json` (Supply v5, 479 objekter, ett per uke). v5-CSV-ene fulgte ikke med, så v4-CSV-ene ligger igjen. `npm run importer` leser fortsatt v4-CSV-en for tilbydere og skolerute, og nekter å skrive over `leirer.json`. CSV-en har ikke påmeldingskolonner.
+1. Kildene ligger i `data/kilder/`: `kurs-norge-v7.csv`, `tilbydere-norge-v7.csv`, `skolerute-2027.csv`, `sjekk-plan.md`, `README-supply-v7.md` og `endringer-v7.md`. Eldre CSV-er er tatt ut. Katalogen som nettstedet viser, er `data/leirer.json` (Supply v7, 503 objekter, ett per uke). `npm run importer` leser v7-CSV-en, tar `pamelding_status` og `pamelding_apner` bare når cellen er fylt, og skriver ikke over `leirer.json` uten `--leirer`.
+
+Samme tilbyder, tittel og sted vises som ett kort. Hver uke blir liggende som egen rad i JSON. Terskelen på 3 teller tilbud etter grupperingen, og bruker den beste statusen i gruppen.
 2. Importen fyller ikke inn manglende felt. `pameldingStatus` og `pameldingApner` blir `null` til kilden sier noe annet. Personnavn, telefon og e-post tas ut av vanlig tekst. URL-er blir ikke kuttet, og siffer inne i en lenke eller en heksadesimal id regnes ikke som telefon. Åttetall som er en dato, som `01052026`, blir stående.
 3. `npm run finn` leser `config/kilder.json` og legger kandidater i `data/kandidater.json` til manuell gjennomgang. Den skriver aldri til `leirer.json` og kopierer ikke lister fra samlesider. `npm run sjekk-plan` lager `data/sjekk-plan.json` fra `data/kilder/sjekk-plan.md`. `npm run finn -- --forfalte` henter bare kildene der `sjekkDato` er i dag eller tidligere. En daglig jobb kan kjøre den modusen senere. Det er ikke satt opp noen cron, GitHub Action eller deploy for det nå.
 4. `npm run sjekk` sjekker lenkene. 404, 410 eller DNS-feil gir `lenkestatus: "utløpt"` og `dod: true`. 403, 429, 451, 5xx, tidsavbrudd eller en bot-utfordring gir `usikker`. Datoen `kildeSjekket` oppdateres.
@@ -79,17 +81,11 @@ Kjør `npm run finn`, les `data/kandidater.json`, og flytt det som holder mål i
 
 På sidene vises bare fakta: tittel, tilbyder, dato eller uke, alder, pris og sted, pluss en kort merknad med våre egne ord der vi har en. Ingen kopierte beskrivelser eller bilder. Knappen går til arrangørens påmeldingsside.
 
-## Før publisering
+## Kontakt og fremheving
 
-Kontakteposten er en plassholder. Den ligger ett sted:
+`kontaktEpost` i `config/site.json` er `kontakt@weekslot.com`. «Bli synlig på WeekSlot», «Send oss tilbudet ditt» og tips-lenkene er `mailto:kontakt@weekslot.com`. Det er ikke bygget noe skjema.
 
-```json
-"kontaktEpost": "{kontakt-epost}"
-```
-
-i `config/site.json`. Bytt den til den ekte adressen før nettstedet publiseres. Inntil da peker «Send oss tilbudet ditt» på `mailto:{kontakt-epost}`, så det er synlig at adressen mangler. Det er ikke bygget noe skjema.
-
-Ikke skriv at det er gratis å bli lagt inn. Pris for fremheving er ikke bestemt.
+Ikke skriv at det er gratis å bli lagt inn. Fremhevet plassering koster 290 kr per kommune per uke (`fremhevetPrisKr`).
 
 ## Det som er tatt ut
 

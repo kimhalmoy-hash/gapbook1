@@ -23,12 +23,19 @@ import {
   slug,
   synlig,
   TEMA_MIN,
-  tellerMotTerskel,
   TYPE_STI,
   typeSlug,
   ukeListe,
   utenPamelding,
   pameldingModus,
+  pameldingErLik,
+  besteStatus,
+  formaterUkeTall,
+  gruppeNokkel,
+  gruppeTellerMotTerskel,
+  grupperLeirer,
+  medSlug,
+  ukeTallFra,
   ukeMandag,
   ukeNokkel,
 } from "@/lib/pure.mjs";
@@ -135,7 +142,7 @@ export type CampView = {
   demo: boolean;
   utenPamelding: boolean;
   gratis: boolean;
-  pameldingLabel: string;
+  pameldingLabel: string | null;
   apnerLabel: string | null;
   sjekketLabel: string | null;
   sesong: string;
@@ -143,6 +150,21 @@ export type CampView = {
   ferieBadge: string | null;
   datoFra: string | null;
   notatIListe: string | null;
+  sesonger: string[];
+  aldre: { fra: number | null; til: number | null }[];
+  ukerader: UkeRad[];
+};
+
+type UkeRad = {
+  id: string;
+  ukeLabel: string;
+  datoLabel: string | null;
+  prisLabel: string | null;
+  prisNotat: string | null;
+  pameldingLabel: string;
+  apnerLabel: string | null;
+  sjekketLabel: string | null;
+  url: string;
 };
 
 export type FerieLinje = {
@@ -229,6 +251,31 @@ function synlige(): Leir[] {
   return leirer.filter((e) => synlig(e, I_DAG));
 }
 
+const GRUPPER: { slug: string; medlemmer: Leir[] }[] = medSlug(grupperLeirer(leirer));
+const GRUPPE_SLUG = new Map<string, Leir[]>(GRUPPER.map((g) => [g.slug, g.medlemmer]));
+const SLUG_AV_NOKKEL = new Map<string, string>(GRUPPER.map((g) => [gruppeNokkel(g.medlemmer[0]), g.slug]));
+
+function grupperFor(liste: Leir[]): { slug: string; medlemmer: Leir[] }[] {
+  const nokler = new Set(liste.map((e) => gruppeNokkel(e)));
+  const ut: { slug: string; medlemmer: Leir[] }[] = [];
+  for (const g of GRUPPER) {
+    if (!nokler.has(gruppeNokkel(g.medlemmer[0]))) continue;
+    const syn = g.medlemmer.filter((e) => synlig(e, I_DAG));
+    if (syn.length) ut.push({ slug: g.slug, medlemmer: syn });
+  }
+  return ut;
+}
+
+function antallIndeks(liste: Leir[]): number {
+  const nokler = new Set(liste.map((e) => gruppeNokkel(e)));
+  let n = 0;
+  for (const g of GRUPPER) {
+    if (!nokler.has(gruppeNokkel(g.medlemmer[0]))) continue;
+    if (gruppeTellerMotTerskel(g.medlemmer, I_DAG)) n += 1;
+  }
+  return n;
+}
+
 const kommuneNavn = new Map<string, string>();
 for (const e of leirer) {
   if (e.kommune) kommuneNavn.set(slug(e.kommune), e.kommune);
@@ -284,16 +331,9 @@ function leirerFor(rute: Rute): Leir[] {
 export function indekserbar(rute: Rute): boolean {
   if (rute.kind === "skoleruta" || rute.kind === "skolerutaHub") return true;
   if (rute.kind === "leir") {
-    const e = leirer.find((x) => x.id === rute.id);
-    return !!e && tellerMotTerskel(e, I_DAG);
+    return gruppeTellerMotTerskel(GRUPPE_SLUG.get(rute.id) || [], I_DAG);
   }
-  const antall = leirerFor(rute).filter((e) => tellerMotTerskel(e, I_DAG)).length;
-  return antall >= TEMA_MIN;
-}
-
-function vises(rute: Rute): Leir[] {
-  const indeks = indekserbar(rute);
-  return leirerFor(rute).filter((e) => (indeks ? !e.demo : true));
+  return antallIndeks(leirerFor(rute)) >= TEMA_MIN;
 }
 
 function feltFor(rad: (typeof skolerute)[number], navn: SesongNavn) {
@@ -484,8 +524,9 @@ function byggRuter(): Rute[] {
       if (!har) continue;
       legg(ruter, locale, ["type", tSlug], { kind: "type", typeSlug: tSlug, offentlig: false });
     }
-    for (const e of synlige()) {
-      legg(ruter, locale, ["leir", e.id], { kind: "leir", id: e.id });
+    for (const g of GRUPPER) {
+      if (!g.medlemmer.some((e) => synlig(e, I_DAG))) continue;
+      legg(ruter, locale, ["leir", g.slug], { kind: "leir", id: g.slug });
     }
   }
   const nokler = ruter.map((r) => r.slug.join("/"));
@@ -511,75 +552,112 @@ export function sammeSti(rute: Rute, locale: Locale): string {
   return sti(locale, uten);
 }
 
-function campView(e: Leir, locale: Locale, ferieBadge: string | null): CampView {
-  const tekst = copy(locale);
-  const del = sesongDeler(e.sesong);
-  const aar = del?.aar;
-  const statusLabel =
-    e.status === "forventet"
-      ? fyll(tekst.expected, { år: aar ?? "" })
-      : e.status === "delvis"
-        ? tekst.partial
-        : null;
-  const sted = e.by && e.by !== e.kommune ? `${e.by}, ${e.kommune}` : e.kommune;
+function pameldingLinjer(e: Leir, locale: Locale, tekst: Copy): { pameldingLabel: string; apnerLabel: string | null } {
+  const modus = pameldingModus(e.pameldingStatus, e.pameldingApner, I_DAG);
+  if (modus === "apnet" && e.pameldingApner) {
+    return { pameldingLabel: fyll(tekst.openedCheck, { dato: formatDato(e.pameldingApner, locale, false) }), apnerLabel: null };
+  }
   return {
-    id: e.id,
-    href: sti(locale, ["leir", e.id]),
-    tittel: e.tittel,
-    tilbyder: e.tilbyder,
-    url: e.url,
-    tilbyderUrl: e.tilbyderUrl,
-    typeSlug: typeSlug(e.type),
-    typeLabel: tekst.types[e.type] || e.type,
-    kommune: e.kommune,
-    kommuneSlug: slug(e.kommune),
+    pameldingLabel: e.pameldingStatus ? tekst.pamelding[e.pameldingStatus] : tekst.pamelding.ukjent,
+    apnerLabel: modus === "apner" && e.pameldingApner ? fyll(tekst.opens, { dato: formatDato(e.pameldingApner, locale) }) : null,
+  };
+}
+
+function prisFor(e: Leir, locale: Locale, tekst: Copy): string | null {
+  if (e.prisNok == null) return null;
+  if (e.status === "forventet") {
+    return e.prisNok === 0 ? tekst.lastYearFree : fyll(tekst.lastYearPrice, { pris: formatPris(e.prisNok, locale) });
+  }
+  return e.prisNok === 0 ? tekst.gratis : formatPris(e.prisNok, locale);
+}
+
+function prisForGruppe(medlemmer: Leir[], locale: Locale, tekst: Copy): string | null {
+  const tall = medlemmer.map((e) => e.prisNok).filter((n): n is number => n != null);
+  if (!tall.length) return null;
+  const min = Math.min(...tall);
+  const max = Math.max(...tall);
+  const forventet = medlemmer.every((e) => e.status === "forventet");
+  if (min === max) return prisFor({ ...medlemmer[0], prisNok: min, status: forventet ? "forventet" : "verifisert" }, locale, tekst);
+  if (min === 0) return `${tekst.gratis}–${formatPris(max, locale)}`;
+  const fra = fyll(tekst.fromPrice, { pris: formatPris(min, locale) });
+  return forventet ? fyll(tekst.lastYearPrice, { pris: fra }) : fra;
+}
+
+function groupView(slugId: string, medlemmer: Leir[], locale: Locale, ferieBadge: string | null): CampView {
+  const tekst = copy(locale);
+  const sortert = [...medlemmer].sort((a, b) => String(a.uke).localeCompare(String(b.uke), "nb", { numeric: true }) || a.id.localeCompare(b.id));
+  const best = besteStatus(sortert.map((e) => e.status));
+  const rep = sortert.find((e) => e.status === best) || sortert[0];
+  const aar = sesongDeler(rep.sesong)?.aar;
+  const statusLabel = best === "forventet" ? fyll(tekst.expected, { år: aar ?? "" }) : best === "delvis" ? tekst.partial : null;
+  const sted = rep.by && rep.by !== rep.kommune ? `${rep.by}, ${rep.kommune}` : rep.kommune;
+  const datoerFra = sortert.map((e) => e.datoFra).filter((d): d is string => !!d).sort();
+  const datoerTil = sortert.map((e) => e.datoTil).filter((d): d is string => !!d).sort();
+  const ukerTekst = formaterUkeTall(ukeTallFra(sortert));
+  const likPamelding = pameldingErLik(sortert);
+  const felles = likPamelding ? pameldingLinjer(sortert[0], locale, tekst) : { pameldingLabel: null, apnerLabel: null };
+  const notater = [...new Set(sortert.map((e) => rensPerson(e.notat)).filter((n): n is string => !!n))];
+  const kort = [...new Set(sortert.map((e) => {
+    const fjor = fjoraarsTekst(e.notat);
+    if (fjor) return fyll(tekst.lastYearLine, { dato: fjor });
+    if (e.status === "forventet") return tekst.expectedShort;
+    return "";
+  }).filter(Boolean))];
+  const sjekket = sortert.map((e) => e.kildeSjekket).filter((d): d is string => !!d).sort().at(-1) || null;
+  const prisNotater = [...new Set(sortert.map((e) => e.prisNotat || ""))];
+  const aldre = sortert.map((e) => ({ fra: e.alderFra, til: e.alderTil }));
+  const unikeAlder = [...new Set(sortert.map((e) => formatAlder(e.alderFra, e.alderTil, tekst) || ""))];
+  return {
+    id: slugId,
+    href: sti(locale, ["leir", slugId]),
+    tittel: rep.tittel,
+    tilbyder: rep.tilbyder,
+    url: rep.url,
+    tilbyderUrl: rep.tilbyderUrl,
+    typeSlug: typeSlug(rep.type),
+    typeLabel: tekst.types[rep.type] || rep.type,
+    kommune: rep.kommune,
+    kommuneSlug: slug(rep.kommune),
     sted,
-    uker: campUker(e),
-    ukeLabel: formatUke(e.uke, tekst),
-    datoLabel: formatPeriode(e.datoFra, e.datoTil, locale),
-    alderLabel: formatAlder(e.alderFra, e.alderTil, tekst),
-    alderFra: e.alderFra,
-    alderTil: e.alderTil,
-    prisLabel:
-      e.prisNok == null
-        ? null
-        : e.status === "forventet"
-          ? e.prisNok === 0
-            ? tekst.lastYearFree
-            : fyll(tekst.lastYearPrice, { pris: formatPris(e.prisNok, locale) })
-          : e.prisNok === 0
-            ? tekst.gratis
-            : formatPris(e.prisNok, locale),
-    prisNotat: e.prisNotat,
-    status: e.status,
+    uker: [...new Set(sortert.flatMap((e) => campUker(e)))].sort(),
+    ukeLabel: ukerTekst ? fyll(tekst.weeks, { nr: ukerTekst }) : formatUke(rep.uke, tekst),
+    datoLabel: formatPeriode(datoerFra[0] || null, datoerTil.at(-1) || null, locale),
+    alderLabel: unikeAlder.filter(Boolean).join(", ") || null,
+    alderFra: aldre.reduce<number | null>((min, a) => (a.fra == null ? min : min == null ? a.fra : Math.min(min, a.fra)), null),
+    alderTil: aldre.reduce<number | null>((max, a) => (a.til == null ? max : max == null ? a.til : Math.max(max, a.til)), null),
+    prisLabel: prisForGruppe(sortert, locale, tekst),
+    prisNotat: prisNotater.length === 1 ? prisNotater[0] || null : null,
+    status: best,
     statusLabel,
-    notat: rensPerson(e.notat),
-    notatIListe: e.status === "verifisert" ? null : rensPerson(e.notat),
-    fremhevet: e.fremhevet,
-    demo: e.demo,
-    utenPamelding: utenPamelding(e),
-    gratis: e.prisNok === 0,
-    pameldingLabel: (() => {
-      const modus = pameldingModus(e.pameldingStatus, e.pameldingApner, I_DAG);
-      if (modus === "apnet" && e.pameldingApner) {
-        return fyll(tekst.openedCheck, { dato: formatDato(e.pameldingApner, locale, false) });
-      }
-      return e.pameldingStatus ? tekst.pamelding[e.pameldingStatus] : tekst.pamelding.ukjent;
-    })(),
-    apnerLabel: (() => {
-      if (pameldingModus(e.pameldingStatus, e.pameldingApner, I_DAG) !== "apner" || !e.pameldingApner) return null;
-      return fyll(tekst.opens, { dato: formatDato(e.pameldingApner, locale) });
-    })(),
-    sjekketLabel: e.kildeSjekket ? fyll(tekst.checked, { dato: formatDato(e.kildeSjekket, locale) }) : null,
-    sesong: e.sesong,
-    kortLinje: (() => {
-      const fjor = fjoraarsTekst(e.notat);
-      if (fjor) return fyll(tekst.lastYearLine, { dato: fjor });
-      if (e.status === "forventet") return tekst.expectedShort;
-      return null;
-    })(),
+    notat: notater.join("\n") || null,
+    notatIListe: best === "verifisert" ? null : notater.join("\n") || null,
+    fremhevet: sortert.some((e) => e.fremhevet),
+    demo: sortert.every((e) => e.demo),
+    utenPamelding: sortert.every((e) => utenPamelding(e)),
+    gratis: sortert.every((e) => e.prisNok === 0),
+    pameldingLabel: felles.pameldingLabel,
+    apnerLabel: felles.apnerLabel,
+    sjekketLabel: sjekket ? fyll(tekst.checked, { dato: formatDato(sjekket, locale) }) : null,
+    sesong: rep.sesong,
+    sesonger: [...new Set(sortert.map((e) => e.sesong))],
+    kortLinje: kort.length === 1 ? kort[0] : best === "forventet" ? tekst.expectedShort : null,
     ferieBadge,
-    datoFra: e.datoFra,
+    datoFra: datoerFra[0] || null,
+    aldre,
+    ukerader: sortert.map((e) => {
+      const linjer = pameldingLinjer(e, locale, tekst);
+      return {
+        id: e.id,
+        ukeLabel: formatUke(e.uke, tekst),
+        datoLabel: formatPeriode(e.datoFra, e.datoTil, locale),
+        prisLabel: prisFor(e, locale, tekst),
+        prisNotat: e.prisNotat,
+        pameldingLabel: linjer.pameldingLabel,
+        apnerLabel: linjer.apnerLabel,
+        sjekketLabel: e.kildeSjekket ? fyll(tekst.checked, { dato: formatDato(e.kildeSjekket, locale) }) : null,
+        url: e.url,
+      };
+    }),
   };
 }
 
@@ -672,11 +750,12 @@ export function modell(rute: Rute): SideModell {
         merknad: rad.merknad,
         ferier,
       };
-      for (const e of vises(rute)) {
+      for (const e of leirerFor(rute)) {
         const treff = campIFerie(e, rad);
-        if (treff.length) {
+        const gruppe = SLUG_AV_NOKKEL.get(gruppeNokkel(e));
+        if (treff.length && gruppe) {
           const navn = sesongNavn(String(treff[0].nokkel));
-          badge.set(e.id, fyll(tekst.inHoliday, { ferie: tekst.seasonName[navn].toLowerCase() }));
+          badge.set(gruppe, fyll(tekst.inHoliday, { ferie: tekst.seasonName[navn].toLowerCase() }));
         }
       }
     }
@@ -722,18 +801,17 @@ export function modell(rute: Rute): SideModell {
   }
 
   if (rute.kind === "leir") {
-    const e = leirer.find((x) => x.id === rute.id);
+    const e = (GRUPPE_SLUG.get(rute.id) || []).find((x) => synlig(x, I_DAG));
     if (e) {
       h1 = e.tittel;
       ingress = `${e.tilbyder} · ${e.by && e.by !== e.kommune ? `${e.by}, ${e.kommune}` : e.kommune}`;
     }
   }
 
-  const leirVisning = (rute.kind === "leir"
-    ? synlige().filter((e) => e.id === rute.id)
-    : vises(rute)
-  )
-    .map((e) => campView(e, rute.locale, badge.get(e.id) ?? null))
+  const kilde = rute.kind === "leir" ? GRUPPE_SLUG.get(rute.id) || [] : leirerFor(rute);
+  const leirVisning = grupperFor(kilde)
+    .filter((g) => (indekserbar(rute) ? g.medlemmer.some((e) => !e.demo) : true))
+    .map((g) => groupView(g.slug, g.medlemmer, rute.locale, badge.get(g.slug) ?? null))
     .sort(sorter);
 
   const crumbs = [{ name: tekst.breadcrumbHome, href: home }];
@@ -851,7 +929,7 @@ export function jsonLd(rute: Rute, side: SideModell): unknown[] {
 }
 
 export function sistEndret(rute: Rute): string | undefined {
-  const datoer = (rute.kind === "leir" ? synlige().filter((e) => e.id === rute.id) : leirerFor(rute))
+  const datoer = (rute.kind === "leir" ? GRUPPE_SLUG.get(rute.id) || [] : leirerFor(rute))
     .map((e) => e.kildeSjekket)
     .filter((d): d is string => !!d)
     .sort();

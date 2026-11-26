@@ -48,9 +48,13 @@ export function FilterBar({
     if (type && camp.typeSlug !== type) return false;
     if (alder) {
       const a = Number(alder);
-      if (camp.alderFra == null && camp.alderTil == null) return false;
-      if (camp.alderFra != null && a < camp.alderFra) return false;
-      if (camp.alderTil != null && a > camp.alderTil) return false;
+      const treff = camp.aldre.some((rad) => {
+        if (rad.fra == null && rad.til == null) return false;
+        if (rad.fra != null && a < rad.fra) return false;
+        if (rad.til != null && a > rad.til) return false;
+        return true;
+      });
+      if (!treff) return false;
     }
     return true;
   });
@@ -134,7 +138,7 @@ function SesongUtvalg({
               ? "host"
               : "paske";
         const valgt = leirer
-          .filter((camp) => camp.sesong.startsWith(nokkel))
+          .filter((camp) => camp.sesonger.some((s) => s.startsWith(nokkel)))
           .sort((a, b) => (a.status === b.status ? 0 : a.status === "verifisert" ? -1 : b.status === "verifisert" ? 1 : a.status === "delvis" ? -1 : 1))
           .slice(0, 4);
         if (!valgt.length) return null;

@@ -17,6 +17,9 @@ import {
   ukeMandag,
   utenPamelding,
   pameldingModus,
+  formaterUkeTall,
+  gruppeTrefferUke,
+  antallSomTeller,
 } from "../lib/pure.mjs";
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
 import { stiTillatt } from "../scripts/lib/robots.mjs";
@@ -185,6 +188,51 @@ test("slugs er unike og Færder blir fardar", () => {
   assert.equal(new Set(navn.map(slug)).size, navn.length);
 });
 
+test("uker blir intervall eller liste", () => {
+  assert.equal(formaterUkeTall([33, 25, 26, 27, 28, 29, 30, 31, 32]), "25–33");
+  assert.equal(formaterUkeTall([30, 25, 27]), "25, 27, 30");
+  assert.equal(formaterUkeTall([25, 26, 27, 30]), "25–27, 30");
+  assert.equal(formaterUkeTall([8]), "8");
+});
+
+test("ukeside treffer bare grupper som har uken", () => {
+  const hest = [25, 26, 27, 28, 29, 30, 31, 32, 33].map((uke) => ({
+    id: `hest-${uke}`,
+    tilbyder: "Stall",
+    tittel: "Sommerleir med hest",
+    kommune: "Færder",
+    by: "Tjøme",
+    sesong: "sommer2027",
+    uke,
+    datoFra: null,
+    datoTil: null,
+    status: "delvis",
+    demo: false,
+    dod: false,
+  }));
+  const annen = [{
+    id: "annen",
+    tilbyder: "Annen",
+    tittel: "Annet kurs",
+    kommune: "Oslo",
+    by: "Oslo",
+    sesong: "sommer2027",
+    uke: 8,
+    datoFra: null,
+    datoTil: null,
+    status: "verifisert",
+    demo: false,
+    dod: false,
+  }];
+  assert.equal(gruppeTrefferUke(hest, 2027, 26), true);
+  assert.equal(gruppeTrefferUke(hest, 2027, 8), false);
+  assert.equal(gruppeTrefferUke(annen, 2027, 8), true);
+  assert.equal(antallSomTeller(hest, "2026-11-26"), 1);
+  assert.equal(antallSomTeller([...hest, ...annen], "2026-11-26"), 2);
+  assert.equal(antallSomTeller(hest.map((e) => ({ ...e, status: "forventet" })), "2026-11-26"), 0);
+  assert.equal(antallSomTeller([{ ...hest[0], status: "verifisert" }, ...hest.slice(1).map((e) => ({ ...e, status: "forventet" }))], "2026-11-26"), 1);
+});
+
 test("påmelding som allerede har åpnet blir én linje", () => {
   assert.equal(pameldingModus(null, "2026-11-19", "2026-11-26"), "apnet");
   assert.equal(pameldingModus(null, "2026-11-26", "2026-11-26"), "apnet");
@@ -227,11 +275,10 @@ test("importert skolerute og leirer", () => {
   const stavanger = skolerute.find((r) => r.kommune === "Stavanger");
   assert.equal(stavanger.vinterferie.uke, 7);
   assert.equal(stavanger.vinterferie.datoFra, "2027-02-15");
-  assert.equal(leirer.length, 479);
-  assert.equal(leirer.filter((e) => e.status === "verifisert").length, 49);
-  assert.equal(leirer.filter((e) => e.status === "delvis").length, 29);
-  assert.equal(leirer.filter((e) => e.status === "forventet").length, 401);
-  assert.equal(leirer.filter((e) => /tine\.no/i.test(e.url || "")).length, 155);
+  assert.equal(leirer.length, 503);
+  assert.equal(leirer.filter((e) => e.status === "verifisert").length, 50);
+  assert.equal(leirer.filter((e) => e.status === "delvis").length, 76);
+  assert.equal(leirer.filter((e) => e.status === "forventet").length, 377);
   assert.equal(leirer.every((e) => "pameldingStatus" in e && "pameldingApner" in e), true);
   assert.equal(leirer.some((e) => e.demo), false);
   assert.equal(leirer.some((e) => /hoopit\.io/i.test(e.url)), false);

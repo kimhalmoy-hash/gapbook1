@@ -39,13 +39,29 @@ const STATUS = {
   dato_ikke_publisert: "forventet",
 };
 
+const PAMELDING = new Set(["apen", "ikke_apnet", "full", "stengt"]);
+
+function pameldingStatus(verdi) {
+  const tekst = String(verdi ?? "").trim();
+  if (!tekst) return null;
+  if (!PAMELDING.has(tekst)) throw new Error(`Ukjent pamelding_status «${tekst}»`);
+  return tekst;
+}
+
+function pameldingApner(verdi) {
+  const tekst = String(verdi ?? "").trim();
+  if (!tekst) return null;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(tekst)) throw new Error(`Ugyldig pamelding_apner «${tekst}»`);
+  return tekst;
+}
+
 function skriv(navn, data) {
   writeFileSync(path.join(ROT, "data", navn), `${JSON.stringify(data, null, 2)}\n`);
 }
 
 function importerLeirer(tilbydere) {
   const nett = new Map(tilbydere.map((t) => [t.tilbyder, t.nettside]));
-  const rader = les("kurs-norge-v4.csv");
+  const rader = les("kurs-norge-v7.csv");
   const brukt = new Set();
   const leirer = rader.map((rad) => {
     const status = STATUS[rad.status];
@@ -79,15 +95,15 @@ function importerLeirer(tilbydere) {
       by: tom(rad.by),
       kommune: tom(rad.kommune),
       fylke: tom(rad.fylke),
-      // Filen er kurs-norge-v4. Land står ikke per rad. Påmelding finnes ikke i CSV-en.
+      // Land står ikke per rad. Påmelding tas bare fra kolonnene, aldri fra notatet.
       land: "NO",
       status,
       notat: tom(rad.notat),
       kildeSjekket: tom(rad.kilde_sjekket_dato),
       lenkestatus: null,
       dod: false,
-      pameldingStatus: null,
-      pameldingApner: null,
+      pameldingStatus: pameldingStatus(rad.pamelding_status),
+      pameldingApner: pameldingApner(rad.pamelding_apner),
       fremhevet: false,
       demo: false,
     };
@@ -102,7 +118,7 @@ function importerLeirer(tilbydere) {
 }
 
 function importerTilbydere() {
-  return les("tilbydere-norge-v4.csv")
+  return les("tilbydere-norge-v7.csv")
     .map((rad) => ({
       tilbyder: tom(rad.tilbyder),
       typeTilbyder: tom(rad.type_tilbyder),
@@ -150,10 +166,11 @@ const skolerute = importerSkolerute();
 skriv("tilbydere.json", tilbydere);
 skriv("skolerute.json", skolerute);
 if (process.argv.includes("--leirer")) {
-  console.error("data/leirer.json er Supply v5. kurs-norge-v5.csv ligger ikke i data/kilder/, så v4-CSV-en skal ikke skrives over JSON-en.");
-  process.exit(1);
+  skriv("leirer.json", leirer);
+  console.log("skrev data/leirer.json fra kurs-norge-v7.csv");
+} else {
+  console.log("data/leirer.json er Supply v7 og ble ikke overskrevet. Bruk --leirer for å skrive CSV-en over.");
 }
-console.log("data/leirer.json er Supply v5 og ble ikke overskrevet.");
 console.log(
   `importer: ${leirer.length} leirer fra CSV, ${tilbydere.length} tilbydere, ${skolerute.length} kommuner i skoleruten`,
 );

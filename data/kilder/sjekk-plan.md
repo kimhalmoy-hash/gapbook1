@@ -1,11 +1,12 @@
 # Sjekk-plan vinterferien 2027
 
-Laget 26.11.2026 fra `kurs-norge-v4.csv`. Tabellen viser alle tilbydere med vinterrader som har status forventet, delvis eller dato_ikke_publisert, sortert etter anbefalt sjekkdato.
+Laget 26.11.2026 fra `kurs-norge-v7.csv`. Tabellen viser alle tilbydere med vinterrader som har status forventet, delvis eller dato_ikke_publisert, sortert etter anbefalt sjekkdato.
 
 - **Observert** betyr at datoen er lest på en åpen side (publiseringsdato, oppdatert-dato, dato i URL eller påmeldingsfrist for 2026, eller at 2027-siden allerede finnes).
 - **Anslag** betyr at publiseringstidspunktet er ukjent. Anslaget følger type tilbyder: kommersielle i desember, idrettslag i januar (ca. fem uker før ferien), museer/bibliotek/kommuner «rett før ferien» (14 dager før ferien).
 - Sjekkdatoen er satt noen dager etter fjorårets publiseringsdato der den er observert, justert når ferieuka flytter seg (f.eks. Karmøy og Haugesund uke 9 → 7, Ringsaker uke 9 → 8).
 - Ingen kontakt med tilbydere: alt sjekkes bare på åpne sider.
+- **v7:** Alle 79 vinterrader med status forventet eller dato_ikke_publisert ble sjekket på arrangørenes egne sider 26.11.2026. Ingen hadde publisert 2027-dato ennå; bare Skimore Oslo fikk ny URL, pris og påmeldingsstatus (åpen). LetsReg-siden til Fladmark Gård svarte 403 og ble ikke omgått.
 
 | tilbyder | kommune | uke 2027 | status nå | kilde-URL som skal sjekkes | når programmet pleier å bli publisert | grunnlag | anbefalt sjekkdato |
 |---|---|---|---|---|---|---|---|
@@ -14,7 +15,7 @@ Laget 26.11.2026 fra `kurs-norge-v4.csv`. Tabellen viser alle tilbydere med vint
 | Langedrag Naturpark | Nore og Uvdal | 8 | delvis | https://www.langedrag.no/aktivitet/rideleir-i-vinterferien-2/ | allerede publisert | **Observert:** 2027-side finnes allerede, men mangler felt (status delvis) | 2026-12-01 |
 | Oslo Klatresenter | Oslo | 8 | delvis | https://www.osloklatresenter.no/barn-og-ungdom/klatring-i-vinterferien | allerede publisert | **Observert:** 2027-side finnes allerede, men mangler felt (status delvis) | 2026-12-01 |
 | Oslo Turnforening | Oslo | 8 | delvis | https://osloturn.no/aktivitetsuker/ | allerede publisert | **Observert:** 2027-side finnes allerede, men mangler felt (status delvis) | 2026-12-01 |
-| Skimore Oslo Skiskole | Oslo | 8 | dato_ikke_publisert | https://oslo.skischool.shop/ | desember | **Observert:** påmelding til feriekurs åpnet 15.09.2026, men datoer/priser ikke vist | 2026-12-01 |
+| Skimore Oslo Skiskole | Oslo | 8 | dato_ikke_publisert | https://oslo.skischool.shop/pages/feriekurs/vinterferiekurs/ | desember | **Observert:** påmelding til feriekurs åpnet 15.09.2026, men datoer/priser ikke vist | 2026-12-01 |
 | Stall Verdens Ende | Færder | 8 | delvis | https://stallverdensende.no/produkt/rideleir-vinterferien-2027-uke-8-og-9-stall-verdens-ende-2027 | allerede publisert | **Observert:** 2027-side finnes allerede, men mangler felt (status delvis) | 2026-12-01 |
 | Sørvest Bandyregion (innebandy) | Stavanger | 7 | delvis | https://innebandyturnering.no/strategi/sidehp.php?ID=270 | allerede publisert | **Observert:** 2027-side finnes allerede, men mangler felt (status delvis) | 2026-12-01 |
 | Trondhjems Skiklub | Trondheim | 8 | delvis | https://skiklubben.no/aktiviteter/vinteraktiviteter2027/ | allerede publisert | **Observert:** 2027-side finnes allerede, men mangler felt (status delvis) | 2026-12-01 |
@@ -96,3 +97,145 @@ Laget 26.11.2026 fra `kurs-norge-v4.csv`. Tabellen viser alle tilbydere med vint
 - Sjekk i desember 2026: 17
 - Sjekk i januar 2027: 23
 - Sjekk i februar 2027: 40
+
+# Sjekk-plan sommerferien 2027 (lagt til i v5, oppdatert i v6)
+
+Alle sommerrader med status forventet, delvis eller dato_ikke_publisert. Sommerprogrammer publiseres typisk mars–mai. TINE Fotballskole er slått sammen til én linje per kommune (kilden er TINE-kartet); klubbene står i CSV-en.
+
+| tilbyder | kommune | uke(r) | status nå | kilde-URL som skal sjekkes | når programmet pleier å bli publisert | grunnlag | anbefalt sjekkdato |
+|---|---|---|---|---|---|---|---|
+| Stall Verdens Ende | Færder | 25-33 | delvis | https://stallverdensende.no/produkt/sommerleir-2027/ | allerede publisert | **Observert:** 2027-produktet finnes allerede (status delvis) | 2026-12-01 |
+| Langedrag Naturpark | Nore og Uvdal | 26,27,28 | delvis | https://www.langedrag.no/rideleir/ | allerede publisert | **Observert:** 2027-sider finnes allerede (status delvis) | 2026-12-01 |
+| Playwell | Bergen | 31,32 | delvis | https://www.playwell.no/vinterferiebergen | februar | **Anslag:** Ukjent, anslag (kommersielle tilbydere legger ofte ut sommerleirer tidlig) | 2027-02-15 |
+| Forskerfabrikken | Flere | 26,27,31,32,33 | forventet | https://www.forskerfabrikken.no/kurs/for-barn/sommerskole/ | februar | **Anslag:** Ukjent, anslag (kommersielle tilbydere legger ofte ut sommerleirer tidlig) | 2027-02-15 |
+| Grip Klatring | Trondheim | 26 | forventet | https://gripklatring.no/sommercamp/ | februar | **Anslag:** Ukjent, anslag (kommersielle tilbydere legger ofte ut sommerleirer tidlig) | 2027-02-15 |
+| TINE Fotballskole – 1 klubber | Arendal | se CSV | 1 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 5 klubber | Asker | se CSV | 5 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 10 klubber | Bergen | se CSV | 4 delvis, 6 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 2 klubber | Bodø | se CSV | 2 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 8 klubber | Bærum | se CSV | 5 delvis, 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 3 klubber | Drammen | se CSV | 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 1 klubber | Fredrikstad | se CSV | 1 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 2 klubber | Haugesund | se CSV | 2 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 3 klubber | Indre Østfold | se CSV | 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 6 klubber | Karmøy | se CSV | 6 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 4 klubber | Kristiansand | se CSV | 4 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 3 klubber | Larvik | se CSV | 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 3 klubber | Lillestrøm | se CSV | 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 2 klubber | Lørenskog | se CSV | 2 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 2 klubber | Moss | se CSV | 2 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 3 klubber | Nordre Follo | se CSV | 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 10 klubber | Oslo | se CSV | 10 delvis | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 1 klubber | Porsgrunn | se CSV | 1 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 2 klubber | Ringsaker | se CSV | 2 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 4 klubber | Sandefjord | se CSV | 4 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 3 klubber | Sandnes | se CSV | 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 5 klubber | Sarpsborg | se CSV | 5 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 6 klubber | Stavanger | se CSV | 4 delvis, 2 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 3 klubber | Tromsø | se CSV | 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 6 klubber | Trondheim | se CSV | 3 delvis, 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 6 klubber | Tønsberg | se CSV | 6 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 2 klubber | Ullensaker | se CSV | 2 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 10 klubber | Ålesund | se CSV | 6 delvis, 4 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| TINE Fotballskole – 3 klubber | Øygarden | se CSV | 3 forventet | https://www.tine.no/tinefotballskole/finn-din-fotballskole | mars | **Anslag:** Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side)) | 2027-03-01 |
+| Lillestrøm kommune (Lillestrøm sommerskole) | Lillestrøm | 26,32,33 | forventet | https://www.lillestrom.kommune.no/skole-og-utdanning/skoler-og-skolegrenser/sommerskolen/sporsmal-og-svar-om-sommerskolen/ | mars | **Observert:** kurstilbudet 2026 publisert 02.03.2026, påmelding åpnet 15.03.2026 | 2027-03-03 |
+| Bergens Turnforening | Bergen | 33 | forventet | https://bergensturn.no/sommercamp | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| SK Brann – Kniksen-Akademiet | Bergen | 26 | forventet | https://www.brann.no/nyheter/brann-fotballskole-pa-nymark-i-sommer | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| TIF Viking | Bergen | 27,33 | forventet | https://www.tifviking.no/idrettsleir/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Bærum SK | Bærum | 27,33 | forventet | https://baerumsk.no/om-klubben/tine-fotballskole | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Sandvika Turnforening | Bærum | 26,27,32,33 | forventet | https://www.sandvikaturn.no/treningstilbud/sommerleir2026/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Stabæk Fotball | Bærum | 26,33 | forventet | https://spond.com/discover/nb-no/events/0AA90B10A8B846DF98880CF035D24A4E | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Konnerud IL Fotball | Drammen | 33 | forventet | https://isonen.no/event/cmn7jmbrr0014bt01jdf6g7b9/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Åssiden IF | Drammen | 26,33 | forventet | https://www.aif.no/p/83732/fotballskoler | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Fredrikstad FK | Fredrikstad | 33 | forventet | https://www.fredrikstadfk.no/ffk-utvikling/ffks-fotballskoler | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Kongstensvømmerne | Fredrikstad | 26,27,32,33 | forventet | https://kongstensvommerne.no/klubben/svommeaktiviteter-i-sommerferien | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Nedre Glomma Turn | Fredrikstad | 26 | forventet | https://nedreglommaturn.no/2026/05/13/velkommen-til-sommercamp-2/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Christianssands Seilforening | Kristiansand | 32 | forventet | https://www.csf.no/nybegynnerkurs/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| IK Start | Kristiansand | 26,32 | forventet | https://www.ikstart.no/nyheter/ik-start-arrangerer-fotballskole-25.og-26.juni | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Kristiansand kommune (Haraldvigen feriekoloni) | Kristiansand | 26,27 | forventet | https://www.kristiansand.kommune.no/navigasjon/kultur-og-fritid/fritid/haraldvigen-feriekoloni/ | mars–april | **Observert:** søknadsfrist 24.04.2026; Røde Kors oppgir at kommunen legger ut søknaden «tidlig hver vår» | 2027-03-15 |
+| Fet IL | Lillestrøm | 26,33 | forventet | https://www.fetil.no/pamelding-til-tine-fotballskole-2026/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Lillestrøm SK | Lillestrøm | 26,33 | forventet | https://www.lsk.no/nyheter/lsk-fotballskole-er-tilbake-meld-deg-pa-her | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Skedsmo FK | Lillestrøm | 26 | forventet | https://skedsmofk.no/klubben/skedsmo-sommercamp-2026 | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Kongelig Norsk Seilforening (KNS) | Oslo | 26,27,32,33 | forventet | https://www.kns.no/kurs-og-seiltilbud/seilleir-barn-og-ungdom/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Njård Gymnastikk og turn | Oslo | 26,27,32,33 | forventet | https://turn.njaard.no/next/blog/post/272944/sommercamp-2026-i-uke-26%2C-27%2C-32-og-33---paamelding-og-info! | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Oslo Turnforening | Oslo | 26,32,33 | forventet | https://osloturn.no/aktivitetsuker/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Vålerenga Fotball | Oslo | 26,33 | forventet | https://klubb.valerenga-fotball.no/valerenga-fotball-utviklingsuker-2026/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Lura IL | Sandnes | 26 | forventet | https://lura-il.no/fotball/pameldingen-til-tine-fotballskole-i-uke-26-er-apen | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Sandnes Ulf | Sandnes | 26,32 | forventet | https://sandnesulf.spond.club/news-article/362C3B1674AB48948539B819FAB79B29 | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Sarpsborg FK | Sarpsborg | 26,33 | forventet | https://sarpsborgfk.no/klubben/fotballskoler-2026 | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Sarpsborg Turnforening | Sarpsborg | 33 | forventet | https://www.sarpsborgturn.no/sommerskole-uke-33/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Herkules Håndball | Skien | 32 | forventet | https://skienfritidspark.no/hva-skjer/herkules-haandballskole | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Odd | Skien | 32 | forventet | https://www.odd.no/om-stadion/fotballskoler/tine-odds-fotballskole-2026 | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| KFUK-KFUM Stavanger, Ynglingen | Stavanger | 26,31,32,33 | forventet | https://kfuk-kfum.no/aktiviteter/event-id-37812 | mars–april | **Anslag:** Ukjent, anslag | 2027-03-15 |
+| Stavanger IF Fotball | Stavanger | 33 | forventet | https://stavangerif.no/tine-fotballskole-pa-siffen-uke-33-10-14-august-meld-deg-pa/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Viking FK | Stavanger | 26,33 | forventet | https://vikingfk.spond.club/news-article/F482A1931D5141778F31F863738B35C7 | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Viking HK og Hinna | Stavanger | 26 | forventet | https://vikinghk.spond.club/news-article/953027C29C134BA2B0F5A3AC887BE5C8 | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| KFUK-KFUM Nordland og KFUK-KFUM Troms | Tjeldsund | 32 | forventet | https://kfuk-kfum.no/aktiviteter/event-id-37794 | mars–april | **Anslag:** Ukjent, anslag | 2027-03-15 |
+| Nordnorsk Vitensenter | Tromsø | 26-33 | forventet | https://nordnorsk.vitensenter.no/nb/vitensommer26 | mars–april | **Anslag:** Ukjent, anslag | 2027-03-15 |
+| TENK (TENK Tech Camp) | Tromsø | 31 | delvis | https://tenknorge.com/tenk-tech-camp | mars–april | **Anslag:** Ukjent, anslag | 2027-03-15 |
+| Tromsø IL | Tromsø | 26,33 | forventet | https://www.til.no/om-klubben/Fotballskoler%20og%20trenerutvikling/tils-sommerfotballskole | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Tromsø Ryttersportsklubb | Tromsø | 26,27 | forventet | https://trso.no/ledige-ridetimer-i-vinterferien-uke-10/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Ranheim Fotball | Trondheim | 33 | forventet | https://www.ranheimfotball.no/nyheter/na-kan-du-melde-deg-pa-ranheim-fotballskole-2026- | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Sverresborg Fotball | Trondheim | 33 | forventet | https://www.sverresborgfotball.no/next/blog/post/279282/tine-fotballskole-2026?ispage=true | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Trondhjems Turistforening | Trondheim | 26 | forventet | https://aktiviteter.dnt.no/register/518338 | mars–april | **Anslag:** Ukjent, anslag | 2027-03-15 |
+| Trondhjems Turnforening | Trondheim | 26,27,32,33 | forventet | https://trondhjemsturn.no/arrangementer/turncamp/ | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| KFUK-KFUM Norge | Tvedestrand | 30 | forventet | https://kfuk-kfum.no/aktiviteter/event-id-37693 | mars–april | **Anslag:** Ukjent, anslag | 2027-03-15 |
+| Aalesunds FK | Ålesund | 33 | forventet | https://www.aafk.no/nyheter/aafk-kvinner-fotballskole--i-samarbeid-med-sparebanken-more | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Aalesunds Turnforening | Ålesund | 26,33 | forventet | https://www.aatf.no/nyheter/kiwis-sommerturn-2026 | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Ålesund Gymnastikk og Turnklubb | Ålesund | 26,33 | forventet | https://www.alesundgtk.no/hva-skjer/sommer-rg-skole-85nfr | mars–april | **Anslag:** Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april) | 2027-03-15 |
+| Asker kommune (Feriekontoret) | Asker | 26-33 | dato_ikke_publisert | https://www.asker.kommune.no/om-asker-kommune/askermagasinet/fyll-sommeren-med-opplevelser/ | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Bergen kommune | Bergen | 26-27,32-33 | forventet | https://www.bergen.kommune.no/innbyggerhjelpen/barnehage-og-skole/grunnskole/tilpasset-opplaring-og-individuell-tilrettelegging/sommerleir-for-barn-med-funksjonshemming-utviklingshemming-eller-larevansker | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Bærum kommune (Ungdom og Fritid) | Bærum | 26-33 | forventet | https://www.ufbinfo.no/ | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Drammen kulturskole (Drammen kommune) | Drammen | 25 | delvis | https://www.drammen.kommune.no/tjenester/kunst-kultur/kulturskolen/feriekurs-kulturskole/ | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Fredrikstad kommune (Ferieaktiviteter) | Fredrikstad | 26-33 | forventet | https://www.fredrikstad.kommune.no/tjenester/kunst-og-kultur/ferieaktiviteter/om-ferieaktiviteter/ | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Kristiansand kommune (Fritidsenheten) | Kristiansand | 26-33 | dato_ikke_publisert | https://www.kristiansand.kommune.no/navigasjon/kultur-og-fritid/ferietilbud-for-unge/ | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Oslo kommune (Sommerskolen Oslo) | Oslo | 26,27 | forventet | https://aktuelt.oslo.kommune.no/sommerskolen-oslo-20-ar-med-sommereventyr-for-barn-i-hele-byen | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Oslo kommune, Bydel Grorud | Oslo | 26-33 | forventet | https://www.oslo.kommune.no/bydeler/bydel-grorud/kalender-bydel-grorud/sommerferien-2026/ | april | **Observert:** påmeldingsfrist 15.05.2026 (publisering før det, eksakt dato ukjent) | 2027-04-15 |
+| Stavanger kommune – Fiks ferigge ferie (Ungdom og fritid) | Stavanger | 26-32 | forventet | https://www.stavanger.kommune.no/kultur-og-fritid/fiks-ferigge-ferie/fff-ferieklubb/ | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Tromsø kommune (Fritid) | Tromsø | 28,29,30,31 | forventet | https://tromso.kommune.no/sommeraktiviteter | april–mai | **Anslag:** Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai) | 2027-04-15 |
+| Trondheim kommune (Science Camp) | Trondheim | 25 | forventet | https://sites.google.com/skole.trondheim.kommune.no/sciencecamp/hjem | mai | **Observert:** siden oppgir påmelding «medio mai 2027» | 2027-05-10 |
+| 5. Drammen sjøspeidergruppe | Drammen | 32-33 | forventet | https://www.drammen.kommune.no/tjenester/skole/sommeraktiviteter-for-barn-og-unge/ | mai | **Observert:** påmeldingsfrist 10.06.2026 i kommunens oversikt | 2027-05-15 |
+| 6. Drammen MS speidergruppe | Drammen | 33 | forventet | https://www.drammen.kommune.no/tjenester/skole/sommeraktiviteter-for-barn-og-unge/ | mai–juni | **Observert:** påmeldingsfrist 27.06.2026 i kommunens oversikt | 2027-05-15 |
+| Klatreverket Kristiansand | Kristiansand | 26,32 | forventet | https://klatreverketkrs.no/sommerleir-2026/ | juni | **Observert:** sommerleir-siden 2026 publisert 13.06.2026 (for sent for uke 26; sjekk tidligere) | 2027-05-15 |
+| Tromsø Ishockeyklubb | Tromsø | 33 | forventet | https://spond.com/discover/en-gb/events/FE5B1906645C43959EC46B054EBEEE89 | mai | **Observert:** tidlig påmelding åpnet 20.05.2026 | 2027-05-20 |
+| Tromsø Turnforening | Tromsø | 26,33 | forventet | https://www.tromsoturn.no/next/blog/post/279645/extra-sommerturn-uke-26-og-33 | mai | **Observert:** 2026-innlegget publisert 26.05.2026 | 2027-05-27 |
+| Hånes IF / Håndballmester | Kristiansand | 33 | forventet | https://www.letsreg.com/no/register/sommercamp | juni | **Observert:** LetsReg-salg fra 01.06.2026, klubbinnlegg 14.06.2026 | 2027-06-02 |
+
+## Oppsummering sommer
+
+- 96 linjer: 12 med observert grunnlag, 84 anslag.
+- Sjekk i desember 2026: 2
+- Sjekk i februar 2027: 3
+- Sjekk i mars 2027: 74
+- Sjekk i april 2027: 10
+- Sjekk i mai 2027: 6
+- Sjekk i juni 2027: 1
+
+# Sjekk-plan påskeferien 2027 (lagt til i v6)
+
+Skolens påskeferie 2027 er 22.03–29.03 eller 22.03–30.03 (skolerute-2027.csv): uke 12, pluss 2. påskedag (og i noen kommuner tirsdag) i uke 13. Påsken 2027 kommer 8 dager tidligere enn i 2026, så sjekkdatoene er flyttet tilsvarende.
+
+| tilbyder | kommune | uke(r) | status nå | kilde-URL som skal sjekkes | når programmet pleier å bli publisert | grunnlag | anbefalt sjekkdato |
+|---|---|---|---|---|---|---|---|
+| Skimore Oslo Skiskole | Oslo | 12 | forventet | https://oslo.skischool.shop/pages/feriekurs/paaskeferiekurs/ | allerede publisert | **Observert:** påskeferiekurs ligger i nettbutikken uten dato | 2027-01-15 |
+| Asker Fotball / Asker Skiklubb | Asker | 12 | forventet | https://www.asker-skiklubb.no/kiwi-paskecamp-29-mars-1-april/ | februar–mars | **Observert:** 2026-innlegget publisert 01.03.2026 | 2027-02-22 |
+| Fana IL Fotball | Bergen | 12 | forventet | https://fanafotball.no/fotballutdanning/fotballskoler/paskeferie-fotball-paskeferiefotball-4/ | februar–mars | **Anslag:** Ukjent, anslag (idrettslag la ut påskecamper i mars 2026) | 2027-02-26 |
+| Gneist IL | Bergen | 12 | forventet | https://gneist.no/Fotball/paskefotball-2026 | februar–mars | **Anslag:** Ukjent, anslag (idrettslag la ut påskecamper i mars 2026) | 2027-02-26 |
+| Fossum IF | Bærum | 12 | forventet | https://app.rubic.no/Public/Events/41813 | februar–mars | **Anslag:** Ukjent, anslag (idrettslag la ut påskecamper i mars 2026) | 2027-02-26 |
+| Drammens Turnforening | Drammen | 12 | forventet | https://www.drammenturn.no/pasketurn/ | februar–mars | **Anslag:** Ukjent, anslag (idrettslag la ut påskecamper i mars 2026) | 2027-02-26 |
+| FK Vigør | Kristiansand | 12 | forventet | https://xn--fkvigr-fya.spond.club/fk_vig%C3%B8r_p%C3%A5skecamp_30-31_mars | februar–mars | **Anslag:** Ukjent, anslag (idrettslag la ut påskecamper i mars 2026) | 2027-02-26 |
+| Skedsmo FK | Lillestrøm | 12 | forventet | https://skedsmofk.no/klubben/paskecamp-2026-skedsmo-fk | februar–mars | **Anslag:** Ukjent, anslag (idrettslag la ut påskecamper i mars 2026) | 2027-02-26 |
+| Manglerud Star Fotball | Oslo | 12 | forventet | https://msfotball.no/klubben/nyheter/pamelding-apen-for-ms-camp-i-paskeferien | februar–mars | **Anslag:** Ukjent, anslag (idrettslag la ut påskecamper i mars 2026) | 2027-02-26 |
+| Drammens Museum | Drammen | 12-13 | forventet | https://drammens.museum.no/event/gratis-paskeverksted-for-barn/ | «rett før ferien» (mars) | **Anslag:** Ukjent, anslag (museer legger ofte ut påskeprogram 1–2 uker før) | 2027-03-08 |
+| Fredrikstad museum (Østfoldmuseene) | Fredrikstad | 12-13 | forventet | https://ostfoldmuseene.no/fredrikstad/hva-skjer/paske-p%C3%A5-fredrikstad-museum | «rett før ferien» (mars) | **Anslag:** Ukjent, anslag (museer legger ofte ut påskeprogram 1–2 uker før) | 2027-03-08 |
+| Vest-Agder-museet | Kristiansand | 12 | forventet | https://www.vestagdermuseet.no/pasken-i-vest-agder-museet/ | mars | **Observert:** 2026-oversikten sist oppdatert 16.03.2026 | 2027-03-08 |
+| Lyn Fotball | Oslo | 12 | forventet | https://www.lynfotball.no/blognyheter/2026/3/18/er-du-klar-for-pskecamp | mars | **Observert:** 2026-innlegget publisert 18.03.2026 | 2027-03-08 |
+| Trondheim kunstmuseum | Trondheim | 12 | forventet | https://trondheimkunstmuseum.no/paska-pa-tkm | «rett før ferien» (mars) | **Anslag:** Ukjent, anslag (museer legger ofte ut påskeprogram 1–2 uker før) | 2027-03-08 |
+| Hinna Fotball | Stavanger | 12 | forventet | https://hinnafotball.no/nyheter/paskecamp-2025-2 | mars | **Observert:** 2026-innlegget publisert 20.03.2026 | 2027-03-10 |
+
+## Oppsummering påske
+
+- 15 linjer: 5 med observert grunnlag, 10 anslag.
+- Sjekk i januar 2027: 1
+- Sjekk i februar 2027: 8
+- Sjekk i mars 2027: 6

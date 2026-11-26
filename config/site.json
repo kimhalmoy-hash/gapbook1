@@ -2,7 +2,8 @@
   "name": "WeekSlot",
   "tagline": "Ferieuka, ordnet.",
   "url": "https://weekslot.com",
-  "kontaktEpost": "{kontakt-epost}",
+  "kontaktEpost": "kontakt@weekslot.com",
+  "fremhevetPrisKr": 290,
   "defaultLocale": "nb",
   "locales": ["nb", "sv", "en"],
   "temaMin": 3

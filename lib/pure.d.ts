@@ -81,6 +81,17 @@ export function lagId(tilbyder: string, tittel: string, sesong: string, uke: num
 export function typeSlug(type: string): string;
 export function synlig(leir: LeirUke, iDag: string): boolean;
 export function tellerMotTerskel(leir: LeirUke, iDag: string): boolean;
+export function gruppeNokkel(leir: { tilbyder?: string | null; tittel?: string | null; kommune?: string | null; by?: string | null }): string;
+export function grupperLeirer<T extends { id: string; uke?: number | string | null }>(leirer: readonly T[]): T[][];
+export function gruppeSlugBasis(medlemmer: { id: string; tilbyder?: string | null; tittel?: string | null; kommune?: string | null; by?: string | null }[]): string;
+export function medSlug<T extends { id: string }>(grupper: readonly (readonly T[])[]): { slug: string; medlemmer: T[] }[];
+export function formaterUkeTall(uker: number[]): string;
+export function ukeTallFra(medlemmer: { uke: number | string | null }[]): number[];
+export function gruppeTrefferUke(medlemmer: LeirUke[], aar: number, uke: number): boolean;
+export function besteStatus(statuser: string[]): "verifisert" | "delvis" | "forventet";
+export function gruppeTellerMotTerskel(medlemmer: (LeirUke & { status?: string; demo?: boolean })[], iDag: string): boolean;
+export function antallSomTeller(leirer: (LeirUke & { id: string; status?: string; demo?: boolean; tilbyder?: string; tittel?: string; kommune?: string; by?: string | null })[], iDag: string): number;
+export function pameldingErLik(medlemmer: { pameldingStatus?: string | null; pameldingApner?: string | null }[]): boolean;
 export function pameldingModus(
   status: string | null | undefined,
   apner: string | null | undefined,

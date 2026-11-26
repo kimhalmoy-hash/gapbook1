@@ -56,7 +56,7 @@ export function CampCard({ camp, tekst }: { camp: CampView; tekst: Copy; visNota
           </dd>
         </div>
       </dl>
-      <p className="mt-3 text-sm">{camp.pameldingLabel}</p>
+      {camp.pameldingLabel ? <p className="mt-3 text-sm">{camp.pameldingLabel}</p> : null}
       {camp.apnerLabel ? <p className="text-sm">{camp.apnerLabel}</p> : null}
       {camp.sjekketLabel ? <p className="text-sm text-muted">{camp.sjekketLabel}</p> : null}
       {camp.kortLinje ? <p className="mt-3 text-sm text-muted">{camp.kortLinje}</p> : null}

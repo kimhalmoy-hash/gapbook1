@@ -46,7 +46,7 @@ Fila er én JSON-array. Ett objekt per kurs/leir per uke (samme oppdeling som `d
 - `lenkestatus` settes av `sjekk-lenker.mjs`: `ok` | `usikker` | `utløpt`, eller `null` før første sjekk. `dod: true` ved 404/410/DNS-feil.
 - `pameldingStatus`: `apen` | `ikke_apnet` | `full` | `stengt` | `null`. Bare når kilden sier det. Ellers `null`, som vises som «Påmelding: ukjent – sjekk arrangørens side». `sjekk-lenker` kan sette feltet fra JSON-LD `offers.availability` eller en kort «Fulltegnet»-tekst på Rubic. Den gjetter ikke ut fra brødtekst.
 - `pameldingApner`: ISO-dato når påmeldingen åpner, bare hvis kilden oppgir den. Er datoen i dag eller tidligere og `pameldingStatus` er `null`, vises én linje: «Påmeldingen åpnet 19. nov. – sjekk arrangørens side». Da vises ikke «Påmelding: ukjent». En fremtidig dato vises som «Påmeldingen åpner …». Har status en verdi, vises den. `kildeSjekket` vises som «Sist sjekket».
-- `fremhevet: true` bare for betalt synlighet. Vises merket «Fremhevet» (svensk «Utvald», engelsk «Featured»).
+- `fremhevet: true` bare for betalt synlighet. Vises merket «Fremhevet» (svensk «Utvald», engelsk «Featured»). Prisen står i `config/site.json` som `fremhevetPrisKr` (290) og vises som «290 kr per kommune per uke».
 - `demo: true` bare for eksempeldata. Vises aldri på indekserbare sider og tas aldri med i sitemap.
 - `land`: `NO` nå, `SE` / `DK` / `FI` senere. Importen fra `kurs-norge-v1.csv` setter `NO` fordi fila er det norske datasettet. Feltet finnes ikke per rad i CSV-en.
 - Personopplysninger (e-post, telefon) skal ikke ligge i tekstfeltene. Importen fjerner dem. `valider.mjs` feiler hvis noe blir igjen.

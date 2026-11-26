@@ -27,6 +27,7 @@ export type Copy = {
   trust: string;
   empty: string;
   featured: string;
+  featuredPrice: string;
   expected: string;
   partial: string;
   example: string;
@@ -38,6 +39,8 @@ export type Copy = {
   years: string;
   week: string;
   weeks: string;
+  fromPrice: string;
+  weeksHeading: string;
   signup: string;
   seeOrganiser: string;
   lastYearPrice: string;
@@ -172,6 +175,7 @@ export const COPY: Record<Locale, Copy> = {
     trust: "Vi viser arrangørenes egne opplysninger. Sjekk alltid detaljene hos arrangøren før påmelding.",
     empty: "Ingen tilbud registrert her ennå. Kjenner du en arrangør? Tips oss.",
     featured: "Fremhevet",
+    featuredPrice: "Fremhevet plassering: {pris} kr per kommune per uke.",
     expected: "Forventet – {år}-dato ikke publisert ennå",
     partial: "Noe mangler på kilden",
     example: "Eksempel",
@@ -183,6 +187,8 @@ export const COPY: Record<Locale, Copy> = {
     years: "år",
     week: "Uke {nr}",
     weeks: "Uke {nr}",
+    fromPrice: "fra {pris}",
+    weeksHeading: "Ukene",
     signup: "Meld på hos arrangøren",
     seeOrganiser: "Se arrangørens side",
     lastYearPrice: "I fjor: {pris}",
@@ -280,6 +286,7 @@ export const COPY: Record<Locale, Copy> = {
     trust: "Vi visar arrangörernas egna uppgifter. Kontrollera alltid detaljerna hos arrangören före anmälan.",
     empty: "Inga erbjudanden registrerade här än. Känner du en arrangör? Tipsa oss.",
     featured: "Utvald",
+    featuredPrice: "Utvald placering: {pris} kr per kommun och vecka.",
     expected: "Förväntat – {år}-datum inte publicerat än",
     partial: "Något saknas hos källan",
     example: "Exempel",
@@ -291,6 +298,8 @@ export const COPY: Record<Locale, Copy> = {
     years: "år",
     week: "Vecka {nr}",
     weeks: "Vecka {nr}",
+    fromPrice: "från {pris}",
+    weeksHeading: "Veckorna",
     signup: "Anmäl hos arrangören",
     seeOrganiser: "Se arrangörens sida",
     lastYearPrice: "I fjol: {pris}",
@@ -388,6 +397,7 @@ export const COPY: Record<Locale, Copy> = {
     trust: "We show the organisers' own information. Always check the details with the organiser before signing up.",
     empty: "No listings here yet. Know an organiser? Send us a tip.",
     featured: "Featured",
+    featuredPrice: "Featured placement: NOK {pris} per municipality per week.",
     expected: "Expected – {år} dates not published yet",
     partial: "Some details are missing at the source",
     example: "Example",
@@ -399,6 +409,8 @@ export const COPY: Record<Locale, Copy> = {
     years: "years",
     week: "Week {nr}",
     weeks: "Week {nr}",
+    fromPrice: "from {pris}",
+    weeksHeading: "Weeks",
     signup: "Sign up with the organiser",
     seeOrganiser: "See the organiser's page",
     lastYearPrice: "Last year: {pris}",
