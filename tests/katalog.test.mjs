@@ -25,6 +25,7 @@ import {
   skolerutaIndeks,
   hreflangLokaler,
   heleFerieuker,
+  ferieUkeTekst,
   sommerPeriode,
 } from "../lib/pure.mjs";
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
@@ -34,25 +35,27 @@ import { forfalte, parseSjekkPlan } from "../scripts/lib/sjekk-plan.mjs";
 
 const config = JSON.parse(readFileSync(new URL("../config/kilder.json", import.meta.url), "utf8"));
 
-test("hele ferieuker starter på første mandag og slutter før en ufullstendig uke", () => {
-  assert.deepEqual(
-    heleFerieuker("2027-06-19", "2027-06-27"),
-    [{ aar: 2027, uke: 25 }],
-  );
-  assert.deepEqual(
-    heleFerieuker("2027-02-22", "2027-02-26"),
-    [{ aar: 2027, uke: 8 }],
-  );
-  assert.deepEqual(
-    heleFerieuker("2027-02-24", "2027-03-05"),
-    [{ aar: 2027, uke: 9 }],
-  );
-  assert.deepEqual(heleFerieuker("2027-02-24", "2027-02-26"), []);
-  assert.deepEqual(heleFerieuker("2026-12-26", "2027-01-10"), [
-    { aar: 2026, uke: 53 },
-    { aar: 2027, uke: 1 },
+test("ferieuke krever tre hverdager, og helligdager teller som fri", () => {
+  assert.deepEqual(heleFerieuker("2027-02-24", "2027-02-26"), [
+    { aar: 2027, uke: 8, hel: false, dager: [3, 4, 5] },
   ]);
-  assert.deepEqual(heleFerieuker("2027-06-19", null), [{ aar: 2027, uke: 25 }]);
+  assert.deepEqual(heleFerieuker("2027-02-22", "2027-02-26"), [
+    { aar: 2027, uke: 8, hel: true, dager: [] },
+  ]);
+  assert.deepEqual(heleFerieuker("2027-06-19", "2027-06-27"), [
+    { aar: 2027, uke: 25, hel: true, dager: [] },
+  ]);
+  assert.deepEqual(heleFerieuker("2026-12-26", "2027-01-10"), [
+    { aar: 2026, uke: 53, hel: true, dager: [] },
+    { aar: 2027, uke: 1, hel: true, dager: [] },
+  ]);
+  assert.deepEqual(heleFerieuker("2027-06-19", null), [{ aar: 2027, uke: 25, hel: true, dager: [] }]);
+  const paske = heleFerieuker("2027-03-22", "2027-03-30");
+  assert.deepEqual(paske.map((uke) => uke.uke), [12]);
+  assert.equal(paske[0].hel, true);
+  assert.equal(ferieUkeTekst("2027-02-24", "2027-02-26", "nb")?.kort, "8 (ons–fre)");
+  assert.equal(ferieUkeTekst("2027-02-24", "2027-02-26", "en")?.kort, "8 (Wed–Fri)");
+  assert.equal(ferieUkeTekst("2027-02-24", "2027-02-26", "sv")?.kort, "8 (ons–fre)");
 });
 
 test("iso-uke for kjente dager i 2027", () => {
@@ -92,8 +95,8 @@ test("ferieuker kommer fra data, ikke fra kommunenavn", () => {
     kildeUrl: "https://example.com/tromso",
     merknad: null,
   };
-  assert.equal(heleFerieuker("2026-09-30", "2026-10-02").length, 0);
-  assert.equal(kommunerMedFri([tromso], 2026, 40).length, 0);
+  assert.equal(heleFerieuker("2026-09-30", "2026-10-02")[0].uke, 40);
+  assert.equal(kommunerMedFri([tromso], 2026, 40).length, 1);
   const utenfor = {
     sesong: "host2026",
     uke: 40,

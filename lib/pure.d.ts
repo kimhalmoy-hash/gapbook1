@@ -71,7 +71,17 @@ export function isoUke(iso: string): { aar: number; uke: number };
 export function ukeMandag(aar: number, uke: number): string;
 export function leggTilDager(iso: string, n: number): string;
 export function forsteMandag(iso: string): string;
-export function heleFerieuker(fra: string | null | undefined, til?: string | null): { aar: number; uke: number }[];
+export function paaskedag(aar: number): string;
+export function norskeHelligdager(aar: number): Set<string>;
+export function heleFerieuker(
+  fra: string | null | undefined,
+  til?: string | null,
+): { aar: number; uke: number; hel: boolean; dager: number[] }[];
+export function ferieUkeTekst(
+  fra: string | null | undefined,
+  til: string | null | undefined,
+  locale?: "nb" | "sv" | "en",
+): { kort: string; detalj: string } | null;
 export function dagerMellom(fra: string, til: string): string[];
 export function overlap(
   a0: string | null,

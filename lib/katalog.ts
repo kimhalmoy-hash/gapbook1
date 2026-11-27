@@ -10,6 +10,7 @@ import {
   erHelUke,
   ferieFelter,
   heleFerieuker,
+  ferieUkeTekst,
   kommunerISesong,
   kommunerMedFri,
   leggTilDager,
@@ -321,10 +322,10 @@ function ukerIDato(fra: string | null | undefined, til: string | null | undefine
   return heleFerieuker(fra, til).filter((u) => u.aar === aar).map((u) => u.uke);
 }
 
-function ukeVisning(fra: string | null | undefined, til: string | null | undefined): string | null {
-  const tall = heleFerieuker(fra, til).map((u) => u.uke);
-  const tekst = formaterUkeTall(tall);
-  return tekst || null;
+function ukeVisning(fra: string | null | undefined, til: string | null | undefined, locale: Locale = "nb"): string | null {
+  const tekst = ferieUkeTekst(fra, til, locale);
+  if (!tekst) return null;
+  return `${tekst.kort}${tekst.detalj}`;
 }
 
 function leirerFor(rute: Rute): Leir[] {
@@ -470,8 +471,8 @@ function overskrift(rute: Rute): string {
     const navn = kommuneNavn.get(rute.kommuneSlug) || rute.kommuneSlug;
     const rad = skoleruteFor(rute.kommuneSlug);
     const deler: string[] = [];
-    const hostUker = ukeVisning(rad?.hostferie?.datoFra, rad?.hostferie?.datoTil);
-    const vinterUker = ukeVisning(rad?.vinterferie?.datoFra, rad?.vinterferie?.datoTil);
+    const hostUker = ukeVisning(rad?.hostferie?.datoFra, rad?.hostferie?.datoTil, rute.locale);
+    const vinterUker = ukeVisning(rad?.vinterferie?.datoFra, rad?.vinterferie?.datoTil, rute.locale);
     if (hostUker) deler.push(`${tekst.seasonName.host} ${tekst.weekWord} ${hostUker}`);
     if (vinterUker) deler.push(`${tekst.seasonName.vinter} ${tekst.weekWord} ${vinterUker}`);
     if (deler.length) return fyll(tekst.h1PlaceWeek, { by: navn, uker: deler.join(", ") });
@@ -482,7 +483,7 @@ function overskrift(rute: Rute): string {
     const ferie = tekst.seasonName[rute.navn];
     const rad = skoleruteFor(rute.kommuneSlug);
     const felt = rad ? feltFor(rad, rute.navn) : null;
-    const hele = ukeVisning(felt?.datoFra, felt?.datoTil);
+    const hele = ukeVisning(felt?.datoFra, felt?.datoTil, rute.locale);
     if (hele) return fyll(tekst.h1HolidayPlace, { ferie, by: navn, aar: rute.aar, uke: hele });
     return fyll(tekst.h1HolidayPlaceNoWeek, { ferie, by: navn, aar: rute.aar });
   }
@@ -600,11 +601,12 @@ function sommerVisning(rad: SkoleruteRad | null, locale: Locale, tekst: Copy): {
   if (!rad) return null;
   const periode = sommerPeriode(rad);
   if (!periode || !periode.uker.length) return null;
-  const uker = formaterUkeTall(periode.uker);
+  const ukeTekst = ferieUkeTekst(periode.fra, periode.til, locale);
+  if (!ukeTekst) return null;
   const fra = formatDato(periode.fra, locale);
   const linje = periode.komplett && periode.til
-    ? fyll(tekst.summerBoth, { fra, til: formatDato(periode.til, locale), uker })
-    : fyll(tekst.summerStart, { fra, uker });
+    ? fyll(tekst.summerBoth, { fra, til: formatDato(periode.til, locale), uker: ukeTekst.kort, detalj: ukeTekst.detalj })
+    : fyll(tekst.summerStart, { fra, uker: ukeTekst.kort, detalj: ukeTekst.detalj });
   const kilder: { href: string; label: string }[] = [];
   if (periode.kildeUrl) kilder.push({ href: periode.kildeUrl, label: tekst.source });
   if (periode.forsteKildeUrl && periode.forsteKildeUrl !== periode.kildeUrl) {
@@ -753,7 +755,7 @@ function ferieLinjer(locale: Locale, rader: ReturnType<typeof kommunerMedFri> | 
       label: tekst.seasonName[sesongNavn(String(rad.nokkel))],
       dato: formatPeriode(rad.datoFra, rad.datoTil, locale) || "",
       uke: heleFerieuker(rad.datoFra, rad.datoTil)[0]?.uke ?? null,
-      uker: ukeVisning(rad.datoFra, rad.datoTil),
+      uker: ukeVisning(rad.datoFra, rad.datoTil, locale),
     }))
     .sort((a, b) => (a.uke ?? 99) - (b.uke ?? 99) || a.kommune.localeCompare(b.kommune, "nb"));
 }
@@ -838,7 +840,7 @@ export function modell(rute: Rute): SideModell {
           label: tekst.seasonName[nokkel],
           dato: formatPeriode(f.datoFra, f.datoTil, rute.locale) || "",
           uke: heleFerieuker(f.datoFra, f.datoTil)[0]?.uke ?? null,
-          uker: ukeVisning(f.datoFra, f.datoTil),
+          uker: ukeVisning(f.datoFra, f.datoTil, rute.locale),
           href: sti(rute.locale, [SESONG_STI[nokkel], rute.kommuneSlug]),
         };
       });
@@ -890,7 +892,7 @@ export function modell(rute: Rute): SideModell {
     const felt = rute.navn === "host" ? rad?.hostferie : rute.navn === "vinter" ? rad?.vinterferie : rute.navn === "paske" ? rad?.paske : null;
     const dato = felt ? formatPeriode(felt.datoFra, felt.datoTil, rute.locale) : null;
     if (dato) {
-      const hele = ukeVisning(felt?.datoFra, felt?.datoTil);
+      const hele = ukeVisning(felt?.datoFra, felt?.datoTil, rute.locale);
       kalenderUke = `${tekst.seasonName[rute.navn]}: ${dato}${hele ? ` (${fyll(tekst.week, { nr: hele })})` : ""}`;
     }
     ingress = vinterIntro(rute) || tekst.seasonBlurb[rute.navn];
@@ -899,7 +901,7 @@ export function modell(rute: Rute): SideModell {
         skolear: skolearKort(rad.skolear),
         kildeUrl: rad.kildeUrl,
         merknad: rad.merknad,
-        ferier: [{ label: tekst.seasonName[rute.navn], dato: dato || "", uke: heleFerieuker(felt.datoFra, felt.datoTil)[0]?.uke ?? null, uker: ukeVisning(felt.datoFra, felt.datoTil) }],
+        ferier: [{ label: tekst.seasonName[rute.navn], dato: dato || "", uke: heleFerieuker(felt.datoFra, felt.datoTil)[0]?.uke ?? null, uker: ukeVisning(felt.datoFra, felt.datoTil, rute.locale) }],
       };
     }
     if (rad && rute.navn === "sommer") {
