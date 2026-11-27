@@ -82,6 +82,13 @@ export function ferieUkeTekst(
   til: string | null | undefined,
   locale?: "nb" | "sv" | "en",
 ): { kort: string; detalj: string } | null;
+export function ukerISetning(fra: string | null | undefined, til: string | null | undefined): string | null;
+export function sommerKommuneTekst(
+  mal: string,
+  kommune: string,
+  fra: string | null | undefined,
+  til: string | null | undefined,
+): string;
 export function dagerMellom(fra: string, til: string): string[];
 export function overlap(
   a0: string | null,

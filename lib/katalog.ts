@@ -4,6 +4,7 @@ import leirerJson from "@/data/leirer.json";
 import skoleruteJson from "@/data/skolerute.json";
 import sokeTitler from "@/data/sokeord.json";
 import vinterIntroNb from "@/data/intro-vinterferie-nb.json";
+import sommerIntroNb from "@/data/intro-sommerferie-nb.json";
 import {
   campIFerie,
   campUker,
@@ -11,6 +12,7 @@ import {
   ferieFelter,
   heleFerieuker,
   ferieUkeTekst,
+  sommerKommuneTekst,
   kommunerISesong,
   kommunerMedFri,
   leggTilDager,
@@ -775,6 +777,30 @@ function vinterIntro(rute: Rute): string | null {
   return mal.replaceAll("{uke}", felt?.uke != null ? String(felt.uke) : "").replaceAll("{år}", aar);
 }
 
+const sommerTekster = sommerIntroNb as {
+  h1: string;
+  ingress: string;
+  kommuner: Record<string, string>;
+};
+
+function sommerIntro(rute: Rute): string | null {
+  if (rute.kind !== "ferieKommune" || rute.navn !== "sommer" || rute.locale !== "nb") return null;
+  const mal = sommerTekster.kommuner[rute.kommuneSlug];
+  if (!mal) return null;
+  const rad = skoleruteFor(rute.kommuneSlug);
+  const periode = rad ? sommerPeriode(rad) : null;
+  const kommune = rad?.kommune || kommuneNavn.get(rute.kommuneSlug) || rute.kommuneSlug;
+  const fra = periode?.komplett ? periode.fra : null;
+  const til = periode?.komplett ? periode.til : null;
+  return sommerKommuneTekst(mal, kommune, fra, til);
+}
+
+function soketittel(rute: Rute): string | null {
+  if (rute.locale !== "nb" || rute.kind === "hjem" || rute.kind === "leir" || rute.kind === "fremhevet" || rute.kind === "personvern") return null;
+  const path = sammeSti({ ...rute, locale: "nb" }, "nb").replace(/\/$/, "");
+  return (sokeTitler as Record<string, string>)[path] || null;
+}
+
 export function modell(rute: Rute): SideModell {
   const tekst = copy(rute.locale);
   const home = sti(rute.locale, []);
@@ -799,8 +825,13 @@ export function modell(rute: Rute): SideModell {
     h1 = overskrift(rute);
   }
 
-  if (rute.kind === "sesong") {
+  if (rute.kind === "sesong" && rute.navn === "sommer" && rute.locale === "nb") {
+    h1 = sommerTekster.h1.replaceAll("{år}", String(rute.aar));
+    ingress = sommerTekster.ingress;
+  } else if (rute.kind === "sesong") {
     ingress = tekst.seasonBlurb[rute.navn];
+  }
+  if (rute.kind === "sesong") {
     const rader = kommunerISesong(skolerute, rute.navn, rute.aar);
     if (rader.length) {
       ferieOverskrift = tekst.offThisSeason;
@@ -895,7 +926,7 @@ export function modell(rute: Rute): SideModell {
       const hele = ukeVisning(felt?.datoFra, felt?.datoTil, rute.locale);
       kalenderUke = `${tekst.seasonName[rute.navn]}: ${dato}${hele ? ` (${fyll(tekst.week, { nr: hele })})` : ""}`;
     }
-    ingress = vinterIntro(rute) || tekst.seasonBlurb[rute.navn];
+    ingress = sommerIntro(rute) || vinterIntro(rute) || tekst.seasonBlurb[rute.navn];
     if (rad && felt) {
       skoleruteKort = {
         skolear: skolearKort(rad.skolear),
@@ -969,7 +1000,7 @@ function beskrivelse(rute: Rute, side: SideModell): string {
     return fyll(tekst.typeDescription, { type: tekst.types[raw] || raw });
   }
   if (rute.kind === "sesong" || rute.kind === "ferieKommune") {
-    return fyll(tekst.seasonDescription, { ferie: side.h1 });
+    return fyll(tekst.seasonDescription, { ferie: soketittel(rute) || side.h1 });
   }
   const e = side.leirer[0];
   if (!e) return tekst.homeDescription;
@@ -982,7 +1013,7 @@ function tittel(rute: Rute, side: SideModell): string {
   if (rute.kind === "fremhevet") return tekst.featuredPageTitle;
   if (rute.kind === "personvern") return tekst.privacyTitle;
   if (rute.kind === "hjem") return tekst.homeTitle;
-  if (rute.kind !== "leir") return `${side.h1} | ${site.name}`;
+  if (rute.kind !== "leir") return `${soketittel(rute) || side.h1} | ${site.name}`;
   const e = side.leirer[0];
   return e ? `${e.tittel} | ${site.name}` : tekst.homeTitle;
 }

@@ -26,6 +26,8 @@ import {
   hreflangLokaler,
   heleFerieuker,
   ferieUkeTekst,
+  ukerISetning,
+  sommerKommuneTekst,
   sommerPeriode,
 } from "../lib/pure.mjs";
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
@@ -56,6 +58,25 @@ test("ferieuke krever tre hverdager, og helligdager teller som fri", () => {
   assert.equal(ferieUkeTekst("2027-02-24", "2027-02-26", "nb")?.kort, "8 (ons–fre)");
   assert.equal(ferieUkeTekst("2027-02-24", "2027-02-26", "en")?.kort, "8 (Wed–Fri)");
   assert.equal(ferieUkeTekst("2027-02-24", "2027-02-26", "sv")?.kort, "8 (ons–fre)");
+});
+
+test("sommerintro bruker publiserte uker og reservetekst når en dato mangler", () => {
+  const mal = "Sommerferien i Oslo er uke {uker}. Se ukekurs og leirer.";
+  const manglerSlutt = sommerKommuneTekst(mal, "Oslo", "2027-06-19", null);
+  const manglerStart = sommerKommuneTekst(mal, "Oslo", null, "2027-08-15");
+  assert.equal(manglerSlutt, "Skoleruta for sommeren 2027 er ikke publisert ennå i Oslo. Se ukekurs og leirer.");
+  assert.equal(manglerStart, manglerSlutt);
+  assert.equal(manglerSlutt.includes("{uker}"), false);
+  assert.equal(ukerISetning("2027-06-19", "2027-08-15"), "25–32");
+  const stavanger = ukerISetning("2027-06-19", "2027-08-18");
+  assert.match(stavanger, /^25–33, der uke 33 er man–ons$/);
+  const tekst = sommerKommuneTekst(
+    "Barna i Stavanger har sommerferie uke {uker}. Se hvilke ukekurs.",
+    "Stavanger",
+    "2027-06-19",
+    "2027-08-18",
+  );
+  assert.equal(tekst, "Barna i Stavanger har sommerferie uke 25–33, der uke 33 er man–ons. Se hvilke ukekurs.");
 });
 
 test("iso-uke for kjente dager i 2027", () => {
