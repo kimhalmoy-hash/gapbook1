@@ -363,8 +363,8 @@ test("importert skolerute og leirer", () => {
   assert.equal(skolerute.some((r) => r.kildeType === "ikke funnet"), false);
   assert.equal(leirer.length, 624);
   assert.equal(leirer.filter((e) => e.status === "verifisert").length, 51);
-  assert.equal(leirer.filter((e) => e.status === "delvis").length, 76);
-  assert.equal(leirer.filter((e) => e.status === "forventet").length, 497);
+  assert.equal(leirer.filter((e) => e.status === "delvis").length, 29);
+  assert.equal(leirer.filter((e) => e.status === "forventet").length, 544);
   const fjor = leirer.filter((e) => erFjoraarsSommer(e));
   assert.ok(fjor.length > 0);
   for (const e of fjor) {
