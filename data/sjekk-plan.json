@@ -1,0 +1,2492 @@
+[
+  {
+    "tilbyder": "Bærums Skiklub",
+    "kommune": "Bærum",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://bsk.no/baerums-skiklub/pamelding-til-skiskolekurs-vinteren-2027-er-apnet",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Drammen kulturskole (Drammen kommune)",
+    "kommune": "Drammen",
+    "uke": 9,
+    "status": "delvis",
+    "kildeUrl": "https://www.drammen.kommune.no/tjenester/kunst-kultur/kulturskolen/feriekurs-kulturskole/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Langedrag Naturpark",
+    "kommune": "Nore og Uvdal",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://www.langedrag.no/aktivitet/rideleir-i-vinterferien-2/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Oslo Klatresenter",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://www.osloklatresenter.no/barn-og-ungdom/klatring-i-vinterferien",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Oslo Turnforening",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://osloturn.no/aktivitetsuker/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Skimore Oslo Skiskole",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://oslo.skischool.shop/pages/feriekurs/vinterferiekurs/",
+    "publiseres": "desember",
+    "grunnlag": "Observert: påmelding til feriekurs åpnet 15.09.2026, men datoer/priser ikke vist",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Stall Verdens Ende",
+    "kommune": "Færder",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://stallverdensende.no/produkt/rideleir-vinterferien-2027-uke-8-og-9-stall-verdens-ende-2027",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Sørvest Bandyregion (innebandy)",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "delvis",
+    "kildeUrl": "https://innebandyturnering.no/strategi/sidehp.php?ID=270",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Trondhjems Skiklub",
+    "kommune": "Trondheim",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://skiklubben.no/aktiviteter/vinteraktiviteter2027/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Utleira IL",
+    "kommune": "Trondheim",
+    "uke": 8,
+    "status": "delvis",
+    "kildeUrl": "https://utleira.no/handball/topphandball/topphandball-k1/tigercamp-handball-vinterferien-2027-pamelding-er-apen-3",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-side finnes allerede, men mangler felt (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Fladmark Gård",
+    "kommune": "Indre Østfold",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.letsreg.com/no/register/587523",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Klatreverket",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://klatreverket.no/vinterferie-med-klatring/",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Oslo Movement",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://oslo-movement.no/product/vinterferiecamp-parkour-tricking-2026/",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Oslo Parkour Park",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.osloparkourpark.no/aktiviteter/vintercamp",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Sjusjøen Skisenter",
+    "kommune": "Ringsaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://sjusjoenskisenter.no/",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Tryggvi Islandshestgård",
+    "kommune": "Sandnes",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://tryggvi.no/events/dagsleir-i-vinterferien-nybegynnere/",
+    "publiseres": "desember",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut tidlig)",
+    "sjekkDato": "2026-12-15"
+  },
+  {
+    "tilbyder": "Lørenskog bibliotek",
+    "kommune": "Lørenskog",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.lorenskogbibliotek.no/-/program-januar-april-2026",
+    "publiseres": "desember",
+    "grunnlag": "Observert: programmet jan–apr 2026 lagt ut 18.12.2025 (Issuu)",
+    "sjekkDato": "2026-12-21"
+  },
+  {
+    "tilbyder": "Sandnes Håndballklubb",
+    "kommune": "Sandnes",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.sandneshk.no/2025/12/31/obos-handballskole-vinterferien-2026/",
+    "publiseres": "desember",
+    "grunnlag": "Observert: 2026-innlegget er datert 31.12.2025 (i URL-en)",
+    "sjekkDato": "2027-01-04"
+  },
+  {
+    "tilbyder": "Bogafjell IL",
+    "kommune": "Sandnes",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://spond.com/discover/nb-no/events/902F581C1EE946C4B7309BB3D2FFA7BE",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-08"
+  },
+  {
+    "tilbyder": "Kultur- og bydelshusene i Haugesund",
+    "kommune": "Haugesund",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.haugesund.kommune.no/kif/kultur/kulturhus-og-bygg/gamle-slaktehuset-allaktivitetshus/gratis-latskriverkurs-i-vinterferien.31170.aspx",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-siden publisert 15.01.2026 (ferien er to uker tidligere i 2027)",
+    "sjekkDato": "2027-01-08"
+  },
+  {
+    "tilbyder": "Stavanger IF Fotball",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://stavangerif.no/na-apner-pameldingen-til-ffo-fotballskole-i-vinterferien-uke-9/",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-08"
+  },
+  {
+    "tilbyder": "Stavanger Ishockeyklubb",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.stavangerhockey.no/vinterferiecamp/",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-08"
+  },
+  {
+    "tilbyder": "Lørenskog HK",
+    "kommune": "Lørenskog",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://lorenskoghk.no/klubben/lorenskog-handballskole-vinterferien-2026",
+    "publiseres": "januar",
+    "grunnlag": "Observert: påmeldingsfrist 30.01.2026 (publisering før det, eksakt dato ukjent)",
+    "sjekkDato": "2027-01-11"
+  },
+  {
+    "tilbyder": "Sotra Sportsklubb",
+    "kommune": "Øygarden",
+    "uke": 9,
+    "status": "forventet",
+    "kildeUrl": "https://www.sotrask.no/nyheter/handball/handballskole-i-vinterferien-2026-i-sotra-arena/",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-artikkelen publisert 09.01.2026",
+    "sjekkDato": "2027-01-12"
+  },
+  {
+    "tilbyder": "Bodø Håndballklubb",
+    "kommune": "Bodø",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.bhk.no/2026/01/28/invitasjon-til-rema-1000-handballskole-i-vinterferien/",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Fet IL Aktiv",
+    "kommune": "Lillestrøm",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://app.rubic.no/Public/Events/39097",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Kongstensvømmerne",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://kongstensvommerne.no/ferieaktiviteter/vinterferie",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Lillestrøm SK (LSK Bredde Akademiet)",
+    "kommune": "Lillestrøm",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.lsk.no/nyheter/train-like-a-pro-vinterferien-2026",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Lyn Fotball",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.lynfotball.no/arrangementer",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Nordstrand Turnforening",
+    "kommune": "Oslo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.nordstrandturn.no/treningssamling-i-vinterferien",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Rolvsøy IF",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://rolvsoyif.com/fotball/gratis-vinterferie-fotball",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Rygge IL Turn",
+    "kommune": "Moss",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://ryggeturn.klubbnettside.no/troppsgymnastikk/vinterferieklubben-troppsturn-og-gymhjul",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Sarpsborg Skøyteklubb",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://sskkunstlop.no/camper-i-klubbens-egen-regi",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Tare Vintercamp (Spjelkavik IL, SIF/Hessa, Guard, Rollon, AaFK)",
+    "kommune": "Ålesund",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.sifhessa.com/post/tare-vintercamp-2026",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Tønsbergs Turnforening",
+    "kommune": "Tønsberg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://xn--tnsbergsturn-vjb.spond.club/news-article/6A5C83DE713E4D55A2A2D9583FD317F9",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-innlegget publisert 13.01.2026",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "SK Vedavåg Karmøy",
+    "kommune": "Karmøy",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://skvk.spond.club/news-article/78728BA9319748D4A061E5BEA1B4446B",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-innlegget publisert 04.02.2026 for ferie i uke 9; i 2027 er ferien uke 7, to uker tidligere",
+    "sjekkDato": "2027-01-21"
+  },
+  {
+    "tilbyder": "Drammens Turnforening",
+    "kommune": "Drammen",
+    "uke": 9,
+    "status": "forventet",
+    "kildeUrl": "https://www.drammenturn.no/vintercamp/",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-22"
+  },
+  {
+    "tilbyder": "Nordnorsk Vitensenter",
+    "kommune": "Tromsø",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://nordnorsk.vitensenter.no/nb/node/411",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-siden publisert 20.01.2026",
+    "sjekkDato": "2027-01-22"
+  },
+  {
+    "tilbyder": "Åssiden IF",
+    "kommune": "Drammen",
+    "uke": 9,
+    "status": "forventet",
+    "kildeUrl": "https://www.aif.no/p/83731/haandballskoler",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-22"
+  },
+  {
+    "tilbyder": "Øygarden IL",
+    "kommune": "Øygarden",
+    "uke": 9,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://oygardenil.no/arrangement/fotballskoler-eliteuke",
+    "publiseres": "januar",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut i januar)",
+    "sjekkDato": "2027-01-22"
+  },
+  {
+    "tilbyder": "Sandefjordbibliotekene",
+    "kommune": "Sandefjord",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://sandefjordbibliotekene.no/nb/kampanje/vinterferie-pa-biblioteket_a172fd6c",
+    "publiseres": "januar",
+    "grunnlag": "Observert: 2026-kampanjen publisert 22.01.2026",
+    "sjekkDato": "2027-01-25"
+  },
+  {
+    "tilbyder": "Museum Stavanger (MUST)",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.stavanger.kommune.no/nyheter/tilbud-i-vinterferien/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-01"
+  },
+  {
+    "tilbyder": "Norsk Oljemuseum",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.norskolje.museum.no/kjekke-vinterferieaktiviteter-pa-museet/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-01"
+  },
+  {
+    "tilbyder": "Sølvberget bibliotek og kulturhus",
+    "kommune": "Stavanger",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.solvberget.no/artikler/vinterferie-i-stavanger",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-01"
+  },
+  {
+    "tilbyder": "Vitenfabrikken (Jærmuseet)",
+    "kommune": "Sandnes",
+    "uke": 7,
+    "status": "forventet",
+    "kildeUrl": "https://www.jaermuseet.no/vitenfabrikken/aktiviteter/redesign-drop-in-i-vinterferien/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-01"
+  },
+  {
+    "tilbyder": "Borge Turnforening",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://aktivitetsportalenfredrikstad.no/aktuelt/en-vinterferie-aa-glede-seg-til/",
+    "publiseres": "februar",
+    "grunnlag": "Observert: kommunens oversikt 2026 sist oppdatert 03.02.2026",
+    "sjekkDato": "2027-02-05"
+  },
+  {
+    "tilbyder": "Esport4alle",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://aktivitetsportalenfredrikstad.no/aktuelt/en-vinterferie-aa-glede-seg-til/",
+    "publiseres": "februar",
+    "grunnlag": "Observert: kommunens oversikt 2026 sist oppdatert 03.02.2026",
+    "sjekkDato": "2027-02-05"
+  },
+  {
+    "tilbyder": "Gomma Turnforening",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://aktivitetsportalenfredrikstad.no/aktuelt/en-vinterferie-aa-glede-seg-til/",
+    "publiseres": "februar",
+    "grunnlag": "Observert: kommunens oversikt 2026 sist oppdatert 03.02.2026",
+    "sjekkDato": "2027-02-05"
+  },
+  {
+    "tilbyder": "Arendal bibliotek",
+    "kommune": "Arendal",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://arendalbibliotek.no/arrangement/aktiviteter-i-vinterferien-3/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Borgarsyssel Museum (Østfoldmuseene)",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://ostfoldmuseene.no/borgarsyssel/hva-skjer/vinterferie24",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Danseklubben Jessheim",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Fredrikstad museum (Østfoldmuseene)",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://ostfoldmuseene.no/fredrikstad/hva-skjer/vinterferie-pa-fredrikstad-museum",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "IHK Sparta Sarpsborg",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://ihksparta.spond.club/news-article/69C5F195703B489C9B983EB7EDAD0C45",
+    "publiseres": "februar",
+    "grunnlag": "Observert: 2024-innlegget publisert 06.02.2024; ikke funnet for 2025/2026",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "INSPIRIA science center",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.inspiria.no/besok/apningstider/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Indre Østfold kommune",
+    "kommune": "Indre Østfold",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.io.kommune.no/tjenester/kultur-idrett-og-fritid/idrett-og-fysisk-aktivitet/idrettsnyheter/na-er-skoytesesongen-i-gang.37752.aspx",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Kjerringåsen Alpinsenter",
+    "kommune": "Sarpsborg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.kjerringaasen.no/blank-2",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Kristiansand folkebibliotek",
+    "kommune": "Kristiansand",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://krsbib.no/nyheder/nyheter/vinterferie-pa-biblioteket-0",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Kunstsilo",
+    "kommune": "Kristiansand",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.kunstsilo.no/no/kunstsilo-live/barnefilm-i-silosalen",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Larvik museum (Vestfoldmuseene)",
+    "kommune": "Larvik",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://vestfoldmuseene.no/larvik-museum/vinterferiemoro-i-herregarden",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Lørenskog kommune",
+    "kommune": "Lørenskog",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.lorenskog.kommune.no/tjenester/kultur-idrett-og-fritid/barn-og-ungdom/ferietilbud-for-barn-og-unge/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Nordnorsk Kunstmuseum",
+    "kommune": "Bodø",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://nnkm.no/vinterferie-pa-nordnorsk-kunstmuseum",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Nordnorsk Kunstmuseum",
+    "kommune": "Tromsø",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://nnkm.no/vinterferie-pa-nordnorsk-kunstmuseum",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Nordre Follo bibliotek",
+    "kommune": "Nordre Follo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://nordrefollobibliotek.no/-/velkommen-til-oss-i-vinterferien-",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Nordre Follo kommune (Kjeller'n fritidssenter)",
+    "kommune": "Nordre Follo",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.nordrefollo.kommune.no/tjenester/kultur-idrett-og-fritid/fritidsklubb-og-ungdomskafe/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Skien fritidspark",
+    "kommune": "Skien",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://skienfritidspark.no/aktuelt/opplev-vinterferien-i-skienfritidspark",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Skien kommune",
+    "kommune": "Skien",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.skien.kommune.no/kultur-idrett-og-frivillighet/fritid/fritidsaktiviteter/ferieaktiviteter/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Slottsfjellsmuseet (Vestfoldmuseene)",
+    "kommune": "Tønsberg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://vestfoldmuseene.no/vinterferiemoro-pa-vestfoldmuseene",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "St. Croix-huset / UKM Fredrikstad",
+    "kommune": "Fredrikstad",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.fredrikstad.kommune.no/tjenester/kunst-og-kultur/stcroix-huset/ungdom/ung-vintercamp-2026/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Telemark museum",
+    "kommune": "Porsgrunn",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.telemarkmuseum.no/7-ting-du-kan-gjore-i-vinterferien/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Telemark museum",
+    "kommune": "Skien",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.telemarkmuseum.no/7-ting-du-kan-gjore-i-vinterferien/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ull/Kisa innebandy",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ullensaker Gym & Turn",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ullensaker Issportklubb",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ullensaker kunstforening",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Ullensakersvømmerne",
+    "kommune": "Ullensaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ullensaker.kommune.no/siteassets/20-pdf-dokumenter/kultur/allmenn-kultur/hostsommer-og-vinterferie/vinterferietilbud-2026.pdf",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunens samle-PDF; publiseringsdato ikke vist)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Vest-Agder-museet",
+    "kommune": "Kristiansand",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.vestagdermuseet.no/vinterferie-vest-agder-museet/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "Århus gård / Bybonden i Skien",
+    "kommune": "Skien",
+    "uke": 8,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://aarhusgaard.no/ungebybonder/",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Anslag: Ukjent, anslag (museer, bibliotek og kommuner legger ofte ut program 1–2 uker før)",
+    "sjekkDato": "2027-02-08"
+  },
+  {
+    "tilbyder": "SK Brann – Kniksen-Akademiet",
+    "kommune": "Bergen",
+    "uke": 9,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.brann.no/kniksen-akademiet/kniksen-akademiet/alt-om-kniksen-akademiets-helgesamlinger-og-fotballcamper",
+    "publiseres": "februar",
+    "grunnlag": "Observert: siden sist oppdatert 09.02.2026",
+    "sjekkDato": "2027-02-10"
+  },
+  {
+    "tilbyder": "Haugar kunstmuseum",
+    "kommune": "Tønsberg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.tonsberg.kommune.no/aktuelt/klar-for-vinterferie.46420.aspx",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Observert: kommunens 2026-oversikt publisert 12.02.2026",
+    "sjekkDato": "2027-02-12"
+  },
+  {
+    "tilbyder": "Tønsberg og Færder bibliotek",
+    "kommune": "Tønsberg",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.tonsberg.kommune.no/aktuelt/klar-for-vinterferie.46420.aspx",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Observert: kommunens 2026-oversikt publisert 12.02.2026",
+    "sjekkDato": "2027-02-12"
+  },
+  {
+    "tilbyder": "Ringsaker kommune",
+    "kommune": "Ringsaker",
+    "uke": 8,
+    "status": "forventet",
+    "kildeUrl": "https://www.ringsaker.kommune.no/nyheter/nyheter/2026-02-18-vinteraktivitetsdager-i-mjosparken",
+    "publiseres": "«rett før ferien»",
+    "grunnlag": "Observert: 2026-nyheten publisert/oppdatert 18.02.2026, dagen før ferien (uke 9); i 2027 er ferien uke 8",
+    "sjekkDato": "2027-02-15"
+  },
+  {
+    "tilbyder": "Stall Verdens Ende",
+    "kommune": "Færder",
+    "uke": null,
+    "status": "delvis",
+    "kildeUrl": "https://stallverdensende.no/produkt/sommerleir-2027/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-produktet finnes allerede (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Langedrag Naturpark",
+    "kommune": "Nore og Uvdal",
+    "uke": null,
+    "status": "delvis",
+    "kildeUrl": "https://www.langedrag.no/rideleir/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: 2027-sider finnes allerede (status delvis)",
+    "sjekkDato": "2026-12-01"
+  },
+  {
+    "tilbyder": "Playwell",
+    "kommune": "Bergen",
+    "uke": null,
+    "status": "delvis",
+    "kildeUrl": "https://www.playwell.no/vinterferiebergen",
+    "publiseres": "februar",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut sommerleirer tidlig)",
+    "sjekkDato": "2027-02-15"
+  },
+  {
+    "tilbyder": "Grip Klatring",
+    "kommune": "Trondheim",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://gripklatring.no/sommercamp/",
+    "publiseres": "februar",
+    "grunnlag": "Anslag: Ukjent, anslag (kommersielle tilbydere legger ofte ut sommerleirer tidlig)",
+    "sjekkDato": "2027-02-15"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Arendal",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6125",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Flere",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.forskerfabrikken.no/kurs/for-barn/sommerskole/",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Halden",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6184",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Hamar",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6197",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Harstad",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6223",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Kongsberg",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6216",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Lillehammer",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6053",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Molde",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6147",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Moss",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6177",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Porsgrunn",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6173",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "Forskerfabrikken",
+    "kommune": "Skien",
+    "uke": 32,
+    "status": "forventet",
+    "kildeUrl": "https://customer.forskerfabrikken.no/open/event-instance.html?id=6172",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: hovedsiden oppga påmeldingsstart «onsdag 5. mars kl. 09» (tidligere år); kartet viser «Kommer senere» for 2027",
+    "sjekkDato": "2027-02-25"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 1 klubber",
+    "kommune": "Arendal",
+    "uke": null,
+    "status": "1 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 5 klubber",
+    "kommune": "Asker",
+    "uke": null,
+    "status": "5 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 10 klubber",
+    "kommune": "Bergen",
+    "uke": null,
+    "status": "4 delvis, 6 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 2 klubber",
+    "kommune": "Bodø",
+    "uke": null,
+    "status": "2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 8 klubber",
+    "kommune": "Bærum",
+    "uke": null,
+    "status": "5 delvis, 3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Drammen",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 1 klubber",
+    "kommune": "Fredrikstad",
+    "uke": null,
+    "status": "1 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Gjøvik",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 2 klubber",
+    "kommune": "Halden",
+    "uke": null,
+    "status": "2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Hamar",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 2 klubber",
+    "kommune": "Haugesund",
+    "uke": null,
+    "status": "2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Indre Østfold",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 6 klubber",
+    "kommune": "Karmøy",
+    "uke": null,
+    "status": "6 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 4 klubber",
+    "kommune": "Kristiansand",
+    "uke": null,
+    "status": "4 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Larvik",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Lillestrøm",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 2 klubber",
+    "kommune": "Lørenskog",
+    "uke": null,
+    "status": "2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 2 klubber",
+    "kommune": "Molde",
+    "uke": null,
+    "status": "2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 2 klubber",
+    "kommune": "Moss",
+    "uke": null,
+    "status": "2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Nordre Follo",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 10 klubber",
+    "kommune": "Oslo",
+    "uke": null,
+    "status": "10 delvis",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 1 klubber",
+    "kommune": "Porsgrunn",
+    "uke": null,
+    "status": "1 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 1 klubber",
+    "kommune": "Ringerike",
+    "uke": null,
+    "status": "1 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 2 klubber",
+    "kommune": "Ringsaker",
+    "uke": null,
+    "status": "2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 4 klubber",
+    "kommune": "Sandefjord",
+    "uke": null,
+    "status": "4 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Sandnes",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 5 klubber",
+    "kommune": "Sarpsborg",
+    "uke": null,
+    "status": "5 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 6 klubber",
+    "kommune": "Stavanger",
+    "uke": null,
+    "status": "4 delvis, 2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Tromsø",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 6 klubber",
+    "kommune": "Trondheim",
+    "uke": null,
+    "status": "3 delvis, 3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 6 klubber",
+    "kommune": "Tønsberg",
+    "uke": null,
+    "status": "6 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 2 klubber",
+    "kommune": "Ullensaker",
+    "uke": null,
+    "status": "2 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 10 klubber",
+    "kommune": "Ålesund",
+    "uke": null,
+    "status": "6 delvis, 4 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "TINE Fotballskole – 3 klubber",
+    "kommune": "Øygarden",
+    "uke": null,
+    "status": "3 forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "mars",
+    "grunnlag": "Anslag: Ukjent, anslag (2027-datafila for kartet var tom 26.11.2026; sjekk kartet og klubbsidene i CSV-en (delvis-radene lenker til klubbens egen side))",
+    "sjekkDato": "2027-03-01"
+  },
+  {
+    "tilbyder": "Lillestrøm kommune (Lillestrøm sommerskole)",
+    "kommune": "Lillestrøm",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.lillestrom.kommune.no/skole-og-utdanning/skoler-og-skolegrenser/sommerskolen/sporsmal-og-svar-om-sommerskolen/",
+    "publiseres": "mars",
+    "grunnlag": "Observert: kurstilbudet 2026 publisert 02.03.2026, påmelding åpnet 15.03.2026",
+    "sjekkDato": "2027-03-03"
+  },
+  {
+    "tilbyder": "Alta IF",
+    "kommune": "Alta",
+    "uke": 32,
+    "status": "forventet",
+    "kildeUrl": "https://altaif.no/fotball/pamelding-tine-fotballskole-2026",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Øyestad IF Håndball / ØIF Arendal Elite",
+    "kommune": "Arendal",
+    "uke": 32,
+    "status": "forventet",
+    "kildeUrl": "https://oifhandball.no/2026/velkommen-til-oyestad-handball-camp/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Bergens Turnforening",
+    "kommune": "Bergen",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://bergensturn.no/sommercamp",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "SK Brann – Kniksen-Akademiet",
+    "kommune": "Bergen",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://www.brann.no/nyheter/brann-fotballskole-pa-nymark-i-sommer",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "TIF Viking",
+    "kommune": "Bergen",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.tifviking.no/idrettsleir/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "B&OI Turn",
+    "kommune": "Bodø",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://spond.com/discover/nb-no/events/E65349A21F3D4B1AA2D55762429BD8C3",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Bærum SK",
+    "kommune": "Bærum",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://baerumsk.no/om-klubben/tine-fotballskole",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Sandvika Turnforening",
+    "kommune": "Bærum",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.sandvikaturn.no/treningstilbud/sommerleir2026/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Stabæk Fotball",
+    "kommune": "Bærum",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://spond.com/discover/nb-no/events/0AA90B10A8B846DF98880CF035D24A4E",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Konnerud IL Fotball",
+    "kommune": "Drammen",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://isonen.no/event/cmn7jmbrr0014bt01jdf6g7b9/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Åssiden IF",
+    "kommune": "Drammen",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.aif.no/p/83732/fotballskoler",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Fredrikstad FK",
+    "kommune": "Fredrikstad",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://www.fredrikstadfk.no/ffk-utvikling/ffks-fotballskoler",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Kongstensvømmerne",
+    "kommune": "Fredrikstad",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://kongstensvommerne.no/klubben/svommeaktiviteter-i-sommerferien",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Nedre Glomma Turn",
+    "kommune": "Fredrikstad",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://nedreglommaturn.no/2026/05/13/velkommen-til-sommercamp-2/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Gjøvik Ynglingen",
+    "kommune": "Gjøvik",
+    "uke": 27,
+    "status": "forventet",
+    "kildeUrl": "https://kfuk-kfum.no/aktiviteter/event-id-37817",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Halden Idrettsråd",
+    "kommune": "Halden",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.haldenidrettsrad.no/en-innholdsrik-forste-ferieuke-med-aktivitet-mestring-og-idrettsglede/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Hamar Idrettslag",
+    "kommune": "Hamar",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://spond.com/discover/nb-no/events/08CAFFF664CD4ADDA65DF3470C84FA33",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Hamar Ynglingen",
+    "kommune": "Hamar",
+    "uke": 27,
+    "status": "forventet",
+    "kildeUrl": "https://kfuk-kfum.no/aktiviteter/event-id-37815",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "PS:Dans",
+    "kommune": "Hamar",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://www.psdans.no/events/sommerskole-3-5-klasse-uke-26",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Grottebadet",
+    "kommune": "Harstad",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://grottebadet.no/svommeskole/sommersvommeskole/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Harstad Håndballklubb",
+    "kommune": "Harstad",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://harstadhk.no/arrangement/gratis-apen-hall-i-uke-26-kom-og-prov-handball/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Haugaland Klatrelag",
+    "kommune": "Haugesund",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.haugesund.kommune.no/kif/aktuelt/sommeraktiviteter-for-barn-unge-og-familier.32480.aspx",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Haugesund Volleyballklubb",
+    "kommune": "Haugesund",
+    "uke": 28,
+    "status": "forventet",
+    "kildeUrl": "https://www.haugesund.kommune.no/kif/aktuelt/sommeraktiviteter-for-barn-unge-og-familier.32480.aspx",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Kunst og Moro Workshop",
+    "kommune": "Haugesund",
+    "uke": 27,
+    "status": "forventet",
+    "kildeUrl": "https://www.haugesund.kommune.no/kif/aktuelt/sommeraktiviteter-for-barn-unge-og-familier.32480.aspx",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Kongsberg Golfklubb",
+    "kommune": "Kongsberg",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://kongsberggolf.no/instruksjon/sommercamp/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Christianssands Seilforening",
+    "kommune": "Kristiansand",
+    "uke": 32,
+    "status": "forventet",
+    "kildeUrl": "https://www.csf.no/nybegynnerkurs/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "IK Start",
+    "kommune": "Kristiansand",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.ikstart.no/nyheter/ik-start-arrangerer-fotballskole-25.og-26.juni",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Kristiansand kommune (Haraldvigen feriekoloni)",
+    "kommune": "Kristiansand",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.kristiansand.kommune.no/navigasjon/kultur-og-fritid/fritid/haraldvigen-feriekoloni/",
+    "publiseres": "mars–april",
+    "grunnlag": "Observert: søknadsfrist 24.04.2026; Røde Kors oppgir at kommunen legger ut søknaden «tidlig hver vår»",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Faaberg IL",
+    "kommune": "Lillehammer",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://faabergil.no/fotball/tine-fotballskole",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Innlandet",
+    "kommune": "Lillehammer",
+    "uke": 27,
+    "status": "forventet",
+    "kildeUrl": "https://kfuk-kfum.no/aktiviteter/event-id-37818",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lillehammer Dansesenter",
+    "kommune": "Lillehammer",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.danz.no/dansecamp",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lillehammer Fotballklubb",
+    "kommune": "Lillehammer",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://lillehammerfk.no/tine-fotballskole/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lillehammer Hockey",
+    "kommune": "Lillehammer",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://www.lillehammerhockey.no/Sommerhockeyskolen",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lillehammer IF",
+    "kommune": "Lillehammer",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://lillehammerif.no/lifs-friidrettsuke/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lillehammer Skiklub",
+    "kommune": "Lillehammer",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://isonen.no/event/cmlz9jjj001docs01vauevu3g/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lillehammer Vannskiklubb",
+    "kommune": "Lillehammer",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://lvsk.no/vannsprut",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "NJFF Oppland",
+    "kommune": "Lillehammer",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://www.njff.no/oppland/aktivitetskalender/njff-opplands-sommerskole-2026",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Fet IL",
+    "kommune": "Lillestrøm",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.fetil.no/pamelding-til-tine-fotballskole-2026/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lillestrøm SK",
+    "kommune": "Lillestrøm",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.lsk.no/nyheter/lsk-fotballskole-er-tilbake-meld-deg-pa-her",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Skedsmo FK",
+    "kommune": "Lillestrøm",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://skedsmofk.no/klubben/skedsmo-sommercamp-2026",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Molde FK (AkerAkademiet)",
+    "kommune": "Molde",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://www.moldefk.no/nyheter/velkommen-til-akerakademiets-fotballskole",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Sportsklubben Rival",
+    "kommune": "Molde",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://skrival.spond.club/bli_med_p%C3%A5_sandvolleycamp_i_uke_26!",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Narvik Rideskole",
+    "kommune": "Narvik",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.narvikrideskole.no/2026/02/sommerleirene-2026/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Narvik Turnforening",
+    "kommune": "Narvik",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.narvikturn.no/klubben/sommerturn-2025",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Kongelig Norsk Seilforening (KNS)",
+    "kommune": "Oslo",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.kns.no/kurs-og-seiltilbud/seilleir-barn-og-ungdom/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Oslo Turnforening",
+    "kommune": "Oslo",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://osloturn.no/aktivitetsuker/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Vålerenga Fotball",
+    "kommune": "Oslo",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://klubb.valerenga-fotball.no/valerenga-fotball-utviklingsuker-2026/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Hønefoss BK",
+    "kommune": "Ringerike",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://honefossbk.no/fotballskoler",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Hønefoss Tennisklubb",
+    "kommune": "Ringerike",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://honefosstennis.no/sommer-camp-2026/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lura IL",
+    "kommune": "Sandnes",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://lura-il.no/fotball/pameldingen-til-tine-fotballskole-i-uke-26-er-apen",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Sandnes Ulf",
+    "kommune": "Sandnes",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://sandnesulf.spond.club/news-article/362C3B1674AB48948539B819FAB79B29",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Sarpsborg FK",
+    "kommune": "Sarpsborg",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://sarpsborgfk.no/klubben/fotballskoler-2026",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Sarpsborg Turnforening",
+    "kommune": "Sarpsborg",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://www.sarpsborgturn.no/sommerskole-uke-33/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Herkules Håndball",
+    "kommune": "Skien",
+    "uke": 32,
+    "status": "forventet",
+    "kildeUrl": "https://skienfritidspark.no/hva-skjer/herkules-haandballskole",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Odd",
+    "kommune": "Skien",
+    "uke": 32,
+    "status": "forventet",
+    "kildeUrl": "https://www.odd.no/om-stadion/fotballskoler/tine-odds-fotballskole-2026",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Stavanger, Ynglingen",
+    "kommune": "Stavanger",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://kfuk-kfum.no/aktiviteter/event-id-37812",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Stavanger IF Fotball",
+    "kommune": "Stavanger",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://stavangerif.no/tine-fotballskole-pa-siffen-uke-33-10-14-august-meld-deg-pa/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Viking FK",
+    "kommune": "Stavanger",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://vikingfk.spond.club/news-article/F482A1931D5141778F31F863738B35C7",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Viking HK og Hinna",
+    "kommune": "Stavanger",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://vikinghk.spond.club/news-article/953027C29C134BA2B0F5A3AC887BE5C8",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Nordland og KFUK-KFUM Troms",
+    "kommune": "Tjeldsund",
+    "uke": 32,
+    "status": "forventet",
+    "kildeUrl": "https://kfuk-kfum.no/aktiviteter/event-id-37794",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Nordnorsk Vitensenter",
+    "kommune": "Tromsø",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://nordnorsk.vitensenter.no/nb/vitensommer26",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "TENK (TENK Tech Camp)",
+    "kommune": "Tromsø",
+    "uke": 31,
+    "status": "delvis",
+    "kildeUrl": "https://tenknorge.com/tenk-tech-camp",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Tromsø IL",
+    "kommune": "Tromsø",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.til.no/om-klubben/Fotballskoler%20og%20trenerutvikling/tils-sommerfotballskole",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Tromsø Ryttersportsklubb",
+    "kommune": "Tromsø",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://trso.no/ledige-ridetimer-i-vinterferien-uke-10/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Ranheim Fotball",
+    "kommune": "Trondheim",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://www.ranheimfotball.no/nyheter/na-kan-du-melde-deg-pa-ranheim-fotballskole-2026-",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Sverresborg Fotball",
+    "kommune": "Trondheim",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://www.sverresborgfotball.no/next/blog/post/279282/tine-fotballskole-2026?ispage=true",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Trondhjems Turistforening",
+    "kommune": "Trondheim",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://aktiviteter.dnt.no/register/518338",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Trondhjems Turnforening",
+    "kommune": "Trondheim",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://trondhjemsturn.no/arrangementer/turncamp/",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Norge",
+    "kommune": "Tvedestrand",
+    "uke": 30,
+    "status": "forventet",
+    "kildeUrl": "https://kfuk-kfum.no/aktiviteter/event-id-37693",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Aalesunds FK",
+    "kommune": "Ålesund",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://www.aafk.no/nyheter/aafk-kvinner-fotballskole--i-samarbeid-med-sparebanken-more",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Aalesunds Turnforening",
+    "kommune": "Ålesund",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.aatf.no/nyheter/kiwis-sommerturn-2026",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Ålesund Gymnastikk og Turnklubb",
+    "kommune": "Ålesund",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.alesundgtk.no/hva-skjer/sommer-rg-skole-85nfr",
+    "publiseres": "mars–april",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag legger ofte ut sommercamper i mars–april)",
+    "sjekkDato": "2027-03-15"
+  },
+  {
+    "tilbyder": "Lillehammer Lawn Tennisklubb",
+    "kommune": "Lillehammer",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://lltk.no/2026/03/24/apen-pamelding-til-sommercamp/",
+    "publiseres": "mars",
+    "grunnlag": "Observert: påmelding til 2026-campene åpnet 24.03.2026",
+    "sjekkDato": "2027-03-17"
+  },
+  {
+    "tilbyder": "Tyrili klatring",
+    "kommune": "Lillehammer",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.tyriliklatring.no/barn-ungdom/klatre-og-friluftscamp/",
+    "publiseres": "april",
+    "grunnlag": "Observert: påmelding for 2026 åpnet 07.04.2026 kl. 09",
+    "sjekkDato": "2027-03-31"
+  },
+  {
+    "tilbyder": "Molde og Omegn Idrettsforening",
+    "kommune": "Molde",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://moldeoif.spond.club/p%C3%A5melding",
+    "publiseres": "april",
+    "grunnlag": "Observert: påmelding for 2026 åpnet 08.04.2026",
+    "sjekkDato": "2027-04-01"
+  },
+  {
+    "tilbyder": "Moss Seilforening",
+    "kommune": "Moss",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.moss-seilforening.no/nyheter/sommerseilskolen-2026-n-pen-for-pmelding-a7hw7",
+    "publiseres": "april",
+    "grunnlag": "Observert: 2026-innlegget publisert 07.04.2026",
+    "sjekkDato": "2027-04-01"
+  },
+  {
+    "tilbyder": "Huset Alta (ungdomshus)",
+    "kommune": "Alta",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://www.husetalta.no/post/husets-sommerskoler-2026",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Arendal kulturskole / Kulturkammeret",
+    "kommune": "Arendal",
+    "uke": 32,
+    "status": "forventet",
+    "kildeUrl": "https://www.arendal.kommune.no/kulturkammeret/sommerskole-2026/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Asker kommune (Feriekontoret)",
+    "kommune": "Asker",
+    "uke": null,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.asker.kommune.no/om-asker-kommune/askermagasinet/fyll-sommeren-med-opplevelser/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Bergen kommune",
+    "kommune": "Bergen",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.bergen.kommune.no/innbyggerhjelpen/barnehage-og-skole/grunnskole/tilpasset-opplaring-og-individuell-tilrettelegging/sommerleir-for-barn-med-funksjonshemming-utviklingshemming-eller-larevansker",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Bærum kommune (Ungdom og Fritid)",
+    "kommune": "Bærum",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.ufbinfo.no/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Drammen kulturskole (Drammen kommune)",
+    "kommune": "Drammen",
+    "uke": 25,
+    "status": "delvis",
+    "kildeUrl": "https://www.drammen.kommune.no/tjenester/kunst-kultur/kulturskolen/feriekurs-kulturskole/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Fredrikstad kommune (Ferieaktiviteter)",
+    "kommune": "Fredrikstad",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.fredrikstad.kommune.no/tjenester/kunst-og-kultur/ferieaktiviteter/om-ferieaktiviteter/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Kongsberg kommune (Sommerskolen)",
+    "kommune": "Kongsberg",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://sommerskolenkongsberg.no/les-dette/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Kristiansand kommune (Fritidsenheten)",
+    "kommune": "Kristiansand",
+    "uke": null,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.kristiansand.kommune.no/navigasjon/kultur-og-fritid/ferietilbud-for-unge/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Oslo kommune (Sommerskolen Oslo)",
+    "kommune": "Oslo",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://aktuelt.oslo.kommune.no/sommerskolen-oslo-20-ar-med-sommereventyr-for-barn-i-hele-byen",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Oslo kommune, Bydel Grorud",
+    "kommune": "Oslo",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.oslo.kommune.no/bydeler/bydel-grorud/kalender-bydel-grorud/sommerferien-2026/",
+    "publiseres": "april",
+    "grunnlag": "Observert: påmeldingsfrist 15.05.2026 (publisering før det, eksakt dato ukjent)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Ringerike kommune (Sommerskolen)",
+    "kommune": "Ringerike",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.ringerike.kommune.no/sommerskolen",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Skien kommune",
+    "kommune": "Skien",
+    "uke": null,
+    "status": "dato_ikke_publisert",
+    "kildeUrl": "https://www.skien.kommune.no/kultur-idrett-og-frivillighet/fritid/fritidsaktiviteter/ferieaktiviteter/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Stavanger kommune – Fiks ferigge ferie (Ungdom og fritid)",
+    "kommune": "Stavanger",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.stavanger.kommune.no/kultur-og-fritid/fiks-ferigge-ferie/fff-ferieklubb/",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Tromsø kommune (Fritid)",
+    "kommune": "Tromsø",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://tromso.kommune.no/sommeraktiviteter",
+    "publiseres": "april–mai",
+    "grunnlag": "Anslag: Ukjent, anslag (kommunale sommerprogram kommer ofte i april–mai)",
+    "sjekkDato": "2027-04-15"
+  },
+  {
+    "tilbyder": "Gjøvik frivilligsentral",
+    "kommune": "Gjøvik",
+    "uke": 26,
+    "status": "forventet",
+    "kildeUrl": "https://gjovik.frivilligsentral.no/hendelse?Id=2584482",
+    "publiseres": "mai",
+    "grunnlag": "Observert: påmeldingsfrist 28.05.2026",
+    "sjekkDato": "2027-04-26"
+  },
+  {
+    "tilbyder": "Gjøvik husflidslag",
+    "kommune": "Gjøvik",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://gjovikhusflidslag.no/nyheter/husflidsuke-for-barn",
+    "publiseres": "mai",
+    "grunnlag": "Observert: påmelding for 2026 kom «først i mai»",
+    "sjekkDato": "2027-04-26"
+  },
+  {
+    "tilbyder": "Trondheim kommune (Science Camp)",
+    "kommune": "Trondheim",
+    "uke": 25,
+    "status": "forventet",
+    "kildeUrl": "https://sites.google.com/skole.trondheim.kommune.no/sciencecamp/hjem",
+    "publiseres": "mai",
+    "grunnlag": "Observert: siden oppgir påmelding «medio mai 2027»",
+    "sjekkDato": "2027-05-10"
+  },
+  {
+    "tilbyder": "5. Drammen sjøspeidergruppe",
+    "kommune": "Drammen",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.drammen.kommune.no/tjenester/skole/sommeraktiviteter-for-barn-og-unge/",
+    "publiseres": "mai",
+    "grunnlag": "Observert: påmeldingsfrist 10.06.2026 i kommunens oversikt",
+    "sjekkDato": "2027-05-15"
+  },
+  {
+    "tilbyder": "6. Drammen MS speidergruppe",
+    "kommune": "Drammen",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://www.drammen.kommune.no/tjenester/skole/sommeraktiviteter-for-barn-og-unge/",
+    "publiseres": "mai–juni",
+    "grunnlag": "Observert: påmeldingsfrist 27.06.2026 i kommunens oversikt",
+    "sjekkDato": "2027-05-15"
+  },
+  {
+    "tilbyder": "Klatreverket Kristiansand",
+    "kommune": "Kristiansand",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://klatreverketkrs.no/sommerleir-2026/",
+    "publiseres": "juni",
+    "grunnlag": "Observert: sommerleir-siden 2026 publisert 13.06.2026 (for sent for uke 26; sjekk tidligere)",
+    "sjekkDato": "2027-05-15"
+  },
+  {
+    "tilbyder": "Tromsø Ishockeyklubb",
+    "kommune": "Tromsø",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://spond.com/discover/en-gb/events/FE5B1906645C43959EC46B054EBEEE89",
+    "publiseres": "mai",
+    "grunnlag": "Observert: tidlig påmelding åpnet 20.05.2026",
+    "sjekkDato": "2027-05-20"
+  },
+  {
+    "tilbyder": "Tromsø Turnforening",
+    "kommune": "Tromsø",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.tromsoturn.no/next/blog/post/279645/extra-sommerturn-uke-26-og-33",
+    "publiseres": "mai",
+    "grunnlag": "Observert: 2026-innlegget publisert 26.05.2026",
+    "sjekkDato": "2027-05-27"
+  },
+  {
+    "tilbyder": "Alta Museum",
+    "kommune": "Alta",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://www.altamuseum.no/no/besok/se-og-gjore/steinalderaktiviteter",
+    "publiseres": "«rett før ferien» (juni)",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-06-01"
+  },
+  {
+    "tilbyder": "Maihaugen",
+    "kommune": "Lillehammer",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://maihaugen.no/aktiviteter-for-barn/aktivitetsuke",
+    "publiseres": "«rett før ferien» (juni)",
+    "grunnlag": "Anslag: Ukjent, anslag",
+    "sjekkDato": "2027-06-01"
+  },
+  {
+    "tilbyder": "Hånes IF / Håndballmester",
+    "kommune": "Kristiansand",
+    "uke": 33,
+    "status": "forventet",
+    "kildeUrl": "https://www.letsreg.com/no/register/sommercamp",
+    "publiseres": "juni",
+    "grunnlag": "Observert: LetsReg-salg fra 01.06.2026, klubbinnlegg 14.06.2026",
+    "sjekkDato": "2027-06-02"
+  },
+  {
+    "tilbyder": "Skimore Oslo Skiskole",
+    "kommune": "Oslo",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://oslo.skischool.shop/pages/feriekurs/paaskeferiekurs/",
+    "publiseres": "allerede publisert",
+    "grunnlag": "Observert: påskeferiekurs ligger i nettbutikken uten dato",
+    "sjekkDato": "2027-01-15"
+  },
+  {
+    "tilbyder": "Asker Fotball / Asker Skiklubb",
+    "kommune": "Asker",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://www.asker-skiklubb.no/kiwi-paskecamp-29-mars-1-april/",
+    "publiseres": "februar–mars",
+    "grunnlag": "Observert: 2026-innlegget publisert 01.03.2026",
+    "sjekkDato": "2027-02-22"
+  },
+  {
+    "tilbyder": "Fana IL Fotball",
+    "kommune": "Bergen",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://fanafotball.no/fotballutdanning/fotballskoler/paskeferie-fotball-paskeferiefotball-4/",
+    "publiseres": "februar–mars",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag la ut påskecamper i mars 2026)",
+    "sjekkDato": "2027-02-26"
+  },
+  {
+    "tilbyder": "Gneist IL",
+    "kommune": "Bergen",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://gneist.no/Fotball/paskefotball-2026",
+    "publiseres": "februar–mars",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag la ut påskecamper i mars 2026)",
+    "sjekkDato": "2027-02-26"
+  },
+  {
+    "tilbyder": "Fossum IF",
+    "kommune": "Bærum",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://app.rubic.no/Public/Events/41813",
+    "publiseres": "februar–mars",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag la ut påskecamper i mars 2026)",
+    "sjekkDato": "2027-02-26"
+  },
+  {
+    "tilbyder": "Drammens Turnforening",
+    "kommune": "Drammen",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://www.drammenturn.no/pasketurn/",
+    "publiseres": "februar–mars",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag la ut påskecamper i mars 2026)",
+    "sjekkDato": "2027-02-26"
+  },
+  {
+    "tilbyder": "FK Vigør",
+    "kommune": "Kristiansand",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://xn--fkvigr-fya.spond.club/fk_vig%C3%B8r_p%C3%A5skecamp_30-31_mars",
+    "publiseres": "februar–mars",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag la ut påskecamper i mars 2026)",
+    "sjekkDato": "2027-02-26"
+  },
+  {
+    "tilbyder": "Skedsmo FK",
+    "kommune": "Lillestrøm",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://skedsmofk.no/klubben/paskecamp-2026-skedsmo-fk",
+    "publiseres": "februar–mars",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag la ut påskecamper i mars 2026)",
+    "sjekkDato": "2027-02-26"
+  },
+  {
+    "tilbyder": "Ekholt Ballklubb",
+    "kommune": "Moss",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "publiseres": "februar–mars",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag la ut påskecamper i mars 2026)",
+    "sjekkDato": "2027-02-26"
+  },
+  {
+    "tilbyder": "Manglerud Star Fotball",
+    "kommune": "Oslo",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://msfotball.no/klubben/nyheter/pamelding-apen-for-ms-camp-i-paskeferien",
+    "publiseres": "februar–mars",
+    "grunnlag": "Anslag: Ukjent, anslag (idrettslag la ut påskecamper i mars 2026)",
+    "sjekkDato": "2027-02-26"
+  },
+  {
+    "tilbyder": "Drammens Museum",
+    "kommune": "Drammen",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://drammens.museum.no/event/gratis-paskeverksted-for-barn/",
+    "publiseres": "«rett før ferien» (mars)",
+    "grunnlag": "Anslag: Ukjent, anslag (museer legger ofte ut påskeprogram 1–2 uker før)",
+    "sjekkDato": "2027-03-08"
+  },
+  {
+    "tilbyder": "Fredrikstad museum (Østfoldmuseene)",
+    "kommune": "Fredrikstad",
+    "uke": null,
+    "status": "forventet",
+    "kildeUrl": "https://ostfoldmuseene.no/fredrikstad/hva-skjer/paske-p%C3%A5-fredrikstad-museum",
+    "publiseres": "«rett før ferien» (mars)",
+    "grunnlag": "Anslag: Ukjent, anslag (museer legger ofte ut påskeprogram 1–2 uker før)",
+    "sjekkDato": "2027-03-08"
+  },
+  {
+    "tilbyder": "Vest-Agder-museet",
+    "kommune": "Kristiansand",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://www.vestagdermuseet.no/pasken-i-vest-agder-museet/",
+    "publiseres": "mars",
+    "grunnlag": "Observert: 2026-oversikten sist oppdatert 16.03.2026",
+    "sjekkDato": "2027-03-08"
+  },
+  {
+    "tilbyder": "Lyn Fotball",
+    "kommune": "Oslo",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://www.lynfotball.no/blognyheter/2026/3/18/er-du-klar-for-pskecamp",
+    "publiseres": "mars",
+    "grunnlag": "Observert: 2026-innlegget publisert 18.03.2026",
+    "sjekkDato": "2027-03-08"
+  },
+  {
+    "tilbyder": "Trondheim kunstmuseum",
+    "kommune": "Trondheim",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://trondheimkunstmuseum.no/paska-pa-tkm",
+    "publiseres": "«rett før ferien» (mars)",
+    "grunnlag": "Anslag: Ukjent, anslag (museer legger ofte ut påskeprogram 1–2 uker før)",
+    "sjekkDato": "2027-03-08"
+  },
+  {
+    "tilbyder": "Hinna Fotball",
+    "kommune": "Stavanger",
+    "uke": 12,
+    "status": "forventet",
+    "kildeUrl": "https://hinnafotball.no/nyheter/paskecamp-2025-2",
+    "publiseres": "mars",
+    "grunnlag": "Observert: 2026-innlegget publisert 20.03.2026",
+    "sjekkDato": "2027-03-10"
+  }
+]

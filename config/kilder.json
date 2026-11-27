@@ -1,0 +1,50 @@
+{
+  "userAgent": "WeekSlotBot/0.1 (+https://weekslot.com; katalog over ukekurs for barn; respekterer robots.txt)",
+  "rateLimitMs": 1500,
+  "maksSiderPerKjor": 20,
+  "plattformer": [
+    {
+      "id": "spond-discover",
+      "verter": ["spond.com"],
+      "tillatt": true,
+      "modus": "jsonld-fakta",
+      "merknad": "Bare sitemap og JSON-LD på arrangementssider under /discover/…/events/. Bare fakta: tittel, dato, pris, sted og lenke. Aldri beskrivelse, bilder eller kontaktpersoner. Robots.txt stenger /storage, /images og /core/v1/media."
+    },
+    {
+      "id": "kfuk-kfum",
+      "verter": ["kfuk-kfum.no"],
+      "tillatt": true,
+      "modus": "sitemap-og-robots",
+      "merknad": "Bare URL-er som står i sitemap.xml og som robots.txt tillater. Lav frekvens. Ikke les andre stier under /aktiviteter/."
+    },
+    {
+      "id": "rubic",
+      "verter": ["app.rubic.no", "rubic.no"],
+      "tillatt": true,
+      "modus": "html-fakta",
+      "merknad": "HTML på arrangementssider kan leses. Ikke kall /rest/ eller andre interne API. Korte fakta og lenke til arrangementet. Ingen beskrivelsestekst lagres."
+    },
+    {
+      "id": "hoopit",
+      "verter": ["hoopit.io"],
+      "tillatt": false,
+      "modus": "blokker",
+      "merknad": "Hard blokkert. robots.txt har Disallow: / og vilkårene forbyr spider/robot/scraper. Skriptene henter aldri Hoopit, og validering feiler hvis en Hoopit-adresse legges i kilder. Les klubbens egen side i stedet."
+    },
+    {
+      "id": "letsreg",
+      "verter": ["letsreg.com"],
+      "tillatt": false,
+      "modus": "av",
+      "merknad": "Av til plattformen legges inn med tillatt og en merknad. Cloudflare-utfordring skal ikke omgås. En feed eller avtale med Deltager AS må avtales av eier, ikke av skriptet."
+    },
+    {
+      "id": "dnt",
+      "verter": ["aktiviteter.dnt.no", "dnt.no"],
+      "tillatt": false,
+      "modus": "av",
+      "merknad": "Av til plattformen legges inn med tillatt og en merknad. aktiviteter.dnt.no svarer ofte med Cloudflare. Utfordringen skal ikke omgås."
+    }
+  ],
+  "kilder": []
+}

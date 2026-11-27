@@ -32,6 +32,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -41,6 +43,8 @@ body {
     var(--paper);
   color: var(--ink);
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 h1,
@@ -62,8 +66,29 @@ textarea {
   font: inherit;
 }
 
+.piller {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.brytes,
+.brytes a,
+.ticket,
+.ticket a,
+.ticket p,
+.ticket dd,
+h1,
+h2 {
+  overflow-wrap: anywhere;
+}
+
 .ticket {
   background: var(--card);
   border: 1px solid var(--line);
   box-shadow: 4px 4px 0 var(--pine);
+  max-width: 100%;
+  min-width: 0;
 }

@@ -1,0 +1,9 @@
+{
+  "name": "WeekSlot",
+  "tagline": "Ferieuka, ordnet.",
+  "url": "https://weekslot.com",
+  "kontaktEpost": "kontakt@weekslot.com",
+  "defaultLocale": "nb",
+  "locales": ["nb", "sv", "en"],
+  "temaMin": 3
+}
