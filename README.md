@@ -4,7 +4,7 @@ WeekSlot er oversikten over ukekurs og leirer for barn i skoleferiene, sortert p
 
 Tagline: **Ferieuka, ordnet.**
 
-Inntekten er at tilbydere betaler for å bli fremhevet. Prisen ligger i `config/site.json` som `fremhevetPrisKr` og vises som «Fremhevet plassering: 290 kr per kommune per uke». Fremhevede kort merkes «Fremhevet».
+Inntekten er at tilbydere betaler for synlighet. Prisene ligger i `config/site.json`: `fremhevetPrisKr` 290 kr per kommune per uke, `toppKategoriPrisKr` 690 kr per ferie og `sesongpakkePrisKr` 990 kr per ferie, for vinter-, påske- og høstferien. Grunnoppføring er gratis. Fremhevede kort merkes «Fremhevet».
 
 ## Slik flyter dataene
 
@@ -85,7 +85,7 @@ På sidene vises bare fakta: tittel, tilbyder, dato eller uke, alder, pris og st
 
 `kontaktEpost` i `config/site.json` er `kontakt@weekslot.com`. «Bli synlig på WeekSlot», «Send oss tilbudet ditt» og tips-lenkene er `mailto:kontakt@weekslot.com`. Det er ikke bygget noe skjema.
 
-Ikke skriv at det er gratis å bli lagt inn. Fremhevet plassering koster 290 kr per kommune per uke (`fremhevetPrisKr`).
+Grunnoppføring er gratis. Fremhevet koster 290 kr per kommune per uke. Topp i kategori koster 690 kr per ferie, og sesongpakke koster 990 kr per ferie. Sommerpris er ikke satt.
 
 ## Det som er tatt ut
 

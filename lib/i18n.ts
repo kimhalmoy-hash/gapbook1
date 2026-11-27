@@ -29,6 +29,26 @@ export type Copy = {
   featured: string;
   featuredPrice: string;
   featuredLink: string;
+  featuredPageTitle: string;
+  featuredPageDescription: string;
+  featuredH1: string;
+  featuredIntro: string;
+  featuredBasicTitle: string;
+  featuredBasic: string[];
+  featuredTierTitle: string;
+  featuredTier: string[];
+  featuredExample: string;
+  featuredPacksTitle: string;
+  featuredTopTitle: string;
+  featuredTopBody: string;
+  featuredSeasonTitle: string;
+  featuredSeasonBody: string;
+  featuredStartTitle: string;
+  featuredStart: string[];
+  featuredCta: string;
+  featuredSubject: string;
+  featuredFaqTitle: string;
+  featuredFaq: { q: string; a: string }[];
   expected: string;
   partial: string;
   example: string;
@@ -181,6 +201,60 @@ export const COPY: Record<Locale, Copy> = {
     featured: "Fremhevet",
     featuredPrice: "Fremhevet plassering: {pris} kr per kommune per uke.",
     featuredLink: "Les om Fremhevet",
+    featuredPageTitle: "Bli fremhevet på WeekSlot | For arrangører",
+    featuredPageDescription:
+      "Grunnoppføring er gratis. Med Fremhevet vises tilbudet ditt øverst i kommunen og uka du velger, for {pris} kr per kommune per uke.",
+    featuredH1: "Bli sett av foreldre som planlegger ferieuka",
+    featuredIntro:
+      "WeekSlot viser ukekurs og leirer for barn, sortert etter uke og kommune. Det er gratis å bli lagt inn. Vil du ha mer synlighet, kan du velge Fremhevet.",
+    featuredBasicTitle: "Grunnoppføring – gratis",
+    featuredBasic: [
+      "Tilbudet ditt vises på sidene for riktig uke, kommune og type aktivitet.",
+      "Foreldre ser alder, tider, pris og lenke til påmeldingen din.",
+      "Påmelding og betaling skjer hos deg, som før.",
+    ],
+    featuredTierTitle: "Fremhevet – {pris} kr per kommune per uke",
+    featuredTier: [
+      "Tilbudet ditt vises øverst på siden for kommunen og uka du velger.",
+      "Det merkes tydelig «Fremhevet», så foreldre vet at plasseringen er betalt.",
+      "Du velger selv hvilke kommuner og uker du vil være fremhevet i.",
+    ],
+    featuredExample:
+      "Eksempel: Fremhevet i én kommune i vinterferieuka koster {pris} kr. To kommuner samme uke koster {dobbel} kr.",
+    featuredPacksTitle: "Flere synlighetspakker i vinter-, påske- og høstferien",
+    featuredTopTitle: "Topp i kategori – {pris} kr per ferie",
+    featuredTopBody:
+      "Tilbudet ditt vises øverst i én type aktivitet i én kommune gjennom hele ferien, for eksempel «Klatring i Trondheim, vinterferien». Merket «Fremhevet».",
+    featuredSeasonTitle: "Sesongpakke – {pris} kr per ferie",
+    featuredSeasonBody:
+      "Fremhevet i kommunen din og nabokommunene, Topp i kategori, oversikt over hvor mange som klikker seg videre til deg, og et «Fremhevet på WeekSlot»-merke du kan bruke selv.",
+    featuredStartTitle: "Slik kommer du i gang",
+    featuredStart: [
+      "Send oss tilbudet ditt på {epost}.",
+      "Skriv hvilke kommuner og uker du vil være fremhevet i, hvis du ønsker det.",
+      "Vi legger det inn og gir beskjed når det er synlig.",
+    ],
+    featuredCta: "Send oss tilbudet ditt",
+    featuredSubject: "Fremhevet på WeekSlot",
+    featuredFaqTitle: "Spørsmål og svar",
+    featuredFaq: [
+      {
+        q: "Må jeg betale for å være med?",
+        a: "Nei. Grunnoppføringen er gratis. Fremhevet er et valg for deg som vil ha mer synlighet.",
+      },
+      {
+        q: "Tar WeekSlot påmeldinger eller betaling?",
+        a: "Nei. Foreldre går videre til din egen påmelding.",
+      },
+      {
+        q: "Hvordan vet foreldre at noe er fremhevet?",
+        a: "Alle betalte plasseringer er merket «Fremhevet».",
+      },
+      {
+        q: "Hva om jeg vil endre opplysningene?",
+        a: "Send oss en e-post på {epost}, så oppdaterer vi.",
+      },
+    ],
     expected: "Forventet – {år}-dato ikke publisert ennå",
     partial: "Noe mangler på kilden",
     example: "Eksempel",
@@ -296,6 +370,60 @@ export const COPY: Record<Locale, Copy> = {
     featured: "Utvald",
     featuredPrice: "Utvald placering: {pris} kr per kommun och vecka.",
     featuredLink: "Läs om Utvald",
+    featuredPageTitle: "Bli utvald på WeekSlot | För arrangörer",
+    featuredPageDescription:
+      "Grundannonsen är gratis. Med Utvald visas ditt erbjudande överst i den kommun och vecka du väljer, för {pris} NOK per kommun och vecka.",
+    featuredH1: "Syns för föräldrar som planerar lovveckan",
+    featuredIntro:
+      "WeekSlot visar veckokurser och läger för barn, sorterade efter vecka och kommun. Det är gratis att bli tillagd. Vill du synas mer kan du välja Utvald.",
+    featuredBasicTitle: "Grundannons – gratis",
+    featuredBasic: [
+      "Ditt erbjudande visas på sidorna för rätt vecka, kommun och typ av aktivitet.",
+      "Föräldrar ser ålder, tider, pris och länk till din anmälan.",
+      "Anmälan och betalning sker hos dig, precis som förut.",
+    ],
+    featuredTierTitle: "Utvald – {pris} NOK per kommun och vecka",
+    featuredTier: [
+      "Ditt erbjudande visas överst på sidan för den kommun och vecka du väljer.",
+      "Det märks tydligt «Utvald», så att föräldrar vet att placeringen är betald.",
+      "Du väljer själv i vilka kommuner och veckor du vill vara utvald.",
+    ],
+    featuredExample:
+      "Exempel: Utvald i en kommun under vinterlovsveckan kostar {pris} NOK. Två kommuner samma vecka kostar {dobbel} NOK.",
+    featuredPacksTitle: "Fler synlighetspaket under vinter-, påsk- och höstlovet",
+    featuredTopTitle: "Topp i kategori – {pris} NOK per lov",
+    featuredTopBody:
+      "Ditt erbjudande visas överst i en typ av aktivitet i en kommun under hela lovet, till exempel «Klättring i Trondheim, vinterlovet». Märkt «Utvald».",
+    featuredSeasonTitle: "Säsongspaket – {pris} NOK per lov",
+    featuredSeasonBody:
+      "Utvald i din kommun och grannkommunerna, Topp i kategori, en översikt över hur många som klickar sig vidare till dig och ett «Utvald på WeekSlot»-märke som du kan använda själv.",
+    featuredStartTitle: "Så kommer du igång",
+    featuredStart: [
+      "Skicka ditt erbjudande till {epost}.",
+      "Skriv i vilka kommuner och veckor du vill vara utvald, om du vill det.",
+      "Vi lägger in det och hör av oss när det syns.",
+    ],
+    featuredCta: "Skicka ditt erbjudande",
+    featuredSubject: "Utvald på WeekSlot",
+    featuredFaqTitle: "Frågor och svar",
+    featuredFaq: [
+      {
+        q: "Måste jag betala för att vara med?",
+        a: "Nej. Grundannonsen är gratis. Utvald är ett val för dig som vill synas mer.",
+      },
+      {
+        q: "Tar WeekSlot emot anmälningar eller betalning?",
+        a: "Nej. Föräldrar går vidare till din egen anmälan.",
+      },
+      {
+        q: "Hur vet föräldrar att något är utvalt?",
+        a: "Alla betalda placeringar är märkta «Utvald».",
+      },
+      {
+        q: "Vad gör jag om jag vill ändra uppgifterna?",
+        a: "Skicka ett mejl till {epost}, så uppdaterar vi.",
+      },
+    ],
     expected: "Förväntat – {år}-datum inte publicerat än",
     partial: "Något saknas hos källan",
     example: "Exempel",
@@ -411,6 +539,60 @@ export const COPY: Record<Locale, Copy> = {
     featured: "Featured",
     featuredPrice: "Featured placement: NOK {pris} per municipality per week.",
     featuredLink: "Read about Featured",
+    featuredPageTitle: "Get featured on WeekSlot | For providers",
+    featuredPageDescription:
+      "A basic listing is free. With Featured, your activity shows at the top of the municipality and week you choose, for NOK {pris} per municipality per week.",
+    featuredH1: "Get seen by parents planning the holiday week",
+    featuredIntro:
+      "WeekSlot lists week-long courses and camps for kids, sorted by week and municipality. Getting listed is free. If you want more visibility, you can choose Featured.",
+    featuredBasicTitle: "Basic listing – free",
+    featuredBasic: [
+      "Your activity appears on the pages for the right week, municipality and type of activity.",
+      "Parents see age, times, price and a link to your sign-up.",
+      "Sign-up and payment stay with you, as before.",
+    ],
+    featuredTierTitle: "Featured – NOK {pris} per municipality per week",
+    featuredTier: [
+      "Your activity shows at the top of the page for the municipality and week you choose.",
+      "It is clearly marked «Featured», so parents know the placement is paid.",
+      "You choose which municipalities and weeks you want to be featured in.",
+    ],
+    featuredExample:
+      "Example: Featured in one municipality during winter break week costs NOK {pris}. Two municipalities in the same week cost NOK {dobbel}.",
+    featuredPacksTitle: "More visibility in the winter, Easter and autumn breaks",
+    featuredTopTitle: "Top of category – NOK {pris} per break",
+    featuredTopBody:
+      "Your activity shows at the top of one type of activity in one municipality for the whole break, for example «Climbing in Trondheim, winter break». Marked «Featured».",
+    featuredSeasonTitle: "Season package – NOK {pris} per break",
+    featuredSeasonBody:
+      "Featured in your municipality and the neighbouring ones, Top of category, an overview of how many people click through to you, and a «Featured on WeekSlot» badge you can use yourself.",
+    featuredStartTitle: "How to get started",
+    featuredStart: [
+      "Send us your activity at {epost}.",
+      "Tell us which municipalities and weeks you want to be featured in, if you'd like that.",
+      "We add it and let you know when it's live.",
+    ],
+    featuredCta: "Send us your activity",
+    featuredSubject: "Featured on WeekSlot",
+    featuredFaqTitle: "Questions and answers",
+    featuredFaq: [
+      {
+        q: "Do I have to pay to be listed?",
+        a: "No. The basic listing is free. Featured is an option for those who want more visibility.",
+      },
+      {
+        q: "Does WeekSlot take sign-ups or payments?",
+        a: "No. Parents go on to your own sign-up page.",
+      },
+      {
+        q: "How do parents know something is featured?",
+        a: "Every paid placement is marked «Featured».",
+      },
+      {
+        q: "What if I want to change my details?",
+        a: "Email us at {epost} and we'll update it.",
+      },
+    ],
     expected: "Expected – {år} dates not published yet",
     partial: "Some details are missing at the source",
     example: "Example",

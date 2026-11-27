@@ -14,7 +14,6 @@ import {
   kommunerISesong,
   kommunerMedFri,
   leggTilDager,
-  parseUkeNokkel,
   fjoraarsTekst,
   rensPerson,
   sesongDeler,
@@ -499,7 +498,7 @@ function byggRuter(): Rute[] {
   for (const locale of LOCALES) {
     legg(ruter, locale, [], { kind: "hjem" });
     legg(ruter, locale, ["skoleruta"], { kind: "skolerutaHub" });
-    if (locale === "nb") legg(ruter, locale, ["arrangor", "fremhevet"], { kind: "fremhevet" });
+    legg(ruter, locale, ["arrangor", "fremhevet"], { kind: "fremhevet" });
     for (const rad of skolerute) {
       const kommuneSlug = rad.slug || slug(rad.kommune);
       legg(ruter, locale, ["skoleruta", kommuneSlug], { kind: "skoleruta", kommuneSlug });
@@ -729,9 +728,8 @@ export function modell(rute: Rute): SideModell {
   const badge = new Map<string, string>();
 
   if (rute.kind === "fremhevet") {
-    h1 = "Bli sett av foreldre som planlegger ferieuka";
-    ingress =
-      "WeekSlot viser ukekurs og leirer for barn, sortert etter uke og kommune. Det er gratis å bli lagt inn. Vil du ha mer synlighet, kan du velge Fremhevet.";
+    h1 = tekst.featuredH1;
+    ingress = tekst.featuredIntro;
   } else if (rute.kind !== "hjem" && rute.kind !== "leir") {
     h1 = overskrift(rute);
   }
@@ -878,7 +876,7 @@ export function modell(rute: Rute): SideModell {
 function beskrivelse(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
   if (rute.kind === "fremhevet") {
-    return `Grunnoppføring er gratis. Med Fremhevet vises tilbudet ditt øverst i kommunen og uka du velger, for ${site.fremhevetPrisKr} kr per kommune per uke.`;
+    return fyll(tekst.featuredPageDescription, { pris: site.fremhevetPrisKr });
   }
   if (rute.kind === "hjem") return tekst.homeDescription;
   if (rute.kind === "ferieUke") return fyll(tekst.weekDescription, { nr: rute.uke, år: rute.aar });
@@ -900,7 +898,7 @@ function beskrivelse(rute: Rute, side: SideModell): string {
 
 function tittel(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
-  if (rute.kind === "fremhevet") return "Bli fremhevet på WeekSlot | For arrangører";
+  if (rute.kind === "fremhevet") return tekst.featuredPageTitle;
   if (rute.kind === "hjem") return tekst.homeTitle;
   if (rute.kind !== "leir") return `${side.h1} | ${site.name}`;
   const e = side.leirer[0];
@@ -953,7 +951,7 @@ export function jsonLd(rute: Rute, side: SideModell): unknown[] {
     blokker.push({
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: fremhevetFaq(site.fremhevetPrisKr).map((rad) => ({
+      mainEntity: fremhevetFaq(side.tekst, site.kontaktEpost).map((rad) => ({
         "@type": "Question",
         name: rad.q,
         acceptedAnswer: { "@type": "Answer", text: rad.a },

@@ -1,6 +1,6 @@
 # WeekSlot · Side for arrangører: Fremhevet (nb, v1)
 
-Status: Arbeidsversjon. Ikke publisert. Pris (290 kr) og kontaktadresse (kontakt@weekslot.com) er oppgitt av Idee utvikler og må bekreftes av Kim før publisering.
+Status: Arbeidsversjon, ikke publisert. Bestemt av Kim: kontakt@weekslot.com og Fremhevet 290 kr per kommune per uke (26.11.2026), gratis grunnoppføring og 690/990 kr i vinter-, påske- og høstferien (27.11.2026). Ikke avklart: om prisene er eks. eller inkl. mva, og sommerprisene for Topp i kategori og Sesongpakke.
 Foreslått URL: /arrangor/fremhevet
 Meta-tittel: Bli fremhevet på WeekSlot | For arrangører
 Meta-beskrivelse: Grunnoppføring er gratis. Med Fremhevet vises tilbudet ditt øverst i kommunen og uka du velger, for 290 kr per kommune per uke.
@@ -22,6 +22,12 @@ WeekSlot viser ukekurs og leirer for barn, sortert etter uke og kommune. Det er 
 - Du velger selv hvilke kommuner og uker du vil være fremhevet i.
 
 Eksempel: Fremhevet i én kommune i vinterferieuka koster 290 kr. To kommuner samme uke koster 580 kr.
+
+## Flere synlighetspakker i vinter-, påske- og høstferien
+- **Topp i kategori – 690 kr per ferie:** Tilbudet ditt vises øverst i én type aktivitet i én kommune gjennom hele ferien, for eksempel «Klatring i Trondheim, vinterferien». Merket «Fremhevet».
+- **Sesongpakke – 990 kr per ferie:** Fremhevet i kommunen din og nabokommunene, Topp i kategori, oversikt over hvor mange som klikker seg videre til deg, og et «Fremhevet på WeekSlot»-merke du kan bruke selv.
+
+Sommerferien har egne pakkepriser. Spør oss på kontakt@weekslot.com.
 
 ## Slik kommer du i gang
 1. Send oss tilbudet ditt på kontakt@weekslot.com.
