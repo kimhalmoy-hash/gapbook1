@@ -16,6 +16,21 @@ export type SkoleruteRad = {
   merknad: string | null;
   slug?: string;
   fylke?: string | null;
+  sommer?: {
+    sisteSkole: string | null;
+    forsteSkole: string | null;
+    kildeUrl: string | null;
+    forsteKildeUrl: string | null;
+  } | null;
+};
+
+export type SommerPeriode = {
+  fra: string;
+  til: string | null;
+  uker: number[];
+  komplett: boolean;
+  kildeUrl: string | null;
+  forsteKildeUrl: string | null;
 };
 
 export type FerieTreff = {
@@ -78,6 +93,7 @@ export function ferieFelter(rad: SkoleruteRad): FerieTreff[];
 export function kommunerMedFri(rader: SkoleruteRad[], aar: number, uke: number): KommuneFri[];
 export function erHelUke(fra: string | null | undefined, til: string | null | undefined): boolean;
 export function campIFerie(camp: LeirUke & { fylke?: string | null }, rad: SkoleruteRad & { fylke?: string | null }): FerieTreff[];
+export function sommerPeriode(rad: SkoleruteRad): SommerPeriode | null;
 export function kommunerISesong(rader: SkoleruteRad[], navn: SesongNavn, skolearSlutt: number): KommuneFri[];
 export function skolearSlutt(skolear: string): number | null;
 export function skolearKort(skolear: string): string;

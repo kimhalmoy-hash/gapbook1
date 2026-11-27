@@ -33,6 +33,7 @@ import {
   besteStatus,
   erFjoraarsSommer,
   formaterUkeTall,
+  sommerPeriode,
   gruppeNokkel,
   gruppeTellerMotTerskel,
   grupperLeirer,
@@ -57,6 +58,12 @@ type SkoleruteRad = {
   merknad: string | null;
   slug?: string;
   fylke?: string | null;
+  sommer?: {
+    sisteSkole: string | null;
+    forsteSkole: string | null;
+    kildeUrl: string | null;
+    forsteKildeUrl: string | null;
+  } | null;
 };
 
 function sesongNavn(verdi: string): SesongNavn {
@@ -117,7 +124,14 @@ export type Rute =
   | { kind: "typeKommune"; locale: Locale; slug: string[]; typeSti: string; kommuneSlug: string }
   | { kind: "leir"; locale: Locale; slug: string[]; id: string }
   | { kind: "fremhevet"; locale: Locale; slug: string[] }
+  | { kind: "personvern"; locale: Locale; slug: string[] }
   | { kind: "ferieKommune"; locale: Locale; slug: string[]; navn: SesongNavn; aar: number; kommuneSlug: string };
+
+const PERSONVERN_STI: Record<Locale, string> = {
+  nb: "personvern",
+  sv: "integritet",
+  en: "privacy",
+};
 
 export type CampView = {
   id: string;
@@ -194,6 +208,8 @@ export type SideModell = {
     merknad: string | null;
     ferier: { label: string; dato: string; uke: number | null; href?: string }[];
   };
+  sommerLinje: string | null;
+  sommerKilder: { href: string; label: string }[];
   leirer: CampView[];
   filter: boolean;
   crumbs: { name: string; href: string }[];
@@ -348,7 +364,7 @@ function leirerFor(rute: Rute): Leir[] {
 
 export function indekserbar(rute: Rute): boolean {
   if (rute.kind === "skoleruta" || rute.kind === "skolerutaHub") return skolerutaIndeks(rute.kind, rute.locale) === true;
-  if (rute.kind === "fremhevet") return true;
+  if (rute.kind === "fremhevet" || rute.kind === "personvern") return true;
   if (rute.kind === "leir") {
     return gruppeTellerMotTerskel(GRUPPE_SLUG.get(rute.id) || [], I_DAG);
   }
@@ -500,6 +516,7 @@ function byggRuter(): Rute[] {
     legg(ruter, locale, [], { kind: "hjem" });
     legg(ruter, locale, ["skoleruta"], { kind: "skolerutaHub" });
     legg(ruter, locale, ["arrangor"], { kind: "fremhevet" });
+    legg(ruter, locale, [PERSONVERN_STI[locale]], { kind: "personvern" });
     for (const rad of skolerute) {
       const kommuneSlug = rad.slug || slug(rad.kommune);
       legg(ruter, locale, ["skoleruta", kommuneSlug], { kind: "skoleruta", kommuneSlug });
@@ -567,8 +584,26 @@ export function finnRute(slug: string[] | undefined): Rute | null {
 }
 
 export function sammeSti(rute: Rute, locale: Locale): string {
+  if (rute.kind === "personvern") return sti(locale, [PERSONVERN_STI[locale]]);
   const uten = rute.locale === "nb" ? rute.slug : rute.slug.slice(1);
   return sti(locale, uten);
+}
+
+function sommerVisning(rad: SkoleruteRad | null, locale: Locale, tekst: Copy): { linje: string; kilder: { href: string; label: string }[] } | null {
+  if (!rad) return null;
+  const periode = sommerPeriode(rad);
+  if (!periode || !periode.uker.length) return null;
+  const uker = formaterUkeTall(periode.uker);
+  const fra = formatDato(periode.fra, locale);
+  const linje = periode.komplett && periode.til
+    ? fyll(tekst.summerBoth, { fra, til: formatDato(periode.til, locale), uker })
+    : fyll(tekst.summerStart, { fra, uker });
+  const kilder: { href: string; label: string }[] = [];
+  if (periode.kildeUrl) kilder.push({ href: periode.kildeUrl, label: tekst.source });
+  if (periode.forsteKildeUrl && periode.forsteKildeUrl !== periode.kildeUrl) {
+    kilder.push({ href: periode.forsteKildeUrl, label: tekst.summerSourceFirst });
+  }
+  return { linje, kilder };
 }
 
 function pameldingLinjer(e: Leir, locale: Locale, tekst: Copy): { pameldingLabel: string; apnerLabel: string | null } {
@@ -740,9 +775,14 @@ export function modell(rute: Rute): SideModell {
   let skoleruteKort: SideModell["skoleruteKort"] = null;
   const badge = new Map<string, string>();
 
+  let sommerLinje: string | null = null;
+  let sommerKilder: { href: string; label: string }[] = [];
   if (rute.kind === "fremhevet") {
     h1 = tekst.featuredH1;
     ingress = tekst.featuredIntro;
+  } else if (rute.kind === "personvern") {
+    h1 = tekst.privacyH1;
+    ingress = "";
   } else if (rute.kind !== "hjem" && rute.kind !== "leir") {
     h1 = overskrift(rute);
   }
@@ -797,6 +837,11 @@ export function modell(rute: Rute): SideModell {
         merknad: rad.merknad,
         ferier,
       };
+      const sommer = sommerVisning(rad, rute.locale, tekst);
+      if (sommer) {
+        sommerLinje = sommer.linje;
+        sommerKilder = sommer.kilder;
+      }
       for (const e of leirerFor(rute)) {
         const treff = campIFerie(e, rad);
         const gruppe = SLUG_AV_NOKKEL.get(gruppeNokkel(e));
@@ -845,6 +890,13 @@ export function modell(rute: Rute): SideModell {
         ferier: [{ label: tekst.seasonName[rute.navn], dato: dato || "", uke: felt.uke ?? null }],
       };
     }
+    if (rad && rute.navn === "sommer") {
+      const sommer = sommerVisning(rad, rute.locale, tekst);
+      if (sommer) {
+        sommerLinje = sommer.linje;
+        sommerKilder = sommer.kilder;
+      }
+    }
   }
 
   if (rute.kind === "leir") {
@@ -879,6 +931,8 @@ export function modell(rute: Rute): SideModell {
     ferieOverskrift,
     ferieListe,
     skoleruteKort,
+    sommerLinje,
+    sommerKilder,
     leirer: leirVisning,
     filter: rute.kind === "hjem",
     crumbs,
@@ -889,6 +943,7 @@ export function modell(rute: Rute): SideModell {
 function beskrivelse(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
   if (rute.kind === "fremhevet") return tekst.featuredPageDescription;
+  if (rute.kind === "personvern") return tekst.privacyBody.join(" ");
   if (rute.kind === "hjem") return tekst.homeDescription;
   if (rute.kind === "ferieUke") return fyll(tekst.weekDescription, { nr: rute.uke, år: rute.aar });
   if (rute.kind === "skoleruta") {
@@ -911,6 +966,7 @@ function beskrivelse(rute: Rute, side: SideModell): string {
 function tittel(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
   if (rute.kind === "fremhevet") return tekst.featuredPageTitle;
+  if (rute.kind === "personvern") return tekst.privacyTitle;
   if (rute.kind === "hjem") return tekst.homeTitle;
   if (rute.kind !== "leir") return `${side.h1} | ${site.name}`;
   const e = side.leirer[0];

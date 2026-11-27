@@ -10,7 +10,7 @@ Det er gratis å bli lagt inn, inntil videre. Ingen pakker og ingen betalt merki
 
 1. Kildene ligger i `data/kilder/`: `tilbydere-norge-v8.csv`, `skolerute-2027-alle.csv`, `sjekk-plan.md`, `README-supply-v8.md` og `endringer-v8.md`. Katalogen som nettstedet viser, er `data/leirer.json` (Supply v8, 624 objekter, ett per uke). `kurs-norge-v8.csv` fulgte ikke med, så `npm run importer` skriver tilbydere og skolerute, og rører ikke `leirer.json`.
 
-Sommeruker med status `forventet` har uketall fra året før. De vises som «Forventet sommeren 2027 · i 2026: uke 25», ikke som en bekreftet uke i 2027. Sommerhuben grupperer dem under «I 2026: uke 25». Verifiserte og delvis rader med 2027-dato vises med den datoen. Sommerferie finnes ikke i skoleruten og blir ikke funnet på.
+Sommeruker med status `forventet` har uketall fra året før. De vises som «Forventet sommeren 2027 · i 2026: uke 25», ikke som en bekreftet uke i 2027. Sommerhuben grupperer dem under «I 2026: uke 25». Verifiserte og delvis rader med 2027-dato vises med den datoen. Sommerferien på skolerutesidene og på sommerhuben per kommune kommer fra siste og første skoledag når de er publisert. Tomme felt fylles ikke inn.
 
 Samme tilbyder, tittel og sted vises som ett kort. Hver uke blir liggende som egen rad i JSON. Terskelen på 3 teller tilbud etter grupperingen, og bruker den beste statusen i gruppen.
 2. Importen fyller ikke inn manglende felt. `pameldingStatus` og `pameldingApner` blir `null` til kilden sier noe annet. Personnavn, telefon og e-post tas ut av vanlig tekst. URL-er blir ikke kuttet, og siffer inne i en lenke eller en heksadesimal id regnes ikke som telefon. Åttetall som er en dato, som `01052026`, blir stående.
@@ -56,7 +56,7 @@ Lister med færre enn 3 synlige `verifisert`- eller `delvis`-rader får `noindex
 
 `data/skolerute.json` er bygget fra `data/kilder/skolerute-2027-alle.csv` (357 kommuner, 305 med datoer). «Ikke funnet» blir utelatt og får ingen `/skoleruta/`-side. Datoene `fra`/`til` styrer uke-sidene. Der merknaden sier at avviket er avklart, vises at datoene følger det nyeste offisielle vedtaket. Bergen har vinterferie 1.–5. mars 2027. Alta har vinterferie onsdag–fredag.
 
-Kommuner uten rad viser ingen ferie. Sommerferie står ikke i skoleruta, så sommerhuben finner ikke på sommeruker.
+Kommuner uten rad viser ingen ferie. Sommerferien vises bare der siste skoledag, og eventuelt første skoledag, er publisert. Uker etter en ukjent sluttdato finnes ikke på.
 
 Stavanger publiserer skoleruta som åpne data (CSV, JSON og ICS) på opencom.no. Det kan bli en automatisk kilde senere. Det er ikke bygget en henter for den nå.
 

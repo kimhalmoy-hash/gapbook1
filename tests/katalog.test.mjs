@@ -24,6 +24,7 @@ import {
   prisVisning,
   skolerutaIndeks,
   hreflangLokaler,
+  sommerPeriode,
 } from "../lib/pure.mjs";
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
 import { stiTillatt } from "../scripts/lib/robots.mjs";
@@ -300,6 +301,15 @@ test("importert skolerute og leirer", () => {
   assert.equal(stavanger.vinterferie.uke, 7);
   assert.equal(stavanger.vinterferie.datoFra, "2027-02-15");
   assert.equal(skolerute.length, 305);
+  const osloSommer = sommerPeriode(skolerute.find((r) => r.kommune === "Oslo"));
+  assert.equal(osloSommer.fra, "2027-06-19");
+  assert.equal(osloSommer.til, "2027-08-15");
+  assert.deepEqual(osloSommer.uker, [24, 25, 26, 27, 28, 29, 30, 31, 32]);
+  const sandnesSommer = sommerPeriode(skolerute.find((r) => r.kommune === "Sandnes"));
+  assert.equal(sandnesSommer.fra, "2027-06-19");
+  assert.equal(sandnesSommer.til, null);
+  assert.deepEqual(sandnesSommer.uker, [24]);
+  assert.equal(sommerPeriode({ sommer: { sisteSkole: null, forsteSkole: "2027-08-16" } }), null);
   const slugs = skolerute.map((r) => r.slug);
   assert.equal(new Set(slugs).size, slugs.length);
   const alta = skolerute.find((r) => r.kommune === "Alta");

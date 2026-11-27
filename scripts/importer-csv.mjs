@@ -133,6 +133,24 @@ function importerTilbydere() {
     .sort((a, b) => String(a.tilbyder).localeCompare(String(b.tilbyder), "nb"));
 }
 
+function datoEllerNull(verdi) {
+  const tekst = tom(verdi);
+  if (!tekst || !/^\d{4}-\d{2}-\d{2}$/.test(tekst)) return null;
+  return tekst;
+}
+
+function sommer(rad) {
+  const sisteSkole = datoEllerNull(rad.siste_skoledag_2027);
+  const forsteSkole = datoEllerNull(rad.forste_skoledag_2027);
+  if (!sisteSkole && !forsteSkole) return null;
+  return {
+    sisteSkole,
+    forsteSkole,
+    kildeUrl: sisteSkole ? tom(rad.sommer_kilde_url) : null,
+    forsteKildeUrl: forsteSkole ? tom(rad.forste_kilde_url) : null,
+  };
+}
+
 function ferie(uke, fra, til) {
   const datoFra = tom(fra);
   const datoTil = tom(til);
@@ -156,6 +174,7 @@ function importerSkolerute() {
       hostferie: ferie(rad.hostferie_uke, rad.hostferie_fra, rad.hostferie_til),
       vinterferie: ferie(rad.vinterferie_uke, rad.vinterferie_fra, rad.vinterferie_til),
       paske: ferie(null, rad.paske_fra, rad.paske_til),
+      sommer: sommer(rad),
       kildeUrl: tom(rad.kilde_url),
       kildeType: tom(rad.kilde_type),
       merknad: rad.merknad?.trim() ? rad.merknad.trim() : null,

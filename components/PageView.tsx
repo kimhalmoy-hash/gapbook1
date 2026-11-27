@@ -31,9 +31,9 @@ export function PageView({ rute }: { rute: Rute }) {
         spraak={spraak}
       />
       <main className="mx-auto min-w-0 max-w-6xl px-4 py-10">
-        {rute.kind === "hjem" ? <Hjem side={side} /> : rute.kind === "fremhevet" ? <FremhevetSide tekst={tekst} /> : <Innhold side={side} />}
+        {rute.kind === "hjem" ? <Hjem side={side} /> : rute.kind === "fremhevet" ? <FremhevetSide tekst={tekst} /> : rute.kind === "personvern" ? <Personvern tekst={tekst} /> : <Innhold side={side} />}
       </main>
-      <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} />
+      <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} privacyHref={rute.locale === "sv" ? "/sv/integritet/" : rute.locale === "en" ? "/en/privacy/" : "/personvern/"} />
     </div>
   );
 }
@@ -139,6 +139,32 @@ function SommerHub({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }) {
   );
 }
 
+function Personvern({ tekst }: { tekst: Copy }) {
+  return (
+    <>
+      <h1 className="max-w-4xl font-serif text-4xl leading-tight sm:text-5xl">{tekst.privacyH1}</h1>
+      <div className="mt-6 grid max-w-2xl gap-3 text-lg">
+        {tekst.privacyBody.map((linje) => (
+          <p key={linje}>{linje}</p>
+        ))}
+      </div>
+    </>
+  );
+}
+
+function SommerKilder({ kilder }: { kilder: { href: string; label: string }[] }) {
+  if (!kilder.length) return null;
+  return (
+    <>
+      {kilder.map((kilde) => (
+        <a key={kilde.href + kilde.label} className="ml-2 text-pine hover:underline" href={kilde.href} rel="noopener noreferrer">
+          {kilde.label}
+        </a>
+      ))}
+    </>
+  );
+}
+
 function Innhold({ side }: { side: ReturnType<typeof modell> }) {
   const tekst = side.tekst;
   const erDetalj = side.rute.kind === "leir";
@@ -153,6 +179,12 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
         ))}
       </nav>
       <h1 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-5xl">{side.h1}</h1>
+      {side.rute.kind === "ferieKommune" && side.sommerLinje ? (
+        <p className="mt-4 max-w-3xl text-lg">
+          {side.sommerLinje}
+          <SommerKilder kilder={side.sommerKilder} />
+        </p>
+      ) : null}
       {side.kalenderUke || side.skoleruteKort ? (
         <p className="mt-4 max-w-3xl text-lg">
           {side.kalenderUke
@@ -188,6 +220,12 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
               </li>
             ))}
           </ul>
+          {side.sommerLinje ? (
+            <p className="mt-4 text-sm">
+              {side.sommerLinje}
+              <SommerKilder kilder={side.sommerKilder} />
+            </p>
+          ) : null}
           {side.skoleruteKort.merknad ? (
             <>
               {/avvik avklart/i.test(side.skoleruteKort.merknad) ? (
