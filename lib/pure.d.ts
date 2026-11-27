@@ -65,6 +65,7 @@ export function overlap(
 export function sesongDeler(sesong: string | null | undefined): { navn: SesongNavn; aar: number } | null;
 export function ukeNokkel(aar: number, uke: number): string;
 export function parseUkeNokkel(nokkel: string): { aar: number; uke: number } | null;
+export function erFjoraarsSommer(camp: { sesong?: string | null; status?: string | null }): boolean;
 export function campUker(camp: LeirUke): string[];
 export const TEMA_MIN: number;
 export function erDato8(s: string): boolean;

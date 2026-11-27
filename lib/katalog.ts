@@ -31,6 +31,7 @@ import {
   pameldingModus,
   pameldingErLik,
   besteStatus,
+  erFjoraarsSommer,
   formaterUkeTall,
   gruppeNokkel,
   gruppeTellerMotTerskel,
@@ -133,6 +134,7 @@ export type CampView = {
   sted: string;
   uker: string[];
   ukeLabel: string;
+  fjoraarsUker: number[] | null;
   datoLabel: string | null;
   alderLabel: string | null;
   alderFra: number | null;
@@ -317,7 +319,7 @@ function leirerFor(rute: Rute): Leir[] {
   }
   if (rute.kind === "ferieUke") {
     const nokkel = ukeNokkel(rute.aar, rute.uke);
-    return alle.filter((e) => sesongDeler(e.sesong)?.navn === rute.navn && campUker(e).includes(nokkel));
+    return alle.filter((e) => sesongDeler(e.sesong)?.navn === rute.navn && !erFjoraarsSommer(e) && campUker(e).includes(nokkel));
   }
   if (rute.kind === "skoleruta") {
     return alle.filter((e) => slug(e.kommune) === rute.kommuneSlug);
@@ -490,7 +492,7 @@ function byggRuter(): Rute[] {
     }
     for (const e of synlige()) {
       const del = sesongDeler(e.sesong);
-      if (!del || del.navn !== navn || del.aar !== year) continue;
+      if (!del || del.navn !== navn || del.aar !== year || erFjoraarsSommer(e)) continue;
       for (const u of ukeListe(e.uke)) sett.add(u);
     }
     return [...sett].sort((a, b) => a - b);
@@ -611,7 +613,11 @@ function groupView(slugId: string, medlemmer: Leir[], locale: Locale, ferieBadge
   const sted = rep.by && rep.by !== rep.kommune ? `${rep.by}, ${rep.kommune}` : rep.kommune;
   const datoerFra = sortert.map((e) => e.datoFra).filter((d): d is string => !!d).sort();
   const datoerTil = sortert.map((e) => e.datoTil).filter((d): d is string => !!d).sort();
-  const ukerTekst = formaterUkeTall(ukeTallFra(sortert));
+  const bareFjor = sortert.length > 0 && sortert.every((e) => erFjoraarsSommer(e));
+  const fjoraarsUker = bareFjor ? ukeTallFra(sortert) : null;
+  const visning = bareFjor ? [] : sortert.filter((e) => !erFjoraarsSommer(e));
+  const ukerTekst = formaterUkeTall(ukeTallFra(visning.length ? visning : sortert));
+  const sesongAar = aar ?? 2027;
   const likPamelding = pameldingErLik(sortert);
   const felles = likPamelding ? pameldingLinjer(sortert[0], locale, tekst) : { pameldingLabel: null, apnerLabel: null };
   const notater = [...new Set(sortert.map((e) => rensPerson(e.notat)).filter((n): n is string => !!n))];
@@ -638,8 +644,13 @@ function groupView(slugId: string, medlemmer: Leir[], locale: Locale, ferieBadge
     kommuneSlug: slug(rep.kommune),
     sted,
     uker: [...new Set(sortert.flatMap((e) => campUker(e)))].sort(),
-    ukeLabel: ukerTekst ? fyll(tekst.weeks, { nr: ukerTekst }) : formatUke(rep.uke, tekst),
-    datoLabel: formatPeriode(datoerFra[0] || null, datoerTil.at(-1) || null, locale),
+    ukeLabel: fjoraarsUker?.length
+      ? fyll(tekst.expectedSummer, { aar: sesongAar, fjor: sesongAar - 1, uker: formaterUkeTall(fjoraarsUker) })
+      : ukerTekst
+        ? fyll(tekst.weeks, { nr: ukerTekst })
+        : formatUke(rep.uke, tekst),
+    fjoraarsUker,
+    datoLabel: fjoraarsUker?.length ? null : formatPeriode(datoerFra[0] || null, datoerTil.at(-1) || null, locale),
     alderLabel: unikeAlder.filter(Boolean).join(", ") || null,
     alderFra: aldre.reduce<number | null>((min, a) => (a.fra == null ? min : min == null ? a.fra : Math.min(min, a.fra)), null),
     alderTil: aldre.reduce<number | null>((max, a) => (a.til == null ? max : max == null ? a.til : Math.max(max, a.til)), null),
@@ -664,10 +675,14 @@ function groupView(slugId: string, medlemmer: Leir[], locale: Locale, ferieBadge
     aldre,
     ukerader: sortert.map((e) => {
       const linjer = pameldingLinjer(e, locale, tekst);
+      const fjor = erFjoraarsSommer(e);
+      const fjorAar = (sesongDeler(e.sesong)?.aar ?? sesongAar) - 1;
       return {
         id: e.id,
-        ukeLabel: formatUke(e.uke, tekst),
-        datoLabel: formatPeriode(e.datoFra, e.datoTil, locale),
+        ukeLabel: fjor
+          ? fyll(tekst.expectedSummerWeek, { fjor: fjorAar, uker: formaterUkeTall(ukeListe(e.uke)) })
+          : formatUke(e.uke, tekst),
+        datoLabel: fjor ? null : formatPeriode(e.datoFra, e.datoTil, locale),
         prisLabel: prisFor(e, locale, tekst),
         prisNotat: e.prisNotat,
         pameldingLabel: linjer.pameldingLabel,
@@ -893,7 +908,8 @@ function beskrivelse(rute: Rute, side: SideModell): string {
   }
   const e = side.leirer[0];
   if (!e) return tekst.homeDescription;
-  return fyll(tekst.detailDescription, { tittel: e.tittel, tilbyder: e.tilbyder, sted: e.sted });
+  const grunn = fyll(tekst.detailDescription, { tittel: e.tittel, tilbyder: e.tilbyder, sted: e.sted });
+  return e.fjoraarsUker?.length ? `${grunn} ${e.ukeLabel}` : grunn;
 }
 
 function tittel(rute: Rute, side: SideModell): string {

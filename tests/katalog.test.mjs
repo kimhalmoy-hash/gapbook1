@@ -6,6 +6,7 @@ import {
   fjoraarsTekst,
   campIFerie,
   campUker,
+  erFjoraarsSommer,
   erDato8,
   inneholderPerson,
   isoUke,
@@ -306,10 +307,22 @@ test("importert skolerute og leirer", () => {
   assert.equal(alta.vinterferie.datoTil, "2027-02-26");
   assert.equal(skolerute.some((r) => r.kommune === "Rælingen"), true);
   assert.equal(skolerute.some((r) => r.kildeType === "ikke funnet"), false);
-  assert.equal(leirer.length, 503);
-  assert.equal(leirer.filter((e) => e.status === "verifisert").length, 50);
+  assert.equal(leirer.length, 624);
+  assert.equal(leirer.filter((e) => e.status === "verifisert").length, 51);
   assert.equal(leirer.filter((e) => e.status === "delvis").length, 76);
-  assert.equal(leirer.filter((e) => e.status === "forventet").length, 377);
+  assert.equal(leirer.filter((e) => e.status === "forventet").length, 497);
+  const fjor = leirer.filter((e) => erFjoraarsSommer(e));
+  assert.ok(fjor.length > 0);
+  for (const e of fjor) {
+    assert.equal(e.datoFra, null, e.id);
+    assert.equal(e.datoTil, null, e.id);
+    assert.deepEqual(campUker(e), [], e.id);
+  }
+  const vinter = leirer.find((e) => e.status === "forventet" && String(e.sesong).startsWith("vinter"));
+  assert.equal(erFjoraarsSommer(vinter), false);
+  assert.ok(campUker(vinter).some((nokkel) => nokkel.startsWith("2027-")));
+  const bodo = leirer.find((e) => e.kommune === "Bodø" && e.status === "verifisert" && e.sesong === "sommer2027");
+  assert.ok(campUker(bodo).includes("2027-32"));
   assert.equal(leirer.every((e) => "pameldingStatus" in e && "pameldingApner" in e), true);
   assert.equal(leirer.some((e) => e.demo), false);
   assert.equal(leirer.some((e) => /hoopit\.io/i.test(e.url)), false);

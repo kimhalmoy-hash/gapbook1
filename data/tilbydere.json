@@ -1,5 +1,25 @@
 [
   {
+    "tilbyder": "5. Drammen sjøspeidergruppe",
+    "typeTilbyder": "organisasjon",
+    "by": "Drammen",
+    "kommune": "Drammen",
+    "nettside": "https://www.drammen.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Via kommunens oversikt"
+  },
+  {
+    "tilbyder": "6. Drammen MS speidergruppe",
+    "typeTilbyder": "organisasjon",
+    "by": "Drammen",
+    "kommune": "Drammen",
+    "nettside": "https://www.drammen.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Via kommunens oversikt"
+  },
+  {
     "tilbyder": "AKKS Trondheim",
     "typeTilbyder": "organisasjon",
     "by": "Trondheim",
@@ -8,6 +28,46 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": "Musikkorganisasjon for jenter/ikke-binære"
+  },
+  {
+    "tilbyder": "Aksla IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.akslail.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Alta IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Alta",
+    "kommune": "Alta",
+    "nettside": "http://www.altaif.no/sport/fotball/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Alta Museum",
+    "typeTilbyder": "museum",
+    "by": "Alta",
+    "kommune": "Alta",
+    "nettside": "https://www.altamuseum.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Alvøen Idrettspark",
+    "typeTilbyder": "idrettslag",
+    "by": "Godvik",
+    "kommune": "Bergen",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Arendal bibliotek",
@@ -20,6 +80,36 @@
     "notat": "Påmelding kun til film/eventyrstund"
   },
   {
+    "tilbyder": "Arendal kulturskole / Kulturkammeret",
+    "typeTilbyder": "kommune",
+    "by": "Arendal",
+    "kommune": "Arendal",
+    "nettside": "https://www.arendal.kommune.no/kulturkammeret/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Gratis sommerskole"
+  },
+  {
+    "tilbyder": "Asker Fotball / Asker Skiklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Asker",
+    "kommune": "Asker",
+    "nettside": "https://www.asker-skiklubb.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Asker kommune (Feriekontoret)",
+    "typeTilbyder": "kommune",
+    "by": "Asker",
+    "kommune": "Asker",
+    "nettside": "https://www.asker.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Via «Hva skjer i Asker»"
+  },
+  {
     "tilbyder": "Asker Seilforening",
     "typeTilbyder": "idrettslag",
     "by": "Asker",
@@ -28,6 +118,56 @@
     "antallKursILista": 4,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Askim Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Askim",
+    "kommune": "Indre Østfold",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Astor FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://astorfk.no/next/p/31844/hjem",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Austrått IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://www.austraattil.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Avaldsnes",
+    "typeTilbyder": "idrettslag",
+    "by": "Avaldsnes",
+    "kommune": "Karmøy",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "B&OI Turn",
+    "typeTilbyder": "idrettslag",
+    "by": "Bodø",
+    "kommune": "Bodø",
+    "nettside": "https://spond.com/discover/nb-no/events/E65349A21F3D4B1AA2D55762429BD8C3",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond (kun fakta og lenke)"
   },
   {
     "tilbyder": "Barça Academy / Barcelona Training (m/ Heimdal Fotball)",
@@ -50,6 +190,36 @@
     "notat": "Dansk arrangør, samarbeid med lokal klubb"
   },
   {
+    "tilbyder": "Berg IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Berg I Østfold",
+    "kommune": "Halden",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Bergen kommune",
+    "typeTilbyder": "kommune",
+    "by": "Bergen",
+    "kommune": "Bergen",
+    "nettside": "https://www.bergen.kommune.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Søknad via skolen"
+  },
+  {
+    "tilbyder": "Bergen Nord FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Bergen",
+    "kommune": "Bergen",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Bergens Turnforening",
     "typeTilbyder": "idrettslag",
     "by": "Bergen",
@@ -58,6 +228,56 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Biri IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Biri",
+    "kommune": "Gjøvik",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Birkebeineren IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Krokstadelva",
+    "kommune": "Drammen",
+    "nettside": "https://ibk.no/fotball",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Blindheim IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Bodø Håndballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Bodø",
+    "kommune": "Bodø",
+    "nettside": "https://www.bhk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Bodø IBK",
+    "typeTilbyder": "idrettslag",
+    "by": "Bodø",
+    "kommune": "Bodø",
+    "nettside": "https://bibk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Påmeldingsskjema på klubbens side"
   },
   {
     "tilbyder": "Bogafjell IL",
@@ -90,6 +310,46 @@
     "notat": "Spond"
   },
   {
+    "tilbyder": "Borgen Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Borgenhaugen",
+    "kommune": "Sarpsborg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Brøttum Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Brøttum",
+    "kommune": "Ringsaker",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Byåsen Toppfotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "http://www.byasenfotball.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Bærum kommune (Ungdom og Fritid)",
+    "typeTilbyder": "kommune",
+    "by": "Bærum",
+    "kommune": "Bærum",
+    "nettside": "https://www.ufbinfo.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
     "tilbyder": "Bærum SK",
     "typeTilbyder": "idrettslag",
     "by": "Bærum",
@@ -108,6 +368,46 @@
     "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": "LetsReg"
+  },
+  {
+    "tilbyder": "Bærums Verk Hauger IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Rud",
+    "kommune": "Bærum",
+    "nettside": "https://club.spond.com/landing/courses/bvhif/5A88089F7AC04365AA7D90539DA4663D?source=direct",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Bøler IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Bønes IL.",
+    "typeTilbyder": "idrettslag",
+    "by": "Bønes",
+    "kommune": "Bergen",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Christianssands Seilforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.csf.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
   },
   {
     "tilbyder": "Damgården Ridesenter",
@@ -160,14 +460,44 @@
     "notat": "SpeedAdmin"
   },
   {
+    "tilbyder": "Drammens Museum",
+    "typeTilbyder": "museum",
+    "by": "Drammen",
+    "kommune": "Drammen",
+    "nettside": "https://drammens.museum.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Åpent tilbud"
+  },
+  {
     "tilbyder": "Drammens Turnforening",
     "typeTilbyder": "idrettslag",
     "by": "Drammen",
     "kommune": "Drammen",
     "nettside": "https://www.drammenturn.no",
-    "antallKursILista": 1,
+    "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Eidsvåg Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Eidsvåg I Åsane",
+    "kommune": "Bergen",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Ekholt Ballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Moss",
+    "kommune": "Moss",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "EKT Rideskole og Husdyrpark",
@@ -180,6 +510,36 @@
     "notat": "Påmelding 'åpner snart'"
   },
   {
+    "tilbyder": "Ellingsøy IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Ellingsøy",
+    "kommune": "Ålesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Elvebyen Fotballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Drammen",
+    "kommune": "Drammen",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Emblem IL Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.emblem-il.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Esport4alle",
     "typeTilbyder": "organisasjon",
     "by": "Fredrikstad",
@@ -188,6 +548,16 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ukjent",
     "notat": "Feriegaming+ i skoleferiene"
+  },
+  {
+    "tilbyder": "Fana IL Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Bergen; Nesttun",
+    "kommune": "Bergen",
+    "nettside": "https://fanafotball.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
   },
   {
     "tilbyder": "Fet IL",
@@ -210,6 +580,66 @@
     "notat": "Rubic"
   },
   {
+    "tilbyder": "Fjellhamar Fotballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Fjellhamar",
+    "kommune": "Lørenskog",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "FK Donn",
+    "typeTilbyder": "idrettslag",
+    "by": "Kristiansand S",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "FK Eik Tønsberg",
+    "typeTilbyder": "idrettslag",
+    "by": "Tønsberg",
+    "kommune": "Tønsberg",
+    "nettside": "https://fkeiktonsberg.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Fk Fyllingsdalen",
+    "typeTilbyder": "idrettslag",
+    "by": "Fyllingsdalen",
+    "kommune": "Bergen",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "FK Vidar",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://fkvidar.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "FK Vigør",
+    "typeTilbyder": "idrettslag",
+    "by": "Kristiansand; Kristiansand S",
+    "kommune": "Kristiansand",
+    "nettside": "https://xn--fkvigr-fya.spond.club",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Spond (kun fakta og lenke)"
+  },
+  {
     "tilbyder": "Fladmark Gård",
     "typeTilbyder": "kommersiell",
     "by": "Askim",
@@ -220,14 +650,64 @@
     "notat": "LetsReg (enkeltoppslag); adresse Askim, Indre Østfold"
   },
   {
+    "tilbyder": "Flaktveit IK",
+    "typeTilbyder": "idrettslag",
+    "by": "Flaktveit",
+    "kommune": "Bergen",
+    "nettside": "https://www.flaktveitik.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Flint Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Tolvsrød",
+    "kommune": "Tønsberg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Forskerfabrikken",
     "typeTilbyder": "kommersiell",
-    "by": "Flere byer",
-    "kommune": "Flere",
+    "by": "Arendal; Flere byer; Halden; Hamar; Harstad; Kongsberg; Lillehammer; Molde; Moss; Porsgrunn; Skien",
+    "kommune": "Arendal; Flere; Halden; Hamar; Harstad; Kongsberg; Lillehammer; Molde; Moss; Porsgrunn; Skien",
     "nettside": "https://www.forskerfabrikken.no",
-    "antallKursILista": 1,
+    "antallKursILista": 17,
     "harPameldingOnline": "ja",
     "notat": "Nasjonal, lokale kurs"
+  },
+  {
+    "tilbyder": "Forus & Gausel IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.fgi.no/portal/arego/club/197",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Fossum IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Bærum; Eiksmarka",
+    "kommune": "Bærum",
+    "nettside": "https://www.fossumif.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ja",
+    "notat": "Rubic"
+  },
+  {
+    "tilbyder": "Fotballaget Fart",
+    "typeTilbyder": "idrettslag",
+    "by": "Vang På Hedmarken",
+    "kommune": "Hamar",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Fredrikstad Ballklubb (håndball)",
@@ -250,14 +730,104 @@
     "notat": null
   },
   {
+    "tilbyder": "Fredrikstad kommune (Ferieaktiviteter)",
+    "typeTilbyder": "kommune",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://www.fredrikstad.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Via kommunens aktivitetskalender"
+  },
+  {
     "tilbyder": "Fredrikstad museum (Østfoldmuseene)",
     "typeTilbyder": "museum",
     "by": "Fredrikstad",
     "kommune": "Fredrikstad",
     "nettside": "https://ostfoldmuseene.no/fredrikstad",
-    "antallKursILista": 1,
+    "antallKursILista": 2,
     "harPameldingOnline": "nei",
     "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Frigg Oslo FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://web.frigg.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Frogner IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Frogner",
+    "kommune": "Lillestrøm",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Frøys Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Laksevåg",
+    "kommune": "Bergen",
+    "nettside": "https://www.froya-fotball.no/next/p/80506/hjem",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Faaberg IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Fåberg",
+    "kommune": "Lillehammer",
+    "nettside": "https://faabergil.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Ganddal IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Gjøvik frivilligsentral",
+    "typeTilbyder": "organisasjon",
+    "by": "Gjøvik",
+    "kommune": "Gjøvik",
+    "nettside": "https://gjovik.frivilligsentral.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Gratis sommertilbud"
+  },
+  {
+    "tilbyder": "Gjøvik husflidslag",
+    "typeTilbyder": "organisasjon",
+    "by": "Gjøvik",
+    "kommune": "Gjøvik",
+    "nettside": "https://gjovikhusflidslag.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": null
+  },
+  {
+    "tilbyder": "Gneist IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Bergen; Blomsterdalen",
+    "kommune": "Bergen",
+    "nettside": "https://gneist.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
   },
   {
     "tilbyder": "Gomma Turnforening",
@@ -270,6 +840,16 @@
     "notat": "Funnet via kommunens aktivitetsportal"
   },
   {
+    "tilbyder": "Greåker IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Greåker",
+    "kommune": "Sarpsborg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Grip Klatring",
     "typeTilbyder": "kommersiell",
     "by": "Trondheim",
@@ -278,6 +858,26 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Grottebadet",
+    "typeTilbyder": "bad/svømmehall",
+    "by": "Harstad",
+    "kommune": "Harstad",
+    "nettside": "https://grottebadet.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Grüner Fotball IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Gui SK",
@@ -290,6 +890,86 @@
     "notat": "Spond"
   },
   {
+    "tilbyder": "Gui Sportsklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Vollen",
+    "kommune": "Asker",
+    "nettside": "http://www.guisk.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Hafslund Idrettsforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Hafslundsøy",
+    "kommune": "Sarpsborg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Halden Idrettsråd",
+    "typeTilbyder": "organisasjon",
+    "by": "Halden",
+    "kommune": "Halden",
+    "nettside": "https://www.haldenidrettsrad.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Gratis ferieaktiviteter"
+  },
+  {
+    "tilbyder": "Halsen IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Larvik",
+    "kommune": "Larvik",
+    "nettside": "https://halsenif.no/tine-fotballskole/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Hamar Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Hamar",
+    "kommune": "Hamar",
+    "nettside": "https://spond.com/discover/nb-no/events/08CAFFF664CD4ADDA65DF3470C84FA33",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond (kun fakta og lenke)"
+  },
+  {
+    "tilbyder": "Hamkam YA",
+    "typeTilbyder": "idrettslag",
+    "by": "Hamar",
+    "kommune": "Hamar",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Hamna Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Tromsø",
+    "kommune": "Tromsø",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Harstad Håndballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Harstad",
+    "kommune": "Harstad",
+    "nettside": "https://harstadhk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
     "tilbyder": "Hasle-Løren IL Ishockey",
     "typeTilbyder": "idrettslag",
     "by": "Oslo",
@@ -298,6 +978,36 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": "Billett via klubbens arrangementsside"
+  },
+  {
+    "tilbyder": "Haslum IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Bekkestua",
+    "kommune": "Bærum",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Hauerseter Sportsklubb Nordkisa",
+    "typeTilbyder": "idrettslag",
+    "by": "Nordkisa",
+    "kommune": "Ullensaker",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Haugaland Klatrelag",
+    "typeTilbyder": "idrettslag",
+    "by": "Haugesund",
+    "kommune": "Haugesund",
+    "nettside": "https://www.haugesund.kommune.no/kif/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Via kommunens oversikt"
   },
   {
     "tilbyder": "Haugar kunstmuseum",
@@ -310,6 +1020,16 @@
     "notat": "Drop-in"
   },
   {
+    "tilbyder": "Haugesund Volleyballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Haugesund",
+    "kommune": "Haugesund",
+    "nettside": "https://www.haugesund.kommune.no/kif/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Via kommunens oversikt"
+  },
+  {
     "tilbyder": "Herkules Håndball",
     "typeTilbyder": "idrettslag",
     "by": "Skien",
@@ -318,6 +1038,46 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": "Skjema"
+  },
+  {
+    "tilbyder": "Hinna Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://hinnafotball.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Holmen IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Nesbru",
+    "kommune": "Asker",
+    "nettside": "http://www.holmenif.no/fotball",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Holmlia Sp.Kl.",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Huset Alta (ungdomshus)",
+    "typeTilbyder": "kommune",
+    "by": "Alta",
+    "kommune": "Alta",
+    "nettside": "https://www.husetalta.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
   },
   {
     "tilbyder": "Hvalfangstmuseet (Vestfoldmuseene)",
@@ -330,6 +1090,76 @@
     "notat": "Drop-in"
   },
   {
+    "tilbyder": "Hønefoss BK",
+    "typeTilbyder": "idrettslag",
+    "by": "Hønefoss",
+    "kommune": "Ringerike",
+    "nettside": "https://honefossbk.no",
+    "antallKursILista": 3,
+    "harPameldingOnline": "ja",
+    "notat": "Superinvite"
+  },
+  {
+    "tilbyder": "Hønefoss Tennisklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Hønefoss",
+    "kommune": "Ringerike",
+    "nettside": "https://honefosstennis.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "MATCHi"
+  },
+  {
+    "tilbyder": "Høybråten og Stovner IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Hånes IF / Håndballmester",
+    "typeTilbyder": "idrettslag",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.hanesif.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "LetsReg (enkeltoppslag)"
+  },
+  {
+    "tilbyder": "Idrettsklubben Grand Bodø",
+    "typeTilbyder": "idrettslag",
+    "by": "Bodø",
+    "kommune": "Bodø",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Idrettslaget Runar",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandefjord",
+    "kommune": "Sandefjord",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "IF Fløya",
+    "typeTilbyder": "idrettslag",
+    "by": "Tromsø",
+    "kommune": "Tromsø",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "IHK Sparta Sarpsborg",
     "typeTilbyder": "idrettslag",
     "by": "Sarpsborg",
@@ -338,6 +1168,16 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": "Spond"
+  },
+  {
+    "tilbyder": "IK Grane Arendal Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Arendal",
+    "kommune": "Arendal",
+    "nettside": "https://www.granefotball.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "IK Start",
@@ -350,6 +1190,56 @@
     "notat": null
   },
   {
+    "tilbyder": "IL Bjarg Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Rådal",
+    "kommune": "Bergen",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "IL Ivrig",
+    "typeTilbyder": "idrettslag",
+    "by": "Våle",
+    "kommune": "Tønsberg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "IL JARDAR",
+    "typeTilbyder": "idrettslag",
+    "by": "Slependen",
+    "kommune": "Bærum",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "IL Jutul",
+    "typeTilbyder": "idrettslag",
+    "by": "Skui",
+    "kommune": "Bærum",
+    "nettside": "https://jutulilfotball.idrettenonline.no/next/p/96453/fotball",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "IL ROS",
+    "typeTilbyder": "idrettslag",
+    "by": "Spikkestad",
+    "kommune": "Asker",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Indre Østfold kommune",
     "typeTilbyder": "kommune",
     "by": "Askim",
@@ -360,6 +1250,16 @@
     "notat": "Åpent tilbud"
   },
   {
+    "tilbyder": "Innstrandens il",
+    "typeTilbyder": "idrettslag",
+    "by": "Bodø",
+    "kommune": "Bodø",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "INSPIRIA science center",
     "typeTilbyder": "museum",
     "by": "Sarpsborg",
@@ -368,6 +1268,76 @@
     "antallKursILista": 1,
     "harPameldingOnline": "nei",
     "notat": "Drop-in, billett"
+  },
+  {
+    "tilbyder": "Kambo IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Moss",
+    "kommune": "Moss",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Gjøvik Ynglingen",
+    "typeTilbyder": "organisasjon",
+    "by": "Gjøvik",
+    "kommune": "Gjøvik",
+    "nettside": "https://kfuk-kfum.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Funnet via KFUK-KFUMs sitemap"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Hamar Ynglingen",
+    "typeTilbyder": "organisasjon",
+    "by": "Hamar",
+    "kommune": "Hamar",
+    "nettside": "https://kfuk-kfum.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Funnet via KFUK-KFUMs sitemap"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Innlandet",
+    "typeTilbyder": "organisasjon",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://kfuk-kfum.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Funnet via KFUK-KFUMs sitemap"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Nordland og KFUK-KFUM Troms",
+    "typeTilbyder": "organisasjon",
+    "by": "Evenskjer",
+    "kommune": "Tjeldsund",
+    "nettside": "https://kfuk-kfum.no/kfuk-kfum-troms",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Funnet via KFUK-KFUMs sitemap"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Norge",
+    "typeTilbyder": "organisasjon",
+    "by": "Gjeving",
+    "kommune": "Tvedestrand",
+    "nettside": "https://kfuk-kfum.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Funnet via KFUK-KFUMs sitemap"
+  },
+  {
+    "tilbyder": "KFUK-KFUM Stavanger, Ynglingen",
+    "typeTilbyder": "organisasjon",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://kfuk-kfum.no/kfuk-kfum-stavanger-ynglingen",
+    "antallKursILista": 4,
+    "harPameldingOnline": "ja",
+    "notat": "Funnet via KFUK-KFUMs sitemap"
   },
   {
     "tilbyder": "Kjerringåsen Alpinsenter",
@@ -400,6 +1370,46 @@
     "notat": null
   },
   {
+    "tilbyder": "Klæbu IL fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Klæbu",
+    "kommune": "Trondheim",
+    "nettside": "https://www.klaebuil.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Kløfta IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Kløfta",
+    "kommune": "Ullensaker",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Kolbotn IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Sofiemyr",
+    "kommune": "Nordre Follo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Kolnes IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Kolnes",
+    "kommune": "Karmøy",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Kongelig Norsk Seilforening (KNS)",
     "typeTilbyder": "idrettslag",
     "by": "Oslo",
@@ -408,6 +1418,26 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ukjent",
     "notat": null
+  },
+  {
+    "tilbyder": "Kongsberg Golfklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Kongsberg",
+    "kommune": "Kongsberg",
+    "nettside": "https://kongsberggolf.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Kongsberg kommune (Sommerskolen)",
+    "typeTilbyder": "kommune",
+    "by": "Kongsberg",
+    "kommune": "Kongsberg",
+    "nettside": "https://sommerskolenkongsberg.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Søknad via kommunen"
   },
   {
     "tilbyder": "Kongstensvømmerne",
@@ -430,6 +1460,16 @@
     "notat": "iSonen"
   },
   {
+    "tilbyder": "Kopervik IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Kopervik",
+    "kommune": "Karmøy",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Korsvoll IL",
     "typeTilbyder": "idrettslag",
     "by": "Oslo",
@@ -450,6 +1490,26 @@
     "notat": "Drop-in"
   },
   {
+    "tilbyder": "Kristiansand kommune (Fritidsenheten)",
+    "typeTilbyder": "kommune",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.kristiansand.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Program legges ut før ferien"
+  },
+  {
+    "tilbyder": "Kristiansand kommune (Haraldvigen feriekoloni)",
+    "typeTilbyder": "kommune",
+    "by": "Kristiansand",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.kristiansand.kommune.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Søknadsskjema på kommunens side"
+  },
+  {
     "tilbyder": "Kultur- og bydelshusene i Haugesund",
     "typeTilbyder": "kommune",
     "by": "Haugesund",
@@ -458,6 +1518,16 @@
     "antallKursILista": 1,
     "harPameldingOnline": "nei",
     "notat": "Påmelding per e-post"
+  },
+  {
+    "tilbyder": "Kunst og Moro Workshop",
+    "typeTilbyder": "organisasjon",
+    "by": "Haugesund",
+    "kommune": "Haugesund",
+    "nettside": "https://www.haugesund.kommune.no/kif/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Via kommunens oversikt"
   },
   {
     "tilbyder": "Kunstsilo",
@@ -470,6 +1540,36 @@
     "notat": null
   },
   {
+    "tilbyder": "Kurland FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Kurland",
+    "kommune": "Lørenskog",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Kvaløya Sportsklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Kvaløya",
+    "kommune": "Tromsø",
+    "nettside": "https://kvaloyask.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Kvik Halden",
+    "typeTilbyder": "idrettslag",
+    "by": "Halden",
+    "kommune": "Halden",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Langedrag Naturpark",
     "typeTilbyder": "kommersiell",
     "by": "Tunhovd",
@@ -480,6 +1580,16 @@
     "notat": "Cloudbooking"
   },
   {
+    "tilbyder": "Langhus IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Langhus",
+    "kommune": "Nordre Follo",
+    "nettside": "https://langhus-idrettslag-fotball.spoortz.no/portal/arego/club/1370",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Larvik museum (Vestfoldmuseene)",
     "typeTilbyder": "museum",
     "by": "Larvik",
@@ -488,6 +1598,86 @@
     "antallKursILista": 1,
     "harPameldingOnline": "nei",
     "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Lillehammer Dansesenter",
+    "typeTilbyder": "organisasjon",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://www.danz.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Lillehammer Fotballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Lillehammer Hockey",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://www.lillehammerhockey.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Rubic"
+  },
+  {
+    "tilbyder": "Lillehammer IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://lillehammerif.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Lillehammer Lawn Tennisklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://lltk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "MATCHi"
+  },
+  {
+    "tilbyder": "Lillehammer Skiklub",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://isonen.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "iSonen"
+  },
+  {
+    "tilbyder": "Lillehammer Vannskiklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://lvsk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Lillestrøm kommune (Lillestrøm sommerskole)",
+    "typeTilbyder": "kommune",
+    "by": "Lillestrøm",
+    "kommune": "Lillestrøm",
+    "nettside": "https://www.lillestrom.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
   },
   {
     "tilbyder": "Lillestrøm SK",
@@ -510,6 +1700,36 @@
     "notat": null
   },
   {
+    "tilbyder": "Lisleby FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Fredrikstad",
+    "kommune": "Fredrikstad",
+    "nettside": "https://lislebyfk.app/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Ljan Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Lommedalens IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Lommedalen",
+    "kommune": "Bærum",
+    "nettside": "https://www.lil.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Lura IL",
     "typeTilbyder": "idrettslag",
     "by": "Sandnes",
@@ -525,8 +1745,8 @@
     "by": "Oslo",
     "kommune": "Oslo",
     "nettside": "https://www.lynfotball.no",
-    "antallKursILista": 1,
-    "harPameldingOnline": "ukjent",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
     "notat": null
   },
   {
@@ -560,6 +1780,76 @@
     "notat": "Program legges ut før ferien"
   },
   {
+    "tilbyder": "Maihaugen",
+    "typeTilbyder": "museum",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://maihaugen.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Manglerud Star Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://msfotball.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Mjøndalen Toppfotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Mjøndalen",
+    "kommune": "Drammen",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Molde FK (AkerAkademiet)",
+    "typeTilbyder": "idrettslag",
+    "by": "Molde",
+    "kommune": "Molde",
+    "nettside": "https://www.moldefk.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Molde og Omegn Idrettsforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Molde",
+    "kommune": "Molde",
+    "nettside": "https://moldeoif.spond.club",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond (kun fakta og lenke)"
+  },
+  {
+    "tilbyder": "Monolitten IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Moss Seilforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Moss",
+    "kommune": "Moss",
+    "nettside": "https://www.moss-seilforening.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond"
+  },
+  {
     "tilbyder": "Museum Stavanger (MUST)",
     "typeTilbyder": "museum",
     "by": "Stavanger",
@@ -570,6 +1860,46 @@
     "notat": "Drop-in; lenke til kommunens oversikt"
   },
   {
+    "tilbyder": "Mysen IF Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Mysen",
+    "kommune": "Indre Østfold",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Narvik Rideskole",
+    "typeTilbyder": "rideskole",
+    "by": "Skjomen",
+    "kommune": "Narvik",
+    "nettside": "https://www.narvikrideskole.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Bookingleaf"
+  },
+  {
+    "tilbyder": "Narvik Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Narvik",
+    "kommune": "Narvik",
+    "nettside": "https://www.narvikturn.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Navestad IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Borgenhaugen",
+    "kommune": "Sarpsborg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Nedre Glomma Turn",
     "typeTilbyder": "idrettslag",
     "by": "Fredrikstad",
@@ -578,6 +1908,26 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": "Rubic"
+  },
+  {
+    "tilbyder": "Nesøya Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Nesøya",
+    "kommune": "Asker",
+    "nettside": "https://www.nesoyail.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "NJFF Oppland",
+    "typeTilbyder": "organisasjon",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://www.njff.no/oppland",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
   },
   {
     "tilbyder": "Njård Gymnastikk og turn",
@@ -605,7 +1955,7 @@
     "by": "Tromsø",
     "kommune": "Tromsø",
     "nettside": "https://nordnorsk.vitensenter.no",
-    "antallKursILista": 1,
+    "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": null
   },
@@ -680,6 +2030,26 @@
     "notat": null
   },
   {
+    "tilbyder": "Oslo kommune (Sommerskolen Oslo)",
+    "typeTilbyder": "kommune",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.oslo.kommune.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Oslo kommune, Bydel Grorud",
+    "typeTilbyder": "kommune",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.oslo.kommune.no/bydeler/bydel-grorud/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Påmeldingsskjema"
+  },
+  {
     "tilbyder": "Oslo Movement",
     "typeTilbyder": "kommersiell",
     "by": "Oslo",
@@ -740,6 +2110,36 @@
     "notat": null
   },
   {
+    "tilbyder": "Pors Grenland Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Porsgrunn",
+    "kommune": "Porsgrunn",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "PS:Dans",
+    "typeTilbyder": "organisasjon",
+    "by": "Hamar",
+    "kommune": "Hamar",
+    "nettside": "https://www.psdans.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Randesund Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Kristiansand S",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Ranheim Fotball",
     "typeTilbyder": "idrettslag",
     "by": "Trondheim",
@@ -748,6 +2148,26 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Ringerike kommune (Sommerskolen)",
+    "typeTilbyder": "kommune",
+    "by": "Hønefoss",
+    "kommune": "Ringerike",
+    "nettside": "https://www.ringerike.kommune.no/sommerskolen",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Søknad via kommunen"
+  },
+  {
+    "tilbyder": "Ringsaker IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Gaupen",
+    "kommune": "Ringsaker",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Ringsaker kommune",
@@ -780,6 +2200,16 @@
     "notat": "billett.rbk.no"
   },
   {
+    "tilbyder": "Rustad Abildsø Sportsklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Rygge IL Turn",
     "typeTilbyder": "idrettslag",
     "by": "Moss",
@@ -788,6 +2218,26 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ukjent",
     "notat": "Via Moss kommunes vinterferieklubb"
+  },
+  {
+    "tilbyder": "Røa IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Sandefjord Ballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandefjord",
+    "kommune": "Sandefjord",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Sandefjordbibliotekene",
@@ -818,6 +2268,16 @@
     "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": "Spond"
+  },
+  {
+    "tilbyder": "Sandved IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandnes",
+    "kommune": "Sandnes",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Sandvika Turnforening",
@@ -860,6 +2320,46 @@
     "notat": "Spond"
   },
   {
+    "tilbyder": "Sem IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Sem",
+    "kommune": "Tønsberg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "SIF/Hessa IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "SjakkEvent (sjakkleir på Skøyen skole)",
+    "typeTilbyder": "organisasjon",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://sjakkevent.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Påmelding på SjakkEvent"
+  },
+  {
+    "tilbyder": "Sjetne IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Sjetnemarka",
+    "kommune": "Trondheim",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Sjusjøen Skisenter",
     "typeTilbyder": "kommersiell",
     "by": "Sjusjøen",
@@ -880,6 +2380,46 @@
     "notat": "Superinvite"
   },
   {
+    "tilbyder": "SK Haugar",
+    "typeTilbyder": "idrettslag",
+    "by": "Haugesund",
+    "kommune": "Haugesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "SK Nord",
+    "typeTilbyder": "idrettslag",
+    "by": "Karmsund",
+    "kommune": "Karmøy",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "SK Sprint- Jeløy",
+    "typeTilbyder": "idrettslag",
+    "by": "Moss",
+    "kommune": "Moss",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "SK Trygg/Lade",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://www.trygglade.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "SK Vedavåg Karmøy",
     "typeTilbyder": "idrettslag",
     "by": "Vedavågen",
@@ -895,9 +2435,19 @@
     "by": "Lillestrøm",
     "kommune": "Lillestrøm",
     "nettside": "https://skedsmofk.no",
-    "antallKursILista": 1,
+    "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": "Hoopit (ikke lest)"
+  },
+  {
+    "tilbyder": "Ski IL Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Ski",
+    "kommune": "Nordre Follo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Skien fritidspark",
@@ -915,7 +2465,7 @@
     "by": "Skien",
     "kommune": "Skien",
     "nettside": "https://www.skien.kommune.no",
-    "antallKursILista": 1,
+    "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": "Program legges ut før ferien"
   },
@@ -925,9 +2475,69 @@
     "by": "Oslo",
     "kommune": "Oslo",
     "nettside": "https://oslo.skischool.shop",
-    "antallKursILista": 1,
+    "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": "Nettbutikk"
+  },
+  {
+    "tilbyder": "Skjetten Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Skjetten",
+    "kommune": "Lillestrøm",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Skodje IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Skodje",
+    "kommune": "Ålesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Skudenes UIL",
+    "typeTilbyder": "idrettslag",
+    "by": "Skudeneshavn",
+    "kommune": "Karmøy",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Skåla IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Skåla",
+    "kommune": "Molde",
+    "nettside": "https://www.skaalaidrett.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Slagen Idrettsforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Tolvsrød",
+    "kommune": "Tønsberg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Slemmestad IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Slemmestad",
+    "kommune": "Asker",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Slottsfjellsmuseet (Vestfoldmuseene)",
@@ -940,14 +2550,124 @@
     "notat": "Drop-in"
   },
   {
+    "tilbyder": "Snarøya SK",
+    "typeTilbyder": "idrettslag",
+    "by": "Snarøya",
+    "kommune": "Bærum",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Sotra Sportsklubb",
     "typeTilbyder": "idrettslag",
     "by": "Straume",
     "kommune": "Øygarden",
     "nettside": "https://www.sotrask.no",
-    "antallKursILista": 1,
+    "antallKursILista": 2,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Sp. Kl. Træff",
+    "typeTilbyder": "idrettslag",
+    "by": "Molde",
+    "kommune": "Molde",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Spjelkavik IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Sportsklubben Djerv 1919",
+    "typeTilbyder": "idrettslag",
+    "by": "Haugesund",
+    "kommune": "Haugesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Sportsklubben Guard",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Sportsklubben Herd",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Sportsklubben Jarl",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.skjarl.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Sportsklubben Nationalkameratene",
+    "typeTilbyder": "idrettslag",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Sportsklubben Rival",
+    "typeTilbyder": "idrettslag",
+    "by": "Molde",
+    "kommune": "Molde",
+    "nettside": "https://skrival.spond.club",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond (kun fakta og lenke)"
+  },
+  {
+    "tilbyder": "Sportsklubben Rollon",
+    "typeTilbyder": "idrettslag",
+    "by": "Ålesund",
+    "kommune": "Ålesund",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Sportsklubben STAG",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavern",
+    "kommune": "Larvik",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "St. Croix-huset / UKM Fredrikstad",
@@ -995,7 +2715,7 @@
     "by": "Stavanger",
     "kommune": "Stavanger",
     "nettside": "https://stavangerif.no",
-    "antallKursILista": 2,
+    "antallKursILista": 3,
     "harPameldingOnline": "ja",
     "notat": "Spond"
   },
@@ -1020,6 +2740,36 @@
     "notat": "Billettportal; kun Stavanger-barn"
   },
   {
+    "tilbyder": "Stokke",
+    "typeTilbyder": "idrettslag",
+    "by": "Stokke",
+    "kommune": "Sandefjord",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Store Bergan Fotball",
+    "typeTilbyder": "idrettslag",
+    "by": "Sandefjord",
+    "kommune": "Sandefjord",
+    "nettside": "https://www.sbifotball.no/fotball",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Svarstad IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Svarstad",
+    "kommune": "Larvik",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Sverresborg Fotball",
     "typeTilbyder": "idrettslag",
     "by": "Trondheim",
@@ -1030,6 +2780,16 @@
     "notat": "LetsReg"
   },
   {
+    "tilbyder": "Søgne FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Søgne",
+    "kommune": "Kristiansand",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Sølvberget bibliotek og kulturhus",
     "typeTilbyder": "bibliotek",
     "by": "Stavanger",
@@ -1038,6 +2798,16 @@
     "antallKursILista": 2,
     "harPameldingOnline": "delvis",
     "notat": "Gratisbilletter til noen arrangementer"
+  },
+  {
+    "tilbyder": "Sørumsand IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Sørumsand",
+    "kommune": "Lillestrøm",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Sørvest Bandyregion (innebandy)",
@@ -1060,6 +2830,16 @@
     "notat": "Samarbeid mellom fem klubber"
   },
   {
+    "tilbyder": "Telavåg Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Tælavåg",
+    "kommune": "Øygarden",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Telemark museum",
     "typeTilbyder": "museum",
     "by": "Porsgrunn; Skien",
@@ -1078,6 +2858,26 @@
     "antallKursILista": 6,
     "harPameldingOnline": "ja",
     "notat": "Gratis"
+  },
+  {
+    "tilbyder": "TIF Viking",
+    "typeTilbyder": "idrettslag",
+    "by": "Bergen",
+    "kommune": "Bergen",
+    "nettside": "https://www.tifviking.no",
+    "antallKursILista": 12,
+    "harPameldingOnline": "ja",
+    "notat": "Leirer i samarbeid med Bergen kommune"
+  },
+  {
+    "tilbyder": "Tjensvoll FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Stavanger",
+    "kommune": "Stavanger",
+    "nettside": "https://www.tjensvollfk.no/",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Tomm Murstad Sjøleir",
@@ -1100,6 +2900,16 @@
     "notat": null
   },
   {
+    "tilbyder": "Tromsø Ishockeyklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Tromsø",
+    "kommune": "Tromsø",
+    "nettside": "https://spond.com/discover/en-gb/events/FE5B1906645C43959EC46B054EBEEE89",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "Spond (kun fakta og lenke)"
+  },
+  {
     "tilbyder": "Tromsø kommune (Fritid)",
     "typeTilbyder": "kommune",
     "by": "Tromsø",
@@ -1110,6 +2920,46 @@
     "notat": "Kommunalt skjema"
   },
   {
+    "tilbyder": "Tromsø Ryttersportsklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Tromsø",
+    "kommune": "Tromsø",
+    "nettside": "https://trso.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "nei",
+    "notat": "Påmelding per e-post"
+  },
+  {
+    "tilbyder": "Tromsø Turnforening",
+    "typeTilbyder": "idrettslag",
+    "by": "Tromsø",
+    "kommune": "Tromsø",
+    "nettside": "https://www.tromsoturn.no",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ja",
+    "notat": "Rubic"
+  },
+  {
+    "tilbyder": "Trondheim kommune (Science Camp)",
+    "typeTilbyder": "kommune",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://sites.google.com/skole.trondheim.kommune.no/sciencecamp/hjem",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Trondheim kunstmuseum",
+    "typeTilbyder": "museum",
+    "by": "Trondheim",
+    "kommune": "Trondheim",
+    "nettside": "https://trondheimkunstmuseum.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "nei",
+    "notat": "Drop-in"
+  },
+  {
     "tilbyder": "Trondhjems Skiklub",
     "typeTilbyder": "idrettslag",
     "by": "Trondheim",
@@ -1118,6 +2968,16 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": "Påmelding ikke åpnet ennå"
+  },
+  {
+    "tilbyder": "Trondhjems Turistforening",
+    "typeTilbyder": "organisasjon",
+    "by": "Nedalshytta",
+    "kommune": "Trondheim",
+    "nettside": "https://aktiviteter.dnt.no/register/518338",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": "DNT (enkeltoppslag /register/)"
   },
   {
     "tilbyder": "Trondhjems Turnforening",
@@ -1138,6 +2998,46 @@
     "antallKursILista": 1,
     "harPameldingOnline": "ja",
     "notat": null
+  },
+  {
+    "tilbyder": "Trøgstad Båstad FK",
+    "typeTilbyder": "idrettslag",
+    "by": "Trøgstad",
+    "kommune": "Indre Østfold",
+    "nettside": "http://www.tb-fotball.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Tune Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Grålum",
+    "kommune": "Sarpsborg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Tyrili klatring",
+    "typeTilbyder": "organisasjon",
+    "by": "Lillehammer",
+    "kommune": "Lillehammer",
+    "nettside": "https://www.tyriliklatring.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Tønsberg fotballklubb",
+    "typeTilbyder": "idrettslag",
+    "by": "Tønsberg",
+    "kommune": "Tønsberg",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Tønsberg og Færder bibliotek",
@@ -1220,14 +3120,44 @@
     "notat": "Påmelding via Superinvite"
   },
   {
+    "tilbyder": "Vang FL",
+    "typeTilbyder": "idrettslag",
+    "by": "Hamar",
+    "kommune": "Hamar",
+    "nettside": "https://www.vangfl.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Vardal IF",
+    "typeTilbyder": "idrettslag",
+    "by": "Hunndalen",
+    "kommune": "Gjøvik",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Vest-Agder-museet",
     "typeTilbyder": "museum",
     "by": "Kristiansand",
     "kommune": "Kristiansand",
     "nettside": "https://www.vestagdermuseet.no",
-    "antallKursILista": 2,
+    "antallKursILista": 3,
     "harPameldingOnline": "nei",
     "notat": "Drop-in"
+  },
+  {
+    "tilbyder": "Vestre Akers SK",
+    "typeTilbyder": "idrettslag",
+    "by": "Oslo",
+    "kommune": "Oslo",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Viking FK",
@@ -1250,6 +3180,16 @@
     "notat": "Skjema"
   },
   {
+    "tilbyder": "Vind IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Gjøvik",
+    "kommune": "Gjøvik",
+    "nettside": "http://www.vindil.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Vitenfabrikken (Jærmuseet)",
     "typeTilbyder": "museum",
     "by": "Sandnes",
@@ -1270,6 +3210,36 @@
     "notat": null
   },
   {
+    "tilbyder": "Øvrevoll Hosle IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Hosle",
+    "kommune": "Bærum",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 2,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Øyestad IF Håndball / ØIF Arendal Elite",
+    "typeTilbyder": "idrettslag",
+    "by": "Arendal",
+    "kommune": "Arendal",
+    "nettside": "https://oifhandball.no",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ja",
+    "notat": null
+  },
+  {
+    "tilbyder": "Øygarden Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Rong",
+    "kommune": "Øygarden",
+    "nettside": "https://oygardenil.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
     "tilbyder": "Øygarden IL",
     "typeTilbyder": "idrettslag",
     "by": "Rong",
@@ -1278,6 +3248,26 @@
     "antallKursILista": 2,
     "harPameldingOnline": "ukjent",
     "notat": null
+  },
+  {
+    "tilbyder": "Ådal IL",
+    "typeTilbyder": "idrettslag",
+    "by": "Hallingby",
+    "kommune": "Ringerike",
+    "nettside": "https://fotball.aadalil.no/",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
+  },
+  {
+    "tilbyder": "Åkra Idrettslag",
+    "typeTilbyder": "idrettslag",
+    "by": "Åkrehamn",
+    "kommune": "Karmøy",
+    "nettside": "https://www.tine.no/tinefotballskole/finn-din-fotballskole",
+    "antallKursILista": 1,
+    "harPameldingOnline": "ukjent",
+    "notat": "Funnet via TINE Fotballskoles kart"
   },
   {
     "tilbyder": "Ålesund Gymnastikk og Turnklubb",

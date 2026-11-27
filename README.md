@@ -8,7 +8,9 @@ Inntekten er at tilbydere betaler for synlighet. Prisene ligger i `config/site.j
 
 ## Slik flyter dataene
 
-1. Kildene ligger i `data/kilder/`: `kurs-norge-v7.csv`, `tilbydere-norge-v7.csv`, `skolerute-2027.csv`, `sjekk-plan.md`, `README-supply-v7.md` og `endringer-v7.md`. Eldre CSV-er er tatt ut. Katalogen som nettstedet viser, er `data/leirer.json` (Supply v7, 503 objekter, ett per uke). `npm run importer` leser v7-CSV-en, tar `pamelding_status` og `pamelding_apner` bare når cellen er fylt, og skriver ikke over `leirer.json` uten `--leirer`.
+1. Kildene ligger i `data/kilder/`: `tilbydere-norge-v8.csv`, `skolerute-2027-alle.csv`, `sjekk-plan.md`, `README-supply-v8.md` og `endringer-v8.md`. Katalogen som nettstedet viser, er `data/leirer.json` (Supply v8, 624 objekter, ett per uke). `kurs-norge-v8.csv` fulgte ikke med, så `npm run importer` skriver tilbydere og skolerute, og rører ikke `leirer.json`.
+
+Sommeruker med status `forventet` har uketall fra året før. De vises som «Forventet sommeren 2027 · i 2026: uke 25», ikke som en bekreftet uke i 2027. Sommerhuben grupperer dem under «I 2026: uke 25». Verifiserte og delvis rader med 2027-dato vises med den datoen. Sommerferie finnes ikke i skoleruten og blir ikke funnet på.
 
 Samme tilbyder, tittel og sted vises som ett kort. Hver uke blir liggende som egen rad i JSON. Terskelen på 3 teller tilbud etter grupperingen, og bruker den beste statusen i gruppen.
 2. Importen fyller ikke inn manglende felt. `pameldingStatus` og `pameldingApner` blir `null` til kilden sier noe annet. Personnavn, telefon og e-post tas ut av vanlig tekst. URL-er blir ikke kuttet, og siffer inne i en lenke eller en heksadesimal id regnes ikke som telefon. Åttetall som er en dato, som `01052026`, blir stående.

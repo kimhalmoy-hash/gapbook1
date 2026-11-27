@@ -1,5 +1,6 @@
 /**
- * Leser data/kilder/*.csv og skriver data/leirer.json, data/tilbydere.json og data/skolerute.json.
+ * Leser data/kilder/*.csv og skriver data/tilbydere.json og data/skolerute.json.
+ * data/leirer.json er Supply v8 og skrives ikke over herfra.
  * Fyller ikke inn manglende felt. Skriver aldri personopplysninger.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -118,7 +119,7 @@ function importerLeirer(tilbydere) {
 }
 
 function importerTilbydere() {
-  return les("tilbydere-norge-v7.csv")
+  return les("tilbydere-norge-v8.csv")
     .map((rad) => ({
       tilbyder: tom(rad.tilbyder),
       typeTilbyder: tom(rad.type_tilbyder),
@@ -185,16 +186,12 @@ if (process.argv.includes("--bare-skolerute")) {
   console.log(`skolerute: ${skolerute.length} kommuner med datoer`);
   process.exit(0);
 }
+if (process.argv.includes("--leirer")) {
+  console.error("data/leirer.json er Supply v8. kurs-norge-v8.csv fulgte ikke med, så CSV-import skriver ikke over katalogen.");
+  process.exit(1);
+}
 const tilbydere = importerTilbydere();
-const leirer = importerLeirer(tilbydere);
 skriv("tilbydere.json", tilbydere);
 skriv("skolerute.json", skolerute);
-if (process.argv.includes("--leirer")) {
-  skriv("leirer.json", leirer);
-  console.log("skrev data/leirer.json fra kurs-norge-v7.csv");
-} else {
-  console.log("data/leirer.json er Supply v7 og ble ikke overskrevet. Bruk --leirer for å skrive CSV-en over.");
-}
-console.log(
-  `importer: ${leirer.length} leirer fra CSV, ${tilbydere.length} tilbydere, ${skolerute.length} kommuner i skoleruten`,
-);
+console.log("data/leirer.json er Supply v8 og ble ikke overskrevet.");
+console.log(`importer: ${tilbydere.length} tilbydere, ${skolerute.length} kommuner i skoleruten`);

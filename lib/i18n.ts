@@ -88,6 +88,8 @@ export type Copy = {
   datesResolved: string;
   lastYearLine: string;
   expectedShort: string;
+  expectedSummer: string;
+  expectedSummerWeek: string;
   showMore: string;
   seeAll: string;
   explore: string;
@@ -300,6 +302,8 @@ export const COPY: Record<Locale, Copy> = {
     datesResolved: "Datoene følger det nyeste offisielle vedtaket.",
     lastYearLine: "Fjorårets dato: {dato}",
     expectedShort: "Forventet ut fra fjorårets opplegg",
+    expectedSummer: "Forventet sommeren {aar} · i {fjor}: uke {uker}",
+    expectedSummerWeek: "I {fjor}: uke {uker}",
     showMore: "Vis flere",
     seeAll: "Se alle",
     explore: "Utforsk",
@@ -469,6 +473,8 @@ export const COPY: Record<Locale, Copy> = {
     datesResolved: "Datumen följer det senaste officiella beslutet.",
     lastYearLine: "Fjolårets datum: {dato}",
     expectedShort: "Förväntat utifrån förra årets upplägg",
+    expectedSummer: "Förväntat sommaren {aar} · i {fjor}: vecka {uker}",
+    expectedSummerWeek: "I {fjor}: vecka {uker}",
     showMore: "Visa fler",
     seeAll: "Se alla",
     explore: "Utforska",
@@ -638,6 +644,8 @@ export const COPY: Record<Locale, Copy> = {
     datesResolved: "The dates follow the latest official decision.",
     lastYearLine: "Last year's dates: {dato}",
     expectedShort: "Expected from last year's listing",
+    expectedSummer: "Expected summer {aar} · in {fjor}: week {uker}",
+    expectedSummerWeek: "In {fjor}: week {uker}",
     showMore: "Show more",
     seeAll: "See all",
     explore: "Explore",

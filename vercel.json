@@ -562,6 +562,126 @@
       "permanent": true
     },
     {
+      "source": "/leir/alta-if-tine-fotballskole-altaparken-sommer2027-u32",
+      "destination": "/leir/alta-if-tine-fotballskole-altaparken-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/alta-if-tine-fotballskole-altaparken-sommer2027-u32",
+      "destination": "/sv/leir/alta-if-tine-fotballskole-altaparken-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/alta-if-tine-fotballskole-altaparken-sommer2027-u32",
+      "destination": "/en/leir/alta-if-tine-fotballskole-altaparken-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u26",
+      "destination": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u26",
+      "destination": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u26",
+      "destination": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u27",
+      "destination": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u27",
+      "destination": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u27",
+      "destination": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u28",
+      "destination": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u28",
+      "destination": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u28",
+      "destination": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u29",
+      "destination": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u29",
+      "destination": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u29",
+      "destination": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u30",
+      "destination": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u30",
+      "destination": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u30",
+      "destination": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u31",
+      "destination": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u31",
+      "destination": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u31",
+      "destination": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u32",
+      "destination": "/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u32",
+      "destination": "/sv/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-sommer2027-u32",
+      "destination": "/en/leir/alta-museum-steinalderaktiviteter-for-barn-og-familie-alta-alta",
+      "permanent": true
+    },
+    {
       "source": "/leir/alvoen-idrettspark-tine-fotballskole-alvoen-idrettspark-sommer2027-u27",
       "destination": "/leir/alvoen-idrettspark-tine-fotballskole-alvoen-idrettspark-bergen-godvik",
       "permanent": true
@@ -589,6 +709,21 @@
     {
       "source": "/en/leir/arendal-bibliotek-aktiviteter-i-vinterferien-verksted-film-eventyrstund-rebus-vinter2027-u8",
       "destination": "/en/leir/arendal-bibliotek-aktiviteter-i-vinterferien-verksted-film-eventyrstund-rebus-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/leir/arendal-kulturskole-kulturkammeret-sommerskole-demokrati-og-kunst-5-7-trinn-sommer2027-u32",
+      "destination": "/leir/arendal-kulturskole-kulturkammeret-sommerskole-demokrati-og-kunst-5-7-trinn-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/arendal-kulturskole-kulturkammeret-sommerskole-demokrati-og-kunst-5-7-trinn-sommer2027-u32",
+      "destination": "/sv/leir/arendal-kulturskole-kulturkammeret-sommerskole-demokrati-og-kunst-5-7-trinn-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/arendal-kulturskole-kulturkammeret-sommerskole-demokrati-og-kunst-5-7-trinn-sommer2027-u32",
+      "destination": "/en/leir/arendal-kulturskole-kulturkammeret-sommerskole-demokrati-og-kunst-5-7-trinn-arendal-arendal",
       "permanent": true
     },
     {
@@ -862,6 +997,36 @@
       "permanent": true
     },
     {
+      "source": "/leir/b-oi-turn-sommerturn-morkvedhallen-sommer2027-u26",
+      "destination": "/leir/b-oi-turn-sommerturn-morkvedhallen-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/b-oi-turn-sommerturn-morkvedhallen-sommer2027-u26",
+      "destination": "/sv/leir/b-oi-turn-sommerturn-morkvedhallen-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/b-oi-turn-sommerturn-morkvedhallen-sommer2027-u26",
+      "destination": "/en/leir/b-oi-turn-sommerturn-morkvedhallen-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/leir/b-oi-turn-sommerturn-morkvedhallen-sommer2027-u27",
+      "destination": "/leir/b-oi-turn-sommerturn-morkvedhallen-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/b-oi-turn-sommerturn-morkvedhallen-sommer2027-u27",
+      "destination": "/sv/leir/b-oi-turn-sommerturn-morkvedhallen-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/b-oi-turn-sommerturn-morkvedhallen-sommer2027-u27",
+      "destination": "/en/leir/b-oi-turn-sommerturn-morkvedhallen-bodo-bodo",
+      "permanent": true
+    },
+    {
       "source": "/leir/barca-academy-barcelona-training-m-heimdal-fotball-fc-barcelona-fotball-camp-trondheim-202-sommer2027-u33",
       "destination": "/leir/barca-academy-barcelona-training-m-heimdal-fotball-fc-barcelona-fotball-camp-trondheim-2027-trondheim-trondheim-heimdal",
       "permanent": true
@@ -889,6 +1054,21 @@
     {
       "source": "/en/leir/barca-academy-barcelona-training-m-stavanger-if-fc-barcelona-fotball-camp-stavanger-2027-sommer2027-u26",
       "destination": "/en/leir/barca-academy-barcelona-training-m-stavanger-if-fc-barcelona-fotball-camp-stavanger-2027-stavanger-stavanger",
+      "permanent": true
+    },
+    {
+      "source": "/leir/berg-il-tine-fotballskole-berg-stadion-sommer2027-u33",
+      "destination": "/leir/berg-il-tine-fotballskole-berg-stadion-halden-berg-i-ostfold",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/berg-il-tine-fotballskole-berg-stadion-sommer2027-u33",
+      "destination": "/sv/leir/berg-il-tine-fotballskole-berg-stadion-halden-berg-i-ostfold",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/berg-il-tine-fotballskole-berg-stadion-sommer2027-u33",
+      "destination": "/en/leir/berg-il-tine-fotballskole-berg-stadion-halden-berg-i-ostfold",
       "permanent": true
     },
     {
@@ -982,6 +1162,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/biri-il-tine-fotballskole-biri-idrettspark-sommer2027-u26",
+      "destination": "/leir/biri-il-tine-fotballskole-biri-idrettspark-gjovik-biri",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/biri-il-tine-fotballskole-biri-idrettspark-sommer2027-u26",
+      "destination": "/sv/leir/biri-il-tine-fotballskole-biri-idrettspark-gjovik-biri",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/biri-il-tine-fotballskole-biri-idrettspark-sommer2027-u26",
+      "destination": "/en/leir/biri-il-tine-fotballskole-biri-idrettspark-gjovik-biri",
+      "permanent": true
+    },
+    {
       "source": "/leir/birkebeineren-if-tine-fotballskole-arbogen-idrettspark-sommer2027-u33",
       "destination": "/leir/birkebeineren-if-tine-fotballskole-arbogen-idrettspark-drammen-krokstadelva",
       "permanent": true
@@ -1009,6 +1204,36 @@
     {
       "source": "/en/leir/blindheim-il-tine-fotballskole-blindheim-idrettspark-sommer2027-u26",
       "destination": "/en/leir/blindheim-il-tine-fotballskole-blindheim-idrettspark-alesund-alesund",
+      "permanent": true
+    },
+    {
+      "source": "/leir/bodo-handballklubb-rema-1000-handballskole-i-vinterferien-bodo-spektrum-vinter2027-u8",
+      "destination": "/leir/bodo-handballklubb-rema-1000-handballskole-i-vinterferien-bodo-spektrum-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/bodo-handballklubb-rema-1000-handballskole-i-vinterferien-bodo-spektrum-vinter2027-u8",
+      "destination": "/sv/leir/bodo-handballklubb-rema-1000-handballskole-i-vinterferien-bodo-spektrum-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/bodo-handballklubb-rema-1000-handballskole-i-vinterferien-bodo-spektrum-vinter2027-u8",
+      "destination": "/en/leir/bodo-handballklubb-rema-1000-handballskole-i-vinterferien-bodo-spektrum-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/leir/bodo-ibk-bodo-summer-camp-innebandy-morkvedhallen-sommer2027-u32",
+      "destination": "/leir/bodo-ibk-bodo-summer-camp-innebandy-morkvedhallen-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/bodo-ibk-bodo-summer-camp-innebandy-morkvedhallen-sommer2027-u32",
+      "destination": "/sv/leir/bodo-ibk-bodo-summer-camp-innebandy-morkvedhallen-bodo-bodo",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/bodo-ibk-bodo-summer-camp-innebandy-morkvedhallen-sommer2027-u32",
+      "destination": "/en/leir/bodo-ibk-bodo-summer-camp-innebandy-morkvedhallen-bodo-bodo",
       "permanent": true
     },
     {
@@ -1627,6 +1852,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/ekholt-ballklubb-tine-fotballskole-i-pasken-ekholt-kunstgressbane-paske2027-u12",
+      "destination": "/leir/ekholt-ballklubb-tine-fotballskole-i-pasken-ekholt-kunstgressbane-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/ekholt-ballklubb-tine-fotballskole-i-pasken-ekholt-kunstgressbane-paske2027-u12",
+      "destination": "/sv/leir/ekholt-ballklubb-tine-fotballskole-i-pasken-ekholt-kunstgressbane-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/ekholt-ballklubb-tine-fotballskole-i-pasken-ekholt-kunstgressbane-paske2027-u12",
+      "destination": "/en/leir/ekholt-ballklubb-tine-fotballskole-i-pasken-ekholt-kunstgressbane-moss-moss",
+      "permanent": true
+    },
+    {
       "source": "/leir/ekt-rideskole-og-husdyrpark-sommerrideleir-uke-25-ekebergsletta-sommer2027-u25",
       "destination": "/leir/ekt-rideskole-og-husdyrpark-sommerrideleir-uke-25-ekebergsletta-oslo-oslo",
       "permanent": true
@@ -2077,6 +2317,291 @@
       "permanent": true
     },
     {
+      "source": "/leir/forskerfabrikken-sommerskole-2-3-trinn-arendal-sommer2027-u27",
+      "destination": "/leir/forskerfabrikken-sommerskole-2-3-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-arendal-sommer2027-u27",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-arendal-sommer2027-u27",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-2-3-trinn-halden-sommer2027-u26",
+      "destination": "/leir/forskerfabrikken-sommerskole-2-3-trinn-halden-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-halden-sommer2027-u26",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-halden-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-halden-sommer2027-u26",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-halden-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-2-3-trinn-hamar-sommer2027-u32",
+      "destination": "/leir/forskerfabrikken-sommerskole-2-3-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-hamar-sommer2027-u32",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-hamar-sommer2027-u32",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-2-3-trinn-harstad-sommer2027-u27",
+      "destination": "/leir/forskerfabrikken-sommerskole-2-3-trinn-harstad-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-harstad-sommer2027-u27",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-harstad-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-harstad-sommer2027-u27",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-harstad-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-2-3-trinn-kongsberg-sommer2027-u27",
+      "destination": "/leir/forskerfabrikken-sommerskole-2-3-trinn-kongsberg-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-kongsberg-sommer2027-u27",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-kongsberg-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-kongsberg-sommer2027-u27",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-kongsberg-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-2-3-trinn-moss-sommer2027-u27",
+      "destination": "/leir/forskerfabrikken-sommerskole-2-3-trinn-moss-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-moss-sommer2027-u27",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-2-3-trinn-moss-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-moss-sommer2027-u27",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-2-3-trinn-moss-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-sommer2027-u26",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-sommer2027-u26",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-sommer2027-u26",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-sommer2027-u32",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-sommer2027-u32",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-sommer2027-u32",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-arendal-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-halden-sommer2027-u32",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-halden-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-halden-sommer2027-u32",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-halden-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-halden-sommer2027-u32",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-halden-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-sommer2027-u26",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-sommer2027-u26",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-sommer2027-u26",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-sommer2027-u32",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-sommer2027-u32",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-sommer2027-u32",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-hamar-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-hammartun-skole-sommer2027-u33",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-hammartun-skole-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-hammartun-skole-sommer2027-u33",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-hammartun-skole-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-hammartun-skole-sommer2027-u33",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-hammartun-skole-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-harstad-sommer2027-u32",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-harstad-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-harstad-sommer2027-u32",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-harstad-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-harstad-sommer2027-u32",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-harstad-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-kongsberg-sommer2027-u32",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-kongsberg-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-kongsberg-sommer2027-u32",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-kongsberg-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-kongsberg-sommer2027-u32",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-kongsberg-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-sommer2027-u26",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-sommer2027-u26",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-sommer2027-u26",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-sommer2027-u32",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-sommer2027-u32",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-sommer2027-u32",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-molde-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-moss-sommer2027-u26",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-moss-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-moss-sommer2027-u26",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-moss-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-moss-sommer2027-u26",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-moss-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-porsgrunn-sommer2027-u26",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-porsgrunn-porsgrunn-porsgrunn",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-porsgrunn-sommer2027-u26",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-porsgrunn-porsgrunn-porsgrunn",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-porsgrunn-sommer2027-u26",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-porsgrunn-porsgrunn-porsgrunn",
+      "permanent": true
+    },
+    {
+      "source": "/leir/forskerfabrikken-sommerskole-4-6-trinn-skien-sommer2027-u32",
+      "destination": "/leir/forskerfabrikken-sommerskole-4-6-trinn-skien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-skien-sommer2027-u32",
+      "destination": "/sv/leir/forskerfabrikken-sommerskole-4-6-trinn-skien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-skien-sommer2027-u32",
+      "destination": "/en/leir/forskerfabrikken-sommerskole-4-6-trinn-skien-skien-skien",
+      "permanent": true
+    },
+    {
       "source": "/leir/forus-gausel-il-tine-fotballskole-knudamyra-idrettspark-sommer2027-u26",
       "destination": "/leir/forus-gausel-il-tine-fotballskole-knudamyra-idrettspark-stavanger-stavanger",
       "permanent": true
@@ -2134,6 +2659,21 @@
     {
       "source": "/en/leir/fossum-if-tine-fotballskole-fossumbanen-kunstgress-og-evt-grusbane-sommer2027-u33",
       "destination": "/en/leir/fossum-if-tine-fotballskole-fossumbanen-kunstgress-og-evt-grusbane-baerum-eiksmarka",
+      "permanent": true
+    },
+    {
+      "source": "/leir/fotballaget-fart-tine-fotballskole-fartbana-sommer2027-u26",
+      "destination": "/leir/fotballaget-fart-tine-fotballskole-fartbana-hamar-vang-pa-hedmarken",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/fotballaget-fart-tine-fotballskole-fartbana-sommer2027-u26",
+      "destination": "/sv/leir/fotballaget-fart-tine-fotballskole-fartbana-hamar-vang-pa-hedmarken",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/fotballaget-fart-tine-fotballskole-fartbana-sommer2027-u26",
+      "destination": "/en/leir/fotballaget-fart-tine-fotballskole-fartbana-hamar-vang-pa-hedmarken",
       "permanent": true
     },
     {
@@ -2407,6 +2947,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/faaberg-il-faaberg-tine-fotballskole-jorekstad-sommer2027-u26",
+      "destination": "/leir/faaberg-il-faaberg-tine-fotballskole-jorekstad-lillehammer-faberg",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/faaberg-il-faaberg-tine-fotballskole-jorekstad-sommer2027-u26",
+      "destination": "/sv/leir/faaberg-il-faaberg-tine-fotballskole-jorekstad-lillehammer-faberg",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/faaberg-il-faaberg-tine-fotballskole-jorekstad-sommer2027-u26",
+      "destination": "/en/leir/faaberg-il-faaberg-tine-fotballskole-jorekstad-lillehammer-faberg",
+      "permanent": true
+    },
+    {
       "source": "/leir/ganddal-il-tine-fotballskole-ganddal-idrettspark-sommer2027-u26",
       "destination": "/leir/ganddal-il-tine-fotballskole-ganddal-idrettspark-sandnes-sandnes",
       "permanent": true
@@ -2434,6 +2989,36 @@
     {
       "source": "/en/leir/ganddal-il-tine-fotballskole-ganddal-idrettspark-sommer2027-u32",
       "destination": "/en/leir/ganddal-il-tine-fotballskole-ganddal-idrettspark-sandnes-sandnes",
+      "permanent": true
+    },
+    {
+      "source": "/leir/gjovik-frivilligsentral-farmen-jr-pa-eiktunet-6-7-klasse-sommer2027-u26",
+      "destination": "/leir/gjovik-frivilligsentral-farmen-jr-pa-eiktunet-6-7-klasse-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/gjovik-frivilligsentral-farmen-jr-pa-eiktunet-6-7-klasse-sommer2027-u26",
+      "destination": "/sv/leir/gjovik-frivilligsentral-farmen-jr-pa-eiktunet-6-7-klasse-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/gjovik-frivilligsentral-farmen-jr-pa-eiktunet-6-7-klasse-sommer2027-u26",
+      "destination": "/en/leir/gjovik-frivilligsentral-farmen-jr-pa-eiktunet-6-7-klasse-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/leir/gjovik-husflidslag-husflidsuka-for-barn-sommer2027-u33",
+      "destination": "/leir/gjovik-husflidslag-husflidsuka-for-barn-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/gjovik-husflidslag-husflidsuka-for-barn-sommer2027-u33",
+      "destination": "/sv/leir/gjovik-husflidslag-husflidsuka-for-barn-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/gjovik-husflidslag-husflidsuka-for-barn-sommer2027-u33",
+      "destination": "/en/leir/gjovik-husflidslag-husflidsuka-for-barn-gjovik-gjovik",
       "permanent": true
     },
     {
@@ -2509,6 +3094,21 @@
     {
       "source": "/en/leir/grip-klatring-sommercamp-klatring-uke-26-sommer2027-u26",
       "destination": "/en/leir/grip-klatring-sommercamp-klatring-uke-26-trondheim-trondheim",
+      "permanent": true
+    },
+    {
+      "source": "/leir/grottebadet-sommersvommeskole-nybegynnere-sommer2027-u26",
+      "destination": "/leir/grottebadet-sommersvommeskole-nybegynnere-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/grottebadet-sommersvommeskole-nybegynnere-sommer2027-u26",
+      "destination": "/sv/leir/grottebadet-sommersvommeskole-nybegynnere-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/grottebadet-sommersvommeskole-nybegynnere-sommer2027-u26",
+      "destination": "/en/leir/grottebadet-sommersvommeskole-nybegynnere-harstad-harstad",
       "permanent": true
     },
     {
@@ -2602,6 +3202,36 @@
       "permanent": true
     },
     {
+      "source": "/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-sommer2027-u26",
+      "destination": "/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-sommer2027-u26",
+      "destination": "/sv/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-sommer2027-u26",
+      "destination": "/en/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-sommer2027-u33",
+      "destination": "/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-sommer2027-u33",
+      "destination": "/sv/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-sommer2027-u33",
+      "destination": "/en/leir/halden-idrettsrad-gratis-ferieaktiviteter-prov-mange-idretter-halden-halden",
+      "permanent": true
+    },
+    {
       "source": "/leir/halsen-if-tine-fotballskole-bergeskogen-sommer2027-u26",
       "destination": "/leir/halsen-if-tine-fotballskole-bergeskogen-larvik-larvik",
       "permanent": true
@@ -2617,6 +3247,51 @@
       "permanent": true
     },
     {
+      "source": "/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-sommer2027-u26",
+      "destination": "/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-sommer2027-u26",
+      "destination": "/sv/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-sommer2027-u26",
+      "destination": "/en/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-sommer2027-u33",
+      "destination": "/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-sommer2027-u33",
+      "destination": "/sv/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-sommer2027-u33",
+      "destination": "/en/leir/hamar-idrettslag-turncamp-i-sommerferien-ankerskogen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/leir/hamkam-ya-tine-fotballskole-ankerskogen-idrettspark-sommer2027-u26",
+      "destination": "/leir/hamkam-ya-tine-fotballskole-ankerskogen-idrettspark-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/hamkam-ya-tine-fotballskole-ankerskogen-idrettspark-sommer2027-u26",
+      "destination": "/sv/leir/hamkam-ya-tine-fotballskole-ankerskogen-idrettspark-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/hamkam-ya-tine-fotballskole-ankerskogen-idrettspark-sommer2027-u26",
+      "destination": "/en/leir/hamkam-ya-tine-fotballskole-ankerskogen-idrettspark-hamar-hamar",
+      "permanent": true
+    },
+    {
       "source": "/leir/hamna-idrettslag-tine-fotballskole-hamnabanen-hamnahallen-sommer2027-u26",
       "destination": "/leir/hamna-idrettslag-tine-fotballskole-hamnabanen-hamnahallen-tromso-tromso",
       "permanent": true
@@ -2629,6 +3304,21 @@
     {
       "source": "/en/leir/hamna-idrettslag-tine-fotballskole-hamnabanen-hamnahallen-sommer2027-u26",
       "destination": "/en/leir/hamna-idrettslag-tine-fotballskole-hamnabanen-hamnahallen-tromso-tromso",
+      "permanent": true
+    },
+    {
+      "source": "/leir/harstad-handballklubb-gratis-apen-hall-prov-handball-stangneshallen-sommer2027-u26",
+      "destination": "/leir/harstad-handballklubb-gratis-apen-hall-prov-handball-stangneshallen-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/harstad-handballklubb-gratis-apen-hall-prov-handball-stangneshallen-sommer2027-u26",
+      "destination": "/sv/leir/harstad-handballklubb-gratis-apen-hall-prov-handball-stangneshallen-harstad-harstad",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/harstad-handballklubb-gratis-apen-hall-prov-handball-stangneshallen-sommer2027-u26",
+      "destination": "/en/leir/harstad-handballklubb-gratis-apen-hall-prov-handball-stangneshallen-harstad-harstad",
       "permanent": true
     },
     {
@@ -2692,6 +3382,36 @@
       "permanent": true
     },
     {
+      "source": "/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-sommer2027-u27",
+      "destination": "/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-sommer2027-u27",
+      "destination": "/sv/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-sommer2027-u27",
+      "destination": "/en/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-sommer2027-u33",
+      "destination": "/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-sommer2027-u33",
+      "destination": "/sv/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-sommer2027-u33",
+      "destination": "/en/leir/haugaland-klatrelag-sommerklatreskole-haugalandsveggen-haugesund-haugesund",
+      "permanent": true
+    },
+    {
       "source": "/leir/haugar-kunstmuseum-vinterferieverksted-og-barneomvisning-vinter2027-u8",
       "destination": "/leir/haugar-kunstmuseum-vinterferieverksted-og-barneomvisning-tonsberg-tonsberg",
       "permanent": true
@@ -2704,6 +3424,21 @@
     {
       "source": "/en/leir/haugar-kunstmuseum-vinterferieverksted-og-barneomvisning-vinter2027-u8",
       "destination": "/en/leir/haugar-kunstmuseum-vinterferieverksted-og-barneomvisning-tonsberg-tonsberg",
+      "permanent": true
+    },
+    {
+      "source": "/leir/haugesund-volleyballklubb-gratis-sandvolleyballskole-vangen-sommer2027-u28",
+      "destination": "/leir/haugesund-volleyballklubb-gratis-sandvolleyballskole-vangen-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/haugesund-volleyballklubb-gratis-sandvolleyballskole-vangen-sommer2027-u28",
+      "destination": "/sv/leir/haugesund-volleyballklubb-gratis-sandvolleyballskole-vangen-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/haugesund-volleyballklubb-gratis-sandvolleyballskole-vangen-sommer2027-u28",
+      "destination": "/en/leir/haugesund-volleyballklubb-gratis-sandvolleyballskole-vangen-haugesund-haugesund",
       "permanent": true
     },
     {
@@ -2827,6 +3562,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/huset-alta-ungdomshus-husets-sommerskoler-sparkesykkel-eller-fotoskole-sommer2027-u26",
+      "destination": "/leir/huset-alta-ungdomshus-husets-sommerskoler-sparkesykkel-eller-fotoskole-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/huset-alta-ungdomshus-husets-sommerskoler-sparkesykkel-eller-fotoskole-sommer2027-u26",
+      "destination": "/sv/leir/huset-alta-ungdomshus-husets-sommerskoler-sparkesykkel-eller-fotoskole-alta-alta",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/huset-alta-ungdomshus-husets-sommerskoler-sparkesykkel-eller-fotoskole-sommer2027-u26",
+      "destination": "/en/leir/huset-alta-ungdomshus-husets-sommerskoler-sparkesykkel-eller-fotoskole-alta-alta",
+      "permanent": true
+    },
+    {
       "source": "/leir/hvalfangstmuseet-vestfoldmuseene-vinterferiemoro-pa-hvalfangstmuseet-fortellerstund-verkst-vinter2027-u8",
       "destination": "/leir/hvalfangstmuseet-vestfoldmuseene-vinterferiemoro-pa-hvalfangstmuseet-fortellerstund-verksted-rebus-sandefjord-sandefjord",
       "permanent": true
@@ -2839,6 +3589,96 @@
     {
       "source": "/en/leir/hvalfangstmuseet-vestfoldmuseene-vinterferiemoro-pa-hvalfangstmuseet-fortellerstund-verkst-vinter2027-u8",
       "destination": "/en/leir/hvalfangstmuseet-vestfoldmuseene-vinterferiemoro-pa-hvalfangstmuseet-fortellerstund-verksted-rebus-sandefjord-sandefjord",
+      "permanent": true
+    },
+    {
+      "source": "/leir/honefoss-bk-aktivitetsskole-fotball-og-gym-aktiviteter-sommer2027-u27",
+      "destination": "/leir/honefoss-bk-aktivitetsskole-fotball-og-gym-aktiviteter-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/honefoss-bk-aktivitetsskole-fotball-og-gym-aktiviteter-sommer2027-u27",
+      "destination": "/sv/leir/honefoss-bk-aktivitetsskole-fotball-og-gym-aktiviteter-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/honefoss-bk-aktivitetsskole-fotball-og-gym-aktiviteter-sommer2027-u27",
+      "destination": "/en/leir/honefoss-bk-aktivitetsskole-fotball-og-gym-aktiviteter-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/honefoss-bk-fotballskole-i-august-aka-arena-sommer2027-u33",
+      "destination": "/leir/honefoss-bk-fotballskole-i-august-aka-arena-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/honefoss-bk-fotballskole-i-august-aka-arena-sommer2027-u33",
+      "destination": "/sv/leir/honefoss-bk-fotballskole-i-august-aka-arena-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/honefoss-bk-fotballskole-i-august-aka-arena-sommer2027-u33",
+      "destination": "/en/leir/honefoss-bk-fotballskole-i-august-aka-arena-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/honefoss-bk-tine-fotballskole-aka-arena-sommer2027-u26",
+      "destination": "/leir/honefoss-bk-tine-fotballskole-aka-arena-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/honefoss-bk-tine-fotballskole-aka-arena-sommer2027-u26",
+      "destination": "/sv/leir/honefoss-bk-tine-fotballskole-aka-arena-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/honefoss-bk-tine-fotballskole-aka-arena-sommer2027-u26",
+      "destination": "/en/leir/honefoss-bk-tine-fotballskole-aka-arena-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u26",
+      "destination": "/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u26",
+      "destination": "/sv/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u26",
+      "destination": "/en/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u32",
+      "destination": "/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u32",
+      "destination": "/sv/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u32",
+      "destination": "/en/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u33",
+      "destination": "/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u33",
+      "destination": "/sv/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/honefoss-tennisklubb-sommer-camp-tennis-sommer2027-u33",
+      "destination": "/en/leir/honefoss-tennisklubb-sommer-camp-tennis-ringerike-honefoss",
       "permanent": true
     },
     {
@@ -3157,6 +3997,51 @@
       "permanent": true
     },
     {
+      "source": "/leir/kfuk-kfum-gjovik-ynglingen-ferieklubben-gjovik-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/leir/kfuk-kfum-gjovik-ynglingen-ferieklubben-gjovik-dagaktiviteter-tur-til-hunderfossen-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kfuk-kfum-gjovik-ynglingen-ferieklubben-gjovik-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/sv/leir/kfuk-kfum-gjovik-ynglingen-ferieklubben-gjovik-dagaktiviteter-tur-til-hunderfossen-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kfuk-kfum-gjovik-ynglingen-ferieklubben-gjovik-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/en/leir/kfuk-kfum-gjovik-ynglingen-ferieklubben-gjovik-dagaktiviteter-tur-til-hunderfossen-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/leir/kfuk-kfum-hamar-ynglingen-ferieklubben-hamar-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/leir/kfuk-kfum-hamar-ynglingen-ferieklubben-hamar-dagaktiviteter-tur-til-hunderfossen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kfuk-kfum-hamar-ynglingen-ferieklubben-hamar-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/sv/leir/kfuk-kfum-hamar-ynglingen-ferieklubben-hamar-dagaktiviteter-tur-til-hunderfossen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kfuk-kfum-hamar-ynglingen-ferieklubben-hamar-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/en/leir/kfuk-kfum-hamar-ynglingen-ferieklubben-hamar-dagaktiviteter-tur-til-hunderfossen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/leir/kfuk-kfum-innlandet-ferieklubben-lillehammer-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/leir/kfuk-kfum-innlandet-ferieklubben-lillehammer-dagaktiviteter-tur-til-hunderfossen-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kfuk-kfum-innlandet-ferieklubben-lillehammer-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/sv/leir/kfuk-kfum-innlandet-ferieklubben-lillehammer-dagaktiviteter-tur-til-hunderfossen-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kfuk-kfum-innlandet-ferieklubben-lillehammer-dagaktiviteter-tur-til-hunderfossen-sommer2027-u27",
+      "destination": "/en/leir/kfuk-kfum-innlandet-ferieklubben-lillehammer-dagaktiviteter-tur-til-hunderfossen-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
       "source": "/leir/kfuk-kfum-nordland-og-kfuk-kfum-troms-sommerleir-nord-norge-folkehogskolen-nord-norge-even-sommer2027-u32",
       "destination": "/leir/kfuk-kfum-nordland-og-kfuk-kfum-troms-sommerleir-nord-norge-folkehogskolen-nord-norge-evenskjer-tjeldsund-evenskjer",
       "permanent": true
@@ -3439,6 +4324,66 @@
     {
       "source": "/en/leir/kongelig-norsk-seilforening-kns-sommermoro-seilleir-sommer2027-u33",
       "destination": "/en/leir/kongelig-norsk-seilforening-kns-sommermoro-seilleir-oslo-oslo",
+      "permanent": true
+    },
+    {
+      "source": "/leir/kongsberg-golfklubb-junior-sommer-camp-golf-sommer2027-u26",
+      "destination": "/leir/kongsberg-golfklubb-junior-sommer-camp-golf-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kongsberg-golfklubb-junior-sommer-camp-golf-sommer2027-u26",
+      "destination": "/sv/leir/kongsberg-golfklubb-junior-sommer-camp-golf-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kongsberg-golfklubb-junior-sommer-camp-golf-sommer2027-u26",
+      "destination": "/en/leir/kongsberg-golfklubb-junior-sommer-camp-golf-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u26",
+      "destination": "/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u26",
+      "destination": "/sv/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u26",
+      "destination": "/en/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u32",
+      "destination": "/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u32",
+      "destination": "/sv/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u32",
+      "destination": "/en/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u33",
+      "destination": "/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u33",
+      "destination": "/sv/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-sommer2027-u33",
+      "destination": "/en/leir/kongsberg-kommune-sommerskolen-sommerskolen-kongsberg-5-7-trinn-gratis-kongsberg-kongsberg",
       "permanent": true
     },
     {
@@ -3772,6 +4717,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/kunst-og-moro-workshop-gratis-kunstverksted-sommer2027-u27",
+      "destination": "/leir/kunst-og-moro-workshop-gratis-kunstverksted-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kunst-og-moro-workshop-gratis-kunstverksted-sommer2027-u27",
+      "destination": "/sv/leir/kunst-og-moro-workshop-gratis-kunstverksted-haugesund-haugesund",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kunst-og-moro-workshop-gratis-kunstverksted-sommer2027-u27",
+      "destination": "/en/leir/kunst-og-moro-workshop-gratis-kunstverksted-haugesund-haugesund",
+      "permanent": true
+    },
+    {
       "source": "/leir/kunstsilo-barnefilm-i-silosalen-i-vinterferien-vinter2027-u8",
       "destination": "/leir/kunstsilo-barnefilm-i-silosalen-i-vinterferien-kristiansand-kristiansand",
       "permanent": true
@@ -3829,6 +4789,21 @@
     {
       "source": "/en/leir/kvaloya-sportsklubb-tine-fotballskole-storelva-kunstgress-storelvahallen-sommer2027-u26",
       "destination": "/en/leir/kvaloya-sportsklubb-tine-fotballskole-storelva-kunstgress-storelvahallen-tromso-kvaloya",
+      "permanent": true
+    },
+    {
+      "source": "/leir/kvik-halden-tine-fotballskole-strupe-sommer2027-u26",
+      "destination": "/leir/kvik-halden-tine-fotballskole-strupe-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/kvik-halden-tine-fotballskole-strupe-sommer2027-u26",
+      "destination": "/sv/leir/kvik-halden-tine-fotballskole-strupe-halden-halden",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/kvik-halden-tine-fotballskole-strupe-sommer2027-u26",
+      "destination": "/en/leir/kvik-halden-tine-fotballskole-strupe-halden-halden",
       "permanent": true
     },
     {
@@ -3949,6 +4924,201 @@
     {
       "source": "/en/leir/larvik-museum-vestfoldmuseene-vinterferiemoro-i-herregarden-eventyrstund-skoletime-verkste-vinter2027-u8",
       "destination": "/en/leir/larvik-museum-vestfoldmuseene-vinterferiemoro-i-herregarden-eventyrstund-skoletime-verksted-larvik-larvik",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u26",
+      "destination": "/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u26",
+      "destination": "/sv/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u26",
+      "destination": "/en/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u27",
+      "destination": "/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u27",
+      "destination": "/sv/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u27",
+      "destination": "/en/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u33",
+      "destination": "/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u33",
+      "destination": "/sv/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-sommer2027-u33",
+      "destination": "/en/leir/lillehammer-dansesenter-sommerdansecamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-sommer2027-u26",
+      "destination": "/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-sommer2027-u26",
+      "destination": "/sv/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-sommer2027-u26",
+      "destination": "/en/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-sommer2027-u33",
+      "destination": "/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-sommer2027-u33",
+      "destination": "/sv/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-sommer2027-u33",
+      "destination": "/en/leir/lillehammer-fotballklubb-tine-fotballskole-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-hockey-sommerhockeyskole-eidsiva-arena-sommer2027-u26",
+      "destination": "/leir/lillehammer-hockey-sommerhockeyskole-eidsiva-arena-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-hockey-sommerhockeyskole-eidsiva-arena-sommer2027-u26",
+      "destination": "/sv/leir/lillehammer-hockey-sommerhockeyskole-eidsiva-arena-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-hockey-sommerhockeyskole-eidsiva-arena-sommer2027-u26",
+      "destination": "/en/leir/lillehammer-hockey-sommerhockeyskole-eidsiva-arena-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-if-sommerfriidrettsuke-stampesletta-sommer2027-u26",
+      "destination": "/leir/lillehammer-if-sommerfriidrettsuke-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-if-sommerfriidrettsuke-stampesletta-sommer2027-u26",
+      "destination": "/sv/leir/lillehammer-if-sommerfriidrettsuke-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-if-sommerfriidrettsuke-stampesletta-sommer2027-u26",
+      "destination": "/en/leir/lillehammer-if-sommerfriidrettsuke-stampesletta-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u26",
+      "destination": "/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u26",
+      "destination": "/sv/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u26",
+      "destination": "/en/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u27",
+      "destination": "/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u27",
+      "destination": "/sv/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u27",
+      "destination": "/en/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u32",
+      "destination": "/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u32",
+      "destination": "/sv/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u32",
+      "destination": "/en/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u33",
+      "destination": "/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u33",
+      "destination": "/sv/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-sommer2027-u33",
+      "destination": "/en/leir/lillehammer-lawn-tennisklubb-sommercamp-tennis-for-barn-og-ungdom-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-skiklub-sommerskiskole-birkebeineren-skistadion-sommer2027-u33",
+      "destination": "/leir/lillehammer-skiklub-sommerskiskole-birkebeineren-skistadion-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-skiklub-sommerskiskole-birkebeineren-skistadion-sommer2027-u33",
+      "destination": "/sv/leir/lillehammer-skiklub-sommerskiskole-birkebeineren-skistadion-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-skiklub-sommerskiskole-birkebeineren-skistadion-sommer2027-u33",
+      "destination": "/en/leir/lillehammer-skiklub-sommerskiskole-birkebeineren-skistadion-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/lillehammer-vannskiklubb-vannsprut-3-dager-vannski-og-bading-sommer2027-u33",
+      "destination": "/leir/lillehammer-vannskiklubb-vannsprut-3-dager-vannski-og-bading-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/lillehammer-vannskiklubb-vannsprut-3-dager-vannski-og-bading-sommer2027-u33",
+      "destination": "/sv/leir/lillehammer-vannskiklubb-vannsprut-3-dager-vannski-og-bading-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/lillehammer-vannskiklubb-vannsprut-3-dager-vannski-og-bading-sommer2027-u33",
+      "destination": "/en/leir/lillehammer-vannskiklubb-vannsprut-3-dager-vannski-og-bading-lillehammer-lillehammer",
       "permanent": true
     },
     {
@@ -4192,6 +5362,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/maihaugen-aktivitetsuke-for-barn-handverk-mat-fiske-sommer2027-u33",
+      "destination": "/leir/maihaugen-aktivitetsuke-for-barn-handverk-mat-fiske-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/maihaugen-aktivitetsuke-for-barn-handverk-mat-fiske-sommer2027-u33",
+      "destination": "/sv/leir/maihaugen-aktivitetsuke-for-barn-handverk-mat-fiske-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/maihaugen-aktivitetsuke-for-barn-handverk-mat-fiske-sommer2027-u33",
+      "destination": "/en/leir/maihaugen-aktivitetsuke-for-barn-handverk-mat-fiske-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
       "source": "/leir/manglerud-star-fotball-ms-camp-i-paskeferien-paske2027-u12",
       "destination": "/leir/manglerud-star-fotball-ms-camp-i-paskeferien-oslo-oslo",
       "permanent": true
@@ -4219,6 +5404,81 @@
     {
       "source": "/en/leir/mjondalen-toppfotball-tine-fotballskole-vassenga-mjondalen-stadion-sommer2027-u26",
       "destination": "/en/leir/mjondalen-toppfotball-tine-fotballskole-vassenga-mjondalen-stadion-drammen-mjondalen",
+      "permanent": true
+    },
+    {
+      "source": "/leir/molde-fk-akerakademiet-akerakademiets-fotballskole-arolia-sommer2027-u33",
+      "destination": "/leir/molde-fk-akerakademiet-akerakademiets-fotballskole-arolia-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/molde-fk-akerakademiet-akerakademiets-fotballskole-arolia-sommer2027-u33",
+      "destination": "/sv/leir/molde-fk-akerakademiet-akerakademiets-fotballskole-arolia-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/molde-fk-akerakademiet-akerakademiets-fotballskole-arolia-sommer2027-u33",
+      "destination": "/en/leir/molde-fk-akerakademiet-akerakademiets-fotballskole-arolia-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u26",
+      "destination": "/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u26",
+      "destination": "/sv/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u26",
+      "destination": "/en/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u27",
+      "destination": "/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u27",
+      "destination": "/sv/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u27",
+      "destination": "/en/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u32",
+      "destination": "/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u32",
+      "destination": "/sv/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u32",
+      "destination": "/en/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u33",
+      "destination": "/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u33",
+      "destination": "/sv/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivs-sommer2027-u33",
+      "destination": "/en/leir/molde-og-omegn-idrettsforening-friluftslivskolen-junioruke-aktivitetsuke-superuke-kystlivsuke-molde-molde",
       "permanent": true
     },
     {
@@ -4252,6 +5512,66 @@
       "permanent": true
     },
     {
+      "source": "/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u26",
+      "destination": "/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u26",
+      "destination": "/sv/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u26",
+      "destination": "/en/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u27",
+      "destination": "/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u27",
+      "destination": "/sv/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u27",
+      "destination": "/en/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u32",
+      "destination": "/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u32",
+      "destination": "/sv/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u32",
+      "destination": "/en/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u33",
+      "destination": "/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u33",
+      "destination": "/sv/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/moss-seilforening-sommerseilskole-soly-sommer2027-u33",
+      "destination": "/en/leir/moss-seilforening-sommerseilskole-soly-moss-moss",
+      "permanent": true
+    },
+    {
       "source": "/leir/museum-stavanger-must-vinterferie-pa-stavanger-maritime-museum-rebus-historielab-vinter2027-u7",
       "destination": "/leir/museum-stavanger-must-vinterferie-pa-stavanger-maritime-museum-rebus-historielab-stavanger-stavanger",
       "permanent": true
@@ -4279,6 +5599,141 @@
     {
       "source": "/en/leir/mysen-if-fotball-tine-fotballskole-mysen-stadion-kg-sommer2027-u33",
       "destination": "/en/leir/mysen-if-fotball-tine-fotballskole-mysen-stadion-kg-indre-ostfold-mysen",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u26",
+      "destination": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u26",
+      "destination": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u26",
+      "destination": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u27",
+      "destination": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u27",
+      "destination": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u27",
+      "destination": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u28",
+      "destination": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u28",
+      "destination": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u28",
+      "destination": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u29",
+      "destination": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u29",
+      "destination": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u29",
+      "destination": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u30",
+      "destination": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u30",
+      "destination": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u30",
+      "destination": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u33",
+      "destination": "/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u33",
+      "destination": "/sv/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-sommer2027-u33",
+      "destination": "/en/leir/narvik-rideskole-sommerleirer-med-ridning-dag-og-overnattingsleir-skjomen-narvik-skjomen",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-turnforening-sommerturn-sommer2027-u26",
+      "destination": "/leir/narvik-turnforening-sommerturn-narvik-narvik",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-turnforening-sommerturn-sommer2027-u26",
+      "destination": "/sv/leir/narvik-turnforening-sommerturn-narvik-narvik",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-turnforening-sommerturn-sommer2027-u26",
+      "destination": "/en/leir/narvik-turnforening-sommerturn-narvik-narvik",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-turnforening-sommerturn-sommer2027-u27",
+      "destination": "/leir/narvik-turnforening-sommerturn-narvik-narvik",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-turnforening-sommerturn-sommer2027-u27",
+      "destination": "/sv/leir/narvik-turnforening-sommerturn-narvik-narvik",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-turnforening-sommerturn-sommer2027-u27",
+      "destination": "/en/leir/narvik-turnforening-sommerturn-narvik-narvik",
+      "permanent": true
+    },
+    {
+      "source": "/leir/narvik-turnforening-sommerturn-sommer2027-u33",
+      "destination": "/leir/narvik-turnforening-sommerturn-narvik-narvik",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/narvik-turnforening-sommerturn-sommer2027-u33",
+      "destination": "/sv/leir/narvik-turnforening-sommerturn-narvik-narvik",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/narvik-turnforening-sommerturn-sommer2027-u33",
+      "destination": "/en/leir/narvik-turnforening-sommerturn-narvik-narvik",
       "permanent": true
     },
     {
@@ -4339,6 +5794,21 @@
     {
       "source": "/en/leir/nesoya-idrettslag-tine-fotballskole-nesoya-il-kunstgressbane-sommer2027-u33",
       "destination": "/en/leir/nesoya-idrettslag-tine-fotballskole-nesoya-il-kunstgressbane-asker-nesoya",
+      "permanent": true
+    },
+    {
+      "source": "/leir/njff-oppland-sommerskole-i-jakt-fiske-og-friluftsliv-maihaugen-sommer2027-u26",
+      "destination": "/leir/njff-oppland-sommerskole-i-jakt-fiske-og-friluftsliv-maihaugen-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/njff-oppland-sommerskole-i-jakt-fiske-og-friluftsliv-maihaugen-sommer2027-u26",
+      "destination": "/sv/leir/njff-oppland-sommerskole-i-jakt-fiske-og-friluftsliv-maihaugen-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/njff-oppland-sommerskole-i-jakt-fiske-og-friluftsliv-maihaugen-sommer2027-u26",
+      "destination": "/en/leir/njff-oppland-sommerskole-i-jakt-fiske-og-friluftsliv-maihaugen-lillehammer-lillehammer",
       "permanent": true
     },
     {
@@ -5197,6 +6667,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/ps-dans-sommerskole-i-dans-3-7-klasse-sommer2027-u26",
+      "destination": "/leir/ps-dans-sommerskole-i-dans-3-7-klasse-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/ps-dans-sommerskole-i-dans-3-7-klasse-sommer2027-u26",
+      "destination": "/sv/leir/ps-dans-sommerskole-i-dans-3-7-klasse-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/ps-dans-sommerskole-i-dans-3-7-klasse-sommer2027-u26",
+      "destination": "/en/leir/ps-dans-sommerskole-i-dans-3-7-klasse-hamar-hamar",
+      "permanent": true
+    },
+    {
       "source": "/leir/randesund-idrettslag-tine-fotballskole-sukkevann-idrettspark-sommer2027-u26",
       "destination": "/leir/randesund-idrettslag-tine-fotballskole-sukkevann-idrettspark-kristiansand-kristiansand-s",
       "permanent": true
@@ -5224,6 +6709,66 @@
     {
       "source": "/en/leir/ranheim-fotball-ranheim-fotballskole-sommer2027-u33",
       "destination": "/en/leir/ranheim-fotball-ranheim-fotballskole-trondheim-trondheim",
+      "permanent": true
+    },
+    {
+      "source": "/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u26",
+      "destination": "/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u26",
+      "destination": "/sv/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u26",
+      "destination": "/en/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u27",
+      "destination": "/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u27",
+      "destination": "/sv/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u27",
+      "destination": "/en/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u32",
+      "destination": "/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u32",
+      "destination": "/sv/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u32",
+      "destination": "/en/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u33",
+      "destination": "/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u33",
+      "destination": "/sv/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-sommer2027-u33",
+      "destination": "/en/leir/ringerike-kommune-sommerskolen-sommerskolen-ringerike-5-10-trinn-gratis-ringerike-honefoss",
       "permanent": true
     },
     {
@@ -5812,6 +7357,126 @@
       "permanent": true
     },
     {
+      "source": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u26",
+      "destination": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u26",
+      "destination": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u26",
+      "destination": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u27",
+      "destination": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u27",
+      "destination": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u27",
+      "destination": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u28",
+      "destination": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u28",
+      "destination": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u28",
+      "destination": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u29",
+      "destination": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u29",
+      "destination": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u29",
+      "destination": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u30",
+      "destination": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u30",
+      "destination": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u30",
+      "destination": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u31",
+      "destination": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u31",
+      "destination": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u31",
+      "destination": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u32",
+      "destination": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u32",
+      "destination": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u32",
+      "destination": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u33",
+      "destination": "/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u33",
+      "destination": "/sv/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-sommer2027-u33",
+      "destination": "/en/leir/skien-kommune-kommunens-gratis-ferieaktiviteter-i-sommerferien-skien-skien",
+      "permanent": true
+    },
+    {
       "source": "/leir/skimore-oslo-skiskole-paskeferiekurs-alpint-3-dager-paske2027-u12",
       "destination": "/leir/skimore-oslo-skiskole-paskeferiekurs-alpint-3-dager-oslo-oslo",
       "permanent": true
@@ -5902,6 +7567,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/skala-il-tine-fotballskole-vaganebanen-sommer2027-u33",
+      "destination": "/leir/skala-il-tine-fotballskole-vaganebanen-molde-skala",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/skala-il-tine-fotballskole-vaganebanen-sommer2027-u33",
+      "destination": "/sv/leir/skala-il-tine-fotballskole-vaganebanen-molde-skala",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/skala-il-tine-fotballskole-vaganebanen-sommer2027-u33",
+      "destination": "/en/leir/skala-il-tine-fotballskole-vaganebanen-molde-skala",
+      "permanent": true
+    },
+    {
       "source": "/leir/slagen-idrettsforening-tine-fotballskole-slagen-idrettspark-sommer2027-u33",
       "destination": "/leir/slagen-idrettsforening-tine-fotballskole-slagen-idrettspark-tonsberg-tolvsrod",
       "permanent": true
@@ -5989,6 +7669,21 @@
     {
       "source": "/en/leir/sotra-sportsklubb-vestland-handballskole-i-sotra-arena-vinter2027-u9",
       "destination": "/en/leir/sotra-sportsklubb-vestland-handballskole-i-sotra-arena-oygarden-straume",
+      "permanent": true
+    },
+    {
+      "source": "/leir/sp-kl-traeff-tine-fotballskole-traeffhuset-sommer2027-u33",
+      "destination": "/leir/sp-kl-traeff-tine-fotballskole-traeffhuset-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/sp-kl-traeff-tine-fotballskole-traeffhuset-sommer2027-u33",
+      "destination": "/sv/leir/sp-kl-traeff-tine-fotballskole-traeffhuset-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/sp-kl-traeff-tine-fotballskole-traeffhuset-sommer2027-u33",
+      "destination": "/en/leir/sp-kl-traeff-tine-fotballskole-traeffhuset-molde-molde",
       "permanent": true
     },
     {
@@ -6109,6 +7804,21 @@
     {
       "source": "/en/leir/sportsklubben-nationalkameratene-tine-fotballskole-hallset-kunstgress-sommer2027-u33",
       "destination": "/en/leir/sportsklubben-nationalkameratene-tine-fotballskole-hallset-kunstgress-trondheim-trondheim",
+      "permanent": true
+    },
+    {
+      "source": "/leir/sportsklubben-rival-sandvolleyballcamp-rivalbanene-aro-sommer2027-u26",
+      "destination": "/leir/sportsklubben-rival-sandvolleyballcamp-rivalbanene-aro-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/sportsklubben-rival-sandvolleyballcamp-rivalbanene-aro-sommer2027-u26",
+      "destination": "/sv/leir/sportsklubben-rival-sandvolleyballcamp-rivalbanene-aro-molde-molde",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/sportsklubben-rival-sandvolleyballcamp-rivalbanene-aro-sommer2027-u26",
+      "destination": "/en/leir/sportsklubben-rival-sandvolleyballcamp-rivalbanene-aro-molde-molde",
       "permanent": true
     },
     {
@@ -7477,6 +9187,36 @@
       "permanent": true
     },
     {
+      "source": "/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-sommer2027-u26",
+      "destination": "/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-sommer2027-u26",
+      "destination": "/sv/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-sommer2027-u26",
+      "destination": "/en/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-sommer2027-u33",
+      "destination": "/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-sommer2027-u33",
+      "destination": "/sv/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-sommer2027-u33",
+      "destination": "/en/leir/tyrili-klatring-klatre-og-friluftscamp-1-7-klasse-lillehammer-lillehammer",
+      "permanent": true
+    },
+    {
       "source": "/leir/tonsberg-fotballklubb-tine-fotballskole-strandman-arena-sommer2027-u33",
       "destination": "/leir/tonsberg-fotballklubb-tine-fotballskole-strandman-arena-tonsberg-tonsberg",
       "permanent": true
@@ -7612,6 +9352,36 @@
       "permanent": true
     },
     {
+      "source": "/leir/vang-fl-tine-fotballskole-vangbanen-sommer2027-u26",
+      "destination": "/leir/vang-fl-tine-fotballskole-vangbanen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/vang-fl-tine-fotballskole-vangbanen-sommer2027-u26",
+      "destination": "/sv/leir/vang-fl-tine-fotballskole-vangbanen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/vang-fl-tine-fotballskole-vangbanen-sommer2027-u26",
+      "destination": "/en/leir/vang-fl-tine-fotballskole-vangbanen-hamar-hamar",
+      "permanent": true
+    },
+    {
+      "source": "/leir/vardal-if-tine-fotballskole-vardal-if-sommer2027-u26",
+      "destination": "/leir/vardal-if-tine-fotballskole-vardal-if-gjovik-hunndalen",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/vardal-if-tine-fotballskole-vardal-if-sommer2027-u26",
+      "destination": "/sv/leir/vardal-if-tine-fotballskole-vardal-if-gjovik-hunndalen",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/vardal-if-tine-fotballskole-vardal-if-sommer2027-u26",
+      "destination": "/en/leir/vardal-if-tine-fotballskole-vardal-if-gjovik-hunndalen",
+      "permanent": true
+    },
+    {
       "source": "/leir/vest-agder-museet-bypaske-pa-kristiansand-museum-barneverksted-og-eggjakt-paske2027-u12",
       "destination": "/leir/vest-agder-museet-bypaske-pa-kristiansand-museum-barneverksted-og-eggjakt-kristiansand-kristiansand",
       "permanent": true
@@ -7732,6 +9502,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/vind-il-tine-fotballskole-vind-stadion-sommer2027-u26",
+      "destination": "/leir/vind-il-tine-fotballskole-vind-stadion-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/vind-il-tine-fotballskole-vind-stadion-sommer2027-u26",
+      "destination": "/sv/leir/vind-il-tine-fotballskole-vind-stadion-gjovik-gjovik",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/vind-il-tine-fotballskole-vind-stadion-sommer2027-u26",
+      "destination": "/en/leir/vind-il-tine-fotballskole-vind-stadion-gjovik-gjovik",
+      "permanent": true
+    },
+    {
       "source": "/leir/vitenfabrikken-jaermuseet-redesign-skaperverksted-drop-in-vinter2027-u7",
       "destination": "/leir/vitenfabrikken-jaermuseet-redesign-skaperverksted-drop-in-sandnes-sandnes",
       "permanent": true
@@ -7822,6 +9607,21 @@
       "permanent": true
     },
     {
+      "source": "/leir/oyestad-if-handball-oif-arendal-elite-oyestad-handball-camp-nedeneshallen-sommer2027-u32",
+      "destination": "/leir/oyestad-if-handball-oif-arendal-elite-oyestad-handball-camp-nedeneshallen-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/oyestad-if-handball-oif-arendal-elite-oyestad-handball-camp-nedeneshallen-sommer2027-u32",
+      "destination": "/sv/leir/oyestad-if-handball-oif-arendal-elite-oyestad-handball-camp-nedeneshallen-arendal-arendal",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/oyestad-if-handball-oif-arendal-elite-oyestad-handball-camp-nedeneshallen-sommer2027-u32",
+      "destination": "/en/leir/oyestad-if-handball-oif-arendal-elite-oyestad-handball-camp-nedeneshallen-arendal-arendal",
+      "permanent": true
+    },
+    {
       "source": "/leir/oygarden-idrettslag-tine-fotballskole-hjeltefjorden-arena-rong-stadion-toftoy-idrettsanleg-sommer2027-u26",
       "destination": "/leir/oygarden-idrettslag-tine-fotballskole-hjeltefjorden-arena-rong-stadion-toftoy-idrettsanlegg-oygarden-rong",
       "permanent": true
@@ -7864,6 +9664,21 @@
     {
       "source": "/en/leir/oygarden-il-vinterferie-fotballskole-akademiet-vinter2027-u9",
       "destination": "/en/leir/oygarden-il-vinterferie-fotballskole-akademiet-oygarden-rong",
+      "permanent": true
+    },
+    {
+      "source": "/leir/adal-il-tine-fotballskole-hallingby-sommer2027-u33",
+      "destination": "/leir/adal-il-tine-fotballskole-hallingby-ringerike-hallingby",
+      "permanent": true
+    },
+    {
+      "source": "/sv/leir/adal-il-tine-fotballskole-hallingby-sommer2027-u33",
+      "destination": "/sv/leir/adal-il-tine-fotballskole-hallingby-ringerike-hallingby",
+      "permanent": true
+    },
+    {
+      "source": "/en/leir/adal-il-tine-fotballskole-hallingby-sommer2027-u33",
+      "destination": "/en/leir/adal-il-tine-fotballskole-hallingby-ringerike-hallingby",
       "permanent": true
     },
     {

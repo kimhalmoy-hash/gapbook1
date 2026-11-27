@@ -3,9 +3,9 @@ import { FremhevetSide } from "@/components/FremhevetSide";
 import { FilterBar } from "@/components/FilterBar";
 import { Footer, Header } from "@/components/Chrome";
 import { JsonLd } from "@/components/JsonLd";
-import { fyll, type Locale } from "@/lib/i18n";
-import { prisVisning } from "@/lib/pure.mjs";
-import { jsonLd, mailto, modell, sammeSti, site, type Rute } from "@/lib/katalog";
+import { fyll, type Copy, type Locale } from "@/lib/i18n";
+import { formaterUkeTall, prisVisning } from "@/lib/pure.mjs";
+import { jsonLd, mailto, modell, sammeSti, site, type CampView, type Rute } from "@/lib/katalog";
 import { SetLang } from "@/components/Chrome";
 
 export function PageView({ rute }: { rute: Rute }) {
@@ -109,6 +109,36 @@ function Hjem({ side }: { side: ReturnType<typeof modell> }) {
   );
 }
 
+function SommerHub({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }) {
+  const bekreftet = leirer.filter((camp) => !camp.fjoraarsUker?.length);
+  const grupper = new Map<string, { sort: number; heading: string; leirer: CampView[] }>();
+  for (const camp of leirer) {
+    if (!camp.fjoraarsUker?.length) continue;
+    const uker = formaterUkeTall(camp.fjoraarsUker);
+    const match = camp.sesong.match(/(\d{4})$/);
+    const fjor = match ? Number(match[1]) - 1 : 2026;
+    const key = `${fjor}:${uker}`;
+    const heading = fyll(tekst.expectedSummerWeek, { fjor, uker });
+    const eksisterende = grupper.get(key);
+    if (eksisterende) eksisterende.leirer.push(camp);
+    else grupper.set(key, { sort: camp.fjoraarsUker[0], heading, leirer: [camp] });
+  }
+  const sortert = [...grupper.values()].sort((a, b) => a.sort - b.sort || a.heading.localeCompare(b.heading, tekst.htmlLang));
+  return (
+    <>
+      {bekreftet.length ? <CampGrid leirer={bekreftet} tekst={tekst} /> : null}
+      {sortert.map((gruppe) => (
+        <div key={gruppe.heading} className="mt-10">
+          <h2 className="font-serif text-2xl">{gruppe.heading}</h2>
+          <div className="mt-4">
+            <CampGrid leirer={gruppe.leirer} tekst={tekst} />
+          </div>
+        </div>
+      ))}
+    </>
+  );
+}
+
 function Innhold({ side }: { side: ReturnType<typeof modell> }) {
   const tekst = side.tekst;
   const erDetalj = side.rute.kind === "leir";
@@ -192,7 +222,11 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
       <section className="mt-10">
         {side.leirer.length ? (
           <>
-            <CampGrid leirer={side.leirer} tekst={tekst} visNotat={erDetalj} />
+            {side.rute.kind === "sesong" && side.rute.navn === "sommer" && !erDetalj ? (
+              <SommerHub leirer={side.leirer} tekst={tekst} />
+            ) : (
+              <CampGrid leirer={side.leirer} tekst={tekst} visNotat={erDetalj} />
+            )}
             {erDetalj && (side.leirer[0]?.ukerader.length || 0) > 1 ? (
               <div className="mt-8">
                 <h2 className="font-serif text-2xl">{tekst.weeksHeading}</h2>
