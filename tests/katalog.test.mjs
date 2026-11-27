@@ -24,6 +24,7 @@ import {
   prisVisning,
   skolerutaIndeks,
   hreflangLokaler,
+  heleFerieuker,
   sommerPeriode,
 } from "../lib/pure.mjs";
 import { assertKilderTrygge, erHoopit, vurderUrl } from "../scripts/lib/plattform.mjs";
@@ -32,6 +33,27 @@ import { faktaFraJsonLd, pameldingFraJsonLd, pameldingFraRubic } from "../script
 import { forfalte, parseSjekkPlan } from "../scripts/lib/sjekk-plan.mjs";
 
 const config = JSON.parse(readFileSync(new URL("../config/kilder.json", import.meta.url), "utf8"));
+
+test("hele ferieuker starter på første mandag og slutter før en ufullstendig uke", () => {
+  assert.deepEqual(
+    heleFerieuker("2027-06-19", "2027-06-27"),
+    [{ aar: 2027, uke: 25 }],
+  );
+  assert.deepEqual(
+    heleFerieuker("2027-02-22", "2027-02-26"),
+    [{ aar: 2027, uke: 8 }],
+  );
+  assert.deepEqual(
+    heleFerieuker("2027-02-24", "2027-03-05"),
+    [{ aar: 2027, uke: 9 }],
+  );
+  assert.deepEqual(heleFerieuker("2027-02-24", "2027-02-26"), []);
+  assert.deepEqual(heleFerieuker("2026-12-26", "2027-01-10"), [
+    { aar: 2026, uke: 53 },
+    { aar: 2027, uke: 1 },
+  ]);
+  assert.deepEqual(heleFerieuker("2027-06-19", null), [{ aar: 2027, uke: 25 }]);
+});
 
 test("iso-uke for kjente dager i 2027", () => {
   assert.deepEqual(isoUke("2027-02-15"), { aar: 2027, uke: 7 });
@@ -70,10 +92,8 @@ test("ferieuker kommer fra data, ikke fra kommunenavn", () => {
     kildeUrl: "https://example.com/tromso",
     merknad: null,
   };
-  const treff = kommunerMedFri([tromso], 2026, 40);
-  assert.equal(treff.length, 1);
-  assert.equal(treff[0].datoFra, "2026-09-30");
-  assert.equal(treff[0].datoTil, "2026-10-02");
+  assert.equal(heleFerieuker("2026-09-30", "2026-10-02").length, 0);
+  assert.equal(kommunerMedFri([tromso], 2026, 40).length, 0);
   const utenfor = {
     sesong: "host2026",
     uke: 40,
@@ -304,11 +324,11 @@ test("importert skolerute og leirer", () => {
   const osloSommer = sommerPeriode(skolerute.find((r) => r.kommune === "Oslo"));
   assert.equal(osloSommer.fra, "2027-06-19");
   assert.equal(osloSommer.til, "2027-08-15");
-  assert.deepEqual(osloSommer.uker, [24, 25, 26, 27, 28, 29, 30, 31, 32]);
+  assert.deepEqual(osloSommer.uker, [25, 26, 27, 28, 29, 30, 31, 32]);
   const sandnesSommer = sommerPeriode(skolerute.find((r) => r.kommune === "Sandnes"));
   assert.equal(sandnesSommer.fra, "2027-06-19");
   assert.equal(sandnesSommer.til, null);
-  assert.deepEqual(sandnesSommer.uker, [24]);
+  assert.deepEqual(sandnesSommer.uker, [25]);
   assert.equal(sommerPeriode({ sommer: { sisteSkole: null, forsteSkole: "2027-08-16" } }), null);
   const slugs = skolerute.map((r) => r.slug);
   assert.equal(new Set(slugs).size, slugs.length);

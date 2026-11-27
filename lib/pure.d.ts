@@ -70,6 +70,8 @@ export function ukeListe(uke: number | string | null | undefined): number[];
 export function isoUke(iso: string): { aar: number; uke: number };
 export function ukeMandag(aar: number, uke: number): string;
 export function leggTilDager(iso: string, n: number): string;
+export function forsteMandag(iso: string): string;
+export function heleFerieuker(fra: string | null | undefined, til?: string | null): { aar: number; uke: number }[];
 export function dagerMellom(fra: string, til: string): string[];
 export function overlap(
   a0: string | null,

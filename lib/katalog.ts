@@ -7,10 +7,9 @@ import vinterIntroNb from "@/data/intro-vinterferie-nb.json";
 import {
   campIFerie,
   campUker,
-  dagerMellom,
   erHelUke,
   ferieFelter,
-  isoUke,
+  heleFerieuker,
   kommunerISesong,
   kommunerMedFri,
   leggTilDager,
@@ -192,6 +191,7 @@ export type FerieLinje = {
   label: string;
   dato: string;
   uke: number | null;
+  uker: string | null;
 };
 
 export type SideModell = {
@@ -206,7 +206,7 @@ export type SideModell = {
     skolear: string;
     kildeUrl: string;
     merknad: string | null;
-    ferier: { label: string; dato: string; uke: number | null; href?: string }[];
+    ferier: { label: string; dato: string; uke: number | null; uker: string | null; href?: string }[];
   };
   sommerLinje: string | null;
   sommerKilder: { href: string; label: string }[];
@@ -318,12 +318,13 @@ function skoleruteFor(kommuneSlug: string): SkoleruteRad | null {
 
 function ukerIDato(fra: string | null | undefined, til: string | null | undefined, aar: number): number[] {
   if (!fra || !til) return [];
-  const sett = new Set<number>();
-  for (const dag of dagerMellom(fra, til)) {
-    const iso = isoUke(dag);
-    if (iso.aar === aar) sett.add(iso.uke);
-  }
-  return [...sett];
+  return heleFerieuker(fra, til).filter((u) => u.aar === aar).map((u) => u.uke);
+}
+
+function ukeVisning(fra: string | null | undefined, til: string | null | undefined): string | null {
+  const tall = heleFerieuker(fra, til).map((u) => u.uke);
+  const tekst = formaterUkeTall(tall);
+  return tekst || null;
 }
 
 function leirerFor(rute: Rute): Leir[] {
@@ -469,8 +470,10 @@ function overskrift(rute: Rute): string {
     const navn = kommuneNavn.get(rute.kommuneSlug) || rute.kommuneSlug;
     const rad = skoleruteFor(rute.kommuneSlug);
     const deler: string[] = [];
-    if (rad?.hostferie?.uke != null) deler.push(`${tekst.seasonName.host} ${tekst.weekWord} ${rad.hostferie.uke}`);
-    if (rad?.vinterferie?.uke != null) deler.push(`${tekst.seasonName.vinter} ${tekst.weekWord} ${rad.vinterferie.uke}`);
+    const hostUker = ukeVisning(rad?.hostferie?.datoFra, rad?.hostferie?.datoTil);
+    const vinterUker = ukeVisning(rad?.vinterferie?.datoFra, rad?.vinterferie?.datoTil);
+    if (hostUker) deler.push(`${tekst.seasonName.host} ${tekst.weekWord} ${hostUker}`);
+    if (vinterUker) deler.push(`${tekst.seasonName.vinter} ${tekst.weekWord} ${vinterUker}`);
     if (deler.length) return fyll(tekst.h1PlaceWeek, { by: navn, uker: deler.join(", ") });
     return fyll(tekst.h1Place, { by: navn });
   }
@@ -479,7 +482,8 @@ function overskrift(rute: Rute): string {
     const ferie = tekst.seasonName[rute.navn];
     const rad = skoleruteFor(rute.kommuneSlug);
     const felt = rad ? feltFor(rad, rute.navn) : null;
-    if (felt?.uke != null) return fyll(tekst.h1HolidayPlace, { ferie, by: navn, aar: rute.aar, uke: felt.uke });
+    const hele = ukeVisning(felt?.datoFra, felt?.datoTil);
+    if (hele) return fyll(tekst.h1HolidayPlace, { ferie, by: navn, aar: rute.aar, uke: hele });
     return fyll(tekst.h1HolidayPlaceNoWeek, { ferie, by: navn, aar: rute.aar });
   }
   return tekst.heroTitle;
@@ -504,6 +508,9 @@ function byggRuter(): Rute[] {
     for (const rad of skolerute) {
       const felt = feltFor(rad, navn);
       for (const uke of ukerIDato(felt?.datoFra, felt?.datoTil, year)) sett.add(uke);
+      if (navn === "sommer") {
+        for (const uke of sommerPeriode(rad)?.uker || []) sett.add(uke);
+      }
     }
     for (const e of synlige()) {
       const del = sesongDeler(e.sesong);
@@ -745,7 +752,8 @@ function ferieLinjer(locale: Locale, rader: ReturnType<typeof kommunerMedFri> | 
       href: sti(locale, [SESONG_STI[sesongNavn(String(rad.nokkel))], rad.slug]),
       label: tekst.seasonName[sesongNavn(String(rad.nokkel))],
       dato: formatPeriode(rad.datoFra, rad.datoTil, locale) || "",
-      uke: rad.uke,
+      uke: heleFerieuker(rad.datoFra, rad.datoTil)[0]?.uke ?? null,
+      uker: ukeVisning(rad.datoFra, rad.datoTil),
     }))
     .sort((a, b) => (a.uke ?? 99) - (b.uke ?? 99) || a.kommune.localeCompare(b.kommune, "nb"));
 }
@@ -756,6 +764,8 @@ function vinterIntro(rute: Rute): string | null {
   if (!mal) return null;
   const felt = skoleruteFor(rute.kommuneSlug)?.vinterferie;
   const aar = String(rute.aar);
+  const hele = ukeVisning(felt?.datoFra, felt?.datoTil);
+  if (hele) return mal.replaceAll("{uke}", hele).replaceAll("{år}", aar);
   if (felt?.datoFra && felt.datoTil && !erHelUke(felt.datoFra, felt.datoTil)) {
     const dato = formatPeriode(felt.datoFra, felt.datoTil, "nb") || "";
     return mal.replace(/uke \{uke\}/g, dato).replaceAll("{år}", aar).replaceAll("{uke}", dato);
@@ -827,7 +837,8 @@ export function modell(rute: Rute): SideModell {
         return {
           label: tekst.seasonName[nokkel],
           dato: formatPeriode(f.datoFra, f.datoTil, rute.locale) || "",
-          uke: f.uke ?? null,
+          uke: heleFerieuker(f.datoFra, f.datoTil)[0]?.uke ?? null,
+          uker: ukeVisning(f.datoFra, f.datoTil),
           href: sti(rute.locale, [SESONG_STI[nokkel], rute.kommuneSlug]),
         };
       });
@@ -879,7 +890,8 @@ export function modell(rute: Rute): SideModell {
     const felt = rute.navn === "host" ? rad?.hostferie : rute.navn === "vinter" ? rad?.vinterferie : rute.navn === "paske" ? rad?.paske : null;
     const dato = felt ? formatPeriode(felt.datoFra, felt.datoTil, rute.locale) : null;
     if (dato) {
-      kalenderUke = `${tekst.seasonName[rute.navn]}: ${dato}${felt?.uke != null ? ` (${fyll(tekst.week, { nr: felt.uke })})` : ""}`;
+      const hele = ukeVisning(felt?.datoFra, felt?.datoTil);
+      kalenderUke = `${tekst.seasonName[rute.navn]}: ${dato}${hele ? ` (${fyll(tekst.week, { nr: hele })})` : ""}`;
     }
     ingress = vinterIntro(rute) || tekst.seasonBlurb[rute.navn];
     if (rad && felt) {
@@ -887,7 +899,7 @@ export function modell(rute: Rute): SideModell {
         skolear: skolearKort(rad.skolear),
         kildeUrl: rad.kildeUrl,
         merknad: rad.merknad,
-        ferier: [{ label: tekst.seasonName[rute.navn], dato: dato || "", uke: felt.uke ?? null }],
+        ferier: [{ label: tekst.seasonName[rute.navn], dato: dato || "", uke: heleFerieuker(felt.datoFra, felt.datoTil)[0]?.uke ?? null, uker: ukeVisning(felt.datoFra, felt.datoTil) }],
       };
     }
     if (rad && rute.navn === "sommer") {

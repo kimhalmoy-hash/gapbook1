@@ -190,7 +190,7 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
           {side.kalenderUke
             ? side.kalenderUke
             : side.skoleruteKort?.ferier
-                .map((f) => `${f.label}: ${f.dato}${f.uke != null ? ` (${fyll(tekst.week, { nr: f.uke })})` : ""}`)
+                .map((f) => `${f.label}: ${f.dato}${f.uker ? ` (${fyll(tekst.week, { nr: f.uker })})` : ""}`)
                 .join(" · ")}{" "}
           {side.skoleruteKort ? (
             <a className="text-pine hover:underline" href={side.skoleruteKort.kildeUrl} rel="noopener noreferrer">
@@ -215,7 +215,7 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
                 <p className="font-medium">{f.href ? <a className="hover:underline" href={f.href}>{f.label}</a> : f.label}</p>
                 <p className="text-sm">
                   {f.dato}
-                  {f.uke != null ? ` (${fyll(tekst.week, { nr: f.uke })})` : ""}
+                  {f.uker ? ` (${fyll(tekst.week, { nr: f.uker })})` : ""}
                 </p>
               </li>
             ))}
@@ -249,8 +249,8 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
               <li key={`${f.href}-${f.label}`} className="rounded-xl border border-line bg-card px-4 py-3 text-sm">
                 <a className="font-medium text-pine hover:underline" href={f.href}>{f.kommune}</a>
                 <span className="text-muted">
-                  {" "}· {f.label}: {f.dato}
-                  {f.uke != null ? ` (${fyll(tekst.week, { nr: f.uke })})` : ""}
+                  {" "}· {f.label}:                   {f.dato}
+                  {f.uker ? ` (${fyll(tekst.week, { nr: f.uker })})` : ""}
                 </span>
               </li>
             ))}
