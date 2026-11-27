@@ -280,9 +280,8 @@ function Arrangor({ tekst }: { tekst: ReturnType<typeof modell>["tekst"] }) {
     <section id="arrangor" className="ticket mt-16 p-6 sm:p-8">
       <h2 className="font-serif text-3xl">{tekst.providerTitle}</h2>
       <p className="mt-3 max-w-2xl text-muted">{tekst.providerBody}</p>
-      <p className="mt-3 text-sm">{fyll(tekst.featuredPrice, { pris: site.fremhevetPrisKr })}</p>
       <p className="mt-2 text-sm">
-        <a className="text-pine hover:underline" href="/arrangor/fremhevet/">{tekst.featuredLink}</a>
+        <a className="text-pine hover:underline" href={tekst.htmlLang === "nb" ? "/arrangor/" : `/${tekst.htmlLang}/arrangor/`}>{tekst.featuredLink}</a>
       </p>
       <a href={mailto(tekst.providerSubject)} className="mt-5 inline-block rounded-full bg-pine px-6 py-3 text-white hover:bg-pine-mid">
         {tekst.providerCta}

@@ -3,10 +3,6 @@
   "tagline": "Ferieuka, ordnet.",
   "url": "https://weekslot.com",
   "kontaktEpost": "kontakt@weekslot.com",
-  "fremhevetPrisKr": 290,
-  "toppKategoriPrisKr": 690,
-  "sesongpakkePrisKr": 990,
-  "prisSesonger": ["vinterferie", "paskeferie", "hostferie"],
   "defaultLocale": "nb",
   "locales": ["nb", "sv", "en"],
   "temaMin": 3

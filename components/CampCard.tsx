@@ -9,11 +9,8 @@ function kommentar(tekst: string) {
 export function CampCard({ camp, tekst }: { camp: CampView; tekst: Copy; visNotat?: boolean }) {
   const pris = prisVisning(camp.prisLabel, camp.prisNotat, tekst.priceMissing);
   return (
-    <article id={camp.id} className={`ticket flex h-full min-w-0 flex-col p-5 ${camp.fremhevet ? "border-clay" : ""}`}>
+    <article id={camp.id} className="ticket flex h-full min-w-0 flex-col p-5">
       <div className="flex flex-wrap gap-2">
-        {camp.fremhevet ? (
-          <span className="rounded-full bg-clay px-2.5 py-0.5 text-xs font-semibold text-white">{tekst.featured}</span>
-        ) : null}
         {camp.demo ? (
           <span className="rounded-full bg-ink px-2.5 py-0.5 text-xs font-semibold text-white">{tekst.example}</span>
         ) : null}

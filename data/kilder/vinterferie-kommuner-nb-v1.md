@@ -37,4 +37,4 @@ I Fredrikstad er vinterferien uke {uke}. Her finner du ukekurs og leirer for bar
 
 ## Regler
 - Bruk aldri «alle leirer», «komplett oversikt», «garantert plass» eller «billigst».
-- Betalte plasseringer merkes «Fremhevet».
+- Ingen betalt merking. Oppføring er gratis inntil videre.

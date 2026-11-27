@@ -4,7 +4,7 @@ WeekSlot er oversikten over ukekurs og leirer for barn i skoleferiene, sortert p
 
 Tagline: **Ferieuka, ordnet.**
 
-Inntekten er at tilbydere betaler for synlighet. Prisene ligger i `config/site.json`: `fremhevetPrisKr` 290 kr per kommune per uke, `toppKategoriPrisKr` 690 kr per ferie og `sesongpakkePrisKr` 990 kr per ferie, for vinter-, påske- og høstferien. Grunnoppføring er gratis. Fremhevede kort merkes «Fremhevet».
+Det er gratis å bli lagt inn, inntil videre. Ingen pakker og ingen betalt merking.
 
 ## Slik flyter dataene
 
@@ -83,11 +83,9 @@ Kjør `npm run finn`, les `data/kandidater.json`, og flytt det som holder mål i
 
 På sidene vises bare fakta: tittel, tilbyder, dato eller uke, alder, pris og sted, pluss en kort merknad med våre egne ord der vi har en. Ingen kopierte beskrivelser eller bilder. Knappen går til arrangørens påmeldingsside.
 
-## Kontakt og fremheving
+## Kontakt
 
-`kontaktEpost` i `config/site.json` er `kontakt@weekslot.com`. «Bli synlig på WeekSlot», «Send oss tilbudet ditt» og tips-lenkene er `mailto:kontakt@weekslot.com`. Det er ikke bygget noe skjema.
-
-Grunnoppføring er gratis. Fremhevet koster 290 kr per kommune per uke. Topp i kategori koster 690 kr per ferie, og sesongpakke koster 990 kr per ferie. Sommerpris er ikke satt.
+`kontaktEpost` i `config/site.json` er `kontakt@weekslot.com`. Arrangørsiden er `/arrangor/` (svensk `/sv/arrangor/`, engelsk `/en/arrangor/`). Knappen der er `mailto:kontakt@weekslot.com` med emnet «Nytt tilbud på WeekSlot». `/arrangor/fremhevet/` sender 301 dit. Det er ikke bygget noe skjema. Alt er gratis å bli lagt inn, inntil videre.
 
 ## Det som er tatt ut
 
@@ -99,7 +97,7 @@ Vercel-regionen i `vercel.json` er fortsatt `fra1`. Ingenting er deployet herfra
 
 | Kommando | Gjør |
 | --- | --- |
-| `npm run importer` | CSV → `tilbydere.json` og `skolerute.json`. `--leirer` skriver også `leirer.json` |
+| `npm run importer` | CSV → `tilbydere.json` og `skolerute.json`. `leirer.json` er Supply v8 og skrives ikke over |
 | `npm run sjekk-plan` | `sjekk-plan.md` → `data/sjekk-plan.json` |
 | `npm run finn` | Kandidater fra `config/kilder.json` |
 | `npm run finn -- --forfalte` | Bare kilder i sjekk-planen med `sjekkDato` i dag eller tidligere |

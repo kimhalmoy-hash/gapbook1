@@ -1,55 +1,39 @@
-# WeekSlot · Side for arrangører: Fremhevet (nb, v1)
+# WeekSlot · Side for arrangører: Gratis oppføring (nb, v2)
 
-Status: Arbeidsversjon, ikke publisert. Bestemt av Kim: kontakt@weekslot.com og Fremhevet 290 kr per kommune per uke (26.11.2026), gratis grunnoppføring og 690/990 kr i vinter-, påske- og høstferien (27.11.2026). Ikke avklart: om prisene er eks. eller inkl. mva, og sommerprisene for Topp i kategori og Sesongpakke.
-Foreslått URL: /arrangor/fremhevet
-Meta-tittel: Bli fremhevet på WeekSlot | For arrangører
-Meta-beskrivelse: Grunnoppføring er gratis. Med Fremhevet vises tilbudet ditt øverst i kommunen og uka du velger, for 290 kr per kommune per uke.
+Status: Arbeidsversjon, ikke publisert. Bestemt av Kim 27.11.2026: alt på WeekSlot er gratis til siden har blitt populær. Ingen priser, pakker eller betaling på siden. Kontakt: kontakt@weekslot.com (bestemt 26.11.2026). Den betalte versjonen ligger i arkiv/.
+Foreslått URL: /arrangor/ (med videresending fra /arrangor/fremhevet/)
+Meta-tittel: Legg inn ferietilbudet ditt gratis | WeekSlot for arrangører
+Meta-beskrivelse: Har du ukekurs eller leir for barn i skoleferien? Det er gratis å bli lagt inn på WeekSlot. Foreldre finner deg etter uke og kommune.
 
 ## H1
 Bli sett av foreldre som planlegger ferieuka
 
 ## Ingress
-WeekSlot viser ukekurs og leirer for barn, sortert etter uke og kommune. Det er gratis å bli lagt inn. Vil du ha mer synlighet, kan du velge Fremhevet.
+WeekSlot viser ukekurs og leirer for barn, sortert etter uke og kommune. Det er gratis å bli lagt inn.
 
-## Grunnoppføring – gratis
+## Dette får du
 - Tilbudet ditt vises på sidene for riktig uke, kommune og type aktivitet.
 - Foreldre ser alder, tider, pris og lenke til påmeldingen din.
 - Påmelding og betaling skjer hos deg, som før.
 
-## Fremhevet – 290 kr per kommune per uke
-- Tilbudet ditt vises øverst på siden for kommunen og uka du velger.
-- Det merkes tydelig «Fremhevet», så foreldre vet at plasseringen er betalt.
-- Du velger selv hvilke kommuner og uker du vil være fremhevet i.
-
-Eksempel: Fremhevet i én kommune i vinterferieuka koster 290 kr. To kommuner samme uke koster 580 kr.
-
-## Flere synlighetspakker i vinter-, påske- og høstferien
-- **Topp i kategori – 690 kr per ferie:** Tilbudet ditt vises øverst i én type aktivitet i én kommune gjennom hele ferien, for eksempel «Klatring i Trondheim, vinterferien». Merket «Fremhevet».
-- **Sesongpakke – 990 kr per ferie:** Fremhevet i kommunen din og nabokommunene, Topp i kategori, oversikt over hvor mange som klikker seg videre til deg, og et «Fremhevet på WeekSlot»-merke du kan bruke selv.
-
-Sommerferien har egne pakkepriser. Spør oss på kontakt@weekslot.com.
-
 ## Slik kommer du i gang
-1. Send oss tilbudet ditt på kontakt@weekslot.com.
-2. Skriv hvilke kommuner og uker du vil være fremhevet i, hvis du ønsker det.
-3. Vi legger det inn og gir beskjed når det er synlig.
+1. Send oss tilbudet ditt på kontakt@weekslot.com: navn, uke, sted, alder, tider, pris og lenke til påmeldingen.
+2. Vi legger det inn og gir beskjed når det er synlig.
 
 Knapp: Send oss tilbudet ditt
-Lenke: mailto:kontakt@weekslot.com?subject=Fremhevet%20p%C3%A5%20WeekSlot
+Lenke: mailto:kontakt@weekslot.com?subject=Nytt%20tilbud%20p%C3%A5%20WeekSlot
 
 ## Spørsmål og svar
-**Må jeg betale for å være med?**
-Nei. Grunnoppføringen er gratis. Fremhevet er et valg for deg som vil ha mer synlighet.
+**Koster det noe?**
+Nei. Det er gratis å bli lagt inn.
 
 **Tar WeekSlot påmeldinger eller betaling?**
 Nei. Foreldre går videre til din egen påmelding.
-
-**Hvordan vet foreldre at noe er fremhevet?**
-Alle betalte plasseringer er merket «Fremhevet».
 
 **Hva om jeg vil endre opplysningene?**
 Send oss en e-post på kontakt@weekslot.com, så oppdaterer vi.
 
 ## Regler
+- Ingen priser, pakker eller betalte plasseringer på siden.
 - Ingen lover om antall visninger, påmeldinger eller «garantert plass».
-- Bruk aldri «alle leirer», «komplett oversikt» eller «billigst».
+- Bruk aldri «alle leirer», «komplett oversikt», «billigst» eller «gratis for alltid».

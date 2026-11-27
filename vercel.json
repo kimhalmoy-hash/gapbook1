@@ -7,6 +7,36 @@
   ],
   "redirects": [
     {
+      "source": "/arrangor/fremhevet",
+      "destination": "/arrangor",
+      "statusCode": 301
+    },
+    {
+      "source": "/arrangor/fremhevet/",
+      "destination": "/arrangor/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sv/arrangor/fremhevet",
+      "destination": "/sv/arrangor",
+      "statusCode": 301
+    },
+    {
+      "source": "/sv/arrangor/fremhevet/",
+      "destination": "/sv/arrangor/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/arrangor/fremhevet",
+      "destination": "/en/arrangor",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/arrangor/fremhevet/",
+      "destination": "/en/arrangor/",
+      "statusCode": 301
+    },
+    {
       "source": "/vinterferie/:year(\\d{4})",
       "destination": "/vinterferie",
       "permanent": true

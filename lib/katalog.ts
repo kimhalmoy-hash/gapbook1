@@ -41,7 +41,6 @@ import {
   ukeMandag,
   ukeNokkel,
 } from "@/lib/pure.mjs";
-import { fremhevetFaq } from "@/lib/fremhevet";
 import { COPY, copy, fyll, intlLocale, type Copy, type Locale, LOCALES } from "@/lib/i18n";
 
 type SesongNavn = "vinter" | "sommer" | "host" | "paske";
@@ -500,7 +499,7 @@ function byggRuter(): Rute[] {
   for (const locale of LOCALES) {
     legg(ruter, locale, [], { kind: "hjem" });
     legg(ruter, locale, ["skoleruta"], { kind: "skolerutaHub" });
-    legg(ruter, locale, ["arrangor", "fremhevet"], { kind: "fremhevet" });
+    legg(ruter, locale, ["arrangor"], { kind: "fremhevet" });
     for (const rad of skolerute) {
       const kommuneSlug = rad.slug || slug(rad.kommune);
       legg(ruter, locale, ["skoleruta", kommuneSlug], { kind: "skoleruta", kommuneSlug });
@@ -660,7 +659,7 @@ function groupView(slugId: string, medlemmer: Leir[], locale: Locale, ferieBadge
     statusLabel,
     notat: notater.join("\n") || null,
     notatIListe: best === "verifisert" ? null : notater.join("\n") || null,
-    fremhevet: sortert.some((e) => e.fremhevet),
+    fremhevet: false,
     demo: sortert.every((e) => e.demo),
     utenPamelding: sortert.every((e) => utenPamelding(e)),
     gratis: sortert.every((e) => e.prisNok === 0),
@@ -695,7 +694,6 @@ function groupView(slugId: string, medlemmer: Leir[], locale: Locale, ferieBadge
 }
 
 function sorter(a: CampView, b: CampView): number {
-  if (a.fremhevet !== b.fremhevet) return a.fremhevet ? -1 : 1;
   if (a.ferieBadge && !b.ferieBadge) return -1;
   if (!a.ferieBadge && b.ferieBadge) return 1;
   const da = a.datoFra || "9999";
@@ -890,9 +888,7 @@ export function modell(rute: Rute): SideModell {
 
 function beskrivelse(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
-  if (rute.kind === "fremhevet") {
-    return fyll(tekst.featuredPageDescription, { pris: site.fremhevetPrisKr });
-  }
+  if (rute.kind === "fremhevet") return tekst.featuredPageDescription;
   if (rute.kind === "hjem") return tekst.homeDescription;
   if (rute.kind === "ferieUke") return fyll(tekst.weekDescription, { nr: rute.uke, år: rute.aar });
   if (rute.kind === "skoleruta") {
@@ -967,7 +963,7 @@ export function jsonLd(rute: Rute, side: SideModell): unknown[] {
     blokker.push({
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: fremhevetFaq(side.tekst, site.kontaktEpost).map((rad) => ({
+      mainEntity: side.tekst.featuredFaq.map((rad) => ({
         "@type": "Question",
         name: rad.q,
         acceptedAnswer: { "@type": "Answer", text: rad.a },
