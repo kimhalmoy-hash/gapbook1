@@ -3,6 +3,7 @@ import { FremhevetSide } from "@/components/FremhevetSide";
 import { FilterBar } from "@/components/FilterBar";
 import { Footer, Header } from "@/components/Chrome";
 import { JsonLd } from "@/components/JsonLd";
+import { SesongGuide } from "@/components/SesongGuide";
 import { fyll, type Copy, type Locale } from "@/lib/i18n";
 import { formaterUkeTall, prisVisning } from "@/lib/pure.mjs";
 import { jsonLd, mailto, modell, sammeSti, site, type CampView, type Rute } from "@/lib/katalog";
@@ -303,6 +304,7 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
           </p>
         )}
       </section>
+      {side.rute.kind === "sesong" ? <SesongGuide rute={side.rute} /> : null}
       {erDetalj ? null : (
         <>
           <Arrangor tekst={tekst} />
