@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { absolute: `${site.name} — ${site.tagline}` },
   description: "WeekSlot samler ukekurs og leirer for barn i hver skoleferie, sortert etter uke og by.",
+  // Google Search Console-eierskap. Ikke sporing, og ligger ikke bak annonsebryteren.
+  verification: { google: "0CfmAsDHRiYgWd0tkUvANmORacYnevcxLqZ5sQW47Uo" },
 };
 
 // AdSense-taggen er eneste lastepunkt. Den leverer også samtykkemeldingen (Privacy & messaging), så det finnes
