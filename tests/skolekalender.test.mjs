@@ -53,6 +53,13 @@ test("regionkalender genereres bare der det finnes verifiserte data", () => {
   assert.ok(stier.includes("/no/oslo/school-holidays/"));
   assert.ok(stier.includes("/no/vestland/school-holidays/"));
   assert.ok(sider.every((side) => side.offisiell === true && side.locale === "nb"));
+  const medOslo = norskeKalenderSider(geo, rader, new Set(["oslo"]));
+  const osloSide = medOslo.find((side) => side.path === "/no/oslo/school-holidays/");
+  assert.equal(osloSide.canonical, "/skoleruta/oslo/");
+  assert.equal(osloSide.indeks, false);
+  const vestlandSide = medOslo.find((side) => side.path === "/no/vestland/school-holidays/");
+  assert.equal(vestlandSide.canonical, null);
+  assert.equal(vestlandSide.indeks, true);
   assert.equal(sider.some((side) => side.path.includes("/oslo/oslo/")), false);
   assert.equal(kanoniskNorsk("/no/oslo/school-holidays/"), null);
   assert.deepEqual(kanoniskNorsk("/no/oslo/oslo/fotball/"), {

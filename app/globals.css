@@ -92,3 +92,60 @@ h2 {
   max-width: 100%;
   min-width: 0;
 }
+
+/* Annonseplasser. Fast høyde, så siden aldri hopper (CLS 0). Tegnes bare når AdSense-bryteren er PÅ. */
+.annonse {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 2.5rem 0;
+  overflow: hidden;
+  contain: layout paint;
+  border-block: 1px solid var(--line);
+  text-align: center;
+}
+.annonse-h {
+  height: 128px;
+}
+.annonse-r {
+  height: 278px;
+}
+.annonse-merke {
+  height: 28px;
+  margin: 0;
+  font-size: 0.6875rem;
+  line-height: 28px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.annonse-flate {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.annonse-h .annonse-flate {
+  height: 100px;
+}
+.annonse-r .annonse-flate {
+  height: 250px;
+}
+.annonse-flate ins {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+}
+.annonse-h ins {
+  width: 320px;
+  height: 100px;
+}
+.annonse-r ins {
+  width: 300px;
+  height: 250px;
+}
+@media (min-width: 768px) {
+  .annonse-h ins {
+    width: 728px;
+    height: 90px;
+  }
+}

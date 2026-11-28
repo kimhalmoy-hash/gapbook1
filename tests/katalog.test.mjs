@@ -349,6 +349,8 @@ test("importert skolerute og leirer", () => {
   assert.equal(osloSommer.fra, "2027-06-19");
   assert.equal(osloSommer.til, "2027-08-15");
   assert.deepEqual(osloSommer.uker, [25, 26, 27, 28, 29, 30, 31, 32]);
+  const bergenSommer = sommerPeriode(skolerute.find((r) => r.kommune === "Bergen"));
+  assert.deepEqual(bergenSommer.uker, [25, 26, 27, 28, 29, 30, 31, 32]);
   const sandnesSommer = sommerPeriode(skolerute.find((r) => r.kommune === "Sandnes"));
   assert.equal(sandnesSommer.fra, "2027-06-19");
   assert.equal(sandnesSommer.til, null);

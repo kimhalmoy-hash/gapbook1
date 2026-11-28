@@ -1,18 +1,29 @@
+import { AnnonsePlass } from "@/components/AnnonsePlass";
 import { CampGrid } from "@/components/CampCard";
 import { FremhevetSide } from "@/components/FremhevetSide";
 import { FilterBar } from "@/components/FilterBar";
 import { Footer, Header, Landvelger } from "@/components/Chrome";
 import { landvelger } from "@/lib/landvelger.mjs";
 import { JsonLd } from "@/components/JsonLd";
+import { SesongGuide } from "@/components/SesongGuide";
 import { fyll, type Copy, type Locale } from "@/lib/i18n";
 import { formaterUkeTall, prisVisning } from "@/lib/pure.mjs";
-import { jsonLd, mailto, modell, sammeSti, site, type CampView, type Rute } from "@/lib/katalog";
+import { indekserbar, jsonLd, mailto, modell, sammeSti, site, type CampView, type Rute } from "@/lib/katalog";
+import { ETIKETTER, adsenseAktiv, annonsePlasser } from "@/lib/annonser.mjs";
+import { lesPersonvernMd, parsePersonvern, type Inline, type PersonvernBlokk } from "@/lib/personvern.mjs";
 import { SetLang } from "@/components/Chrome";
 
 export function PageView({ rute }: { rute: Rute }) {
   const side = modell(rute);
   const tekst = side.tekst;
   const land = landvelger(side.spraakKode || rute.locale, rute.kind === "global" && rute.landKode ? rute.landKode : "NO", rute.locale);
+  const plasser = annonsePlasser({
+    kind: rute.kind,
+    indekserbar: indekserbar(rute),
+    antallKort: side.leirer.length,
+    tom: side.leirer.length === 0 && side.ferieListe.length === 0,
+    ukerader: rute.kind === "leir" ? side.leirer[0]?.ukerader.length || 0 : 0,
+  });
   const spraak = (["nb", "sv", "en"] as Locale[]).map((locale) => ({
     locale,
     href: sammeSti(rute, locale),
@@ -44,6 +55,7 @@ export function PageView({ rute }: { rute: Rute }) {
           </nav>
           <h1 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-5xl">{side.h1}</h1>
           {side.ingress ? <p className="mt-4 max-w-2xl text-lg text-muted">{side.ingress}</p> : null}
+          {side.kalender ? <KalenderLand kalender={side.kalender} /> : null}
           {side.utenlandsk.lenker.length ? (
             <ul className="mt-6 flex flex-wrap gap-2 text-sm">
               {side.utenlandsk.lenker.map((lenke) => (
@@ -85,14 +97,14 @@ export function PageView({ rute }: { rute: Rute }) {
         land={land}
       />
       <main className="mx-auto min-w-0 max-w-6xl px-4 py-10">
-        {rute.kind === "hjem" ? <Hjem side={side} /> : rute.kind === "fremhevet" ? <FremhevetSide tekst={tekst} /> : rute.kind === "personvern" ? <Personvern tekst={tekst} /> : <Innhold side={side} />}
+        {rute.kind === "hjem" ? <Hjem side={side} plasser={plasser} /> : rute.kind === "fremhevet" ? <FremhevetSide tekst={tekst} /> : rute.kind === "personvern" ? <Personvern locale={rute.locale} /> : <Innhold side={side} plasser={plasser} />}
       </main>
-      <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} privacyHref={rute.locale === "sv" ? "/sv/integritet/" : rute.locale === "en" ? "/en/privacy/" : "/personvern/"} land={land} />
+      <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} privacyHref={rute.locale === "sv" ? "/sv/integritet/" : rute.locale === "en" ? "/en/privacy/" : "/personvern/"} land={land} samtykkeTekst={adsenseAktiv() ? ETIKETTER[rute.locale].samtykke : undefined} />
     </div>
   );
 }
 
-function Hjem({ side }: { side: ReturnType<typeof modell> }) {
+function Hjem({ side, plasser }: { side: ReturnType<typeof modell>; plasser: string[] }) {
   const tekst = side.tekst;
   const prefix = side.rute.locale === "nb" ? "" : `/${side.rute.locale}`;
   const kommuner = [...new Map(side.leirer.map((c) => [c.kommuneSlug, c.kommune])).entries()].sort((a, b) =>
@@ -125,6 +137,7 @@ function Hjem({ side }: { side: ReturnType<typeof modell> }) {
           ))}
         </ol>
       </section>
+      <AnnonsePlass navn="H-1" plasser={plasser} tekst={tekst} />
       <section className="mt-16">
         <h2 className="font-serif text-3xl">{tekst.explore}</h2>
         <h3 className="mt-6 font-serif text-2xl">{tekst.seasonsTitle}</h3>
@@ -157,6 +170,7 @@ function Hjem({ side }: { side: ReturnType<typeof modell> }) {
           ))}
         </ul>
       </section>
+      <AnnonsePlass navn="R-2" plasser={plasser} tekst={tekst} />
       <Arrangor tekst={tekst} />
       <Tips tekst={tekst} />
     </>
@@ -193,16 +207,70 @@ function SommerHub({ leirer, tekst }: { leirer: CampView[]; tekst: Copy }) {
   );
 }
 
-function Personvern({ tekst }: { tekst: Copy }) {
+function InlineVisning({ inline }: { inline: Inline[] }) {
   return (
     <>
-      <h1 className="max-w-4xl font-serif text-4xl leading-tight sm:text-5xl">{tekst.privacyH1}</h1>
-      <div className="mt-6 grid max-w-2xl gap-3 text-lg">
-        {tekst.privacyBody.map((linje) => (
-          <p key={linje}>{linje}</p>
-        ))}
-      </div>
+      {inline.map((del, i) => {
+        if (del.type === "br") return <br key={i} />;
+        if (del.type === "strong") return <strong key={i}>{del.text}</strong>;
+        if (del.type === "a") {
+          const ekstern = /^https?:/.test(del.href);
+          return (
+            <a key={i} className="text-pine underline hover:text-pine-mid" href={del.href} {...(ekstern ? { rel: "noopener noreferrer" } : {})}>
+              {del.text}
+            </a>
+          );
+        }
+        return <span key={i}>{del.text}</span>;
+      })}
     </>
+  );
+}
+
+function PersonvernBlokkVisning({ blokk }: { blokk: PersonvernBlokk }) {
+  if (blokk.type === "h1")
+    return (
+      <h1 className="max-w-4xl font-serif text-4xl leading-tight sm:text-5xl">
+        <InlineVisning inline={blokk.inline} />
+      </h1>
+    );
+  if (blokk.type === "h2")
+    return (
+      <h2 className="mt-10 font-serif text-2xl sm:text-3xl">
+        <InlineVisning inline={blokk.inline} />
+      </h2>
+    );
+  if (blokk.type === "h3")
+    return (
+      <h3 className="mt-6 font-serif text-xl">
+        <InlineVisning inline={blokk.inline} />
+      </h3>
+    );
+  if (blokk.type === "ul")
+    return (
+      <ul className="mt-3 grid list-disc gap-2 pl-6">
+        {blokk.items.map((item, i) => (
+          <li key={i}>
+            <InlineVisning inline={item} />
+          </li>
+        ))}
+      </ul>
+    );
+  return (
+    <p className="mt-3">
+      <InlineVisning inline={blokk.inline} />
+    </p>
+  );
+}
+
+function Personvern({ locale }: { locale: Locale }) {
+  const blokker = parsePersonvern(lesPersonvernMd(locale));
+  return (
+    <div className="max-w-2xl text-lg">
+      {blokker.map((blokk, i) => (
+        <PersonvernBlokkVisning key={i} blokk={blokk} />
+      ))}
+    </div>
   );
 }
 
@@ -219,7 +287,7 @@ function SommerKilder({ kilder }: { kilder: { href: string; label: string }[] })
   );
 }
 
-function Innhold({ side }: { side: ReturnType<typeof modell> }) {
+function Innhold({ side, plasser }: { side: ReturnType<typeof modell>; plasser: string[] }) {
   const tekst = side.tekst;
   const erDetalj = side.rute.kind === "leir";
   return (
@@ -312,13 +380,19 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
           </ul>
         </section>
       ) : null}
+      <AnnonsePlass navn="H-1" plasser={plasser} tekst={tekst} />
       <section className="mt-10">
         {side.leirer.length ? (
           <>
             {side.rute.kind === "sesong" && side.rute.navn === "sommer" && !erDetalj ? (
               <SommerHub leirer={side.leirer} tekst={tekst} />
             ) : (
-              <CampGrid leirer={side.leirer} tekst={tekst} visNotat={erDetalj} />
+              <CampGrid
+                leirer={side.leirer}
+                tekst={tekst}
+                visNotat={erDetalj}
+                midtISlot={<AnnonsePlass navn="H-3" plasser={plasser} tekst={tekst} />}
+              />
             )}
             {erDetalj && (side.leirer[0]?.ukerader.length || 0) > 1 ? (
               <div className="mt-8">
@@ -358,6 +432,9 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
           </p>
         )}
       </section>
+      <AnnonsePlass navn="R-1" plasser={plasser} tekst={tekst} />
+      <AnnonsePlass navn="R-2" plasser={plasser} tekst={tekst} />
+      {side.rute.kind === "sesong" ? <SesongGuide rute={side.rute} /> : null}
       {erDetalj ? null : (
         <>
           <Arrangor tekst={tekst} />
@@ -365,6 +442,46 @@ function Innhold({ side }: { side: ReturnType<typeof modell> }) {
         </>
       )}
     </>
+  );
+}
+
+function KalenderLand({ kalender }: { kalender: NonNullable<ReturnType<typeof modell>["kalender"]> }) {
+  return (
+    <div className="mt-8 grid gap-8">
+      {kalender.perioder.length ? (
+        <ul className="grid gap-2">
+          {kalender.perioder.map((rad) => (
+            <li key={`${rad.navn}-${rad.fra}`} className="rounded-xl border border-line bg-card px-4 py-3 text-sm">
+              <p className="font-medium">{rad.navn}</p>
+              <p>{rad.fra}–{rad.til} · {rad.uke}</p>
+              {rad.kilder.map((url) => (
+                <a key={url} className="mr-3 text-pine hover:underline" href={url} rel="noopener noreferrer">Kilde</a>
+              ))}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {kalender.kommuner.map((kommune) => (
+        <section key={kommune.navn}>
+          <h2 className="font-serif text-2xl">{kommune.navn}</h2>
+          <ul className="mt-2 text-sm">
+            {kommune.rader.map((rad) => (
+              <li key={`${kommune.navn}-${rad.navn}-${rad.fra}`}>{rad.navn}: {rad.fra}–{rad.til} · {rad.uke}</li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      {kalender.delomrade.length ? (
+        <section>
+          <h2 className="font-serif text-2xl">Gjelder bare deler av regionen</h2>
+          <ul className="mt-2 text-sm">
+            {kalender.delomrade.map((rad) => (
+              <li key={`${rad.omrade}-${rad.navn}`}>{rad.omrade}: {rad.navn} {rad.fra}–{rad.til}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+    </div>
   );
 }
 
