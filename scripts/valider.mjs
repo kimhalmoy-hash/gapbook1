@@ -13,7 +13,7 @@ import {
   ukeListe,
 } from "../lib/pure.mjs";
 import { globaleSider, validerGeografi } from "../lib/globale-ruter.mjs";
-import { lesSkolekalender, norskeKalenderSider, validerSkolekalender } from "../lib/skolekalender.mjs";
+import { lesSkolekalender, norskeKalenderSider, parseSkolekalender, validerSkolekalender } from "../lib/skolekalender.mjs";
 
 const ROT = path.resolve(import.meta.dirname, "..");
 const feil = [];
@@ -143,6 +143,13 @@ if (globaleSider(geografi).some((side) => side.path.startsWith("/no/"))) {
 }
 const skolekalender = lesSkolekalender();
 for (const melding of validerSkolekalender(skolekalender)) feil.push(melding);
+for (const fil of ["se", "de", "at", "gb", "ie"]) {
+  const { rader, feil: parseFeil } = parseSkolekalender(readFileSync(path.join(ROT, "data/kalender", `${fil}.csv`), "utf8"));
+  for (const melding of parseFeil) feil.push(`${fil}: ${melding}`);
+  for (const melding of validerSkolekalender(rader)) feil.push(`${fil}: ${melding}`);
+}
+const oslo = norskeKalenderSider(geografi, skolekalender, new Set(["oslo"])).find((side) => side.region === "oslo");
+if (oslo?.canonical !== "/skoleruta/oslo/" || oslo.indeks !== false) feil.push("Oslo-kalenderen skal peke til /skoleruta/oslo/ og ut av sitemap");
 for (const side of norskeKalenderSider(geografi, skolekalender)) {
   if (!/^\/no\/[a-z0-9]+(?:-[a-z0-9]+)*\/school-holidays\/$/.test(side.path)) {
     feil.push(`ugyldig kalendersti ${side.path}`);

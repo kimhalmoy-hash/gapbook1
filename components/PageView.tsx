@@ -51,6 +51,7 @@ export function PageView({ rute }: { rute: Rute }) {
           </nav>
           <h1 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-5xl">{side.h1}</h1>
           {side.ingress ? <p className="mt-4 max-w-2xl text-lg text-muted">{side.ingress}</p> : null}
+          {side.kalender ? <KalenderLand kalender={side.kalender} /> : null}
           {side.utenlandsk.lenker.length ? (
             <ul className="mt-6 flex flex-wrap gap-2 text-sm">
               {side.utenlandsk.lenker.map((lenke) => (
@@ -430,6 +431,46 @@ function Innhold({ side, plasser }: { side: ReturnType<typeof modell>; plasser: 
         </>
       )}
     </>
+  );
+}
+
+function KalenderLand({ kalender }: { kalender: NonNullable<ReturnType<typeof modell>["kalender"]> }) {
+  return (
+    <div className="mt-8 grid gap-8">
+      {kalender.perioder.length ? (
+        <ul className="grid gap-2">
+          {kalender.perioder.map((rad) => (
+            <li key={`${rad.navn}-${rad.fra}`} className="rounded-xl border border-line bg-card px-4 py-3 text-sm">
+              <p className="font-medium">{rad.navn}</p>
+              <p>{rad.fra}–{rad.til} · {rad.uke}</p>
+              {rad.kilder.map((url) => (
+                <a key={url} className="mr-3 text-pine hover:underline" href={url} rel="noopener noreferrer">Kilde</a>
+              ))}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {kalender.kommuner.map((kommune) => (
+        <section key={kommune.navn}>
+          <h2 className="font-serif text-2xl">{kommune.navn}</h2>
+          <ul className="mt-2 text-sm">
+            {kommune.rader.map((rad) => (
+              <li key={`${kommune.navn}-${rad.navn}-${rad.fra}`}>{rad.navn}: {rad.fra}–{rad.til} · {rad.uke}</li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      {kalender.delomrade.length ? (
+        <section>
+          <h2 className="font-serif text-2xl">Gjelder bare deler av regionen</h2>
+          <ul className="mt-2 text-sm">
+            {kalender.delomrade.map((rad) => (
+              <li key={`${rad.omrade}-${rad.navn}`}>{rad.omrade}: {rad.navn} {rad.fra}–{rad.til}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+    </div>
   );
 }
 

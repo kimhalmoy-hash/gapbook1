@@ -19,8 +19,6 @@ test("norske URL-er fra main finnes fortsatt", () => {
   const naa = new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((treff) => new URL(treff[1]).pathname));
   const borte = main.filter((sti) => !naa.has(sti));
   assert.deepEqual(borte, []);
-  const ekstra = [...naa].filter((sti) => !main.includes(sti)).sort();
-  assert.equal(ekstra.some((sti) => sti.startsWith("/ie/")), false);
   assert.equal(naa.has("/sommerleir/uke-24/"), false);
   assert.equal(naa.has("/sv/sommerleir/uke-24/"), false);
   assert.equal(naa.has("/en/sommerleir/uke-24/"), false);
@@ -29,9 +27,8 @@ test("norske URL-er fra main finnes fortsatt", () => {
     assert.equal(existsSync(fil), true, sti);
     assert.match(readFileSync(fil, "utf8"), /noindex,\s*follow/);
   }
-  assert.ok(
-    ekstra.every(
-      (sti) => /^\/no\/[a-z0-9]+(?:-[a-z0-9]+)*\/school-holidays\/$/.test(sti) || sti === "/gb/england/",
-    ),
-  );
+  assert.equal(naa.has("/no/oslo/school-holidays/"), false);
+  assert.equal(naa.has("/ie/dublin/"), false);
+  assert.equal(naa.has("/ie/school-holidays/"), true);
+  assert.equal(naa.has("/no/vestland/school-holidays/"), true);
 });
