@@ -10,6 +10,7 @@ import { globaleSider } from "@/lib/globale-ruter.mjs";
 import { lesSkolekalender, norskeKalenderSider, regionInnhold } from "@/lib/skolekalender.mjs";
 import { sideInnhold, tilbudSider } from "@/lib/bolge-ruter.mjs";
 import globaleLeirerJson from "@/data/leirer-global.json";
+import { personvernBeskrivelse } from "@/lib/personvern.mjs";
 import {
   campIFerie,
   campUker,
@@ -1128,7 +1129,7 @@ export function modell(rute: Rute): SideModell {
 function beskrivelse(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
   if (rute.kind === "fremhevet") return tekst.featuredPageDescription;
-  if (rute.kind === "personvern") return tekst.privacyBody.join(" ");
+  if (rute.kind === "personvern") return personvernBeskrivelse(rute.locale);
   if (rute.kind === "hjem") return tekst.homeDescription;
   if (side.dokumentBeskrivelse) return side.dokumentBeskrivelse;
   if (rute.kind === "global" && rute.globalKind === "school-holidays") return side.ingress;

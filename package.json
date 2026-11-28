@@ -9,10 +9,11 @@
     "valider": "node scripts/valider.mjs",
     "sjekk": "node scripts/sjekk-lenker.mjs",
     "finn": "node scripts/finn-leirer.mjs",
-    "build": "npm run valider && next build",
+    "build": "npm run valider && next build && node scripts/sjekk-eksport.mjs --streng",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test tests/**/*.test.mjs"
+    "test": "node --test tests/**/*.test.mjs",
+    "sjekk-eksport": "node scripts/sjekk-eksport.mjs"
   },
   "dependencies": {
     "next": "16.3.5",
