@@ -18,6 +18,7 @@ import {
   annonsePlasser,
 } from "../lib/annonser.mjs";
 import { CONSENT_DEFAULT_SCRIPT, SAMTYKKE_PARAMETRE } from "../lib/samtykke.mjs";
+import { FLERE_TILBUD_MAKS, flereTilbud } from "../lib/pure.mjs";
 import {
   PERSONVERN_LOKALER,
   SAMTYKKE_ANKER,
@@ -169,10 +170,15 @@ test("plasser per sidetype følger plasseringskart.md", () => {
   assert.deepEqual(annonsePlasser(side({ kind: "skolerutaHub", antallKort: 50 })), ["H-1", "R-2"]);
 });
 
-test("leirdetalj: aldri før påmelding, og bare når ukeradene står imellom", () => {
-  assert.deepEqual(annonsePlasser(side({ kind: "leir", antallKort: 1, ukerader: 1 })), []);
-  assert.deepEqual(annonsePlasser(side({ kind: "leir", antallKort: 1, ukerader: 0 })), []);
-  assert.deepEqual(annonsePlasser(side({ kind: "leir", antallKort: 1, ukerader: 2 })), ["R-1"]);
+test("leirdetalj: aldri før en innholdsseksjon, og to annonser aldri rett etter hverandre", () => {
+  const leir = (o) => annonsePlasser(side({ kind: "leir", antallKort: 1, ...o }));
+  assert.deepEqual(leir({ ukerader: 1 }), []);
+  assert.deepEqual(leir({ ukerader: 0 }), []);
+  assert.deepEqual(leir({ ukerader: 2 }), ["R-1"]); // ukelisten står imellom
+  assert.deepEqual(leir({ innholdsseksjoner: 1 }), ["R-1"]); // «Flere tilbud» (kommune) står imellom
+  assert.deepEqual(leir({ innholdsseksjoner: 2 }), ["R-1", "H-2"]); // kommune + fylke: R-1 mellom dem, H-2 etter den andre
+  assert.deepEqual(leir({ innholdsseksjoner: 2, indekserbar: false }), []);
+  assert.deepEqual(leir({ innholdsseksjoner: 2, tom: true }), []);
 });
 
 test("aldri mer enn tre plasser, og alle plasser har format og reservert høyde", () => {
@@ -291,3 +297,98 @@ test(
     assert.match(r.stdout, /bryter (AV|PÅ)/);
   },
 );
+
+// ---------- «Flere tilbud i kommunen» ----------
+
+const I_DAG = "2026-11-28";
+let teller = 0;
+function grp(kommune, fylke, o = {}) {
+  teller++;
+  const id = o.id || `g${teller}`;
+  return {
+    slug: id,
+    medlemmer: [
+      {
+        id,
+        tittel: o.tittel || `Leir ${id}`,
+        tilbyder: "Arrangør",
+        kommune,
+        fylke,
+        by: null,
+        status: "verifisert",
+        demo: false,
+        dod: false,
+        lenkestatus: "ok",
+        datoFra: o.datoFra || "2027-02-22",
+        datoTil: o.datoTil || "2027-02-26",
+        ...o.felt,
+      },
+    ],
+  };
+}
+const valg = { kommuneSlug: "oslo", fylkeSlug: "oslo" };
+
+test("flereTilbud: andre indekserbare tilbud i samme kommune, aldri siden selv", () => {
+  const alle = [grp("Oslo", "Oslo", { id: "selv" }), grp("Oslo", "Oslo"), grp("Oslo", "Oslo"), grp("Oslo", "Oslo"), grp("Bergen", "Vestland")];
+  const r = flereTilbud(alle, "selv", I_DAG, valg);
+  assert.equal(r.kommune.length, 3);
+  assert.ok(!r.kommune.some((g) => g.slug === "selv"));
+  assert.deepEqual(r.fylke, []); // nok i kommunen, ingen reserve
+});
+
+test("flereTilbud: bare synlige, ikke-demo og indekserbare tilbud (verifisert eller delvis)", () => {
+  const alle = [
+    grp("Oslo", "Oslo", { id: "selv" }),
+    grp("Oslo", "Oslo", { id: "demo", felt: { demo: true } }),
+    grp("Oslo", "Oslo", { id: "forventet", felt: { status: "forventet" } }),
+    grp("Oslo", "Oslo", { id: "dod", felt: { dod: true } }),
+    grp("Oslo", "Oslo", { id: "utlopt", felt: { lenkestatus: "utløpt" } }),
+    grp("Oslo", "Oslo", { id: "passert", datoTil: "2026-01-01" }),
+    grp("Oslo", "Oslo", { id: "ok", felt: { status: "delvis" } }),
+  ];
+  const r = flereTilbud(alle, "selv", I_DAG, valg);
+  assert.deepEqual(r.kommune.map((g) => g.slug), ["ok"]);
+});
+
+test("flereTilbud: fylket er reserve bare når kommunen har færre enn tre, og totalt maks seks", () => {
+  const alle = [grp("Oslo", "Oslo", { id: "selv" }), grp("Oslo", "Oslo", { id: "a" })];
+  for (let i = 0; i < 10; i++) alle.push(grp("Nordre Follo", "Oslo"));
+  alle.push(grp("Bergen", "Vestland", { id: "annet-fylke" }));
+  const r = flereTilbud(alle, "selv", I_DAG, valg);
+  assert.deepEqual(r.kommune.map((g) => g.slug), ["a"]);
+  assert.equal(r.fylke.length, FLERE_TILBUD_MAKS - 1);
+  assert.ok(r.fylke.every((g) => g.medlemmer[0].fylke === "Oslo" && g.medlemmer[0].kommune !== "Oslo"));
+  assert.ok(!r.fylke.some((g) => g.slug === "annet-fylke"));
+});
+
+test("flereTilbud: ingenting å vise gir tomt resultat (blokken skal da ikke tegnes)", () => {
+  const r = flereTilbud([grp("Oslo", "Oslo", { id: "selv" }), grp("Bergen", "Vestland")], "selv", I_DAG, valg);
+  assert.deepEqual(r, { kommune: [], fylke: [] });
+  assert.deepEqual(flereTilbud([], "x", I_DAG, valg), { kommune: [], fylke: [] });
+  assert.deepEqual(flereTilbud([grp("Oslo", "Oslo")], "x", I_DAG, {}), { kommune: [], fylke: [] });
+});
+
+test("flereTilbud: sortert på startdato, deretter tittel", () => {
+  const alle = [
+    grp("Oslo", "Oslo", { id: "selv" }),
+    grp("Oslo", "Oslo", { id: "senere", datoFra: "2027-03-01" }),
+    grp("Oslo", "Oslo", { id: "b", datoFra: "2027-02-15", tittel: "B" }),
+    grp("Oslo", "Oslo", { id: "a", datoFra: "2027-02-15", tittel: "A" }),
+  ];
+  assert.deepEqual(flereTilbud(alle, "selv", I_DAG, valg).kommune.map((g) => g.slug), ["a", "b", "senere"]);
+});
+
+test("«Flere tilbud» finnes på tre språk, og blokken tegnes bare med innhold, uten påmeldingslenker", () => {
+  const i18n = les("lib", "i18n.ts");
+  assert.match(i18n, /moreTitle: "Flere tilbud i \{sted\}"/);
+  assert.match(i18n, /moreTitle: "Fler erbjudanden i \{sted\}"/);
+  assert.match(i18n, /moreTitle: "More camps in \{sted\}"/);
+  const v = les("components", "PageView.tsx");
+  assert.match(v, /side\.flereTilbud\[0\] \? <FlereTilbud/);
+  assert.match(v, /side\.flereTilbud\[1\] \? <FlereTilbud/);
+  const blokk = v.slice(v.indexOf("function FlereTilbud"), v.indexOf("function Arrangor"));
+  assert.doesNotMatch(blokk, /camp\.url|signup|seeOrganiser|rel="noopener/);
+  const katalog = les("lib", "katalog.ts");
+  assert.match(katalog, /if \(valgt\.kommune\.length\) flereTilbud\.push/);
+  assert.match(katalog, /if \(valgt\.fylke\.length && forste\.fylke\) flereTilbud\.push/);
+});

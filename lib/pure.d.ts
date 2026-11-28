@@ -143,3 +143,12 @@ export function pameldingModus(
   apner: string | null | undefined,
   iDag: string,
 ): "apnet" | "apner" | "status";
+
+export const FLERE_TILBUD_MAKS: number;
+export const FLERE_TILBUD_KOMMUNE_MIN: number;
+export function flereTilbud<T extends { slug: string; medlemmer: any[] }>(
+  grupper: T[],
+  gjeldendeSlug: string,
+  iDag: string,
+  valg?: { kommuneSlug?: string; fylkeSlug?: string; maks?: number },
+): { kommune: T[]; fylke: T[] };

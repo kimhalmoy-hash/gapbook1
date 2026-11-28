@@ -14,5 +14,6 @@ export function annonsePlasser(side: {
   antallKort: number;
   tom: boolean;
   ukerader?: number;
+  innholdsseksjoner?: number;
 }): string[];
 export const ETIKETTER: Record<"nb" | "sv" | "en", { annonse: string; samtykke: string }>;
