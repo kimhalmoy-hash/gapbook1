@@ -63,6 +63,7 @@ export function Footer({ tekst, tipHref, privacyHref }: { tekst: Copy; tipHref: 
         <p>{tekst.trust}</p>
         <p className="mt-3 flex flex-wrap gap-4">
           <a className="text-pine hover:underline" href={privacyHref}>{tekst.privacyLink}</a>
+          <a id="samtykkeinnstillinger" className="text-pine hover:underline" href="#samtykkeinnstillinger">{tekst.consentLink}</a>
           <a className="text-pine hover:underline" href={tipHref}>{tekst.tipCta}</a>
         </p>
       </div>

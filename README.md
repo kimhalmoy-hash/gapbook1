@@ -105,3 +105,7 @@ Vercel-regionen i `vercel.json` er fortsatt `fra1`. Ingenting er deployet herfra
 | `npm run valider` | Skjema og personvern |
 | `npm run build` | Valider, deretter statisk eksport til `out/` |
 | `npm test` | Regler for uke, Hoopit, robots, Spond-utdrag og skolerute |
+
+## Samtykke og annonser
+
+Consent Mode v2 (alt «denied»), personvern på tre språk og ads.txt er med. AdSense er bygget, men AV som standard (`ADSENSE_AKTIV` i `lib/annonser.mjs`). Se `docs/annonser.md` for plasser, hvordan bryteren slås PÅ og kontrollene som kjører i `npm run build`.

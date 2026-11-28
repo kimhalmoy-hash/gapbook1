@@ -27,8 +27,9 @@ export type Copy = {
   trust: string;
   privacyTitle: string;
   privacyH1: string;
-  privacyBody: string[];
   privacyLink: string;
+  consentLink: string;
+  adLabel: string;
   summerBoth: string;
   summerStart: string;
   summerSourceFirst: string;
@@ -198,15 +199,9 @@ export const COPY: Record<Locale, Copy> = {
     trust: "Vi viser arrangørenes egne opplysninger. Sjekk alltid detaljene hos arrangøren før påmelding.",
     privacyTitle: "Personvern | WeekSlot",
     privacyH1: "Personvern",
-    privacyBody: [
-      "WeekSlot bruker ingen informasjonskapsler.",
-      "Vi bruker ingen analyse og ingen tredjeparts sporing.",
-      "Det finnes ingen skjema som lagrer data.",
-      "Nettstedet ligger hos Vercel, som fører vanlige tekniske serverlogger.",
-      "E-post til kontakt@weekslot.com behandles bare for å svare og for å legge inn tilbudet.",
-      "Kontakt: kontakt@weekslot.com.",
-    ],
     privacyLink: "Personvern",
+    consentLink: "Samtykkeinnstillinger",
+    adLabel: "Annonse",
     summerBoth: "Sommerferie: fra {fra} til {til} (uke {uker}){detalj}",
     summerStart: "Sommerferien starter {fra} (uke {uker}). Slutten er ikke publisert.{detalj}",
     summerSourceFirst: "Kilde, første skoledag",
@@ -360,15 +355,9 @@ export const COPY: Record<Locale, Copy> = {
     trust: "Vi visar arrangörernas egna uppgifter. Kontrollera alltid detaljerna hos arrangören före anmälan.",
     privacyTitle: "Integritet | WeekSlot",
     privacyH1: "Integritet",
-    privacyBody: [
-      "WeekSlot använder inga kakor.",
-      "Vi använder ingen analys och ingen spårning från tredje part.",
-      "Det finns inga formulär som lagrar data.",
-      "Webbplatsen ligger hos Vercel, som för vanliga tekniska serverloggar.",
-      "E-post till kontakt@weekslot.com behandlas bara för att svara och för att lägga in erbjudandet.",
-      "Kontakt: kontakt@weekslot.com.",
-    ],
     privacyLink: "Integritet",
+    consentLink: "Samtyckesinställningar",
+    adLabel: "Annons",
     summerBoth: "Sommarlov: från {fra} till {til} (vecka {uker}){detalj}",
     summerStart: "Sommarlovet börjar {fra} (vecka {uker}). Slutet är inte publicerat.{detalj}",
     summerSourceFirst: "Källa, första skoldagen",
@@ -523,15 +512,9 @@ export const COPY: Record<Locale, Copy> = {
     trust: "We show the organisers' own information. Always check the details with the organiser before signing up.",
     privacyTitle: "Privacy | WeekSlot",
     privacyH1: "Privacy",
-    privacyBody: [
-      "WeekSlot uses no cookies.",
-      "We use no analytics and no third-party tracking.",
-      "There are no forms that store data.",
-      "The site is hosted by Vercel, which keeps ordinary technical server logs.",
-      "Email to kontakt@weekslot.com is used only to reply and to add the listing.",
-      "Contact: kontakt@weekslot.com.",
-    ],
     privacyLink: "Privacy",
+    consentLink: "Consent settings",
+    adLabel: "Advertisement",
     summerBoth: "Summer holiday: from {fra} to {til} (week {uker}){detalj}",
     summerStart: "The summer holiday starts {fra} (week {uker}). The end date is not published.{detalj}",
     summerSourceFirst: "Source, first school day",
