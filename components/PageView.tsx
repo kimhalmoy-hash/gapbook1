@@ -21,6 +21,7 @@ export function PageView({ rute }: { rute: Rute }) {
     antallKort: side.leirer.length,
     tom: side.leirer.length === 0 && side.ferieListe.length === 0,
     ukerader: rute.kind === "leir" ? side.leirer[0]?.ukerader.length || 0 : 0,
+    innholdsseksjoner: side.flereTilbud.length,
   });
   const spraak = (["nb", "sv", "en"] as Locale[]).map((locale) => ({
     locale,
@@ -376,8 +377,16 @@ function Innhold({ side, plasser }: { side: ReturnType<typeof modell>; plasser: 
           </p>
         )}
       </section>
-      <AnnonsePlass navn="R-1" plasser={plasser} tekst={tekst} />
-      <AnnonsePlass navn="R-2" plasser={plasser} tekst={tekst} />
+      {erDetalj ? (
+        <>
+          {side.flereTilbud[0] ? <FlereTilbud seksjon={side.flereTilbud[0]} /> : null}
+          <AnnonsePlass navn="R-1" plasser={plasser} tekst={tekst} />
+          {side.flereTilbud[1] ? <FlereTilbud seksjon={side.flereTilbud[1]} /> : null}
+          <AnnonsePlass navn="H-2" plasser={plasser} tekst={tekst} />
+        </>
+      ) : (
+        <AnnonsePlass navn="R-2" plasser={plasser} tekst={tekst} />
+      )}
       {side.rute.kind === "sesong" ? <SesongGuide rute={side.rute} /> : null}
       {erDetalj ? null : (
         <>
@@ -386,6 +395,25 @@ function Innhold({ side, plasser }: { side: ReturnType<typeof modell>; plasser: 
         </>
       )}
     </>
+  );
+}
+
+/** «Flere tilbud i kommunen»: lenker bare til andre, indekserbare tilbud. Ikke leirkort, og ingen påmeldingslenker. */
+function FlereTilbud({ seksjon }: { seksjon: { rubrikk: string; leirer: CampView[] } }) {
+  return (
+    <section className="mt-12" data-flere-tilbud>
+      <h2 className="font-serif text-2xl">{seksjon.rubrikk}</h2>
+      <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+        {seksjon.leirer.map((camp) => (
+          <li key={camp.id} className="rounded-xl border border-line bg-card px-4 py-3 text-sm">
+            <a className="font-medium text-pine hover:underline" href={camp.href}>{camp.tittel}</a>
+            <span className="mt-0.5 block text-muted">
+              {camp.tilbyder} · {camp.sted} · {camp.ukeLabel}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

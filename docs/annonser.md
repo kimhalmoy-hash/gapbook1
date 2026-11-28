@@ -54,7 +54,7 @@ Etter `plasseringskart.md`. Logikken ligger i `annonsePlasser()` i `lib/annonser
 |---|---|
 | Forside `/` | H-1 (etter «Slik virker det»), R-2 (etter «Utforsk») |
 | Kommune/skolerute, kommune + ferie, ukeside, fylke, temaside, feriehub | H-1 før listen, R-2 etter listen, H-3 mellom rad to og tre når det er minst ni kort |
-| Leirdetalj `/leir/<id>/` | R-1 etter ukeradene, bare når siden har en ukeliste (mer enn én uke) |
+| Leirdetalj `/leir/<id>/` | R-1 etter første innholdsseksjon («Flere tilbud i kommunen», ellers ukelisten), H-2 etter en andre seksjon («Flere tilbud i fylket»). Aldri rett under «Meld på», og aldri to annonser rett etter hverandre |
 
 Ingen plasser på: `/arrangor/` (nb/sv/en), personvernsidene, noindex-sider, 404 og sider med tom liste. Maks tre per side. Aldri over H1 eller i headeren, aldri inne i rutenettet eller rett under en lenke.
 
@@ -78,3 +78,15 @@ Tre mulige løsninger ble vurdert for AV-tilstanden: (a) tom boks med reservert 
 
 - Annonser som allerede er lastet fjernes ikke hvis besøkende trekker samtykket tilbake i samme sidevisning. De er borte ved neste sidevisning.
 - Taggen lastes på alle sider, også på `/arrangor/` og personvernsidene, fordi samtykkemeldingen må kunne vises og trekkes tilbake overalt. Det vises ingen annonser der.
+
+## «Flere tilbud i kommunen» (leirdetalj)
+
+Innholdsblokk på `/leir/<id>/` (nb/sv/en), uten ny URL. Valget gjøres av `flereTilbud()` i `lib/pure.mjs`:
+
+- andre tilbud i samme kommune som er synlige, ikke demo og indekserbare (samme regel som gjør leirsiden indekserbar: verifisert eller delvis);
+- færre enn tre i kommunen: fylket fyller opp som reserve, i en egen seksjon («Flere tilbud i {fylke}»); maks seks totalt;
+- sortert på startdato, så tittel; aldri siden selv;
+- ingenting å vise: blokken tegnes ikke;
+- lenker er vanlige tekstlenker til andre leirsider på samme språk, ingen påmeldingslenker og ingen leirkort.
+
+`sjekk-eksport` sjekker at alle lenkene i blokken står i `sitemap.xml`, at det er høyst seks per seksjon og to seksjoner, at det ikke finnes tomme blokker, og at ingen lenker til siden selv.

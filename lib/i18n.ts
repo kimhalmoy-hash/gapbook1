@@ -58,6 +58,7 @@ export type Copy = {
   weeks: string;
   fromPrice: string;
   weeksHeading: string;
+  moreTitle: string;
   signup: string;
   seeOrganiser: string;
   lastYearPrice: string;
@@ -249,6 +250,7 @@ export const COPY: Record<Locale, Copy> = {
     weeks: "Uke {nr}",
     fromPrice: "fra {pris}",
     weeksHeading: "Ukene",
+    moreTitle: "Flere tilbud i {sted}",
     signup: "Meld på hos arrangøren",
     seeOrganiser: "Se arrangørens side",
     lastYearPrice: "I fjor: {pris}",
@@ -404,6 +406,7 @@ export const COPY: Record<Locale, Copy> = {
     weeks: "Vecka {nr}",
     fromPrice: "från {pris}",
     weeksHeading: "Veckorna",
+    moreTitle: "Fler erbjudanden i {sted}",
     signup: "Anmäl hos arrangören",
     seeOrganiser: "Se arrangörens sida",
     lastYearPrice: "I fjol: {pris}",
@@ -558,6 +561,7 @@ export const COPY: Record<Locale, Copy> = {
     weeks: "Week {nr}",
     fromPrice: "from {pris}",
     weeksHeading: "Weeks",
+    moreTitle: "More camps in {sted}",
     signup: "Sign up with the organiser",
     seeOrganiser: "See the organiser's page",
     lastYearPrice: "Last year: {pris}",

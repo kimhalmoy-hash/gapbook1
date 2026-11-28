@@ -13,6 +13,7 @@ import {
   ferieFelter,
   heleFerieuker,
   ferieUkeTekst,
+  flereTilbud as velgFlereTilbud,
   sommerKommuneTekst,
   kommunerISesong,
   kommunerMedFri,
@@ -216,6 +217,8 @@ export type SideModell = {
   sommerLinje: string | null;
   sommerKilder: { href: string; label: string }[];
   leirer: CampView[];
+  /** «Flere tilbud i kommunen» på leirdetalj: ingen eller opptil to seksjoner (kommune, så fylke som reserve). */
+  flereTilbud: { rubrikk: string; leirer: CampView[] }[];
   filter: boolean;
   crumbs: { name: string; href: string }[];
   sesongLenker: { href: string; label: string; blurb: string }[];
@@ -962,6 +965,21 @@ export function modell(rute: Rute): SideModell {
     .map((g) => groupView(g.slug, g.medlemmer, rute.locale, badge.get(g.slug) ?? null))
     .sort(sorter);
 
+  const flereTilbud: SideModell["flereTilbud"] = [];
+  if (rute.kind === "leir") {
+    const forste = (GRUPPE_SLUG.get(rute.id) || []).find((x) => synlig(x, I_DAG));
+    if (forste) {
+      const valgt = velgFlereTilbud(GRUPPER, rute.id, I_DAG, {
+        kommuneSlug: slug(forste.kommune),
+        fylkeSlug: slug(forste.fylke || ""),
+      });
+      const vis = (liste: typeof valgt.kommune) =>
+        liste.map((g) => groupView(g.slug, g.medlemmer.filter((m) => synlig(m, I_DAG)), rute.locale, null));
+      if (valgt.kommune.length) flereTilbud.push({ rubrikk: fyll(tekst.moreTitle, { sted: forste.kommune }), leirer: vis(valgt.kommune) });
+      if (valgt.fylke.length && forste.fylke) flereTilbud.push({ rubrikk: fyll(tekst.moreTitle, { sted: forste.fylke }), leirer: vis(valgt.fylke) });
+    }
+  }
+
   const crumbs = [{ name: tekst.breadcrumbHome, href: home }];
   if (rute.kind === "ferieKommune") {
     crumbs.push({
@@ -983,6 +1001,7 @@ export function modell(rute: Rute): SideModell {
     sommerLinje,
     sommerKilder,
     leirer: leirVisning,
+    flereTilbud,
     filter: rute.kind === "hjem",
     crumbs,
     sesongLenker: sesonger,

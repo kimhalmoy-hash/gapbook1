@@ -82,6 +82,12 @@ const ANNONSE_ETIKETT = />(Annonse|Annons|Advertisement)<|aria-label="(Annonse|A
 const ETIKETT = { nb: "Annonse", sv: "Annons", en: "Advertisement" };
 let medPlasser = 0;
 let antallPlasser = 0;
+let medFlereTilbud = 0;
+let leirSider = 0;
+let leirMedPlass = 0;
+
+// «Flere tilbud i kommunen» skal bare lenke til indekserbare sider (de som står i sitemap.xml).
+const sitemapUrler = new Set([...readFileSync(path.join(mappe, "sitemap.xml"), "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
 
 for (const f of html) {
   const sti = rel(f);
@@ -104,7 +110,32 @@ for (const f of html) {
     }
   }
 
+  const erLeir = /^\/(sv\/|en\/)?leir\/[^/]+\/index\.html$/.test(sti);
+  const flereSeksjoner = [...kilde.matchAll(/<section class="mt-12" data-flere-tilbud[^>]*>([\s\S]*?)<\/section>/g)].map((m) => m[1]);
+  if (erLeir) leirSider++;
+  if (flereSeksjoner.length) {
+    medFlereTilbud++;
+    krev(erLeir, `${sti}: «Flere tilbud» på en side som ikke er leirdetalj`);
+    krev(flereSeksjoner.length <= 2, `${sti}: flere enn to «Flere tilbud»-seksjoner`);
+    const selv = "https://weekslot.com" + sti.replace(/index\.html$/, "");
+    const lang = kilde.match(/<div lang="([a-z]{2})/)?.[1] || "nb";
+    for (const seksjon of flereSeksjoner) {
+      const href = [...seksjon.matchAll(/<a [^>]*href="([^"]+)"/g)].map((m) => m[1]);
+      krev(href.length > 0, `${sti}: tom «Flere tilbud»-seksjon`);
+      krev(href.length <= 6, `${sti}: mer enn seks lenker i «Flere tilbud»`);
+      krev(!/<button|signup|Meld på|Se hos arrangøren/.test(seksjon), `${sti}: påmeldingslenke i «Flere tilbud»`);
+      for (const h of href) {
+        const abs = "https://weekslot.com" + h;
+        krev(h.startsWith(lang === "nb" ? "/leir/" : `/${lang}/leir/`), `${sti}: «Flere tilbud» lenker utenfor leirsidene på samme språk: ${h}`);
+        krev(sitemapUrler.has(abs), `${sti}: «Flere tilbud» lenker til side som ikke er indekserbar: ${h}`);
+        krev(abs !== selv, `${sti}: «Flere tilbud» lenker til siden selv`);
+      }
+      krev(new Set(href).size === href.length, `${sti}: duplikate lenker i «Flere tilbud»`);
+    }
+  }
+
   const plasser = [...kilde.matchAll(/data-annonse-plass="([^"]+)"/g)].map((m) => m[1]);
+  if (erLeir && plasser.length) leirMedPlass++;
   antallPlasser += plasser.length;
   if (plasser.length) medPlasser++;
 
@@ -145,6 +176,13 @@ for (const f of html) {
   krev(h1 >= 0 && forste > h1, `${sti}: annonseplass før H1`);
   krev(kilde.includes("<header") ? forste > kilde.indexOf("</header>") : true, `${sti}: annonseplass i headeren`);
   krev(!/<a[^>]*>[^<]*<\/a><aside[^>]*data-annonse-plass/.test(kilde), `${sti}: annonse rett etter en lenke`);
+  if (erLeir) {
+    // Leirdetalj: aldri annonse før en innholdsseksjon, og to annonser aldri rett etter hverandre.
+    const forstePlass = kilde.indexOf("data-annonse-plass");
+    const forsteInnhold = Math.min(...[kilde.indexOf("data-flere-tilbud"), kilde.indexOf('<h2 class="font-serif text-2xl">')].filter((i) => i >= 0));
+    krev(Number.isFinite(forsteInnhold) && forsteInnhold < forstePlass, `${sti}: leirdetalj har annonse uten innholdsseksjon foran`);
+    krev(!/<\/aside><aside/.test(kilde), `${sti}: to annonser rett etter hverandre`);
+  }
 }
 
 if (!pa) {
@@ -169,7 +207,7 @@ if (baseline) {
 }
 
 console.log(
-  `sjekk-eksport: ${html.length} HTML-filer, bryter ${pa ? "PÅ" : "AV"}, ${antallPlasser} annonseplasser på ${medPlasser} sider${sitemapInfo ? ", " + sitemapInfo : ""}`,
+  `sjekk-eksport: ${html.length} HTML-filer, bryter ${pa ? "PÅ" : "AV"}, ${antallPlasser} annonseplasser på ${medPlasser} sider, «Flere tilbud» på ${medFlereTilbud} av ${leirSider} leirsider (${leirMedPlass} med annonseplass)${sitemapInfo ? ", " + sitemapInfo : ""}`,
 );
 if (feil.length) {
   console.error(`sjekk-eksport: ${feil.length} feil`);
