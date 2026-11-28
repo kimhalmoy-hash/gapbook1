@@ -53,6 +53,7 @@ import {
   ukeMandag,
   ukeNokkel,
 } from "@/lib/pure.mjs";
+import { guideFor } from "@/lib/guide-data";
 import { COPY, copy, fyll, intlLocale, type Copy, type Locale, LOCALES } from "@/lib/i18n";
 
 type SesongNavn = "vinter" | "sommer" | "host" | "paske";
@@ -950,6 +951,8 @@ export function modell(rute: Rute): SideModell {
   } else if (rute.kind === "sesong") {
     ingress = tekst.seasonBlurb[rute.navn];
   }
+  const guide = guideFor(rute);
+  if (guide) h1 = guide.meta.h1;
   if (rute.kind === "sesong") {
     const rader = kommunerISesong(skolerute, rute.navn, rute.aar);
     if (rader.length) {
@@ -1188,6 +1191,8 @@ function beskrivelse(rute: Rute, side: SideModell): string {
     const raw = typeNavn.get(rute.typeSlug) || rute.typeSlug;
     return fyll(tekst.typeDescription, { type: tekst.types[raw] || raw });
   }
+  const guide = guideFor(rute);
+  if (guide) return guide.meta.beskrivelse;
   if (rute.kind === "sesong" || rute.kind === "ferieKommune") {
     return fyll(tekst.seasonDescription, { ferie: soketittel(rute) || side.h1 });
   }
@@ -1203,6 +1208,8 @@ function tittel(rute: Rute, side: SideModell): string {
   if (rute.kind === "personvern") return tekst.privacyTitle;
   if (rute.kind === "hjem") return tekst.homeTitle;
   if (side.dokumentTittel) return side.dokumentTittel;
+  const guide = guideFor(rute);
+  if (guide) return `${guide.meta.tittel} | ${site.name}`;
   if (rute.kind !== "leir") return `${soketittel(rute) || side.h1} | ${site.name}`;
   const e = side.leirer[0];
   return e ? `${e.tittel} | ${site.name}` : tekst.homeTitle;
@@ -1263,6 +1270,18 @@ export function jsonLd(rute: Rute, side: SideModell): unknown[] {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: side.tekst.featuredFaq.map((rad) => ({
+        "@type": "Question",
+        name: rad.q,
+        acceptedAnswer: { "@type": "Answer", text: rad.a },
+      })),
+    });
+  }
+  const guide = guideFor(rute);
+  if (guide?.faq.length) {
+    blokker.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: guide.faq.map((rad) => ({
         "@type": "Question",
         name: rad.q,
         acceptedAnswer: { "@type": "Answer", text: rad.a },
