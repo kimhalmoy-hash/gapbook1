@@ -39,7 +39,8 @@ Fila er én JSON-array. Ett objekt per kurs/leir per uke (samme oppdeling som `d
 ## Regler
 
 - `id`: unik og stabil mellom eksporter.
-- `sesong`: `vinter2027`, `paske2027`, `sommer2027`, `host2027` og tilsvarende senere år.
+- `sesong`: `vinter2027`, `paske2027`, `sommer2027`, `host2027`, `halvterm2027` (half term i GB) og tilsvarende senere år.
+- Tilbud utenfor Norge ligger i `data/leirer-global.json` og har i tillegg `region` (ISO 3166-2), `regionNavn`, `valuta`, `prisBelop` (tall eller `null`), `gratis`, `sprak` (liste) og `kategori`. `prisBelop` kan ha desimaler. Norske rader trenger ikke feltene.
 - `uke`: heltall når kilden oppgir én uke. Spenn og lister beholdes som tekst, for eksempel `"25-33"` eller `"26,27,32,33"`. De splittes ikke opp i nye rader. For `sommer` + `forventet` er tallet fjorårets uke, ikke en bekreftet uke i sesongåret. Slike rader har ikke `datoFra`/`datoTil`, og sidene viser dem som forventet med «i 2026: uke N».
 - `prisNok`: heltall eller `null`. Et prisområde som `5900-6700` blir `null`. Teksten ligger i `prisNotat`.
 - `status` (datakvalitet): `verifisert` | `delvis` | `forventet`. CSV-verdien `dato_ikke_publisert` blir `forventet` (tilbudet har bare fjorårets dato; den står i `notat`).

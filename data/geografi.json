@@ -1,5 +1,5 @@
 {
-  "kilde": "Fylkeskoder er SSB fylkesnummer 2024 med prefiks NO-. ISO 3166-2:NO er ikke oppdatert for delingen i 2024. Koordinater er omtrentlige kommunesentre, ikke et GeoNames-uttrekk. SE, DE, AT, GB og IE er stubber uten regioner, ferier eller tilbud.",
+  "kilde": "Fylkeskoder er SSB fylkesnummer 2024 med prefiks NO-. ISO 3166-2:NO er ikke oppdatert for delingen i 2024. Koordinater er omtrentlige kommunesentre, ikke et GeoNames-uttrekk. SE, DE, AT, GB og IE er stubber uten regioner, ferier eller tilbud. Bølge 1-steder er kommunesentre for tilbudene i leirer-global.json, omtrentlige, ikke et GeoNames-uttrekk.",
   "land": [
     {
       "iso2": "NO",
@@ -213,6 +213,166 @@
         "nb": "Østfold",
         "sv": "Østfold",
         "en": "Østfold"
+      }
+    },
+    {
+      "iso2": "SE",
+      "kode": "SE-AB",
+      "slug": "stockholm",
+      "navn": {
+        "nb": "Stockholms län",
+        "sv": "Stockholms län",
+        "en": "Stockholms län"
+      }
+    },
+    {
+      "iso2": "SE",
+      "kode": "SE-C",
+      "slug": "uppsala",
+      "navn": {
+        "nb": "Uppsala län",
+        "sv": "Uppsala län",
+        "en": "Uppsala län"
+      }
+    },
+    {
+      "iso2": "SE",
+      "kode": "SE-O",
+      "slug": "vastra-gotaland",
+      "navn": {
+        "nb": "Västra Götalands län",
+        "sv": "Västra Götalands län",
+        "en": "Västra Götalands län"
+      }
+    },
+    {
+      "iso2": "DE",
+      "kode": "DE-BE",
+      "slug": "berlin",
+      "navn": {
+        "nb": "Berlin",
+        "sv": "Berlin",
+        "en": "Berlin"
+      }
+    },
+    {
+      "iso2": "DE",
+      "kode": "DE-BY",
+      "slug": "bayern",
+      "navn": {
+        "nb": "Bayern",
+        "sv": "Bayern",
+        "en": "Bayern"
+      }
+    },
+    {
+      "iso2": "DE",
+      "kode": "DE-HH",
+      "slug": "hamburg",
+      "navn": {
+        "nb": "Hamburg",
+        "sv": "Hamburg",
+        "en": "Hamburg"
+      }
+    },
+    {
+      "iso2": "DE",
+      "kode": "DE-NW",
+      "slug": "nordrhein-westfalen",
+      "navn": {
+        "nb": "Nordrhein-Westfalen",
+        "sv": "Nordrhein-Westfalen",
+        "en": "Nordrhein-Westfalen"
+      }
+    },
+    {
+      "iso2": "AT",
+      "kode": "AT-4",
+      "slug": "oberoesterreich",
+      "navn": {
+        "nb": "Oberösterreich",
+        "sv": "Oberösterreich",
+        "en": "Oberösterreich"
+      }
+    },
+    {
+      "iso2": "AT",
+      "kode": "AT-5",
+      "slug": "salzburg",
+      "navn": {
+        "nb": "Salzburg",
+        "sv": "Salzburg",
+        "en": "Salzburg"
+      }
+    },
+    {
+      "iso2": "AT",
+      "kode": "AT-6",
+      "slug": "steiermark",
+      "navn": {
+        "nb": "Steiermark",
+        "sv": "Steiermark",
+        "en": "Steiermark"
+      }
+    },
+    {
+      "iso2": "AT",
+      "kode": "AT-9",
+      "slug": "wien",
+      "navn": {
+        "nb": "Wien",
+        "sv": "Wien",
+        "en": "Wien"
+      }
+    },
+    {
+      "iso2": "GB",
+      "kode": "GB-ENG",
+      "slug": "england",
+      "navn": {
+        "nb": "England",
+        "sv": "England",
+        "en": "England"
+      }
+    },
+    {
+      "iso2": "GB",
+      "kode": "GB-SCT",
+      "slug": "scotland",
+      "navn": {
+        "nb": "Scotland",
+        "sv": "Scotland",
+        "en": "Scotland"
+      }
+    },
+    {
+      "iso2": "IE",
+      "kode": "IE-D",
+      "slug": "dublin",
+      "navn": {
+        "nb": "Dublin",
+        "sv": "Dublin",
+        "en": "Dublin"
+      }
+    },
+    {
+      "iso2": "IE",
+      "kode": "IE-CO",
+      "slug": "cork",
+      "navn": {
+        "nb": "Cork",
+        "sv": "Cork",
+        "en": "Cork"
+      }
+    },
+    {
+      "iso2": "IE",
+      "kode": "IE-TA",
+      "slug": "tipperary",
+      "navn": {
+        "nb": "Tipperary",
+        "sv": "Tipperary",
+        "en": "Tipperary"
       }
     }
   ],
@@ -792,6 +952,222 @@
       },
       "lat": 62.47,
       "lng": 6.15
+    },
+    {
+      "iso2": "SE",
+      "region": "stockholm",
+      "slug": "stockholm",
+      "navn": {
+        "nb": "Stockholm",
+        "sv": "Stockholm",
+        "en": "Stockholm"
+      },
+      "lat": 59.3293,
+      "lng": 18.0686
+    },
+    {
+      "iso2": "SE",
+      "region": "uppsala",
+      "slug": "uppsala",
+      "navn": {
+        "nb": "Uppsala",
+        "sv": "Uppsala",
+        "en": "Uppsala"
+      },
+      "lat": 59.8586,
+      "lng": 17.6389
+    },
+    {
+      "iso2": "SE",
+      "region": "vastra-gotaland",
+      "slug": "goteborg",
+      "navn": {
+        "nb": "Göteborg",
+        "sv": "Göteborg",
+        "en": "Göteborg"
+      },
+      "lat": 57.7089,
+      "lng": 11.9746
+    },
+    {
+      "iso2": "DE",
+      "region": "berlin",
+      "slug": "berlin",
+      "navn": {
+        "nb": "Berlin",
+        "sv": "Berlin",
+        "en": "Berlin"
+      },
+      "lat": 52.52,
+      "lng": 13.405
+    },
+    {
+      "iso2": "DE",
+      "region": "bayern",
+      "slug": "muenchen",
+      "navn": {
+        "nb": "München",
+        "sv": "München",
+        "en": "München"
+      },
+      "lat": 48.1374,
+      "lng": 11.5755
+    },
+    {
+      "iso2": "DE",
+      "region": "hamburg",
+      "slug": "hamburg",
+      "navn": {
+        "nb": "Hamburg",
+        "sv": "Hamburg",
+        "en": "Hamburg"
+      },
+      "lat": 53.5511,
+      "lng": 9.9937
+    },
+    {
+      "iso2": "DE",
+      "region": "nordrhein-westfalen",
+      "slug": "koeln",
+      "navn": {
+        "nb": "Köln",
+        "sv": "Köln",
+        "en": "Köln"
+      },
+      "lat": 50.9375,
+      "lng": 6.9603
+    },
+    {
+      "iso2": "AT",
+      "region": "oberoesterreich",
+      "slug": "st-wolfgang",
+      "navn": {
+        "nb": "St. Wolfgang",
+        "sv": "St. Wolfgang",
+        "en": "St. Wolfgang"
+      },
+      "lat": 47.739,
+      "lng": 13.447
+    },
+    {
+      "iso2": "AT",
+      "region": "salzburg",
+      "slug": "salzburg",
+      "navn": {
+        "nb": "Salzburg",
+        "sv": "Salzburg",
+        "en": "Salzburg"
+      },
+      "lat": 47.8095,
+      "lng": 13.055
+    },
+    {
+      "iso2": "AT",
+      "region": "steiermark",
+      "slug": "graz",
+      "navn": {
+        "nb": "Graz",
+        "sv": "Graz",
+        "en": "Graz"
+      },
+      "lat": 47.0707,
+      "lng": 15.4395
+    },
+    {
+      "iso2": "AT",
+      "region": "wien",
+      "slug": "wien",
+      "navn": {
+        "nb": "Wien",
+        "sv": "Wien",
+        "en": "Wien"
+      },
+      "lat": 48.2082,
+      "lng": 16.3738
+    },
+    {
+      "iso2": "GB",
+      "region": "england",
+      "slug": "romiley",
+      "navn": {
+        "nb": "Romiley",
+        "sv": "Romiley",
+        "en": "Romiley"
+      },
+      "lat": 53.414,
+      "lng": -2.084
+    },
+    {
+      "iso2": "GB",
+      "region": "england",
+      "slug": "sutton",
+      "navn": {
+        "nb": "Sutton",
+        "sv": "Sutton",
+        "en": "Sutton"
+      },
+      "lat": 51.361,
+      "lng": -0.194
+    },
+    {
+      "iso2": "GB",
+      "region": "england",
+      "slug": "altrincham",
+      "navn": {
+        "nb": "Altrincham",
+        "sv": "Altrincham",
+        "en": "Altrincham"
+      },
+      "lat": 53.384,
+      "lng": -2.355
+    },
+    {
+      "iso2": "GB",
+      "region": "scotland",
+      "slug": "glasgow",
+      "navn": {
+        "nb": "Glasgow",
+        "sv": "Glasgow",
+        "en": "Glasgow"
+      },
+      "lat": 55.8642,
+      "lng": -4.2518
+    },
+    {
+      "iso2": "IE",
+      "region": "dublin",
+      "slug": "blackrock",
+      "navn": {
+        "nb": "Blackrock",
+        "sv": "Blackrock",
+        "en": "Blackrock"
+      },
+      "lat": 53.301,
+      "lng": -6.178
+    },
+    {
+      "iso2": "IE",
+      "region": "cork",
+      "slug": "cork",
+      "navn": {
+        "nb": "Cork",
+        "sv": "Cork",
+        "en": "Cork"
+      },
+      "lat": 51.8985,
+      "lng": -8.4756
+    },
+    {
+      "iso2": "IE",
+      "region": "tipperary",
+      "slug": "roscrea",
+      "navn": {
+        "nb": "Roscrea",
+        "sv": "Roscrea",
+        "en": "Roscrea"
+      },
+      "lat": 52.955,
+      "lng": -7.802
     }
   ],
   "ferier": [],
