@@ -1,5 +1,5 @@
 import type { Copy } from "@/lib/i18n";
-import { ENHET_IDER, PLASS_FORMAT, adsenseAktiv } from "@/lib/annonser.mjs";
+import { ENHET_IDER, ETIKETTER, PLASS_FORMAT, adsenseAktiv } from "@/lib/annonser.mjs";
 
 /**
  * Fast annonseplass. Tegnes bare når AdSense-bryteren er PÅ og siden har lov til plassen.
@@ -11,16 +11,17 @@ export function AnnonsePlass({ navn, plasser, tekst }: { navn: string; plasser: 
   if (!adsenseAktiv() || !plasser.includes(navn)) return null;
   const format = PLASS_FORMAT[navn];
   if (!format) return null;
+  const etikett = ETIKETTER[tekst.htmlLang as keyof typeof ETIKETTER]?.annonse ?? ETIKETTER.nb.annonse;
   return (
     <aside
       className={`annonse ${format === "H" ? "annonse-h" : "annonse-r"}`}
-      aria-label={tekst.adLabel}
+      aria-label={etikett}
       data-annonse-plass={navn}
       data-annonse-format={format}
       data-annonse-enhet={ENHET_IDER[format]}
       data-nosnippet
     >
-      <p className="annonse-merke">{tekst.adLabel}</p>
+      <p className="annonse-merke">{etikett}</p>
       <div className="annonse-flate" />
     </aside>
   );

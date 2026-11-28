@@ -33,10 +33,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="nb" className={`${display.variable} ${body.variable} h-full`}>
       <head>
-        {/* Consent Mode v2: alt «denied» som standard, før noe annet skript. Står før alle tredjepartsskript (Next legger egne async-chunks av eget domene først; de rører ikke Google). */}
-        <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }} />
         {annonser ? (
           <>
+            {/* Consent Mode v2: alt «denied» som standard, før noe annet skript. Står før alle tredjepartsskript (Next legger egne async-chunks av eget domene først; de rører ikke Google). Hele samtykkeoppsettet ligger bak bryteren. */}
+            <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }} />
             {/* Lastes fra eget inline-skript, rett etter consent-standarden, så den aldri havner foran den. */}
             <script dangerouslySetInnerHTML={{ __html: fundingChoicesSkript() + SIGNAL_GOOGLEFC_PRESENT }} />
           </>
@@ -44,8 +44,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-full antialiased">
         {children}
-        <SamtykkeKlikk />
-        {annonser ? <AnnonseStyring /> : null}
+        {annonser ? (
+          <>
+            <SamtykkeKlikk />
+            <AnnonseStyring />
+          </>
+        ) : null}
       </body>
     </html>
   );

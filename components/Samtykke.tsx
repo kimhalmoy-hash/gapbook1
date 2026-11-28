@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { UTGIVER_ID } from "@/lib/annonser.mjs";
 
 // Kompileres inn ved bygging (next.config.ts). AV: grenen under fjernes, og ingen annonsekode ligger i JS-en.
 const ANNONSER_PA = process.env.NEXT_PUBLIC_WEEKSLOT_ADSENSE === "on";
+const UTGIVER_ID = process.env.NEXT_PUBLIC_WEEKSLOT_UTGIVER || "";
 
 type Googlefc = {
   callbackQueue?: unknown[];
@@ -26,6 +26,7 @@ function kø(w: AdsWindow) {
  */
 export function SamtykkeKlikk() {
   useEffect(() => {
+    if (!ANNONSER_PA) return;
     const w = window as AdsWindow;
     function klikk(e: MouseEvent) {
       const lenke = (e.target as Element | null)?.closest?.('a[href="#samtykkeinnstillinger"]');

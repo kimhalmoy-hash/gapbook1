@@ -28,8 +28,6 @@ export type Copy = {
   privacyTitle: string;
   privacyH1: string;
   privacyLink: string;
-  consentLink: string;
-  adLabel: string;
   summerBoth: string;
   summerStart: string;
   summerSourceFirst: string;
@@ -200,8 +198,6 @@ export const COPY: Record<Locale, Copy> = {
     privacyTitle: "Personvern | WeekSlot",
     privacyH1: "Personvern",
     privacyLink: "Personvern",
-    consentLink: "Samtykkeinnstillinger",
-    adLabel: "Annonse",
     summerBoth: "Sommerferie: fra {fra} til {til} (uke {uker}){detalj}",
     summerStart: "Sommerferien starter {fra} (uke {uker}). Slutten er ikke publisert.{detalj}",
     summerSourceFirst: "Kilde, første skoledag",
@@ -356,8 +352,6 @@ export const COPY: Record<Locale, Copy> = {
     privacyTitle: "Integritet | WeekSlot",
     privacyH1: "Integritet",
     privacyLink: "Integritet",
-    consentLink: "Samtyckesinställningar",
-    adLabel: "Annons",
     summerBoth: "Sommarlov: från {fra} till {til} (vecka {uker}){detalj}",
     summerStart: "Sommarlovet börjar {fra} (vecka {uker}). Slutet är inte publicerat.{detalj}",
     summerSourceFirst: "Källa, första skoldagen",
@@ -513,8 +507,6 @@ export const COPY: Record<Locale, Copy> = {
     privacyTitle: "Privacy | WeekSlot",
     privacyH1: "Privacy",
     privacyLink: "Privacy",
-    consentLink: "Consent settings",
-    adLabel: "Advertisement",
     summerBoth: "Summer holiday: from {fra} to {til} (week {uker}){detalj}",
     summerStart: "The summer holiday starts {fra} (week {uker}). The end date is not published.{detalj}",
     summerSourceFirst: "Source, first school day",

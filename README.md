@@ -108,4 +108,4 @@ Vercel-regionen i `vercel.json` er fortsatt `fra1`. Ingenting er deployet herfra
 
 ## Samtykke og annonser
 
-Consent Mode v2 (alt «denied»), personvern på tre språk og ads.txt er med. AdSense er bygget, men AV som standard (`ADSENSE_AKTIV` i `lib/annonser.mjs`). Se `docs/annonser.md` for plasser, hvordan bryteren slås PÅ og kontrollene som kjører i `npm run build`.
+Personvern på tre språk er med. Consent Mode v2 (alt «denied»), samtykkelenke, CMP og AdSense er bygget, men AV som standard (`ADSENSE_AKTIV` i `lib/annonser.mjs`), og da finnes ingen Google- eller samtykkekode i HTML-en. Se `docs/annonser.md` for plasser, hvordan bryteren slås PÅ og kontrollene som kjører i `npm run build`.

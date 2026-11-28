@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { fyll, type Copy, type Locale } from "@/lib/i18n";
 import { formaterUkeTall, prisVisning } from "@/lib/pure.mjs";
 import { indekserbar, jsonLd, mailto, modell, sammeSti, site, type CampView, type Rute } from "@/lib/katalog";
-import { annonsePlasser } from "@/lib/annonser.mjs";
+import { ETIKETTER, adsenseAktiv, annonsePlasser } from "@/lib/annonser.mjs";
 import { lesPersonvernMd, parsePersonvern, type Inline, type PersonvernBlokk } from "@/lib/personvern.mjs";
 import { SetLang } from "@/components/Chrome";
 
@@ -43,7 +43,7 @@ export function PageView({ rute }: { rute: Rute }) {
       <main className="mx-auto min-w-0 max-w-6xl px-4 py-10">
         {rute.kind === "hjem" ? <Hjem side={side} plasser={plasser} /> : rute.kind === "fremhevet" ? <FremhevetSide tekst={tekst} /> : rute.kind === "personvern" ? <Personvern locale={rute.locale} /> : <Innhold side={side} plasser={plasser} />}
       </main>
-      <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} privacyHref={rute.locale === "sv" ? "/sv/integritet/" : rute.locale === "en" ? "/en/privacy/" : "/personvern/"} />
+      <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} privacyHref={rute.locale === "sv" ? "/sv/integritet/" : rute.locale === "en" ? "/en/privacy/" : "/personvern/"} samtykkeTekst={adsenseAktiv() ? ETIKETTER[rute.locale].samtykke : undefined} />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import vm from "node:vm";
 import {
   ADSENSE_AKTIV,
   ENHET_IDER,
+  ETIKETTER,
   MAKS_PLASSER,
   PLASS_FORMAT,
   RESERVERT_HOYDE,
@@ -100,19 +101,33 @@ test("Consent Mode: alle fire parametere er denied som standard", () => {
   assert.ok(!Object.values(verdier).includes("granted"));
 });
 
-test("Consent Mode-standarden ligger i <head> i layout, før alt annet i <head>", () => {
+test("hele samtykkeoppsettet i layout ligger bak bryteren, og Consent Mode-standarden står først i <head>", () => {
   const layout = les("app", "layout.tsx");
   const head = layout.slice(layout.indexOf("<head>"), layout.indexOf("</head>"));
   assert.ok(head.includes("CONSENT_DEFAULT_SCRIPT"));
+  assert.ok(head.indexOf("annonser ? (") >= 0 && head.indexOf("annonser ? (") < head.indexOf("CONSENT_DEFAULT_SCRIPT"));
   assert.ok(head.indexOf("CONSENT_DEFAULT_SCRIPT") < head.indexOf("fundingChoicesSkript"));
+  const body = layout.slice(layout.indexOf("<body"));
+  assert.ok(body.indexOf("annonser ? (") >= 0 && body.indexOf("annonser ? (") < body.indexOf("<SamtykkeKlikk />"));
+  assert.ok(body.indexOf("annonser ? (") < body.indexOf("<AnnonseStyring />"));
 });
 
-test("footeren har lenken Samtykkeinnstillinger på alle tre språk", () => {
+test("samtykke- og annonsetekster ligger ikke i Copy (som serialiseres inn i all HTML), og klientkoden er bak byggekonstanten", () => {
   const i18n = les("lib", "i18n.ts");
-  assert.match(i18n, /consentLink: "Samtykkeinnstillinger"/);
-  assert.match(i18n, /consentLink: "Samtyckesinställningar"/);
-  assert.match(i18n, /consentLink: "Consent settings"/);
-  assert.match(les("components", "Chrome.tsx"), /href="#samtykkeinnstillinger"[^>]*>\{tekst\.consentLink\}/);
+  assert.doesNotMatch(i18n, /consentLink|adLabel|Samtykkeinnstillinger|Annonse"/);
+  const k = les("components", "Samtykke.tsx");
+  assert.match(k, /useEffect\(\(\) => \{\s+if \(!ANNONSER_PA\) return;\s+const w = window as AdsWindow;\s+function klikk/);
+  assert.match(k, /NEXT_PUBLIC_WEEKSLOT_UTGIVER/);
+  assert.doesNotMatch(les("lib", "annonser.mjs").split("export const ETIKETTER")[0].replace(/\/\/.*$/gm, ""), /Annonse"/);
+  assert.match(les("next.config.ts"), /NEXT_PUBLIC_WEEKSLOT_UTGIVER: adsenseAktiv\(\) \? UTGIVER_ID : ""/);
+});
+
+test("footeren har lenken Samtykkeinnstillinger på alle tre språk, men bare med bryteren PÅ", () => {
+  assert.equal(ETIKETTER.nb.samtykke, "Samtykkeinnstillinger");
+  assert.equal(ETIKETTER.sv.samtykke, "Samtyckesinställningar");
+  assert.equal(ETIKETTER.en.samtykke, "Consent settings");
+  assert.match(les("components", "Chrome.tsx"), /samtykkeTekst \? \(/);
+  assert.match(les("components", "PageView.tsx"), /samtykkeTekst=\{adsenseAktiv\(\) \? ETIKETTER\[rute\.locale\]\.samtykke : undefined\}/);
 });
 
 // ---------- Annonseplasser ----------
@@ -177,10 +192,9 @@ test("CSS reserverer fast høyde per format (CLS 0)", () => {
 });
 
 test("plassene er merket Annonse / Annons / Advertisement", () => {
-  const i18n = les("lib", "i18n.ts");
-  assert.match(i18n, /adLabel: "Annonse"/);
-  assert.match(i18n, /adLabel: "Annons"/);
-  assert.match(i18n, /adLabel: "Advertisement"/);
+  assert.equal(ETIKETTER.nb.annonse, "Annonse");
+  assert.equal(ETIKETTER.sv.annonse, "Annons");
+  assert.equal(ETIKETTER.en.annonse, "Advertisement");
 });
 
 test("enhet-ID-ene er tomme til AdSense-enhetene finnes, og utgiver-ID-en stemmer med ads.txt", () => {
@@ -267,7 +281,9 @@ test(
   "eksporten (out/) består sjekk-eksport: ingen AdSense-kode med bryteren AV, consent, ads.txt og ingen tapte URL-er",
   { skip: existsSync(path.join(ute, "index.html")) ? false : "out/ finnes ikke. Kjør `npm run build` først (build kjører samme sjekk)." },
   () => {
-    const r = spawnSync(process.execPath, ["scripts/sjekk-eksport.mjs", "--baseline", "tests/fixtures/sitemap-main-558c160.txt"], {
+    // Med bryteren AV i konfigurasjonen (standard) kjøres sjekken streng: out/ må være bygget AV og være helt uten Google-/samtykkekode.
+    const streng = adsenseAktiv() ? [] : ["--streng"];
+    const r = spawnSync(process.execPath, ["scripts/sjekk-eksport.mjs", ...streng, "--baseline", "tests/fixtures/sitemap-main-558c160.txt"], {
       cwd: ROT,
       encoding: "utf8",
     });

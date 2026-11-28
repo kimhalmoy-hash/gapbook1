@@ -56,14 +56,16 @@ export function Header({
   );
 }
 
-export function Footer({ tekst, tipHref, privacyHref }: { tekst: Copy; tipHref: string; privacyHref: string }) {
+export function Footer({ tekst, tipHref, privacyHref, samtykkeTekst }: { tekst: Copy; tipHref: string; privacyHref: string; samtykkeTekst?: string }) {
   return (
     <footer className="mt-16 border-t border-line">
       <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-muted">
         <p>{tekst.trust}</p>
         <p className="mt-3 flex flex-wrap gap-4">
           <a className="text-pine hover:underline" href={privacyHref}>{tekst.privacyLink}</a>
-          <a id="samtykkeinnstillinger" className="text-pine hover:underline" href="#samtykkeinnstillinger">{tekst.consentLink}</a>
+          {samtykkeTekst ? (
+            <a id="samtykkeinnstillinger" className="text-pine hover:underline" href="#samtykkeinnstillinger">{samtykkeTekst}</a>
+          ) : null}
           <a className="text-pine hover:underline" href={tipHref}>{tekst.tipCta}</a>
         </p>
       </div>

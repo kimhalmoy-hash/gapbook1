@@ -15,3 +15,4 @@ export function annonsePlasser(side: {
   tom: boolean;
   ukerader?: number;
 }): string[];
+export const ETIKETTER: Record<"nb" | "sv" | "en", { annonse: string; samtykke: string }>;

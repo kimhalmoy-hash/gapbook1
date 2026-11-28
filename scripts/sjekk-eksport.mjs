@@ -3,8 +3,9 @@
  *
  *   node scripts/sjekk-eksport.mjs [--mappe out] [--streng] [--baseline tests/fixtures/sitemap-main-558c160.txt]
  *
- * Alltid: ads.txt, Consent Mode (alt denied, før alle tredjepartsskript i <head>), footerlenken «Samtykkeinnstillinger», personvernsidene.
- * Bryter AV: ingen AdSense-/Funding Choices-kode i noen fil, og ingen annonseplasser.
+ * Alltid: ads.txt og personvernsidene.
+ * Bryter AV: ingen Google-kode, ingen samtykkeoppsett (Consent Mode/gtag/footerlenke), ingen utgiver-ID og ingen annonseplasser i noen fil.
+ * Bryter PÅ: Consent Mode (alt denied, før alle tredjepartsskript i <head>) og footerlenken «Samtykkeinnstillinger».
  * Bryter PÅ: plasser bare der plasseringskart.md tillater, merket, maks tre, ingen annonseforespørsel i HTML-en.
  * --baseline: alle URL-ene i fila må fortsatt stå i sitemap.xml (ingen indekserbare URL-er forsvinner).
  */
@@ -39,8 +40,10 @@ function filer(dir) {
 const alle = filer(mappe);
 // Bryterstilling avleses fra eksporten (Funding Choices-tagen ligger bare i <head> med bryteren PÅ).
 // Med --streng (brukes av `npm run build`) må den stemme med konfigurasjonen.
-const pa = alle.some((f) => f.endsWith("index.html") && readFileSync(f, "utf8").includes("fundingchoicesmessages.google.com"));
-if (args.includes("--streng")) krev(pa === adsenseAktiv(), `eksporten er bygget med bryteren ${pa ? "PÅ" : "AV"}, konfigurasjonen sier ${adsenseAktiv() ? "PÅ" : "AV"}`);
+const funnetPa = alle.some((f) => f.endsWith("index.html") && readFileSync(f, "utf8").includes("fundingchoicesmessages.google.com"));
+const streng = args.includes("--streng");
+const pa = streng ? adsenseAktiv() : funnetPa;
+if (streng) krev(funnetPa === pa, `eksporten er bygget med bryteren ${funnetPa ? "PÅ" : "AV"}, konfigurasjonen sier ${pa ? "PÅ" : "AV"}`);
 const rel = (f) => "/" + path.relative(mappe, f).replaceAll(path.sep, "/");
 const html = alle.filter((f) => f.endsWith(".html"));
 krev(html.length > 100, `uventet få HTML-filer: ${html.length}`);
@@ -62,7 +65,7 @@ for (const [lang, sti] of Object.entries(PERSONVERN)) {
     continue;
   }
   krev(tekst.includes('<div lang="' + lang), `${sti}: feil språk`);
-  krev(tekst.includes(">" + SAMTYKKE_TEKST[lang] + "</a>"), `${sti}: lenken ${SAMTYKKE_TEKST[lang]} mangler`);
+  if (pa) krev(tekst.includes(">" + SAMTYKKE_TEKST[lang] + "</a>"), `${sti}: lenken ${SAMTYKKE_TEKST[lang]} mangler`);
   krev(/<h2[^>]*>/.test(tekst), `${sti}: ser ikke ut som den nye teksten (ingen overskrifter)`);
 }
 
@@ -71,7 +74,11 @@ const i18n = readFileSync(path.join(ROT, "lib", "i18n.ts"), "utf8");
 const tomTekster = [...i18n.matchAll(/^\s+empty: "([^"]+)",$/gm)].map((m) => m[1]);
 krev(tomTekster.length === 3, `fant ${tomTekster.length} empty-tekster i i18n.ts, forventet 3`);
 
-const ANNONSE_KODE = /adsbygoogle|pagead2|googlesyndication|fundingchoices|googlefcPresent/i;
+// Med bryteren AV skal verken HTML eller andre filer inneholde noe fra Google, noe samtykkeoppsett eller utgiver-ID.
+const ANNONSE_KODE =
+  /adsbygoogle|pagead2|googlesyndication|fundingchoices|googlefc|googletag|gtag\(|dataLayer|ad_storage|ad_user_data|ad_personalization|analytics_storage|ca-pub|pub-5902367729233688/i;
+const ANNONSE_HTML = /data-annonse|class="annonse|annonse-merke/;
+const ANNONSE_ETIKETT = />(Annonse|Annons|Advertisement)<|aria-label="(Annonse|Annons|Advertisement)"/;
 const ETIKETT = { nb: "Annonse", sv: "Annons", en: "Advertisement" };
 let medPlasser = 0;
 let antallPlasser = 0;
@@ -82,18 +89,19 @@ for (const f of html) {
   const er404 = sti === "/404.html" || sti.startsWith("/_not-found/");
   const noindex = /<meta name="robots" content="noindex/.test(kilde);
 
-  // Consent Mode: standard denied, før første skript med src
-  const headSlutt = kilde.indexOf("</head>");
-  const head = headSlutt > 0 ? kilde.slice(0, headSlutt) : kilde;
-  const standardPos = head.indexOf(CONSENT_DEFAULT_SCRIPT);
-  krev(standardPos >= 0, `${sti}: Consent Mode-standard mangler i <head>`);
-  // Next legger egne async-chunks (eget domene) øverst i <head>. Kravet er at ingen tredjepartsskript kommer før.
-  const forsteEkstern = head.search(/<script[^>]*\ssrc="(?:https?:)?\/\//);
-  krev(forsteEkstern < 0 || standardPos < forsteEkstern, `${sti}: Consent Mode-standard står ikke før første tredjepartsskript`);
-
-  // Footerlenken
-  if (kilde.includes("<footer")) {
-    krev(kilde.includes('href="#samtykkeinnstillinger"'), `${sti}: footerlenken Samtykkeinnstillinger mangler`);
+  if (pa) {
+    // Consent Mode: standard denied, før første tredjepartsskript
+    const headSlutt = kilde.indexOf("</head>");
+    const head = headSlutt > 0 ? kilde.slice(0, headSlutt) : kilde;
+    const standardPos = head.indexOf(CONSENT_DEFAULT_SCRIPT);
+    krev(standardPos >= 0, `${sti}: Consent Mode-standard mangler i <head>`);
+    // Next legger egne async-chunks (eget domene) øverst i <head>. Kravet er at ingen tredjepartsskript kommer før.
+    const forsteEkstern = head.search(/<script[^>]*\ssrc="(?:https?:)?\/\//);
+    krev(forsteEkstern < 0 || standardPos < forsteEkstern, `${sti}: Consent Mode-standard står ikke før første tredjepartsskript`);
+    // Footerlenken
+    if (kilde.includes("<footer")) {
+      krev(kilde.includes('href="#samtykkeinnstillinger"'), `${sti}: footerlenken Samtykkeinnstillinger mangler`);
+    }
   }
 
   const plasser = [...kilde.matchAll(/data-annonse-plass="([^"]+)"/g)].map((m) => m[1]);
@@ -101,7 +109,10 @@ for (const f of html) {
   if (plasser.length) medPlasser++;
 
   if (!pa) {
-    krev(!ANNONSE_KODE.test(kilde), `${sti}: AdSense-kode i HTML med bryteren AV`);
+    krev(!ANNONSE_HTML.test(kilde), `${sti}: annonseplass-markup i HTML med bryteren AV`);
+    krev(!ANNONSE_KODE.test(kilde), `${sti}: Google-/samtykke-/annonsekode i HTML med bryteren AV (${kilde.match(ANNONSE_KODE)?.[0]})`);
+    krev(!ANNONSE_ETIKETT.test(kilde), `${sti}: annonsemerke i HTML med bryteren AV`);
+    krev(!kilde.includes("<footer") || !kilde.includes('id="samtykkeinnstillinger"'), `${sti}: samtykkelenke i footeren med bryteren AV`);
     krev(plasser.length === 0, `${sti}: annonseplass med bryteren AV`);
     continue;
   }
@@ -129,10 +140,11 @@ for (const f of html) {
 }
 
 if (!pa) {
-  // Også i JS-bunten og alt annet: ingen AdSense-kode med bryteren AV.
+  // Også i JS-bunten og alt annet (unntatt ads.txt, som skal ha utgiver-ID-en): ingenting med bryteren AV.
   for (const f of alle.filter((x) => !x.endsWith(".html") && /\.(js|css|txt|xml|json|map)$/.test(x))) {
     if (rel(f) === "/ads.txt") continue;
-    krev(!ANNONSE_KODE.test(readFileSync(f, "utf8")), `${rel(f)}: AdSense-kode med bryteren AV`);
+    const t = readFileSync(f, "utf8");
+    krev(!ANNONSE_KODE.test(t), `${rel(f)}: Google-/samtykke-/annonsekode med bryteren AV (${t.match(ANNONSE_KODE)?.[0]})`);
   }
 }
 

@@ -5,9 +5,13 @@ Status: bygget, men AV. Standard er at nettstedet ikke laster noen annonsekode.
 ## Hva som alltid er med (bryter AV og PÅ)
 
 - Personvern på tre språk: `/personvern/`, `/sv/integritet/`, `/en/privacy/`. Teksten ligger ordrett i `data/personvern/{nb,sv,en}.md` og vises av `lib/personvern.mjs`. Adressene er de samme som før.
+- `public/ads.txt`: `google.com, pub-5902367729233688, DIRECT, f08c47fec0942fa0` (lagt til på main separat).
+
+## Hva som bare er med når bryteren er PÅ
+
 - Consent Mode v2 i `<head>`: `ad_storage`, `ad_user_data`, `ad_personalization` og `analytics_storage` er `denied` (`lib/samtykke.mjs`). Det ligger før alle tredjepartsskript.
-- Lenken «Samtykkeinnstillinger» / «Samtyckesinställningar» / «Consent settings» i footeren (`id="samtykkeinnstillinger"`). Lenker med `href="#samtykkeinnstillinger"` i teksten åpner samme valg. Før Googles CMP finnes, skjer det ingenting.
-- `public/ads.txt`: `google.com, pub-5902367729233688, DIRECT, f08c47fec0942fa0`.
+- Lenken «Samtykkeinnstillinger» / «Samtyckesinställningar» / «Consent settings» i footeren (`id="samtykkeinnstillinger"`) og klikkhåndteringen som åpner samtykkevalget på nytt (også for lenken i personverntekstene).
+- Funding Choices-/CMP-tagen, annonseplassene, AdSense-scriptet og utgiver-ID-en.
 
 ## Bryteren
 
@@ -15,6 +19,7 @@ Status: bygget, men AV. Standard er at nettstedet ikke laster noen annonsekode.
 
 | | AV (standard) | PÅ |
 |---|---|---|
+| Google-, samtykke- og gtag-kode, utgiver-ID, footerlenke for samtykke | ingen, verken i HTML eller JS | med |
 | Annonseplasser i HTML | ingen (ingen ramme, ingen tom boks) | faste plasser, se under |
 | Funding Choices-/CMP-tag | ikke på siden | settes inn fra et inline-skript rett etter consent-standarden |
 | `adsbygoogle.js` / `pagead2` | finnes ikke i HTML eller JS | lastes først etter samtykke (`ad_storage` gitt) |
@@ -56,9 +61,10 @@ Tre mulige løsninger ble vurdert for AV-tilstanden: (a) tom boks med reservert 
 
 - `npm test`: enhetstester (bryter, consent, plasser, ads.txt, personvern). Når `out/` finnes, kjører den også `sjekk-eksport` mot sitemap-baselinen.
 - `npm run build`: `valider`, `next build`, og så `sjekk-eksport --streng`, som går gjennom all eksportert HTML:
-  - med bryteren AV: ingen `adsbygoogle`, `pagead2`, `googlesyndication` eller `fundingchoices` i noen fil (HTML, JS, CSS), og ingen plasser;
+  - med bryteren AV: ingen `adsbygoogle`, `pagead2`, `googlesyndication`, `fundingchoices`, `googlefc`, `gtag(`, `dataLayer`, Consent Mode-parametere, `ca-pub`/`pub-5902367729233688` eller annonsemerker i noen fil (unntatt `ads.txt`), ingen footerlenke for samtykke og ingen plasser;
   - med bryteren PÅ: plasser bare på tillatte sider, merket, maks tre, ingen `<ins>` eller `adsbygoogle.js` i HTML-en;
-  - alltid: consent-standarden først i `<head>`, footerlenken, personvernsidene og `ads.txt`.
+  - med bryteren PÅ: consent-standarden før alle tredjepartsskript i `<head>` og footerlenken;
+  - alltid: personvernsidene og `ads.txt`.
 - `node scripts/sjekk-eksport.mjs --baseline tests/fixtures/sitemap-main-558c160.txt`: alle 656 URL-ene fra main (558c160) må fortsatt stå i `sitemap.xml`. Baselinen er fra denne PR-en; senere dataendringer kan legitimt endre sitemapen, så den brukes ikke i `npm run build`.
 
 ## Kjente begrensninger
