@@ -12,6 +12,7 @@ import {
   sesongDeler,
   ukeListe,
 } from "../lib/pure.mjs";
+import { globaleSider, validerGeografi } from "../lib/globale-ruter.mjs";
 
 const ROT = path.resolve(import.meta.dirname, "..");
 const feil = [];
@@ -123,6 +124,11 @@ try {
 
 validerLeirer(les("data/leirer.json"));
 validerSkolerute(les("data/skolerute.json"));
+const geografi = les("data/geografi.json");
+for (const melding of validerGeografi(geografi)) feil.push(melding);
+if (globaleSider(geografi).some((side) => side.path.startsWith("/no/"))) {
+  feil.push("globale ruter skal ikke duplisere Norge under /no/");
+}
 
 if (feil.length) {
   console.error(`valider: ${feil.length} feil`);
