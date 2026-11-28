@@ -78,13 +78,34 @@ export function CampCard({ camp, tekst }: { camp: CampView; tekst: Copy; visNota
   );
 }
 
-export function CampGrid({ leirer, tekst, visNotat }: { leirer: CampView[]; tekst: Copy; visNotat?: boolean }) {
+const RAD_HOYDE = 6; // to rader på bred skjerm
+
+export function CampGrid({
+  leirer,
+  tekst,
+  visNotat,
+  midtISlot,
+}: {
+  leirer: CampView[];
+  tekst: Copy;
+  visNotat?: boolean;
+  /** Fullbredde-innhold (annonse) mellom rad to og tre. Aldri inne i rutenettet. */
+  midtISlot?: React.ReactNode;
+}) {
   if (!leirer.length) return null;
-  return (
+  const grid = (liste: CampView[]) => (
     <div className="grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {leirer.map((camp) => (
+      {liste.map((camp) => (
         <CampCard key={camp.id} camp={camp} tekst={tekst} visNotat={visNotat} />
       ))}
     </div>
+  );
+  if (!midtISlot || leirer.length <= RAD_HOYDE) return grid(leirer);
+  return (
+    <>
+      {grid(leirer.slice(0, RAD_HOYDE))}
+      {midtISlot}
+      {grid(leirer.slice(RAD_HOYDE))}
+    </>
   );
 }

@@ -5,6 +5,7 @@ import skoleruteJson from "@/data/skolerute.json";
 import sokeTitler from "@/data/sokeord.json";
 import vinterIntroNb from "@/data/intro-vinterferie-nb.json";
 import sommerIntroNb from "@/data/intro-sommerferie-nb.json";
+import { personvernBeskrivelse } from "@/lib/personvern.mjs";
 import {
   campIFerie,
   campUker,
@@ -991,7 +992,7 @@ export function modell(rute: Rute): SideModell {
 function beskrivelse(rute: Rute, side: SideModell): string {
   const tekst = side.tekst;
   if (rute.kind === "fremhevet") return tekst.featuredPageDescription;
-  if (rute.kind === "personvern") return tekst.privacyBody.join(" ");
+  if (rute.kind === "personvern") return personvernBeskrivelse(rute.locale);
   if (rute.kind === "hjem") return tekst.homeDescription;
   if (rute.kind === "ferieUke") return fyll(tekst.weekDescription, { nr: rute.uke, år: rute.aar });
   if (rute.kind === "skoleruta") {
