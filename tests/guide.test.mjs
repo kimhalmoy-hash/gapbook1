@@ -23,10 +23,14 @@ test("guiden lenker bare til interne URL-er som finnes i bygget", () => {
   }
 });
 
-test("lenketesten feiler for en intern URL som ikke finnes, for eksempel /sommerleir/uke-24/", () => {
-  const md = `---\naar: 2027\nh1: A\ntittel: B\nbeskrivelse: C\n---\n\n## Test\n\nSe [uke 24](/sommerleir/uke-24/) og [uke 25](/sommerleir/uke-25/).\n`;
+test("lenketesten feiler for en intern URL som ikke finnes", () => {
+  const md = `---\naar: 2027\nh1: A\ntittel: B\nbeskrivelse: C\n---\n\n## Test\n\nSe [ukjent](/sommerleir/uke-99/) og [uke 25](/sommerleir/uke-25/).\n`;
   const mangler = guideLenker(parseGuide(md).blokker).filter((href) => erIntern(href) && !finnes(href));
-  assert.deepEqual(mangler, ["/sommerleir/uke-24/"]);
+  assert.deepEqual(mangler, ["/sommerleir/uke-99/"]);
+  const uke24 = finnRute(["sommerleir", "uke-24"]);
+  assert.ok(uke24);
+  assert.equal(indekserbar(uke24), false);
+  assert.equal(indekserte.has("/sommerleir/uke-24/"), false);
 });
 
 test("lenker uten indekserbar side vises som tekst, resten peker til sider i sitemap", () => {

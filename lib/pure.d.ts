@@ -96,7 +96,8 @@ export function overlap(
   b0: string | null,
   b1: string | null,
 ): boolean;
-export function sesongDeler(sesong: string | null | undefined): { navn: SesongNavn; aar: number } | null;
+export function sesongDeler(sesong: string | null | undefined): { navn: SesongNavn | "halvterm"; aar: number } | null;
+export function sommerSideUker(rad: { sommer?: SkoleruteRad["sommer"] } | null | undefined, aar?: number): number[];
 export function ukeNokkel(aar: number, uke: number): string;
 export function parseUkeNokkel(nokkel: string): { aar: number; uke: number } | null;
 export function erFjoraarsSommer(camp: { sesong?: string | null; status?: string | null }): boolean;

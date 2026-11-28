@@ -29,6 +29,52 @@ export function PageView({ rute }: { rute: Rute }) {
     current: locale === rute.locale,
   }));
 
+  if (side.utenlandsk && side.spraakKode) {
+    return (
+      <div lang={side.spraakKode}>
+        <SetLang locale={side.spraakKode} />
+        {jsonLd(rute, side).map((blokk, i) => (
+          <JsonLd key={i} data={blokk} />
+        ))}
+        <header className="border-b border-line bg-paper/90">
+          <div className="mx-auto flex max-w-6xl items-center px-4 py-4">
+            <a href={side.crumbs[0]?.href || "/"} className="font-serif text-2xl text-pine">WeekSlot</a>
+          </div>
+        </header>
+        <main className="mx-auto min-w-0 max-w-6xl px-4 py-10">
+          <nav aria-label="Breadcrumb" className="text-sm text-muted">
+            {side.crumbs.map((c, i) => (
+              <span key={`${c.href}-${i}`}>
+                {i > 0 ? <span className="mx-2">/</span> : null}
+                {i === side.crumbs.length - 1 ? <span>{c.name}</span> : <a className="hover:underline" href={c.href}>{c.name}</a>}
+              </span>
+            ))}
+          </nav>
+          <h1 className="mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-5xl">{side.h1}</h1>
+          {side.ingress ? <p className="mt-4 max-w-2xl text-lg text-muted">{side.ingress}</p> : null}
+          {side.kalender ? <KalenderLand kalender={side.kalender} /> : null}
+          {side.utenlandsk.lenker.length ? (
+            <ul className="mt-6 flex flex-wrap gap-2 text-sm">
+              {side.utenlandsk.lenker.map((lenke) => (
+                <li key={lenke.href}><a className="text-pine hover:underline" href={lenke.href}>{lenke.label}</a></li>
+              ))}
+            </ul>
+          ) : null}
+          {side.utenlandsk.tilbud.length ? (
+            <ul className="mt-8 grid gap-3">
+              {side.utenlandsk.tilbud.map((tilbud) => (
+                <li key={tilbud.href + tilbud.tittel} className="rounded-xl border border-line bg-card px-4 py-3">
+                  <a className="font-medium text-pine hover:underline" href={tilbud.href} rel="noopener noreferrer">{tilbud.tittel}</a>
+                  <p className="text-sm text-muted">{tilbud.tilbyder}{tilbud.meta ? ` · ${tilbud.meta}` : ""}</p>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div lang={tekst.htmlLang}>
       <SetLang locale={tekst.htmlLang} />
@@ -272,6 +318,7 @@ function Innhold({ side, plasser }: { side: ReturnType<typeof modell>; plasser: 
         </p>
       ) : null}
       {side.ingress ? <p className="mt-4 max-w-2xl text-lg text-muted">{side.ingress}</p> : null}
+      {side.regionKalender ? <RegionKalender kalender={side.regionKalender} kilde={tekst.source} /> : null}
       {side.skoleruteKort ? (
         <section className="ticket mt-8 p-5">
           <h2 className="font-serif text-2xl">{tekst.holidayHeading}</h2>
@@ -369,7 +416,7 @@ function Innhold({ side, plasser }: { side: ReturnType<typeof modell>; plasser: 
               </div>
             ) : null}
           </>
-        ) : (
+        ) : side.regionKalender ? null : (
           <p className="text-lg">
             {tekst.empty}{" "}
             <a className="text-clay hover:underline" href={mailto(tekst.tipSubject)}>{tekst.tipCta}</a>
@@ -386,6 +433,106 @@ function Innhold({ side, plasser }: { side: ReturnType<typeof modell>; plasser: 
         </>
       )}
     </>
+  );
+}
+
+function KalenderLand({ kalender }: { kalender: NonNullable<ReturnType<typeof modell>["kalender"]> }) {
+  return (
+    <div className="mt-8 grid gap-8">
+      {kalender.perioder.length ? (
+        <ul className="grid gap-2">
+          {kalender.perioder.map((rad) => (
+            <li key={`${rad.navn}-${rad.fra}`} className="rounded-xl border border-line bg-card px-4 py-3 text-sm">
+              <p className="font-medium">{rad.navn}</p>
+              <p>{rad.fra}–{rad.til} · {rad.uke}</p>
+              {rad.kilder.map((url) => (
+                <a key={url} className="mr-3 text-pine hover:underline" href={url} rel="noopener noreferrer">Kilde</a>
+              ))}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {kalender.kommuner.map((kommune) => (
+        <section key={kommune.navn}>
+          <h2 className="font-serif text-2xl">{kommune.navn}</h2>
+          <ul className="mt-2 text-sm">
+            {kommune.rader.map((rad) => (
+              <li key={`${kommune.navn}-${rad.navn}-${rad.fra}`}>{rad.navn}: {rad.fra}–{rad.til} · {rad.uke}</li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      {kalender.delomrade.length ? (
+        <section>
+          <h2 className="font-serif text-2xl">Gjelder bare deler av regionen</h2>
+          <ul className="mt-2 text-sm">
+            {kalender.delomrade.map((rad) => (
+              <li key={`${rad.omrade}-${rad.navn}`}>{rad.omrade}: {rad.navn} {rad.fra}–{rad.til}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+    </div>
+  );
+}
+
+function RegionKalender({
+  kalender,
+  kilde,
+}: {
+  kalender: NonNullable<ReturnType<typeof modell>["regionKalender"]>;
+  kilde: string;
+}) {
+  return (
+    <div className="mt-8 grid gap-8">
+      <section>
+        <h2 className="font-serif text-2xl">Helligdager</h2>
+        <ul className="mt-4 grid gap-2">
+          {kalender.helligdager.map((dag) => (
+            <li key={dag.dato + dag.navn} className="rounded-xl border border-line bg-card px-4 py-3 text-sm">
+              <p className="font-medium">{dag.navn}</p>
+              <p>
+                {dag.dato} · {dag.uke}
+                {dag.fridager === 1 ? " · 1 fridag" : dag.fridager > 1 ? ` · ${dag.fridager} fridager` : ""}
+              </p>
+              <Kilder urls={dag.kilder} kilde={kilde} />
+            </li>
+          ))}
+        </ul>
+      </section>
+      {kalender.kommuner.map((kommune) => (
+        <section key={kommune.navn}>
+          <h2 className="font-serif text-2xl">
+            {kommune.href ? <a className="hover:underline" href={kommune.href}>{kommune.navn}</a> : kommune.navn}
+          </h2>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            {kommune.rader.map((rad) => (
+              <li key={`${kommune.navn}-${rad.navn}-${rad.dato}`} className="rounded-xl border border-line bg-card px-4 py-3 text-sm">
+                <p className="font-medium">{rad.navn}</p>
+                <p>
+                  {rad.dato} · {rad.uke}
+                  {rad.skolear ? ` · ${rad.skolear}` : ""}
+                </p>
+                <Kilder urls={rad.kilder} kilde={kilde} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function Kilder({ urls, kilde }: { urls: string[]; kilde: string }) {
+  if (!urls.length) return null;
+  return (
+    <p className="mt-1">
+      {urls.map((url, indeks) => (
+        <a key={url} className="mr-3 text-pine hover:underline" href={url} rel="noopener noreferrer">
+          {urls.length > 1 ? `${kilde} ${indeks + 1}` : kilde}
+        </a>
+      ))}
+    </p>
   );
 }
 

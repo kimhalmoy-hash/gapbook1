@@ -15,6 +15,8 @@ export function FilterBar({
   sesonger: { href: string; label: string }[];
 }) {
   const [uke, setUke] = useState("");
+  const [land, setLand] = useState("");
+  const [region, setRegion] = useState("");
   const [kommune, setKommune] = useState("");
   const [type, setType] = useState("");
   const [alder, setAlder] = useState("");
@@ -30,11 +32,30 @@ export function FilterBar({
     return [...sett.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   }, [leirer, tekst.week]);
 
-  const kommuner = useMemo(() => {
+  const landListe = useMemo(() => {
     const sett = new Map<string, string>();
-    for (const camp of leirer) sett.set(camp.kommuneSlug, camp.kommune);
+    for (const camp of leirer) if (camp.land) sett.set(camp.land, camp.land);
     return [...sett.entries()].sort((a, b) => a[1].localeCompare(b[1], tekst.htmlLang));
   }, [leirer, tekst.htmlLang]);
+
+  const regioner = useMemo(() => {
+    const sett = new Map<string, string>();
+    for (const camp of leirer) {
+      if (land && camp.land !== land) continue;
+      if (camp.regionSlug) sett.set(camp.regionSlug, camp.regionNavn || camp.regionSlug);
+    }
+    return [...sett.entries()].sort((a, b) => a[1].localeCompare(b[1], tekst.htmlLang));
+  }, [leirer, land, tekst.htmlLang]);
+
+  const kommuner = useMemo(() => {
+    const sett = new Map<string, string>();
+    for (const camp of leirer) {
+      if (land && camp.land !== land) continue;
+      if (region && camp.regionSlug !== region) continue;
+      sett.set(camp.kommuneSlug, camp.kommune);
+    }
+    return [...sett.entries()].sort((a, b) => a[1].localeCompare(b[1], tekst.htmlLang));
+  }, [leirer, land, region, tekst.htmlLang]);
 
   const typer = useMemo(() => {
     const sett = new Map<string, string>();
@@ -44,6 +65,8 @@ export function FilterBar({
 
   const vist = leirer.filter((camp) => {
     if (uke && !camp.uker.includes(uke)) return false;
+    if (land && camp.land !== land) return false;
+    if (region && camp.regionSlug !== region) return false;
     if (kommune && camp.kommuneSlug !== kommune) return false;
     if (type && camp.typeSlug !== type) return false;
     if (alder) {
@@ -59,7 +82,7 @@ export function FilterBar({
     return true;
   });
 
-  const filtrert = Boolean(uke || kommune || type || alder);
+  const filtrert = Boolean(uke || land || region || kommune || type || alder);
 
   return (
     <div id="sok">
@@ -70,6 +93,24 @@ export function FilterBar({
           <select className="w-full min-w-0 rounded-lg border border-line bg-white px-3 py-2" value={uke} onChange={(e) => setUke(e.target.value)}>
             <option value="">{tekst.filters.all}</option>
             {uker.map(([nokkel, label]) => (
+              <option key={nokkel} value={nokkel}>{label}</option>
+            ))}
+          </select>
+        </label>
+        <label className="grid gap-1 text-sm">
+          <span className="font-medium">{tekst.filters.country}</span>
+          <select className="w-full min-w-0 rounded-lg border border-line bg-white px-3 py-2" value={land} onChange={(e) => { setLand(e.target.value); setRegion(""); setKommune(""); }}>
+            <option value="">{tekst.filters.all}</option>
+            {landListe.map(([nokkel, label]) => (
+              <option key={nokkel} value={nokkel}>{label}</option>
+            ))}
+          </select>
+        </label>
+        <label className="grid gap-1 text-sm">
+          <span className="font-medium">{tekst.filters.region}</span>
+          <select className="w-full min-w-0 rounded-lg border border-line bg-white px-3 py-2" value={region} onChange={(e) => { setRegion(e.target.value); setKommune(""); }}>
+            <option value="">{tekst.filters.all}</option>
+            {regioner.map(([nokkel, label]) => (
               <option key={nokkel} value={nokkel}>{label}</option>
             ))}
           </select>

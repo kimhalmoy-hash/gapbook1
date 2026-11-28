@@ -5,6 +5,13 @@ import skoleruteJson from "@/data/skolerute.json";
 import sokeTitler from "@/data/sokeord.json";
 import vinterIntroNb from "@/data/intro-vinterferie-nb.json";
 import sommerIntroNb from "@/data/intro-sommerferie-nb.json";
+import geografiJson from "@/data/geografi.json";
+import { globaleSider } from "@/lib/globale-ruter.mjs";
+import { lesSkolekalender, norskeKalenderSider, regionInnhold } from "@/lib/skolekalender.mjs";
+import { sideInnhold, tilbudSider } from "@/lib/bolge-ruter.mjs";
+import { byggKalendere, hubberSomSlippes } from "@/lib/kalender-land.mjs";
+import puljerJson from "@/data/gb-puljer.json";
+import globaleLeirerJson from "@/data/leirer-global.json";
 import { personvernBeskrivelse } from "@/lib/personvern.mjs";
 import {
   campIFerie,
@@ -37,6 +44,7 @@ import {
   erFjoraarsSommer,
   formaterUkeTall,
   sommerPeriode,
+  sommerSideUker,
   gruppeNokkel,
   gruppeTellerMotTerskel,
   grupperLeirer,
@@ -108,6 +116,39 @@ export type Leir = {
 };
 
 export const leirer = leirerJson as Leir[];
+const globaleLeirer = globaleLeirerJson as Leir[];
+const bolgeSider = tilbudSider(globaleLeirer);
+const { sider: kalenderSider, innhold: kalenderInnhold } = byggKalendere(I_DAG, puljerJson);
+const hubUt = hubberSomSlippes(kalenderSider);
+for (const side of bolgeSider) {
+  if (side.slag === "hub") side.indeks = hubUt.has(side.path);
+}
+for (const path of hubUt) {
+  if (bolgeSider.some((side) => side.path === path)) continue;
+  const deler = path.split("/").filter(Boolean);
+  const land = deler[0].toUpperCase();
+  bolgeSider.push({
+    kind: deler.length === 1 ? "land" : "region",
+    slag: "hub",
+    niva: deler.length === 1 ? "land" : "region",
+    path,
+    land,
+    maal: land === "SE" ? "sv-SE" : land === "DE" ? "de-DE" : land === "AT" ? "de-AT" : land === "IE" ? "en-IE" : "en-GB",
+    region: deler[1] ?? null,
+    regionNavn: deler[1] ? deler[1].replace(/-/g, " ") : land,
+    indeks: true,
+    antall: 0,
+    offisiell: false,
+  });
+}
+const bolgeAvPath = new Map(bolgeSider.map((side) => [side.path, side]));
+
+type GeoSted = { iso2: string; region: string; slug: string; navn: { nb: string; sv: string; en: string } };
+type GeoRegion = { iso2: string; slug: string; navn: { nb: string; sv: string; en: string } };
+const geografi = geografiJson as unknown as { steder: GeoSted[]; regioner: GeoRegion[]; ferier: never[]; tilbud: never[] };
+const skolekalender = lesSkolekalender();
+const stedAvSlug = new Map(geografi.steder.map((sted) => [sted.slug, sted]));
+const regionAvNokkel = new Map(geografi.regioner.map((region) => [`${region.iso2}:${region.slug}`, region]));
 export const skolerute = skoleruteJson as SkoleruteRad[];
 
 const SESONG_STI: Record<SesongNavn, string> = {
@@ -129,7 +170,22 @@ export type Rute =
   | { kind: "leir"; locale: Locale; slug: string[]; id: string }
   | { kind: "fremhevet"; locale: Locale; slug: string[] }
   | { kind: "personvern"; locale: Locale; slug: string[] }
-  | { kind: "ferieKommune"; locale: Locale; slug: string[]; navn: SesongNavn; aar: number; kommuneSlug: string };
+  | { kind: "ferieKommune"; locale: Locale; slug: string[]; navn: SesongNavn; aar: number; kommuneSlug: string }
+  | {
+      kind: "global";
+      locale: Locale;
+      slug: string[];
+      path: string;
+      globalKind: "school-holidays" | "by-kategori" | "land" | "region" | "by" | "by-ferie" | "by-uke";
+      offisiell: boolean;
+      antall: number;
+      regionSlug: string | null;
+      maal: string | null;
+      indeks: boolean;
+      landKode: string | null;
+      slag: string | null;
+      canonicalPath: string | null;
+    };
 
 const PERSONVERN_STI: Record<Locale, string> = {
   nb: "personvern",
@@ -148,6 +204,9 @@ export type CampView = {
   typeLabel: string;
   kommune: string;
   kommuneSlug: string;
+  land: string;
+  regionSlug: string;
+  regionNavn: string;
   sted: string;
   uker: string[];
   ukeLabel: string;
@@ -215,10 +274,30 @@ export type SideModell = {
   };
   sommerLinje: string | null;
   sommerKilder: { href: string; label: string }[];
+  regionKalender: null | {
+    helligdager: { navn: string; dato: string; uke: string; fridager: number; kilder: string[] }[];
+    kommuner: {
+      navn: string;
+      href: string | null;
+      rader: { navn: string; dato: string; uke: string; fridager: number; skolear: string; kilder: string[] }[];
+    }[];
+  };
   leirer: CampView[];
   filter: boolean;
   crumbs: { name: string; href: string }[];
   sesongLenker: { href: string; label: string; blurb: string }[];
+  spraakKode: string | null;
+  dokumentTittel: string | null;
+  dokumentBeskrivelse: string | null;
+  utenlandsk: null | {
+    tilbud: { tittel: string; tilbyder: string; href: string; meta: string }[];
+    lenker: { href: string; label: string }[];
+  };
+  kalender: null | {
+    perioder: { navn: string; fra: string; til: string; uke: string; kilder: string[] }[];
+    kommuner: { navn: string; rader: { navn: string; fra: string; til: string; uke: string; kilder: string[] }[] }[];
+    delomrade: { omrade: string; navn: string; fra: string; til: string; uke: string }[];
+  };
 };
 
 function sti(locale: Locale, parts: string[]): string {
@@ -371,6 +450,7 @@ function leirerFor(rute: Rute): Leir[] {
 export function indekserbar(rute: Rute): boolean {
   if (rute.kind === "skoleruta" || rute.kind === "skolerutaHub") return skolerutaIndeks(rute.kind, rute.locale) === true;
   if (rute.kind === "fremhevet" || rute.kind === "personvern") return true;
+  if (rute.kind === "global") return rute.indeks === true;
   if (rute.kind === "leir") {
     return gruppeTellerMotTerskel(GRUPPE_SLUG.get(rute.id) || [], I_DAG);
   }
@@ -514,7 +594,7 @@ function byggRuter(): Rute[] {
       const felt = feltFor(rad, navn);
       for (const uke of ukerIDato(felt?.datoFra, felt?.datoTil, year)) sett.add(uke);
       if (navn === "sommer") {
-        for (const uke of sommerPeriode(rad)?.uker || []) sett.add(uke);
+        for (const uke of sommerSideUker(rad, year)) sett.add(uke);
       }
     }
     for (const e of synlige()) {
@@ -577,6 +657,27 @@ function byggRuter(): Rute[] {
       legg(ruter, locale, ["leir", g.slug], { kind: "leir", id: g.slug });
     }
   }
+  for (const side of [...globaleSider(geografi), ...norskeKalenderSider(geografi, skolekalender, new Set([...kommuneNavn.keys()])), ...kalenderSider, ...bolgeSider]) {
+    if (side.locale && side.locale !== "nb" && side.locale !== "sv" && side.locale !== "en" && !side.maal) continue;
+    if (side.path.startsWith("/no/") && side.kind !== "school-holidays") continue;
+    const deler = side.path.split("/").filter(Boolean);
+    const norskKalender = side.path.startsWith("/no/");
+    ruter.push({
+      kind: "global",
+      locale: (side.locale === "sv" || side.locale === "en" ? side.locale : "nb") as Locale,
+      slug: deler,
+      path: side.path,
+      globalKind: side.kind as "school-holidays" | "by-kategori" | "land" | "region" | "by" | "by-ferie" | "by-uke",
+      offisiell: side.offisiell === true,
+      antall: side.antall ?? 0,
+      regionSlug: side.region ?? null,
+      maal: side.maal ?? (norskKalender ? "nb-NO" : null),
+      indeks: typeof side.indeks === "boolean" ? side.indeks : norskKalender ? side.offisiell === true : (side.antall ?? 0) >= TEMA_MIN,
+      landKode: side.land ?? (norskKalender ? "NO" : null),
+      slag: side.slag ?? (side.kind === "school-holidays" ? "kalender" : "kategori"),
+      canonicalPath: side.canonical ?? null,
+    });
+  }
   const nokler = ruter.map((r) => r.slug.join("/"));
   if (new Set(nokler).size !== nokler.length) {
     throw new Error("Duplikat-URL i rutetabellen");
@@ -596,6 +697,7 @@ export function finnRute(slug: string[] | undefined): Rute | null {
 }
 
 export function sammeSti(rute: Rute, locale: Locale): string {
+  if (rute.kind === "global") return rute.path;
   if (rute.kind === "personvern") return sti(locale, [PERSONVERN_STI[locale]]);
   const uten = rute.locale === "nb" ? rute.slug : rute.slug.slice(1);
   return sti(locale, uten);
@@ -689,6 +791,14 @@ function groupView(slugId: string, medlemmer: Leir[], locale: Locale, ferieBadge
     typeLabel: tekst.types[rep.type] || rep.type,
     kommune: rep.kommune,
     kommuneSlug: slug(rep.kommune),
+    land: stedAvSlug.get(slug(rep.kommune))?.iso2 || rep.land || "NO",
+    regionSlug: stedAvSlug.get(slug(rep.kommune))?.region || "",
+    regionNavn: (() => {
+      const sted = stedAvSlug.get(slug(rep.kommune));
+      const region = sted ? regionAvNokkel.get(`${sted.iso2}:${sted.region}`) : undefined;
+      if (!region) return rep.fylke || "";
+      return region.navn[locale] || region.navn.nb;
+    })(),
     sted,
     uker: [...new Set(sortert.flatMap((e) => campUker(e)))].sort(),
     ukeLabel: fjoraarsUker?.length
@@ -817,6 +927,14 @@ export function modell(rute: Rute): SideModell {
 
   let sommerLinje: string | null = null;
   let sommerKilder: { href: string; label: string }[] = [];
+  let regionKalender: SideModell["regionKalender"] = null;
+  let spraakKode: string | null = null;
+  let dokumentTittel: string | null = null;
+  let dokumentBeskrivelse: string | null = null;
+  let utenlandsk: SideModell["utenlandsk"] = null;
+  let utenlandskCrumbs: { name: string; href: string }[] | null = null;
+  let kalender: SideModell["kalender"] = null;
+  let sesongLenkerTom = false;
   if (rute.kind === "fremhevet") {
     h1 = tekst.featuredH1;
     ingress = tekst.featuredIntro;
@@ -948,6 +1066,64 @@ export function modell(rute: Rute): SideModell {
     }
   }
 
+  if (rute.kind === "global" && rute.globalKind === "school-holidays" && rute.regionSlug) {
+    const region = regionAvNokkel.get(`NO:${rute.regionSlug}`);
+    const navn = region?.navn.nb || rute.regionSlug;
+    h1 = `Skoleferier i ${navn}`;
+    ingress = `Verifiserte feriedatoer for ${navn}. Året står i datoene. Bare rader med status verifisert er tatt med.`;
+    const innhold = regionInnhold(skolekalender, rute.regionSlug);
+    regionKalender = {
+      helligdager: innhold.helligdager.map((dag: { navn: string[]; dato: string; uke: string; fridager: number; kilder: string[] }) => ({
+        navn: dag.navn.join(" og "),
+        dato: formatDato(dag.dato, rute.locale),
+        uke: dag.uke,
+        fridager: dag.fridager,
+        kilder: dag.kilder,
+      })),
+      kommuner: innhold.kommuner.map(
+        (kommune: { navn: string; slug: string; rader: { navn: string; fra: string; til: string; uke: string; fridager: number; skolear: string; kilder: string[] }[] }) => ({
+          navn: kommune.navn,
+          href: skoleruteFor(kommune.slug) ? sti("nb", ["skoleruta", kommune.slug]) : null,
+          rader: kommune.rader.map((rad) => ({
+            navn: rad.navn,
+            dato: formatPeriode(rad.fra, rad.til, rute.locale) || "",
+            uke: rad.uke,
+            fridager: rad.fridager,
+            skolear: rad.skolear,
+            kilder: rad.kilder,
+          })),
+        }),
+      ),
+    };
+  }
+
+  if (rute.kind === "global" && rute.landKode && rute.landKode !== "NO" && kalenderInnhold.has(rute.path)) {
+    const blokk = kalenderInnhold.get(rute.path);
+    h1 = blokk.h1;
+    ingress = blokk.ingress;
+    spraakKode = rute.maal;
+    dokumentTittel = `${blokk.h1} | WeekSlot`.slice(0, 60);
+    dokumentBeskrivelse = blokk.ingress.slice(0, 155);
+    kalender = { perioder: blokk.perioder, kommuner: blokk.kommuner, delomrade: blokk.delomrade };
+    utenlandsk = { tilbud: [], lenker: [] };
+    sesongLenkerTom = true;
+  }
+
+  if (rute.kind === "global" && rute.landKode && rute.landKode !== "NO" && !kalender) {
+    const side = bolgeAvPath.get(rute.path);
+    if (side) {
+      const innhold = sideInnhold(side, bolgeSider);
+      h1 = innhold.h1;
+      ingress = innhold.ingress;
+      spraakKode = innhold.lang;
+      dokumentTittel = innhold.title;
+      dokumentBeskrivelse = innhold.description;
+      utenlandsk = { tilbud: innhold.tilbud, lenker: innhold.lenker };
+      sesongLenkerTom = true;
+      utenlandskCrumbs = innhold.crumbs;
+    }
+  }
+
   if (rute.kind === "leir") {
     const e = (GRUPPE_SLUG.get(rute.id) || []).find((x) => synlig(x, I_DAG));
     if (e) {
@@ -970,6 +1146,10 @@ export function modell(rute: Rute): SideModell {
     });
   }
   if (rute.kind !== "hjem") crumbs.push({ name: h1, href: sammeSti(rute, rute.locale) });
+  if (utenlandskCrumbs) {
+    crumbs.length = 0;
+    crumbs.push(...utenlandskCrumbs);
+  }
 
   return {
     rute,
@@ -982,10 +1162,16 @@ export function modell(rute: Rute): SideModell {
     skoleruteKort,
     sommerLinje,
     sommerKilder,
+    regionKalender,
     leirer: leirVisning,
     filter: rute.kind === "hjem",
     crumbs,
-    sesongLenker: sesonger,
+    sesongLenker: sesongLenkerTom ? [] : sesonger,
+    spraakKode,
+    dokumentTittel,
+    dokumentBeskrivelse,
+    utenlandsk,
+    kalender,
   };
 }
 
@@ -994,6 +1180,8 @@ function beskrivelse(rute: Rute, side: SideModell): string {
   if (rute.kind === "fremhevet") return tekst.featuredPageDescription;
   if (rute.kind === "personvern") return personvernBeskrivelse(rute.locale);
   if (rute.kind === "hjem") return tekst.homeDescription;
+  if (side.dokumentBeskrivelse) return side.dokumentBeskrivelse;
+  if (rute.kind === "global" && rute.globalKind === "school-holidays") return side.ingress;
   if (rute.kind === "ferieUke") return fyll(tekst.weekDescription, { nr: rute.uke, år: rute.aar });
   if (rute.kind === "skoleruta") {
     const navn = kommuneNavn.get(rute.kommuneSlug) || rute.kommuneSlug;
@@ -1019,6 +1207,7 @@ function tittel(rute: Rute, side: SideModell): string {
   if (rute.kind === "fremhevet") return tekst.featuredPageTitle;
   if (rute.kind === "personvern") return tekst.privacyTitle;
   if (rute.kind === "hjem") return tekst.homeTitle;
+  if (side.dokumentTittel) return side.dokumentTittel;
   const guide = guideFor(rute);
   if (guide) return `${guide.meta.tittel} | ${site.name}`;
   if (rute.kind !== "leir") return `${soketittel(rute) || side.h1} | ${site.name}`;
@@ -1030,12 +1219,20 @@ export function metadataFor(rute: Rute): Metadata {
   const side = modell(rute);
   const title = tittel(rute, side);
   const description = beskrivelse(rute, side);
-  const path = sammeSti(rute, rute.locale);
+  const path = rute.kind === "global" && rute.canonicalPath ? rute.canonicalPath : sammeSti(rute, rute.locale);
   const canonical = absolut(path);
   const nbSti = absolut(sammeSti(rute, "nb"));
-  const languages: Record<string, string> = { "x-default": nbSti };
-  for (const locale of hreflangLokaler(rute.kind) as Locale[]) {
-    languages[COPY[locale].htmlLang] = locale === "nb" ? nbSti : absolut(sammeSti(rute, locale));
+  const languages: Record<string, string> = {};
+  if (rute.kind === "global" && (rute.canonicalPath || !indekserbar(rute))) {
+    /* Duplikat eller noindex: ingen hreflang. */
+  } else if (rute.kind === "global" && rute.maal && rute.landKode && rute.landKode !== "NO") {
+    languages[rute.maal] = canonical;
+  } else {
+    languages["x-default"] = rute.kind === "global" ? canonical : nbSti;
+    const lokaler = rute.kind === "global" ? [rute.locale] : (hreflangLokaler(rute.kind) as Locale[]);
+    for (const locale of lokaler) {
+      languages[COPY[locale].htmlLang] = locale === "nb" ? nbSti : absolut(sammeSti(rute, locale));
+    }
   }
   const indeks = indekserbar(rute);
   return {
@@ -1048,7 +1245,7 @@ export function metadataFor(rute: Rute): Metadata {
       description,
       url: canonical,
       siteName: site.name,
-      locale: rute.locale === "sv" ? "sv_SE" : rute.locale === "en" ? "en_GB" : "nb_NO",
+      locale: rute.kind === "global" && rute.maal ? rute.maal.replace("-", "_") : rute.locale === "sv" ? "sv_SE" : rute.locale === "en" ? "en_GB" : "nb_NO",
       type: "website",
     },
   };

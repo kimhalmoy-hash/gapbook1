@@ -5,5 +5,9 @@
   "kontaktEpost": "kontakt@weekslot.com",
   "defaultLocale": "nb",
   "locales": ["nb", "sv", "en"],
-  "temaMin": 3
+  "temaMin": 3,
+  "sokekonsoll": {
+    "verifisert": false,
+    "googleSiteVerification": null
+  }
 }

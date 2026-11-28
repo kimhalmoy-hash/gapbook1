@@ -1,0 +1,1669 @@
+{
+  "kilde": "ONS mid-2025 MYE2 Persons, All ages. Hentet 28.11.2026. Open Government Licence v3.0. Folketall styrer rekkefølge, ikke søkevolum.",
+  "nordIrland": {
+    "rang": 0,
+    "council": "Northern Ireland",
+    "nasjon": "northern-ireland",
+    "type": "nasjonal kalender",
+    "innbyggere": 1928446,
+    "path": "/gb/northern-ireland/school-holidays/"
+  },
+  "councils": [
+    {
+      "rang": 1,
+      "council": "Kent",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 1652769,
+      "path": "/gb/england/kent/school-holidays/"
+    },
+    {
+      "rang": 2,
+      "council": "Essex",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 1576125,
+      "path": "/gb/england/essex/school-holidays/"
+    },
+    {
+      "rang": 3,
+      "council": "Hampshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 1451703,
+      "path": "/gb/england/hampshire/school-holidays/"
+    },
+    {
+      "rang": 4,
+      "council": "Lancashire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 1308567,
+      "path": "/gb/england/lancashire/school-holidays/"
+    },
+    {
+      "rang": 5,
+      "council": "Surrey",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 1255255,
+      "path": "/gb/england/surrey/school-holidays/"
+    },
+    {
+      "rang": 6,
+      "council": "Hertfordshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 1239398,
+      "path": "/gb/england/hertfordshire/school-holidays/"
+    },
+    {
+      "rang": 7,
+      "council": "Birmingham",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 1176960,
+      "path": "/gb/england/birmingham/school-holidays/"
+    },
+    {
+      "rang": 8,
+      "council": "Norfolk",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 945427,
+      "path": "/gb/england/norfolk/school-holidays/"
+    },
+    {
+      "rang": 9,
+      "council": "West Sussex",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 921240,
+      "path": "/gb/england/west-sussex/school-holidays/"
+    },
+    {
+      "rang": 10,
+      "council": "Staffordshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 913073,
+      "path": "/gb/england/staffordshire/school-holidays/"
+    },
+    {
+      "rang": 11,
+      "council": "Nottinghamshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 862326,
+      "path": "/gb/england/nottinghamshire/school-holidays/"
+    },
+    {
+      "rang": 12,
+      "council": "Devon",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 845541,
+      "path": "/gb/england/devon/school-holidays/"
+    },
+    {
+      "rang": 13,
+      "council": "Leeds",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 840550,
+      "path": "/gb/england/leeds/school-holidays/"
+    },
+    {
+      "rang": 14,
+      "council": "Derbyshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 827217,
+      "path": "/gb/england/derbyshire/school-holidays/"
+    },
+    {
+      "rang": 15,
+      "council": "Lincolnshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 794009,
+      "path": "/gb/england/lincolnshire/school-holidays/"
+    },
+    {
+      "rang": 16,
+      "council": "Suffolk",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 789850,
+      "path": "/gb/england/suffolk/school-holidays/"
+    },
+    {
+      "rang": 17,
+      "council": "Oxfordshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 769831,
+      "path": "/gb/england/oxfordshire/school-holidays/"
+    },
+    {
+      "rang": 18,
+      "council": "Leicestershire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 752448,
+      "path": "/gb/england/leicestershire/school-holidays/"
+    },
+    {
+      "rang": 19,
+      "council": "Cambridgeshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 716983,
+      "path": "/gb/england/cambridgeshire/school-holidays/"
+    },
+    {
+      "rang": 20,
+      "council": "Gloucestershire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 671908,
+      "path": "/gb/england/gloucestershire/school-holidays/"
+    },
+    {
+      "rang": 21,
+      "council": "Glasgow City",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 654330,
+      "path": "/gb/scotland/glasgow/school-holidays/"
+    },
+    {
+      "rang": 22,
+      "council": "Warwickshire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 644021,
+      "path": "/gb/england/warwickshire/school-holidays/"
+    },
+    {
+      "rang": 23,
+      "council": "North Yorkshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 639133,
+      "path": "/gb/england/north-yorkshire/school-holidays/"
+    },
+    {
+      "rang": 24,
+      "council": "Worcestershire",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 624209,
+      "path": "/gb/england/worcestershire/school-holidays/"
+    },
+    {
+      "rang": 25,
+      "council": "Somerset",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 590972,
+      "path": "/gb/england/somerset/school-holidays/"
+    },
+    {
+      "rang": 26,
+      "council": "Manchester",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 588256,
+      "path": "/gb/england/manchester/school-holidays/"
+    },
+    {
+      "rang": 27,
+      "council": "Cornwall",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 584782,
+      "path": "/gb/england/cornwall/school-holidays/"
+    },
+    {
+      "rang": 28,
+      "council": "Buckinghamshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 584296,
+      "path": "/gb/england/buckinghamshire/school-holidays/"
+    },
+    {
+      "rang": 29,
+      "council": "Sheffield",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 579517,
+      "path": "/gb/england/sheffield/school-holidays/"
+    },
+    {
+      "rang": 30,
+      "council": "East Sussex",
+      "nasjon": "england",
+      "type": "fylke (county council)",
+      "innbyggere": 561855,
+      "path": "/gb/england/east-sussex/school-holidays/"
+    },
+    {
+      "rang": 31,
+      "council": "Bradford",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 557758,
+      "path": "/gb/england/bradford/school-holidays/"
+    },
+    {
+      "rang": 32,
+      "council": "County Durham",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 539146,
+      "path": "/gb/england/county-durham/school-holidays/"
+    },
+    {
+      "rang": 33,
+      "council": "City of Edinburgh",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 531370,
+      "path": "/gb/scotland/edinburgh/school-holidays/"
+    },
+    {
+      "rang": 34,
+      "council": "Wiltshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 526392,
+      "path": "/gb/england/wiltshire/school-holidays/"
+    },
+    {
+      "rang": 35,
+      "council": "Liverpool",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 507915,
+      "path": "/gb/england/liverpool/school-holidays/"
+    },
+    {
+      "rang": 36,
+      "council": "Bristol, City of",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 495260,
+      "path": "/gb/england/bristol/school-holidays/"
+    },
+    {
+      "rang": 37,
+      "council": "Kirklees",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 445832,
+      "path": "/gb/england/kirklees/school-holidays/"
+    },
+    {
+      "rang": 38,
+      "council": "West Northamptonshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 444218,
+      "path": "/gb/england/west-northamptonshire/school-holidays/"
+    },
+    {
+      "rang": 39,
+      "council": "Cheshire East",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 425459,
+      "path": "/gb/england/cheshire-east/school-holidays/"
+    },
+    {
+      "rang": 40,
+      "council": "Croydon",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 410085,
+      "path": "/gb/england/croydon/school-holidays/"
+    },
+    {
+      "rang": 41,
+      "council": "Barnet",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 408087,
+      "path": "/gb/england/barnet/school-holidays/"
+    },
+    {
+      "rang": 42,
+      "council": "Bournemouth, Christchurch and Poole",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 405829,
+      "path": "/gb/england/bournemouth-christchurch-and-poole/school-holidays/"
+    },
+    {
+      "rang": 43,
+      "council": "Dorset",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 391036,
+      "path": "/gb/england/dorset/school-holidays/"
+    },
+    {
+      "rang": 44,
+      "council": "Ealing",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 387072,
+      "path": "/gb/england/ealing/school-holidays/"
+    },
+    {
+      "rang": 45,
+      "council": "Leicester",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 383116,
+      "path": "/gb/england/leicester/school-holidays/"
+    },
+    {
+      "rang": 46,
+      "council": "Cardiff",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 381516,
+      "path": "/gb/wales/cardiff/school-holidays/"
+    },
+    {
+      "rang": 47,
+      "council": "North Northamptonshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 379569,
+      "path": "/gb/england/north-northamptonshire/school-holidays/"
+    },
+    {
+      "rang": 48,
+      "council": "Newham",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 376542,
+      "path": "/gb/england/newham/school-holidays/"
+    },
+    {
+      "rang": 49,
+      "council": "Fife",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 373990,
+      "path": "/gb/scotland/fife/school-holidays/"
+    },
+    {
+      "rang": 50,
+      "council": "Cheshire West and Chester",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 373951,
+      "path": "/gb/england/cheshire-west-and-chester/school-holidays/"
+    },
+    {
+      "rang": 51,
+      "council": "Wakefield",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 369450,
+      "path": "/gb/england/wakefield/school-holidays/"
+    },
+    {
+      "rang": 52,
+      "council": "Coventry",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 364766,
+      "path": "/gb/england/coventry/school-holidays/"
+    },
+    {
+      "rang": 53,
+      "council": "East Riding of Yorkshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 360334,
+      "path": "/gb/england/east-riding-of-yorkshire/school-holidays/"
+    },
+    {
+      "rang": 54,
+      "council": "Sandwell",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 352918,
+      "path": "/gb/england/sandwell/school-holidays/"
+    },
+    {
+      "rang": 55,
+      "council": "Brent",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 352201,
+      "path": "/gb/england/brent/school-holidays/"
+    },
+    {
+      "rang": 56,
+      "council": "Wigan",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 347089,
+      "path": "/gb/england/wigan/school-holidays/"
+    },
+    {
+      "rang": 57,
+      "council": "North Lanarkshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 343930,
+      "path": "/gb/scotland/north-lanarkshire/school-holidays/"
+    },
+    {
+      "rang": 58,
+      "council": "Wandsworth",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 339859,
+      "path": "/gb/england/wandsworth/school-holidays/"
+    },
+    {
+      "rang": 59,
+      "council": "Bromley",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 336048,
+      "path": "/gb/england/bromley/school-holidays/"
+    },
+    {
+      "rang": 60,
+      "council": "South Lanarkshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 334330,
+      "path": "/gb/scotland/south-lanarkshire/school-holidays/"
+    },
+    {
+      "rang": 61,
+      "council": "Tower Hamlets",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 334240,
+      "path": "/gb/england/tower-hamlets/school-holidays/"
+    },
+    {
+      "rang": 62,
+      "council": "Northumberland",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 333975,
+      "path": "/gb/england/northumberland/school-holidays/"
+    },
+    {
+      "rang": 63,
+      "council": "Dudley",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 333941,
+      "path": "/gb/england/dudley/school-holidays/"
+    },
+    {
+      "rang": 64,
+      "council": "Shropshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 333162,
+      "path": "/gb/england/shropshire/school-holidays/"
+    },
+    {
+      "rang": 65,
+      "council": "Wirral",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 329896,
+      "path": "/gb/england/wirral/school-holidays/"
+    },
+    {
+      "rang": 66,
+      "council": "Enfield",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 329400,
+      "path": "/gb/england/enfield/school-holidays/"
+    },
+    {
+      "rang": 67,
+      "council": "Hillingdon",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 326671,
+      "path": "/gb/england/hillingdon/school-holidays/"
+    },
+    {
+      "rang": 68,
+      "council": "Nottingham",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 325765,
+      "path": "/gb/england/nottingham/school-holidays/"
+    },
+    {
+      "rang": 69,
+      "council": "Doncaster",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 323016,
+      "path": "/gb/england/doncaster/school-holidays/"
+    },
+    {
+      "rang": 70,
+      "council": "Redbridge",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 321829,
+      "path": "/gb/england/redbridge/school-holidays/"
+    },
+    {
+      "rang": 71,
+      "council": "Central Bedfordshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 321605,
+      "path": "/gb/england/central-bedfordshire/school-holidays/"
+    },
+    {
+      "rang": 72,
+      "council": "Newcastle upon Tyne",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 320838,
+      "path": "/gb/england/newcastle-upon-tyne/school-holidays/"
+    },
+    {
+      "rang": 73,
+      "council": "Lambeth",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 314298,
+      "path": "/gb/england/lambeth/school-holidays/"
+    },
+    {
+      "rang": 74,
+      "council": "Southwark",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 312366,
+      "path": "/gb/england/southwark/school-holidays/"
+    },
+    {
+      "rang": 75,
+      "council": "Bolton",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 309732,
+      "path": "/gb/england/bolton/school-holidays/"
+    },
+    {
+      "rang": 76,
+      "council": "Milton Keynes",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 308866,
+      "path": "/gb/england/milton-keynes/school-holidays/"
+    },
+    {
+      "rang": 77,
+      "council": "South Gloucestershire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 308787,
+      "path": "/gb/england/south-gloucestershire/school-holidays/"
+    },
+    {
+      "rang": 78,
+      "council": "Stockport",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 304879,
+      "path": "/gb/england/stockport/school-holidays/"
+    },
+    {
+      "rang": 79,
+      "council": "Greenwich",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 301225,
+      "path": "/gb/england/greenwich/school-holidays/"
+    },
+    {
+      "rang": 80,
+      "council": "Lewisham",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 301037,
+      "path": "/gb/england/lewisham/school-holidays/"
+    },
+    {
+      "rang": 81,
+      "council": "Hounslow",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 299486,
+      "path": "/gb/england/hounslow/school-holidays/"
+    },
+    {
+      "rang": 82,
+      "council": "Salford",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 297004,
+      "path": "/gb/england/salford/school-holidays/"
+    },
+    {
+      "rang": 83,
+      "council": "Walsall",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 295722,
+      "path": "/gb/england/walsall/school-holidays/"
+    },
+    {
+      "rang": 84,
+      "council": "Medway",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 292697,
+      "path": "/gb/england/medway/school-holidays/"
+    },
+    {
+      "rang": 85,
+      "council": "Sefton",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 287583,
+      "path": "/gb/england/sefton/school-holidays/"
+    },
+    {
+      "rang": 86,
+      "council": "Sunderland",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 287070,
+      "path": "/gb/england/sunderland/school-holidays/"
+    },
+    {
+      "rang": 87,
+      "council": "Brighton and Hove",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 284170,
+      "path": "/gb/england/brighton-and-hove/school-holidays/"
+    },
+    {
+      "rang": 88,
+      "council": "Waltham Forest",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 283713,
+      "path": "/gb/england/waltham-forest/school-holidays/"
+    },
+    {
+      "rang": 89,
+      "council": "Cumberland",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 282343,
+      "path": "/gb/england/cumberland/school-holidays/"
+    },
+    {
+      "rang": 90,
+      "council": "Wolverhampton",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 281434,
+      "path": "/gb/england/wolverhampton/school-holidays/"
+    },
+    {
+      "rang": 91,
+      "council": "Havering",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 280787,
+      "path": "/gb/england/havering/school-holidays/"
+    },
+    {
+      "rang": 92,
+      "council": "Rotherham",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 279161,
+      "path": "/gb/england/rotherham/school-holidays/"
+    },
+    {
+      "rang": 93,
+      "council": "Derby",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 275344,
+      "path": "/gb/england/derby/school-holidays/"
+    },
+    {
+      "rang": 94,
+      "council": "Kingston upon Hull, City of",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 273257,
+      "path": "/gb/england/kingston-upon-hull/school-holidays/"
+    },
+    {
+      "rang": 95,
+      "council": "Harrow",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 272612,
+      "path": "/gb/england/harrow/school-holidays/"
+    },
+    {
+      "rang": 96,
+      "council": "Stoke-on-Trent",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 272282,
+      "path": "/gb/england/stoke-on-trent/school-holidays/"
+    },
+    {
+      "rang": 97,
+      "council": "Plymouth",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 271361,
+      "path": "/gb/england/plymouth/school-holidays/"
+    },
+    {
+      "rang": 98,
+      "council": "Hackney",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 266241,
+      "path": "/gb/england/hackney/school-holidays/"
+    },
+    {
+      "rang": 99,
+      "council": "Haringey",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 266218,
+      "path": "/gb/england/haringey/school-holidays/"
+    },
+    {
+      "rang": 100,
+      "council": "Aberdeenshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 264640,
+      "path": "/gb/scotland/aberdeenshire/school-holidays/"
+    },
+    {
+      "rang": 101,
+      "council": "Southampton",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 259230,
+      "path": "/gb/england/southampton/school-holidays/"
+    },
+    {
+      "rang": 102,
+      "council": "Bexley",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 257103,
+      "path": "/gb/england/bexley/school-holidays/"
+    },
+    {
+      "rang": 103,
+      "council": "Barnsley",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 252784,
+      "path": "/gb/england/barnsley/school-holidays/"
+    },
+    {
+      "rang": 104,
+      "council": "Oldham",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 251915,
+      "path": "/gb/england/oldham/school-holidays/"
+    },
+    {
+      "rang": 105,
+      "council": "Swansea",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 249429,
+      "path": "/gb/wales/swansea/school-holidays/"
+    },
+    {
+      "rang": 106,
+      "council": "Swindon",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 245286,
+      "path": "/gb/england/swindon/school-holidays/"
+    },
+    {
+      "rang": 107,
+      "council": "Rhondda Cynon Taf",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 241015,
+      "path": "/gb/wales/rhondda-cynon-taf/school-holidays/"
+    },
+    {
+      "rang": 108,
+      "council": "Trafford",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 240981,
+      "path": "/gb/england/trafford/school-holidays/"
+    },
+    {
+      "rang": 109,
+      "council": "Tameside",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 240822,
+      "path": "/gb/england/tameside/school-holidays/"
+    },
+    {
+      "rang": 110,
+      "council": "Barking and Dagenham",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 238295,
+      "path": "/gb/england/barking-and-dagenham/school-holidays/"
+    },
+    {
+      "rang": 111,
+      "council": "Rochdale",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 237641,
+      "path": "/gb/england/rochdale/school-holidays/"
+    },
+    {
+      "rang": 112,
+      "council": "Highland",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 237260,
+      "path": "/gb/scotland/highland/school-holidays/"
+    },
+    {
+      "rang": 113,
+      "council": "Luton",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 236380,
+      "path": "/gb/england/luton/school-holidays/"
+    },
+    {
+      "rang": 114,
+      "council": "Westmorland and Furness",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 231307,
+      "path": "/gb/england/westmorland-and-furness/school-holidays/"
+    },
+    {
+      "rang": 115,
+      "council": "Aberdeen City",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 230180,
+      "path": "/gb/scotland/aberdeen/school-holidays/"
+    },
+    {
+      "rang": 116,
+      "council": "North Somerset",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 227160,
+      "path": "/gb/england/north-somerset/school-holidays/"
+    },
+    {
+      "rang": 117,
+      "council": "Peterborough",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 224757,
+      "path": "/gb/england/peterborough/school-holidays/"
+    },
+    {
+      "rang": 118,
+      "council": "Islington",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 224551,
+      "path": "/gb/england/islington/school-holidays/"
+    },
+    {
+      "rang": 119,
+      "council": "Solihull",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 221449,
+      "path": "/gb/england/solihull/school-holidays/"
+    },
+    {
+      "rang": 120,
+      "council": "Merton",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 218891,
+      "path": "/gb/england/merton/school-holidays/"
+    },
+    {
+      "rang": 121,
+      "council": "Camden",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 216658,
+      "path": "/gb/england/camden/school-holidays/"
+    },
+    {
+      "rang": 122,
+      "council": "Warrington",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 215425,
+      "path": "/gb/england/warrington/school-holidays/"
+    },
+    {
+      "rang": 123,
+      "council": "North Tyneside",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 215401,
+      "path": "/gb/england/north-tyneside/school-holidays/"
+    },
+    {
+      "rang": 124,
+      "council": "Sutton",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 213972,
+      "path": "/gb/england/sutton/school-holidays/"
+    },
+    {
+      "rang": 125,
+      "council": "Westminster",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 212367,
+      "path": "/gb/england/westminster/school-holidays/"
+    },
+    {
+      "rang": 126,
+      "council": "Portsmouth",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 211475,
+      "path": "/gb/england/portsmouth/school-holidays/"
+    },
+    {
+      "rang": 127,
+      "council": "Calderdale",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 210734,
+      "path": "/gb/england/calderdale/school-holidays/"
+    },
+    {
+      "rang": 128,
+      "council": "York",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 209118,
+      "path": "/gb/england/york/school-holidays/"
+    },
+    {
+      "rang": 129,
+      "council": "Stockton-on-Tees",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 207158,
+      "path": "/gb/england/stockton-on-tees/school-holidays/"
+    },
+    {
+      "rang": 130,
+      "council": "Gateshead",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 202509,
+      "path": "/gb/england/gateshead/school-holidays/"
+    },
+    {
+      "rang": 131,
+      "council": "Bath and North East Somerset",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 200898,
+      "path": "/gb/england/bath-and-north-east-somerset/school-holidays/"
+    },
+    {
+      "rang": 132,
+      "council": "Telford and Wrekin",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 199378,
+      "path": "/gb/england/telford-and-wrekin/school-holidays/"
+    },
+    {
+      "rang": 133,
+      "council": "Bury",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 199271,
+      "path": "/gb/england/bury/school-holidays/"
+    },
+    {
+      "rang": 134,
+      "council": "Richmond upon Thames",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 196713,
+      "path": "/gb/england/richmond-upon-thames/school-holidays/"
+    },
+    {
+      "rang": 135,
+      "council": "Bedford",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 196398,
+      "path": "/gb/england/bedford/school-holidays/"
+    },
+    {
+      "rang": 136,
+      "council": "Herefordshire, County of",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 192539,
+      "path": "/gb/england/herefordshire/school-holidays/"
+    },
+    {
+      "rang": 137,
+      "council": "Hammersmith and Fulham",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 190216,
+      "path": "/gb/england/hammersmith-and-fulham/school-holidays/"
+    },
+    {
+      "rang": 138,
+      "council": "Carmarthenshire",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 190037,
+      "path": "/gb/wales/carmarthenshire/school-holidays/"
+    },
+    {
+      "rang": 139,
+      "council": "St. Helens",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 189890,
+      "path": "/gb/england/st-helens/school-holidays/"
+    },
+    {
+      "rang": 140,
+      "council": "Renfrewshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 189270,
+      "path": "/gb/scotland/renfrewshire/school-holidays/"
+    },
+    {
+      "rang": 141,
+      "council": "Wokingham",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 189024,
+      "path": "/gb/england/wokingham/school-holidays/"
+    },
+    {
+      "rang": 142,
+      "council": "West Lothian",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 187240,
+      "path": "/gb/scotland/west-lothian/school-holidays/"
+    },
+    {
+      "rang": 143,
+      "council": "Southend-on-Sea",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 185214,
+      "path": "/gb/england/southend-on-sea/school-holidays/"
+    },
+    {
+      "rang": 144,
+      "council": "Reading",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 183762,
+      "path": "/gb/england/reading/school-holidays/"
+    },
+    {
+      "rang": 145,
+      "council": "Thurrock",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 181664,
+      "path": "/gb/england/thurrock/school-holidays/"
+    },
+    {
+      "rang": 146,
+      "council": "Caerphilly",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 176078,
+      "path": "/gb/wales/caerphilly/school-holidays/"
+    },
+    {
+      "rang": 147,
+      "council": "Kingston upon Thames",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 172761,
+      "path": "/gb/england/kingston-upon-thames/school-holidays/"
+    },
+    {
+      "rang": 148,
+      "council": "North Lincolnshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 171421,
+      "path": "/gb/england/north-lincolnshire/school-holidays/"
+    },
+    {
+      "rang": 149,
+      "council": "Newport",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 168584,
+      "path": "/gb/wales/newport/school-holidays/"
+    },
+    {
+      "rang": 150,
+      "council": "Slough",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 167450,
+      "path": "/gb/england/slough/school-holidays/"
+    },
+    {
+      "rang": 151,
+      "council": "West Berkshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 165523,
+      "path": "/gb/england/west-berkshire/school-holidays/"
+    },
+    {
+      "rang": 152,
+      "council": "Blackburn with Darwen",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 163801,
+      "path": "/gb/england/blackburn-with-darwen/school-holidays/"
+    },
+    {
+      "rang": 153,
+      "council": "Knowsley",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 163723,
+      "path": "/gb/england/knowsley/school-holidays/"
+    },
+    {
+      "rang": 154,
+      "council": "Falkirk",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 160230,
+      "path": "/gb/scotland/falkirk/school-holidays/"
+    },
+    {
+      "rang": 155,
+      "council": "North East Lincolnshire",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 160101,
+      "path": "/gb/england/north-east-lincolnshire/school-holidays/"
+    },
+    {
+      "rang": 156,
+      "council": "Windsor and Maidenhead",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 159776,
+      "path": "/gb/england/windsor-and-maidenhead/school-holidays/"
+    },
+    {
+      "rang": 157,
+      "council": "Flintshire",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 155954,
+      "path": "/gb/wales/flintshire/school-holidays/"
+    },
+    {
+      "rang": 158,
+      "council": "Perth and Kinross",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 154930,
+      "path": "/gb/scotland/perth-and-kinross/school-holidays/"
+    },
+    {
+      "rang": 159,
+      "council": "Middlesbrough",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 152795,
+      "path": "/gb/england/middlesbrough/school-holidays/"
+    },
+    {
+      "rang": 160,
+      "council": "South Tyneside",
+      "nasjon": "england",
+      "type": "metropolitan district",
+      "innbyggere": 151255,
+      "path": "/gb/england/south-tyneside/school-holidays/"
+    },
+    {
+      "rang": 161,
+      "council": "Dundee City",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 148390,
+      "path": "/gb/scotland/dundee/school-holidays/"
+    },
+    {
+      "rang": 162,
+      "council": "Bridgend",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 146986,
+      "path": "/gb/wales/bridgend/school-holidays/"
+    },
+    {
+      "rang": 163,
+      "council": "Kensington and Chelsea",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 145734,
+      "path": "/gb/england/kensington-and-chelsea/school-holidays/"
+    },
+    {
+      "rang": 164,
+      "council": "Dumfries and Galloway",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 145490,
+      "path": "/gb/scotland/dumfries-and-galloway/school-holidays/"
+    },
+    {
+      "rang": 165,
+      "council": "Blackpool",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 143492,
+      "path": "/gb/england/blackpool/school-holidays/"
+    },
+    {
+      "rang": 166,
+      "council": "Neath Port Talbot",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 142028,
+      "path": "/gb/wales/neath-port-talbot/school-holidays/"
+    },
+    {
+      "rang": 167,
+      "council": "Isle of Wight",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 140777,
+      "path": "/gb/england/isle-of-wight/school-holidays/"
+    },
+    {
+      "rang": 168,
+      "council": "Redcar and Cleveland",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 139541,
+      "path": "/gb/england/redcar-and-cleveland/school-holidays/"
+    },
+    {
+      "rang": 169,
+      "council": "Torbay",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 139486,
+      "path": "/gb/england/torbay/school-holidays/"
+    },
+    {
+      "rang": 170,
+      "council": "Wrexham",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 137977,
+      "path": "/gb/wales/wrexham/school-holidays/"
+    },
+    {
+      "rang": 171,
+      "council": "Vale of Glamorgan",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 135362,
+      "path": "/gb/wales/vale-of-glamorgan/school-holidays/"
+    },
+    {
+      "rang": 172,
+      "council": "Powys",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 134843,
+      "path": "/gb/wales/powys/school-holidays/"
+    },
+    {
+      "rang": 173,
+      "council": "North Ayrshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 133660,
+      "path": "/gb/scotland/north-ayrshire/school-holidays/"
+    },
+    {
+      "rang": 174,
+      "council": "Bracknell Forest",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 132145,
+      "path": "/gb/england/bracknell-forest/school-holidays/"
+    },
+    {
+      "rang": 175,
+      "council": "Halton",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 131912,
+      "path": "/gb/england/halton/school-holidays/"
+    },
+    {
+      "rang": 176,
+      "council": "Pembrokeshire",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 125849,
+      "path": "/gb/wales/pembrokeshire/school-holidays/"
+    },
+    {
+      "rang": 177,
+      "council": "East Ayrshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 121350,
+      "path": "/gb/scotland/east-ayrshire/school-holidays/"
+    },
+    {
+      "rang": 178,
+      "council": "Gwynedd",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 120295,
+      "path": "/gb/wales/gwynedd/school-holidays/"
+    },
+    {
+      "rang": 179,
+      "council": "Scottish Borders",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 116800,
+      "path": "/gb/scotland/scottish-borders/school-holidays/"
+    },
+    {
+      "rang": 180,
+      "council": "East Lothian",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 116460,
+      "path": "/gb/scotland/east-lothian/school-holidays/"
+    },
+    {
+      "rang": 181,
+      "council": "Angus",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 114610,
+      "path": "/gb/scotland/angus/school-holidays/"
+    },
+    {
+      "rang": 182,
+      "council": "Conwy",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 114421,
+      "path": "/gb/wales/conwy/school-holidays/"
+    },
+    {
+      "rang": 183,
+      "council": "Darlington",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 113402,
+      "path": "/gb/england/darlington/school-holidays/"
+    },
+    {
+      "rang": 184,
+      "council": "South Ayrshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 112280,
+      "path": "/gb/scotland/south-ayrshire/school-holidays/"
+    },
+    {
+      "rang": 185,
+      "council": "East Dunbartonshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 109550,
+      "path": "/gb/scotland/east-dunbartonshire/school-holidays/"
+    },
+    {
+      "rang": 186,
+      "council": "Midlothian",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 100390,
+      "path": "/gb/scotland/midlothian/school-holidays/"
+    },
+    {
+      "rang": 187,
+      "council": "East Renfrewshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 99840,
+      "path": "/gb/scotland/east-renfrewshire/school-holidays/"
+    },
+    {
+      "rang": 188,
+      "council": "Hartlepool",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 99656,
+      "path": "/gb/england/hartlepool/school-holidays/"
+    },
+    {
+      "rang": 189,
+      "council": "Denbighshire",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 98247,
+      "path": "/gb/wales/denbighshire/school-holidays/"
+    },
+    {
+      "rang": 190,
+      "council": "Monmouthshire",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 95329,
+      "path": "/gb/wales/monmouthshire/school-holidays/"
+    },
+    {
+      "rang": 191,
+      "council": "Moray",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 94730,
+      "path": "/gb/scotland/moray/school-holidays/"
+    },
+    {
+      "rang": 192,
+      "council": "Stirling",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 94040,
+      "path": "/gb/scotland/stirling/school-holidays/"
+    },
+    {
+      "rang": 193,
+      "council": "Torfaen",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 93973,
+      "path": "/gb/wales/torfaen/school-holidays/"
+    },
+    {
+      "rang": 194,
+      "council": "West Dunbartonshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 88340,
+      "path": "/gb/scotland/west-dunbartonshire/school-holidays/"
+    },
+    {
+      "rang": 195,
+      "council": "Argyll and Bute",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 87310,
+      "path": "/gb/scotland/argyll-and-bute/school-holidays/"
+    },
+    {
+      "rang": 196,
+      "council": "Inverclyde",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 78550,
+      "path": "/gb/scotland/inverclyde/school-holidays/"
+    },
+    {
+      "rang": 197,
+      "council": "Ceredigion",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 72696,
+      "path": "/gb/wales/ceredigion/school-holidays/"
+    },
+    {
+      "rang": 198,
+      "council": "Isle of Anglesey",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 68607,
+      "path": "/gb/wales/isle-of-anglesey/school-holidays/"
+    },
+    {
+      "rang": 199,
+      "council": "Blaenau Gwent",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 67593,
+      "path": "/gb/wales/blaenau-gwent/school-holidays/"
+    },
+    {
+      "rang": 200,
+      "council": "Merthyr Tydfil",
+      "nasjon": "wales",
+      "type": "unitary authority",
+      "innbyggere": 58362,
+      "path": "/gb/wales/merthyr-tydfil/school-holidays/"
+    },
+    {
+      "rang": 201,
+      "council": "Clackmannanshire",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 51610,
+      "path": "/gb/scotland/clackmannanshire/school-holidays/"
+    },
+    {
+      "rang": 202,
+      "council": "Rutland",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 41629,
+      "path": "/gb/england/rutland/school-holidays/"
+    },
+    {
+      "rang": 203,
+      "council": "Na h-Eileanan Siar",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 25770,
+      "path": "/gb/scotland/na-h-eileanan-siar/school-holidays/"
+    },
+    {
+      "rang": 204,
+      "council": "Shetland Islands",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 22710,
+      "path": "/gb/scotland/shetland-islands/school-holidays/"
+    },
+    {
+      "rang": 205,
+      "council": "Orkney Islands",
+      "nasjon": "scotland",
+      "type": "council area",
+      "innbyggere": 21920,
+      "path": "/gb/scotland/orkney-islands/school-holidays/"
+    },
+    {
+      "rang": 206,
+      "council": "City of London",
+      "nasjon": "england",
+      "type": "london borough",
+      "innbyggere": 15631,
+      "path": "/gb/england/city-of-london/school-holidays/"
+    },
+    {
+      "rang": 207,
+      "council": "Isles of Scilly",
+      "nasjon": "england",
+      "type": "unitary authority",
+      "innbyggere": 2299,
+      "path": "/gb/england/isles-of-scilly/school-holidays/"
+    }
+  ]
+}

@@ -95,7 +95,7 @@ export type Copy = {
   offThisSeason: string;
   inHoliday: string;
   calendarWeek: string;
-  filters: { week: string; place: string; type: string; age: string; all: string; count: string };
+  filters: { week: string; country: string; region: string; place: string; type: string; age: string; all: string; count: string };
   homeTitle: string;
   homeDescription: string;
   weekTitle: string;
@@ -294,6 +294,8 @@ export const COPY: Record<Locale, Copy> = {
     calendarWeek: "Kalenderuke {nr}: {fra}–{til}",
     filters: {
       week: "Velg uke",
+      country: "Land",
+      region: "Region",
       place: "Velg by eller kommune",
       type: "Velg type",
       age: "Alder",
@@ -449,6 +451,8 @@ export const COPY: Record<Locale, Copy> = {
     calendarWeek: "Kalendervecka {nr}: {fra}–{til}",
     filters: {
       week: "Välj vecka",
+      country: "Land",
+      region: "Region",
       place: "Välj ort eller kommun",
       type: "Välj typ",
       age: "Ålder",
@@ -603,6 +607,8 @@ export const COPY: Record<Locale, Copy> = {
     calendarWeek: "Calendar week {nr}: {fra}–{til}",
     filters: {
       week: "Choose week",
+      country: "Country",
+      region: "Region",
       place: "Choose town or municipality",
       type: "Choose type",
       age: "Age",

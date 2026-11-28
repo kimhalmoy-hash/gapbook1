@@ -1,0 +1,1175 @@
+{
+  "kilde": "Fylkeskoder er SSB fylkesnummer 2024 med prefiks NO-. ISO 3166-2:NO er ikke oppdatert for delingen i 2024. Koordinater er omtrentlige kommunesentre, ikke et GeoNames-uttrekk. SE, DE, AT, GB og IE er stubber uten regioner, ferier eller tilbud. Bølge 1-steder er kommunesentre for tilbudene i leirer-global.json, omtrentlige, ikke et GeoNames-uttrekk.",
+  "land": [
+    {
+      "iso2": "NO",
+      "navn": {
+        "nb": "Norge",
+        "sv": "Norge",
+        "en": "Norway"
+      },
+      "hovedsprak": "nb",
+      "innhold": true
+    },
+    {
+      "iso2": "SE",
+      "navn": {
+        "nb": "Sverige",
+        "sv": "Sverige",
+        "en": "Sweden"
+      },
+      "hovedsprak": "sv",
+      "innhold": false
+    },
+    {
+      "iso2": "DE",
+      "navn": {
+        "nb": "Tyskland",
+        "sv": "Tyskland",
+        "en": "Germany",
+        "de": "Deutschland"
+      },
+      "hovedsprak": "de",
+      "innhold": false
+    },
+    {
+      "iso2": "AT",
+      "navn": {
+        "nb": "Østerrike",
+        "sv": "Österrike",
+        "en": "Austria",
+        "de": "Österreich"
+      },
+      "hovedsprak": "de",
+      "innhold": false
+    },
+    {
+      "iso2": "GB",
+      "navn": {
+        "nb": "Storbritannia",
+        "sv": "Storbritannien",
+        "en": "United Kingdom"
+      },
+      "hovedsprak": "en",
+      "innhold": false
+    },
+    {
+      "iso2": "IE",
+      "navn": {
+        "nb": "Irland",
+        "sv": "Irland",
+        "en": "Ireland"
+      },
+      "hovedsprak": "en",
+      "innhold": false
+    }
+  ],
+  "regioner": [
+    {
+      "iso2": "NO",
+      "kode": "NO-42",
+      "slug": "agder",
+      "navn": {
+        "nb": "Agder",
+        "sv": "Agder",
+        "en": "Agder"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-32",
+      "slug": "akershus",
+      "navn": {
+        "nb": "Akershus",
+        "sv": "Akershus",
+        "en": "Akershus"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-33",
+      "slug": "buskerud",
+      "navn": {
+        "nb": "Buskerud",
+        "sv": "Buskerud",
+        "en": "Buskerud"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-56",
+      "slug": "finnmark",
+      "navn": {
+        "nb": "Finnmark",
+        "sv": "Finnmark",
+        "en": "Finnmark"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-34",
+      "slug": "innlandet",
+      "navn": {
+        "nb": "Innlandet",
+        "sv": "Innlandet",
+        "en": "Innlandet"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-15",
+      "slug": "more-og-romsdal",
+      "navn": {
+        "nb": "Møre og Romsdal",
+        "sv": "Møre og Romsdal",
+        "en": "Møre og Romsdal"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-18",
+      "slug": "nordland",
+      "navn": {
+        "nb": "Nordland",
+        "sv": "Nordland",
+        "en": "Nordland"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-03",
+      "slug": "oslo",
+      "navn": {
+        "nb": "Oslo",
+        "sv": "Oslo",
+        "en": "Oslo"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-11",
+      "slug": "rogaland",
+      "navn": {
+        "nb": "Rogaland",
+        "sv": "Rogaland",
+        "en": "Rogaland"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-40",
+      "slug": "telemark",
+      "navn": {
+        "nb": "Telemark",
+        "sv": "Telemark",
+        "en": "Telemark"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-55",
+      "slug": "troms",
+      "navn": {
+        "nb": "Troms",
+        "sv": "Troms",
+        "en": "Troms"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-50",
+      "slug": "trondelag",
+      "navn": {
+        "nb": "Trøndelag",
+        "sv": "Trøndelag",
+        "en": "Trøndelag"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-39",
+      "slug": "vestfold",
+      "navn": {
+        "nb": "Vestfold",
+        "sv": "Vestfold",
+        "en": "Vestfold"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-46",
+      "slug": "vestland",
+      "navn": {
+        "nb": "Vestland",
+        "sv": "Vestland",
+        "en": "Vestland"
+      }
+    },
+    {
+      "iso2": "NO",
+      "kode": "NO-31",
+      "slug": "ostfold",
+      "navn": {
+        "nb": "Østfold",
+        "sv": "Østfold",
+        "en": "Østfold"
+      }
+    },
+    {
+      "iso2": "SE",
+      "kode": "SE-AB",
+      "slug": "stockholm",
+      "navn": {
+        "nb": "Stockholms län",
+        "sv": "Stockholms län",
+        "en": "Stockholms län"
+      }
+    },
+    {
+      "iso2": "SE",
+      "kode": "SE-C",
+      "slug": "uppsala",
+      "navn": {
+        "nb": "Uppsala län",
+        "sv": "Uppsala län",
+        "en": "Uppsala län"
+      }
+    },
+    {
+      "iso2": "SE",
+      "kode": "SE-O",
+      "slug": "vastra-gotaland",
+      "navn": {
+        "nb": "Västra Götalands län",
+        "sv": "Västra Götalands län",
+        "en": "Västra Götalands län"
+      }
+    },
+    {
+      "iso2": "DE",
+      "kode": "DE-BE",
+      "slug": "berlin",
+      "navn": {
+        "nb": "Berlin",
+        "sv": "Berlin",
+        "en": "Berlin"
+      }
+    },
+    {
+      "iso2": "DE",
+      "kode": "DE-BY",
+      "slug": "bayern",
+      "navn": {
+        "nb": "Bayern",
+        "sv": "Bayern",
+        "en": "Bayern"
+      }
+    },
+    {
+      "iso2": "DE",
+      "kode": "DE-HH",
+      "slug": "hamburg",
+      "navn": {
+        "nb": "Hamburg",
+        "sv": "Hamburg",
+        "en": "Hamburg"
+      }
+    },
+    {
+      "iso2": "DE",
+      "kode": "DE-NW",
+      "slug": "nordrhein-westfalen",
+      "navn": {
+        "nb": "Nordrhein-Westfalen",
+        "sv": "Nordrhein-Westfalen",
+        "en": "Nordrhein-Westfalen"
+      }
+    },
+    {
+      "iso2": "AT",
+      "kode": "AT-4",
+      "slug": "oberoesterreich",
+      "navn": {
+        "nb": "Oberösterreich",
+        "sv": "Oberösterreich",
+        "en": "Oberösterreich"
+      }
+    },
+    {
+      "iso2": "AT",
+      "kode": "AT-5",
+      "slug": "salzburg",
+      "navn": {
+        "nb": "Salzburg",
+        "sv": "Salzburg",
+        "en": "Salzburg"
+      }
+    },
+    {
+      "iso2": "AT",
+      "kode": "AT-6",
+      "slug": "steiermark",
+      "navn": {
+        "nb": "Steiermark",
+        "sv": "Steiermark",
+        "en": "Steiermark"
+      }
+    },
+    {
+      "iso2": "AT",
+      "kode": "AT-9",
+      "slug": "wien",
+      "navn": {
+        "nb": "Wien",
+        "sv": "Wien",
+        "en": "Wien"
+      }
+    },
+    {
+      "iso2": "GB",
+      "kode": "GB-ENG",
+      "slug": "england",
+      "navn": {
+        "nb": "England",
+        "sv": "England",
+        "en": "England"
+      }
+    },
+    {
+      "iso2": "GB",
+      "kode": "GB-SCT",
+      "slug": "scotland",
+      "navn": {
+        "nb": "Scotland",
+        "sv": "Scotland",
+        "en": "Scotland"
+      }
+    },
+    {
+      "iso2": "IE",
+      "kode": "IE-D",
+      "slug": "dublin",
+      "navn": {
+        "nb": "Dublin",
+        "sv": "Dublin",
+        "en": "Dublin"
+      }
+    },
+    {
+      "iso2": "IE",
+      "kode": "IE-CO",
+      "slug": "cork",
+      "navn": {
+        "nb": "Cork",
+        "sv": "Cork",
+        "en": "Cork"
+      }
+    },
+    {
+      "iso2": "IE",
+      "kode": "IE-TA",
+      "slug": "tipperary",
+      "navn": {
+        "nb": "Tipperary",
+        "sv": "Tipperary",
+        "en": "Tipperary"
+      }
+    }
+  ],
+  "steder": [
+    {
+      "iso2": "NO",
+      "region": "finnmark",
+      "slug": "alta",
+      "navn": {
+        "nb": "Alta",
+        "sv": "Alta",
+        "en": "Alta"
+      },
+      "lat": 69.97,
+      "lng": 23.27
+    },
+    {
+      "iso2": "NO",
+      "region": "agder",
+      "slug": "arendal",
+      "navn": {
+        "nb": "Arendal",
+        "sv": "Arendal",
+        "en": "Arendal"
+      },
+      "lat": 58.46,
+      "lng": 8.77
+    },
+    {
+      "iso2": "NO",
+      "region": "akershus",
+      "slug": "asker",
+      "navn": {
+        "nb": "Asker",
+        "sv": "Asker",
+        "en": "Asker"
+      },
+      "lat": 59.83,
+      "lng": 10.44
+    },
+    {
+      "iso2": "NO",
+      "region": "vestland",
+      "slug": "bergen",
+      "navn": {
+        "nb": "Bergen",
+        "sv": "Bergen",
+        "en": "Bergen"
+      },
+      "lat": 60.39,
+      "lng": 5.32
+    },
+    {
+      "iso2": "NO",
+      "region": "nordland",
+      "slug": "bodo",
+      "navn": {
+        "nb": "Bodø",
+        "sv": "Bodø",
+        "en": "Bodø"
+      },
+      "lat": 67.28,
+      "lng": 14.4
+    },
+    {
+      "iso2": "NO",
+      "region": "akershus",
+      "slug": "baerum",
+      "navn": {
+        "nb": "Bærum",
+        "sv": "Bærum",
+        "en": "Bærum"
+      },
+      "lat": 59.89,
+      "lng": 10.53
+    },
+    {
+      "iso2": "NO",
+      "region": "buskerud",
+      "slug": "drammen",
+      "navn": {
+        "nb": "Drammen",
+        "sv": "Drammen",
+        "en": "Drammen"
+      },
+      "lat": 59.74,
+      "lng": 10.2
+    },
+    {
+      "iso2": "NO",
+      "region": "ostfold",
+      "slug": "fredrikstad",
+      "navn": {
+        "nb": "Fredrikstad",
+        "sv": "Fredrikstad",
+        "en": "Fredrikstad"
+      },
+      "lat": 59.22,
+      "lng": 10.93
+    },
+    {
+      "iso2": "NO",
+      "region": "vestfold",
+      "slug": "faerder",
+      "navn": {
+        "nb": "Færder",
+        "sv": "Færder",
+        "en": "Færder"
+      },
+      "lat": 59.12,
+      "lng": 10.4
+    },
+    {
+      "iso2": "NO",
+      "region": "innlandet",
+      "slug": "gjovik",
+      "navn": {
+        "nb": "Gjøvik",
+        "sv": "Gjøvik",
+        "en": "Gjøvik"
+      },
+      "lat": 60.8,
+      "lng": 10.69
+    },
+    {
+      "iso2": "NO",
+      "region": "ostfold",
+      "slug": "halden",
+      "navn": {
+        "nb": "Halden",
+        "sv": "Halden",
+        "en": "Halden"
+      },
+      "lat": 59.12,
+      "lng": 11.39
+    },
+    {
+      "iso2": "NO",
+      "region": "innlandet",
+      "slug": "hamar",
+      "navn": {
+        "nb": "Hamar",
+        "sv": "Hamar",
+        "en": "Hamar"
+      },
+      "lat": 60.79,
+      "lng": 11.07
+    },
+    {
+      "iso2": "NO",
+      "region": "troms",
+      "slug": "harstad",
+      "navn": {
+        "nb": "Harstad",
+        "sv": "Harstad",
+        "en": "Harstad"
+      },
+      "lat": 68.8,
+      "lng": 16.54
+    },
+    {
+      "iso2": "NO",
+      "region": "rogaland",
+      "slug": "haugesund",
+      "navn": {
+        "nb": "Haugesund",
+        "sv": "Haugesund",
+        "en": "Haugesund"
+      },
+      "lat": 59.41,
+      "lng": 5.27
+    },
+    {
+      "iso2": "NO",
+      "region": "ostfold",
+      "slug": "indre-ostfold",
+      "navn": {
+        "nb": "Indre Østfold",
+        "sv": "Indre Østfold",
+        "en": "Indre Østfold"
+      },
+      "lat": 59.58,
+      "lng": 11.16
+    },
+    {
+      "iso2": "NO",
+      "region": "rogaland",
+      "slug": "karmoy",
+      "navn": {
+        "nb": "Karmøy",
+        "sv": "Karmøy",
+        "en": "Karmøy"
+      },
+      "lat": 59.28,
+      "lng": 5.3
+    },
+    {
+      "iso2": "NO",
+      "region": "buskerud",
+      "slug": "kongsberg",
+      "navn": {
+        "nb": "Kongsberg",
+        "sv": "Kongsberg",
+        "en": "Kongsberg"
+      },
+      "lat": 59.67,
+      "lng": 9.65
+    },
+    {
+      "iso2": "NO",
+      "region": "agder",
+      "slug": "kristiansand",
+      "navn": {
+        "nb": "Kristiansand",
+        "sv": "Kristiansand",
+        "en": "Kristiansand"
+      },
+      "lat": 58.15,
+      "lng": 8
+    },
+    {
+      "iso2": "NO",
+      "region": "vestfold",
+      "slug": "larvik",
+      "navn": {
+        "nb": "Larvik",
+        "sv": "Larvik",
+        "en": "Larvik"
+      },
+      "lat": 59.05,
+      "lng": 10.04
+    },
+    {
+      "iso2": "NO",
+      "region": "innlandet",
+      "slug": "lillehammer",
+      "navn": {
+        "nb": "Lillehammer",
+        "sv": "Lillehammer",
+        "en": "Lillehammer"
+      },
+      "lat": 61.12,
+      "lng": 10.47
+    },
+    {
+      "iso2": "NO",
+      "region": "akershus",
+      "slug": "lillestrom",
+      "navn": {
+        "nb": "Lillestrøm",
+        "sv": "Lillestrøm",
+        "en": "Lillestrøm"
+      },
+      "lat": 59.96,
+      "lng": 11.05
+    },
+    {
+      "iso2": "NO",
+      "region": "akershus",
+      "slug": "lorenskog",
+      "navn": {
+        "nb": "Lørenskog",
+        "sv": "Lørenskog",
+        "en": "Lørenskog"
+      },
+      "lat": 59.93,
+      "lng": 10.95
+    },
+    {
+      "iso2": "NO",
+      "region": "trondelag",
+      "slug": "malvik",
+      "navn": {
+        "nb": "Malvik",
+        "sv": "Malvik",
+        "en": "Malvik"
+      },
+      "lat": 63.41,
+      "lng": 10.79
+    },
+    {
+      "iso2": "NO",
+      "region": "more-og-romsdal",
+      "slug": "molde",
+      "navn": {
+        "nb": "Molde",
+        "sv": "Molde",
+        "en": "Molde"
+      },
+      "lat": 62.74,
+      "lng": 7.16
+    },
+    {
+      "iso2": "NO",
+      "region": "ostfold",
+      "slug": "moss",
+      "navn": {
+        "nb": "Moss",
+        "sv": "Moss",
+        "en": "Moss"
+      },
+      "lat": 59.43,
+      "lng": 10.66
+    },
+    {
+      "iso2": "NO",
+      "region": "nordland",
+      "slug": "narvik",
+      "navn": {
+        "nb": "Narvik",
+        "sv": "Narvik",
+        "en": "Narvik"
+      },
+      "lat": 68.44,
+      "lng": 17.43
+    },
+    {
+      "iso2": "NO",
+      "region": "akershus",
+      "slug": "nordre-follo",
+      "navn": {
+        "nb": "Nordre Follo",
+        "sv": "Nordre Follo",
+        "en": "Nordre Follo"
+      },
+      "lat": 59.72,
+      "lng": 10.84
+    },
+    {
+      "iso2": "NO",
+      "region": "buskerud",
+      "slug": "nore-og-uvdal",
+      "navn": {
+        "nb": "Nore og Uvdal",
+        "sv": "Nore og Uvdal",
+        "en": "Nore og Uvdal"
+      },
+      "lat": 60.27,
+      "lng": 8.95
+    },
+    {
+      "iso2": "NO",
+      "region": "oslo",
+      "slug": "oslo",
+      "navn": {
+        "nb": "Oslo",
+        "sv": "Oslo",
+        "en": "Oslo"
+      },
+      "lat": 59.91,
+      "lng": 10.75
+    },
+    {
+      "iso2": "NO",
+      "region": "telemark",
+      "slug": "porsgrunn",
+      "navn": {
+        "nb": "Porsgrunn",
+        "sv": "Porsgrunn",
+        "en": "Porsgrunn"
+      },
+      "lat": 59.14,
+      "lng": 9.66
+    },
+    {
+      "iso2": "NO",
+      "region": "buskerud",
+      "slug": "ringerike",
+      "navn": {
+        "nb": "Ringerike",
+        "sv": "Ringerike",
+        "en": "Ringerike"
+      },
+      "lat": 60.17,
+      "lng": 10.26
+    },
+    {
+      "iso2": "NO",
+      "region": "innlandet",
+      "slug": "ringsaker",
+      "navn": {
+        "nb": "Ringsaker",
+        "sv": "Ringsaker",
+        "en": "Ringsaker"
+      },
+      "lat": 60.88,
+      "lng": 10.94
+    },
+    {
+      "iso2": "NO",
+      "region": "ostfold",
+      "slug": "rade",
+      "navn": {
+        "nb": "Råde",
+        "sv": "Råde",
+        "en": "Råde"
+      },
+      "lat": 59.35,
+      "lng": 10.87
+    },
+    {
+      "iso2": "NO",
+      "region": "vestfold",
+      "slug": "sandefjord",
+      "navn": {
+        "nb": "Sandefjord",
+        "sv": "Sandefjord",
+        "en": "Sandefjord"
+      },
+      "lat": 59.13,
+      "lng": 10.22
+    },
+    {
+      "iso2": "NO",
+      "region": "rogaland",
+      "slug": "sandnes",
+      "navn": {
+        "nb": "Sandnes",
+        "sv": "Sandnes",
+        "en": "Sandnes"
+      },
+      "lat": 58.85,
+      "lng": 5.74
+    },
+    {
+      "iso2": "NO",
+      "region": "ostfold",
+      "slug": "sarpsborg",
+      "navn": {
+        "nb": "Sarpsborg",
+        "sv": "Sarpsborg",
+        "en": "Sarpsborg"
+      },
+      "lat": 59.28,
+      "lng": 11.11
+    },
+    {
+      "iso2": "NO",
+      "region": "telemark",
+      "slug": "skien",
+      "navn": {
+        "nb": "Skien",
+        "sv": "Skien",
+        "en": "Skien"
+      },
+      "lat": 59.21,
+      "lng": 9.61
+    },
+    {
+      "iso2": "NO",
+      "region": "rogaland",
+      "slug": "stavanger",
+      "navn": {
+        "nb": "Stavanger",
+        "sv": "Stavanger",
+        "en": "Stavanger"
+      },
+      "lat": 58.97,
+      "lng": 5.73
+    },
+    {
+      "iso2": "NO",
+      "region": "trondelag",
+      "slug": "steinkjer",
+      "navn": {
+        "nb": "Steinkjer",
+        "sv": "Steinkjer",
+        "en": "Steinkjer"
+      },
+      "lat": 64.01,
+      "lng": 11.5
+    },
+    {
+      "iso2": "NO",
+      "region": "troms",
+      "slug": "tjeldsund",
+      "navn": {
+        "nb": "Tjeldsund",
+        "sv": "Tjeldsund",
+        "en": "Tjeldsund"
+      },
+      "lat": 68.58,
+      "lng": 16.58
+    },
+    {
+      "iso2": "NO",
+      "region": "troms",
+      "slug": "tromso",
+      "navn": {
+        "nb": "Tromsø",
+        "sv": "Tromsø",
+        "en": "Tromsø"
+      },
+      "lat": 69.65,
+      "lng": 18.96
+    },
+    {
+      "iso2": "NO",
+      "region": "trondelag",
+      "slug": "trondheim",
+      "navn": {
+        "nb": "Trondheim",
+        "sv": "Trondheim",
+        "en": "Trondheim"
+      },
+      "lat": 63.43,
+      "lng": 10.4
+    },
+    {
+      "iso2": "NO",
+      "region": "agder",
+      "slug": "tvedestrand",
+      "navn": {
+        "nb": "Tvedestrand",
+        "sv": "Tvedestrand",
+        "en": "Tvedestrand"
+      },
+      "lat": 58.62,
+      "lng": 8.93
+    },
+    {
+      "iso2": "NO",
+      "region": "vestfold",
+      "slug": "tonsberg",
+      "navn": {
+        "nb": "Tønsberg",
+        "sv": "Tønsberg",
+        "en": "Tønsberg"
+      },
+      "lat": 59.27,
+      "lng": 10.41
+    },
+    {
+      "iso2": "NO",
+      "region": "akershus",
+      "slug": "ullensaker",
+      "navn": {
+        "nb": "Ullensaker",
+        "sv": "Ullensaker",
+        "en": "Ullensaker"
+      },
+      "lat": 60.14,
+      "lng": 11.17
+    },
+    {
+      "iso2": "NO",
+      "region": "more-og-romsdal",
+      "slug": "orsta",
+      "navn": {
+        "nb": "Ørsta",
+        "sv": "Ørsta",
+        "en": "Ørsta"
+      },
+      "lat": 62.2,
+      "lng": 6.13
+    },
+    {
+      "iso2": "NO",
+      "region": "vestland",
+      "slug": "oygarden",
+      "navn": {
+        "nb": "Øygarden",
+        "sv": "Øygarden",
+        "en": "Øygarden"
+      },
+      "lat": 60.5,
+      "lng": 4.91
+    },
+    {
+      "iso2": "NO",
+      "region": "more-og-romsdal",
+      "slug": "alesund",
+      "navn": {
+        "nb": "Ålesund",
+        "sv": "Ålesund",
+        "en": "Ålesund"
+      },
+      "lat": 62.47,
+      "lng": 6.15
+    },
+    {
+      "iso2": "SE",
+      "region": "stockholm",
+      "slug": "stockholm",
+      "navn": {
+        "nb": "Stockholm",
+        "sv": "Stockholm",
+        "en": "Stockholm"
+      },
+      "lat": 59.3293,
+      "lng": 18.0686
+    },
+    {
+      "iso2": "SE",
+      "region": "uppsala",
+      "slug": "uppsala",
+      "navn": {
+        "nb": "Uppsala",
+        "sv": "Uppsala",
+        "en": "Uppsala"
+      },
+      "lat": 59.8586,
+      "lng": 17.6389
+    },
+    {
+      "iso2": "SE",
+      "region": "vastra-gotaland",
+      "slug": "goteborg",
+      "navn": {
+        "nb": "Göteborg",
+        "sv": "Göteborg",
+        "en": "Göteborg"
+      },
+      "lat": 57.7089,
+      "lng": 11.9746
+    },
+    {
+      "iso2": "DE",
+      "region": "berlin",
+      "slug": "berlin",
+      "navn": {
+        "nb": "Berlin",
+        "sv": "Berlin",
+        "en": "Berlin"
+      },
+      "lat": 52.52,
+      "lng": 13.405
+    },
+    {
+      "iso2": "DE",
+      "region": "bayern",
+      "slug": "muenchen",
+      "navn": {
+        "nb": "München",
+        "sv": "München",
+        "en": "München"
+      },
+      "lat": 48.1374,
+      "lng": 11.5755
+    },
+    {
+      "iso2": "DE",
+      "region": "hamburg",
+      "slug": "hamburg",
+      "navn": {
+        "nb": "Hamburg",
+        "sv": "Hamburg",
+        "en": "Hamburg"
+      },
+      "lat": 53.5511,
+      "lng": 9.9937
+    },
+    {
+      "iso2": "DE",
+      "region": "nordrhein-westfalen",
+      "slug": "koeln",
+      "navn": {
+        "nb": "Köln",
+        "sv": "Köln",
+        "en": "Köln"
+      },
+      "lat": 50.9375,
+      "lng": 6.9603
+    },
+    {
+      "iso2": "AT",
+      "region": "oberoesterreich",
+      "slug": "st-wolfgang",
+      "navn": {
+        "nb": "St. Wolfgang",
+        "sv": "St. Wolfgang",
+        "en": "St. Wolfgang"
+      },
+      "lat": 47.739,
+      "lng": 13.447
+    },
+    {
+      "iso2": "AT",
+      "region": "salzburg",
+      "slug": "salzburg",
+      "navn": {
+        "nb": "Salzburg",
+        "sv": "Salzburg",
+        "en": "Salzburg"
+      },
+      "lat": 47.8095,
+      "lng": 13.055
+    },
+    {
+      "iso2": "AT",
+      "region": "steiermark",
+      "slug": "graz",
+      "navn": {
+        "nb": "Graz",
+        "sv": "Graz",
+        "en": "Graz"
+      },
+      "lat": 47.0707,
+      "lng": 15.4395
+    },
+    {
+      "iso2": "AT",
+      "region": "wien",
+      "slug": "wien",
+      "navn": {
+        "nb": "Wien",
+        "sv": "Wien",
+        "en": "Wien"
+      },
+      "lat": 48.2082,
+      "lng": 16.3738
+    },
+    {
+      "iso2": "GB",
+      "region": "england",
+      "slug": "romiley",
+      "navn": {
+        "nb": "Romiley",
+        "sv": "Romiley",
+        "en": "Romiley"
+      },
+      "lat": 53.414,
+      "lng": -2.084
+    },
+    {
+      "iso2": "GB",
+      "region": "england",
+      "slug": "sutton",
+      "navn": {
+        "nb": "Sutton",
+        "sv": "Sutton",
+        "en": "Sutton"
+      },
+      "lat": 51.361,
+      "lng": -0.194
+    },
+    {
+      "iso2": "GB",
+      "region": "england",
+      "slug": "altrincham",
+      "navn": {
+        "nb": "Altrincham",
+        "sv": "Altrincham",
+        "en": "Altrincham"
+      },
+      "lat": 53.384,
+      "lng": -2.355
+    },
+    {
+      "iso2": "GB",
+      "region": "scotland",
+      "slug": "glasgow",
+      "navn": {
+        "nb": "Glasgow",
+        "sv": "Glasgow",
+        "en": "Glasgow"
+      },
+      "lat": 55.8642,
+      "lng": -4.2518
+    },
+    {
+      "iso2": "IE",
+      "region": "dublin",
+      "slug": "blackrock",
+      "navn": {
+        "nb": "Blackrock",
+        "sv": "Blackrock",
+        "en": "Blackrock"
+      },
+      "lat": 53.301,
+      "lng": -6.178
+    },
+    {
+      "iso2": "IE",
+      "region": "cork",
+      "slug": "cork",
+      "navn": {
+        "nb": "Cork",
+        "sv": "Cork",
+        "en": "Cork"
+      },
+      "lat": 51.8985,
+      "lng": -8.4756
+    },
+    {
+      "iso2": "IE",
+      "region": "tipperary",
+      "slug": "roscrea",
+      "navn": {
+        "nb": "Roscrea",
+        "sv": "Roscrea",
+        "en": "Roscrea"
+      },
+      "lat": 52.955,
+      "lng": -7.802
+    }
+  ],
+  "ferier": [],
+  "tilbud": []
+}

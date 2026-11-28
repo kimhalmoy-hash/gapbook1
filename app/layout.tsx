@@ -34,6 +34,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="nb" className={`${display.variable} ${body.variable} h-full`}>
       <head>
+        {site.sokekonsoll?.googleSiteVerification ? (
+          <meta name="google-site-verification" content={site.sokekonsoll.googleSiteVerification} />
+        ) : null}
         {annonser ? (
           <>
             {/* Consent Mode v2: alt «denied» som standard, før noe annet skript. Står før alle tredjepartsskript (Next legger egne async-chunks av eget domene først; de rører ikke Google). Hele samtykkeoppsettet ligger bak bryteren. */}
