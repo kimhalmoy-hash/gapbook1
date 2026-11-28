@@ -1,7 +1,8 @@
 import { CampGrid } from "@/components/CampCard";
 import { FremhevetSide } from "@/components/FremhevetSide";
 import { FilterBar } from "@/components/FilterBar";
-import { Footer, Header } from "@/components/Chrome";
+import { Footer, Header, Landvelger } from "@/components/Chrome";
+import { landvelger } from "@/lib/landvelger.mjs";
 import { JsonLd } from "@/components/JsonLd";
 import { fyll, type Copy, type Locale } from "@/lib/i18n";
 import { formaterUkeTall, prisVisning } from "@/lib/pure.mjs";
@@ -11,6 +12,7 @@ import { SetLang } from "@/components/Chrome";
 export function PageView({ rute }: { rute: Rute }) {
   const side = modell(rute);
   const tekst = side.tekst;
+  const land = landvelger(side.spraakKode || rute.locale, rute.kind === "global" && rute.landKode ? rute.landKode : "NO", rute.locale);
   const spraak = (["nb", "sv", "en"] as Locale[]).map((locale) => ({
     locale,
     href: sammeSti(rute, locale),
@@ -26,8 +28,9 @@ export function PageView({ rute }: { rute: Rute }) {
           <JsonLd key={i} data={blokk} />
         ))}
         <header className="border-b border-line bg-paper/90">
-          <div className="mx-auto flex max-w-6xl items-center px-4 py-4">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
             <a href={side.crumbs[0]?.href || "/"} className="font-serif text-2xl text-pine">WeekSlot</a>
+            <Landvelger valg={land} kompakt />
           </div>
         </header>
         <main className="mx-auto min-w-0 max-w-6xl px-4 py-10">
@@ -59,6 +62,11 @@ export function PageView({ rute }: { rute: Rute }) {
             </ul>
           ) : null}
         </main>
+        <footer className="mt-16 border-t border-line">
+          <div className="mx-auto max-w-6xl px-4 py-8">
+            <Landvelger valg={land} />
+          </div>
+        </footer>
       </div>
     );
   }
@@ -74,11 +82,12 @@ export function PageView({ rute }: { rute: Rute }) {
         home={side.crumbs[0]?.href || "/"}
         sesongLenker={side.sesongLenker}
         spraak={spraak}
+        land={land}
       />
       <main className="mx-auto min-w-0 max-w-6xl px-4 py-10">
         {rute.kind === "hjem" ? <Hjem side={side} /> : rute.kind === "fremhevet" ? <FremhevetSide tekst={tekst} /> : rute.kind === "personvern" ? <Personvern tekst={tekst} /> : <Innhold side={side} />}
       </main>
-      <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} privacyHref={rute.locale === "sv" ? "/sv/integritet/" : rute.locale === "en" ? "/en/privacy/" : "/personvern/"} />
+      <Footer tekst={tekst} tipHref={mailto(tekst.tipSubject)} privacyHref={rute.locale === "sv" ? "/sv/integritet/" : rute.locale === "en" ? "/en/privacy/" : "/personvern/"} land={land} />
     </div>
   );
 }

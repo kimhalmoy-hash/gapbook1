@@ -9,6 +9,7 @@ import geografiJson from "@/data/geografi.json";
 import { globaleSider } from "@/lib/globale-ruter.mjs";
 import { lesSkolekalender, norskeKalenderSider, regionInnhold } from "@/lib/skolekalender.mjs";
 import { sideInnhold, tilbudSider } from "@/lib/bolge-ruter.mjs";
+import { klynge } from "@/lib/hreflang.mjs";
 import globaleLeirerJson from "@/data/leirer-global.json";
 import {
   campIFerie,
@@ -27,7 +28,6 @@ import {
   skolearKort,
   skolearSlutt,
   skolerutaIndeks,
-  hreflangLokaler,
   slug,
   synlig,
   TEMA_MIN,
@@ -50,7 +50,7 @@ import {
   ukeMandag,
   ukeNokkel,
 } from "@/lib/pure.mjs";
-import { COPY, copy, fyll, intlLocale, type Copy, type Locale, LOCALES } from "@/lib/i18n";
+import { copy, fyll, intlLocale, type Copy, type Locale, LOCALES } from "@/lib/i18n";
 
 type SesongNavn = "vinter" | "sommer" | "host" | "paske";
 
@@ -1161,23 +1161,28 @@ function tittel(rute: Rute, side: SideModell): string {
   return e ? `${e.tittel} | ${site.name}` : tekst.homeTitle;
 }
 
+function hreflangSett(rute: Rute): Record<string, string> {
+  const url = absolut(sammeSti(rute, rute.locale));
+  if (rute.kind === "global") {
+    if (rute.landKode && rute.landKode !== "NO" && rute.maal) return indekserbar(rute) ? { [rute.maal]: url } : {};
+    return indekserbar(rute) ? { "nb-NO": url, "x-default": url } : {};
+  }
+  const medlemmer = (["nb", "sv", "en"] as Locale[]).map((locale) => {
+    const path = sammeSti(rute, locale);
+    const annen = finnRute(path.split("/").filter(Boolean));
+    const kode = locale === "sv" ? "sv-NO" : locale === "en" ? "en-NO" : "nb-NO";
+    return { locale, kode, url: absolut(path), indeks: Boolean(annen && indekserbar(annen)) };
+  });
+  return klynge(medlemmer).get(rute.locale) || {};
+}
+
 export function metadataFor(rute: Rute): Metadata {
   const side = modell(rute);
   const title = tittel(rute, side);
   const description = beskrivelse(rute, side);
   const path = sammeSti(rute, rute.locale);
   const canonical = absolut(path);
-  const nbSti = absolut(sammeSti(rute, "nb"));
-  const languages: Record<string, string> = {};
-  if (rute.kind === "global" && rute.maal && rute.landKode && rute.landKode !== "NO") {
-    languages[rute.maal] = canonical;
-  } else {
-    languages["x-default"] = rute.kind === "global" ? canonical : nbSti;
-    const lokaler = rute.kind === "global" ? [rute.locale] : (hreflangLokaler(rute.kind) as Locale[]);
-    for (const locale of lokaler) {
-      languages[COPY[locale].htmlLang] = locale === "nb" ? nbSti : absolut(sammeSti(rute, locale));
-    }
-  }
+  const languages = hreflangSett(rute);
   const indeks = indekserbar(rute);
   return {
     title: { absolute: title },
