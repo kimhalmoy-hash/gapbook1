@@ -57,14 +57,16 @@ test("annonsekode og tredjepartsadresser finnes bare i layout (bak bryteren) og 
   for (const f of kilder) {
     const t = les(...f.split("/"));
     const harPagead = /pagead2|googlesyndication/.test(t);
-    const harFc = /fundingchoicesmessages/.test(t);
-    if (f === "components/Samtykke.tsx") {
-      assert.ok(harPagead);
+    const harFc = /fundingchoices|googlefcPresent/.test(t);
+    assert.ok(!harFc, `${f}: ingen egen Funding Choices-tag`);
+    if (f === "app/layout.tsx") {
+      assert.ok(harPagead, "layout laster AdSense-taggen");
+      assert.match(t, /adsbygoogle\.js\?client=ca-\$\{UTGIVER_ID\}/);
+      assert.match(t, /annonser \? \(/);
+    } else if (f === "components/Samtykke.tsx") {
+      assert.ok(!harPagead, "Samtykke.tsx laster ikke taggen selv");
       assert.match(t, /if \(!ANNONSER_PA\) return;/);
       assert.match(t, /ANNONSER_PA = process\.env\.NEXT_PUBLIC_WEEKSLOT_ADSENSE === "on"/);
-    } else if (f === "app/layout.tsx") {
-      assert.ok(harFc);
-      assert.match(t, /annonser \? \(/);
     } else {
       assert.ok(!harPagead && !harFc, `${f} skal ikke nevne annonseadresser`);
     }
@@ -73,9 +75,7 @@ test("annonsekode og tredjepartsadresser finnes bare i layout (bak bryteren) og 
 
 test("annonseforespørsel kommer først etter CONSENT_MODE_DATA_READY og ad_storage gitt", () => {
   const t = les("components", "Samtykke.tsx");
-  const lastPos = t.indexOf("pagead2.googlesyndication.com");
-  const venterPos = t.indexOf("CONSENT_MODE_DATA_READY");
-  assert.ok(venterPos > 0 && lastPos > 0);
+  assert.ok(t.indexOf("CONSENT_MODE_DATA_READY") > 0);
   // start() er definert før, men kalles bare fra callbacken, og bare når ad_storage er gitt.
   assert.match(t, /if \(!gitt\(verdier\.adStoragePurposeConsentStatus\)\) return;\s+start\(/);
   assert.equal((t.match(/start\(/g) || []).length, 2); // definisjon + ett kall
@@ -106,7 +106,7 @@ test("hele samtykkeoppsettet i layout ligger bak bryteren, og Consent Mode-stand
   const head = layout.slice(layout.indexOf("<head>"), layout.indexOf("</head>"));
   assert.ok(head.includes("CONSENT_DEFAULT_SCRIPT"));
   assert.ok(head.indexOf("annonser ? (") >= 0 && head.indexOf("annonser ? (") < head.indexOf("CONSENT_DEFAULT_SCRIPT"));
-  assert.ok(head.indexOf("CONSENT_DEFAULT_SCRIPT") < head.indexOf("fundingChoicesSkript"));
+  assert.ok(head.indexOf("CONSENT_DEFAULT_SCRIPT") < head.indexOf("adsenseTagSkript"));
   const body = layout.slice(layout.indexOf("<body"));
   assert.ok(body.indexOf("annonser ? (") >= 0 && body.indexOf("annonser ? (") < body.indexOf("<SamtykkeKlikk />"));
   assert.ok(body.indexOf("annonser ? (") < body.indexOf("<AnnonseStyring />"));

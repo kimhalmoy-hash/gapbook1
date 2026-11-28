@@ -5,7 +5,7 @@
  *
  * Alltid: ads.txt og personvernsidene.
  * Bryter AV: ingen Google-kode, ingen samtykkeoppsett (Consent Mode/gtag/footerlenke), ingen utgiver-ID og ingen annonseplasser i noen fil.
- * Bryter PÅ: Consent Mode (alt denied, før alle tredjepartsskript i <head>) og footerlenken «Samtykkeinnstillinger».
+ * Bryter PÅ: Consent Mode (alt denied, før alle tredjepartsskript i <head>), AdSense-taggen som eneste lastepunkt rett etter (ingen egen Funding Choices-tag) og footerlenken «Samtykkeinnstillinger».
  * Bryter PÅ: plasser bare der plasseringskart.md tillater, merket, maks tre, ingen annonseforespørsel i HTML-en.
  * --baseline: alle URL-ene i fila må fortsatt stå i sitemap.xml (ingen indekserbare URL-er forsvinner).
  */
@@ -40,7 +40,7 @@ function filer(dir) {
 const alle = filer(mappe);
 // Bryterstilling avleses fra eksporten (Funding Choices-tagen ligger bare i <head> med bryteren PÅ).
 // Med --streng (brukes av `npm run build`) må den stemme med konfigurasjonen.
-const funnetPa = alle.some((f) => f.endsWith("index.html") && readFileSync(f, "utf8").includes("fundingchoicesmessages.google.com"));
+const funnetPa = alle.some((f) => f.endsWith("index.html") && readFileSync(f, "utf8").includes("adsbygoogle.js?client=ca-pub-5902367729233688"));
 const streng = args.includes("--streng");
 const pa = streng ? adsenseAktiv() : funnetPa;
 if (streng) krev(funnetPa === pa, `eksporten er bygget med bryteren ${funnetPa ? "PÅ" : "AV"}, konfigurasjonen sier ${pa ? "PÅ" : "AV"}`);
@@ -119,7 +119,15 @@ for (const f of html) {
 
   // PÅ
   krev(!/<ins[^>]*adsbygoogle/.test(kilde), `${sti}: annonse-element i HTML-en (skal først komme etter samtykke)`);
-  krev(!/<script[^>]*adsbygoogle\.js/.test(kilde), `${sti}: adsbygoogle.js i HTML-en (skal først lastes etter samtykke)`);
+  krev(!/<script[^>]*\ssrc="[^"]*adsbygoogle/.test(kilde), `${sti}: adsbygoogle.js som <script src> i HTML-en (skal settes inn fra inline-skriptet etter consent-standarden)`);
+  krev(!/fundingchoices|googlefcPresent/.test(kilde), `${sti}: egen Funding Choices-tag (AdSense-taggen er eneste lastepunkt)`);
+  {
+    const head = kilde.slice(0, Math.max(kilde.indexOf("</head>"), 0) || kilde.length);
+    const tagPos = head.indexOf("adsbygoogle.js?client=ca-pub-5902367729233688");
+    krev((head.match(/adsbygoogle\.js\?client=/g) || []).length === 1, `${sti}: AdSense-taggen skal stå nøyaktig én gang i <head>`);
+    krev(tagPos > head.indexOf(CONSENT_DEFAULT_SCRIPT) && head.indexOf(CONSENT_DEFAULT_SCRIPT) >= 0, `${sti}: AdSense-taggen står ikke etter consent-standarden`);
+    krev(!/data-ad-client=/.test(head), `${sti}: uventet data-ad-client i <head>`);
+  }
   krev(!/data-ad-format="auto"|enable_page_level_ads|google_ad_client/.test(kilde), `${sti}: Auto ads`);
   if (!plasser.length) continue;
   krev(plasser.length <= MAKS_PLASSER, `${sti}: ${plasser.length} plasser, maks ${MAKS_PLASSER}`);

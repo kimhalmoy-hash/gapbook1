@@ -47,8 +47,9 @@ export function SamtykkeKlikk() {
 /**
  * Annonsestyring, bare med bryteren PÅ. Ingen annonseforespørsel før samtykke:
  *  1. venter på CONSENT_MODE_DATA_READY fra Googles CMP (grunnleggende modus)
- *  2. laster annonsebiblioteket og fyller plassene først når ad_storage er gitt (eller ikke gjelder)
- *  3. uten samtykke: ingenting lastes, og de reserverte boksene blir stående tomme
+ *  2. fyller plassene (annonseforespørsel) først når ad_storage er gitt (eller ikke gjelder)
+ *  3. uten samtykke: ingen forespørsel, og de reserverte boksene blir stående tomme
+ * AdSense-taggen selv (som også leverer samtykkemeldingen) settes inn i <head> av layout, rett etter consent-standarden.
  */
 export function AnnonseStyring() {
   useEffect(() => {
@@ -61,11 +62,6 @@ export function AnnonseStyring() {
       startet = true;
       const annonser = (w.adsbygoogle = w.adsbygoogle || []);
       annonser.requestNonPersonalizedAds = personlig ? 0 : 1;
-      const skript = document.createElement("script");
-      skript.async = true;
-      skript.crossOrigin = "anonymous";
-      skript.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-${UTGIVER_ID}`;
-      document.head.appendChild(skript);
       document.querySelectorAll<HTMLElement>("[data-annonse-plass]").forEach((plass) => {
         const enhet = plass.dataset.annonseEnhet;
         const flate = plass.querySelector(".annonse-flate");
